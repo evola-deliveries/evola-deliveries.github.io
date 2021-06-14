@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//https://play.tailwindcss.com/YStq9HbozS?file=css
+//https://play.tailwindcss.com/YStq9HbozS?file=css or https://play.tailwindcss.com/FkK6NzeRPr
 class OrderTicket extends Component {
     render() {
         return (
