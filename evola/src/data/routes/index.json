@@ -3,71 +3,71 @@
         { "region": "The Forge", "systems": [
             { "system": "jita", "regions": [
                 { "region": "Vale of the Silent", "systems":[
-                    { "system": "4-HWWF" },
-                    { "system": "DBT-GB" },
-                    { "system": "1-GBBP" },
-                    { "system": "VI2K-J" },
-                    { "system": "VALE"   }
+                    { "system": "4-HWWF", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
+                    { "system": "DBT-GB", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
+                    { "system": "1-GBBP", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
+                    { "system": "VI2K-J", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
+                    { "system": "VALE", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 }
                 ]},
                 { "region": "TKE" , "systems": [
-                    { "system": "R1O-GN" }
+                    { "system": "R1O-GN", "reward": {"volume": 875.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Malpais", "systems": [
-                    { "system": "NSI-MW" }
+                    { "system": "NSI-MW", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 40000000 }
                 ]},
                 { "region": "Oasa", "systems": [
-                    { "system": "RF-X7V" }
+                    { "system": "RF-X7V", "reward": {"volume": 1175.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 50000000 }
                 ]},
                 { "region": "Cobalt Edge", "systems": [
-                    { "system": "Y-RAW3" }
+                    { "system": "Y-RAW3", "reward": {"volume": 1900.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 500000000 }
                 ]}
             ]}
         ]},
         { "region":"Vale of the Silent", "systems":[
             { "system": "4-HWWF", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita" }
+                    { "system": "Jita", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 20000000 }
                 ]}
             ]},
             { "system": "DBT-GB", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita" }
+                    { "system": "Jita", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 20000000 }
                 ]}
             ]},
             { "system": "1-GBBP", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita" }
+                    { "system": "Jita", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 20000000 }
                 ]}
             ]},
             { "system": "VI2K-J", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita" }
+                    { "system": "Jita", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 20000000 }
                 ]}
             ]},
             { "system": "VALE", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita" }
+                    { "system": "Jita", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 30000000 }
                 ]}
             ]}
         ]},
         { "region":"TKE", "systems":[
             { "system": "R1O-GN", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita" }
+                    { "system": "Jita", "reward": {"volume": 875.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 40000000 }
                 ]}
             ]}
         ]},
         { "region":"Malpais", "systems":[
             { "system": "RF-X7V", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita" }
+                   { "system": "Jita", "reward": {"volume": 1175.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 50000000 }
                 ]}
             ]}
         ]},
         { "region":"Cobalt Edge", "systems":[
             { "system": "Y-RAW3", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita" }
+                   { "system": "Jita", "reward": {"volume": 1900.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 500000000 }
                 ]}
             ]}
         ]}
