@@ -1,0 +1,75 @@
+{
+    "routes": [
+        { "region": "The Forge", "systems": [
+            { "system": "jita", "regions": [
+                { "region": "Vale of the Silent", "systems":[
+                    { "system": "4-HWWF" },
+                    { "system": "DBT-GB" },
+                    { "system": "1-GBBP" },
+                    { "system": "VI2K-J" },
+                    { "system": "VALE"   }
+                ]},
+                { "region": "TKE" , "systems": [
+                    { "system": "R1O-GN" }
+                ]},
+                { "region": "Malpais", "systems": [
+                    { "system": "NSI-MW" }
+                ]},
+                { "region": "Oasa", "systems": [
+                    { "system": "RF-X7V" }
+                ]},
+                { "region": "Cobalt Edge", "systems": [
+                    { "system": "Y-RAW3" }
+                ]}
+            ]}
+        ]},
+        { "region":"Vale of the Silent", "systems":[
+            { "system": "4-HWWF", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita" }
+                ]}
+            ]},
+            { "system": "DBT-GB", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita" }
+                ]}
+            ]},
+            { "system": "1-GBBP", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita" }
+                ]}
+            ]},
+            { "system": "VI2K-J", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita" }
+                ]}
+            ]},
+            { "system": "VALE", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita" }
+                ]}
+            ]}
+        ]},
+        { "region":"TKE", "systems":[
+            { "system": "R1O-GN", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita" }
+                ]}
+            ]}
+        ]},
+        { "region":"Malpais", "systems":[
+            { "system": "RF-X7V", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita" }
+                ]}
+            ]}
+        ]},
+        { "region":"Cobalt Edge", "systems":[
+            { "system": "Y-RAW3", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita" }
+                ]}
+            ]}
+        ]}
+    ]
+}

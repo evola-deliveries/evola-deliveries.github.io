@@ -1,9 +1,12 @@
 import React from 'react';
+import ContractCreator from '../contract-creator';
+
 
 export default function ContractsPage() {
   return (
     <div>
-      nothing to see here
+       <ContractCreator />
+       
     </div>
   );
 };
