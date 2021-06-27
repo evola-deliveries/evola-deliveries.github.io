@@ -4,7 +4,7 @@
         { "region": "The Forge", "systems": [
             { "system": "Jita", "regions": [
                 { "region": "Vale of the Silent", "systems":[
-                    { "system": "4-HWWF", "reward": {"volume": 455.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
+                    { "system": "4-HWWF", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
                     { "system": "DBT-GB", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
                     { "system": "1-GBBP", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
                     { "system": "VI2K-J", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
