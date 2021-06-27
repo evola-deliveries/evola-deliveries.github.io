@@ -1,7 +1,8 @@
 {
+    "default": { "region": "The Forge", "system": "Jita" },
     "routes": [
         { "region": "The Forge", "systems": [
-            { "system": "jita", "regions": [
+            { "system": "Jita", "regions": [
                 { "region": "Vale of the Silent", "systems":[
                     { "system": "4-HWWF", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
                     { "system": "DBT-GB", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },

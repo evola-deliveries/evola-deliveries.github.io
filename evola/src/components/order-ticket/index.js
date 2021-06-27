@@ -4,7 +4,7 @@ class OrderTicket extends Component {
     render() {
         return (
             <div>
-                <div class="flex justify-center m-80">
+                <div class="flex m-80">
                     <div class="p-1 border-2 border-black font-sans w-72">
                         <div class="flex justify-center text-4xl font-extrabold">Evola</div>
                         <div class="flex justify-center text-4xl font-extrabold">Deliveries</div>
