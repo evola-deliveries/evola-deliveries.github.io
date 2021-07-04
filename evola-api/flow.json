@@ -1,0 +1,76 @@
+[
+    {
+        "id": "85d09905.9710c8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6d76d60c.549438",
+        "type": "http in",
+        "z": "85d09905.9710c8",
+        "name": "getAppraisal",
+        "url": "/getAppraisal",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "413d0ea6.7b2ce8"
+            ]
+        ]
+    },
+    {
+        "id": "70cc2683.ee42c",
+        "type": "http response",
+        "z": "85d09905.9710c8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 640,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "87fe4b9d.1712",
+        "type": "http request",
+        "z": "85d09905.9710c8",
+        "name": "janice",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://janice.e-351.com/api/rest/v2/appraisal?market=2&designation=appraisal&pricing=split&pricingVariant=immediate&persist=true&compactize=true&pricePercentage=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 470,
+        "y": 340,
+        "wires": [
+            [
+                "70cc2683.ee42c"
+            ]
+        ]
+    },
+    {
+        "id": "413d0ea6.7b2ce8",
+        "type": "function",
+        "z": "85d09905.9710c8",
+        "name": "headers",
+        "func": "const options = {\n  'X-ApiKey': global.get(\"APIKEY\"),\n  'Content-Type': 'text/plain',\n  'Accept': 'application/json' \n}\nmsg.headers = options;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 300,
+        "y": 300,
+        "wires": [
+            [
+                "87fe4b9d.1712"
+            ]
+        ]
+    }
+]

@@ -1,21 +1,66 @@
-import React, { useState } from 'react';
-import RouteDetails from '../route-details';
+import React, { useEffect, useState } from 'react';
 import PackageDetails from '../package-details';
 import OrderTicket from '../order-ticket';
 import DataService from '../../services/data-service';
 
+function calculatePricing(inboundRouteDeep, price, volume, janice) {
+    const volumeIsk = inboundRouteDeep ? Math.ceil(volume * inboundRouteDeep.reward.volume) : 0;
+    const collateralIsk = inboundRouteDeep ? Math.ceil((price / 100) * inboundRouteDeep.reward.collateral) : 0;
+    const volumeInvalid = inboundRouteDeep ? inboundRouteDeep.limits.volume < volume : false;
+    const collateralInvalid = inboundRouteDeep ? inboundRouteDeep.limits.collateral < price : false;
+    let total = volumeIsk + collateralIsk;
+    if (inboundRouteDeep && total < inboundRouteDeep.minimumReward) total = inboundRouteDeep.minimumReward;
+
+    return {
+        price: price,
+        volume: volume,
+        janice: janice,
+        totals: {
+            volumeInvalid: volumeInvalid,
+            collateralInvalid: collateralInvalid,
+            volume: volumeIsk,
+            collateral: collateralIsk,
+            total: total
+        }
+    };
+}
+
 export default function ContractCreator() {
+    const [pricing, setPricing] = useState(calculatePricing(null, 0, 0, ""));
+
     const [outboundValue, setOutboundValue] = useState(DataService.default.region + "|" + DataService.default.system);
+
+    useEffect(() => {
+        setOutboundRoute(DataService.getOutboundRoute(outboundValue));
+    }, [outboundValue]);
+
     const [inboundValue, setInboundValue] = useState("");
+
+    useEffect(() => {
+        setInboundRoute(DataService.getInboundRoute(outboundValue, inboundValue));
+    }, [inboundValue]);
 
     const handleOutboundChanged = (event) => setOutboundValue(event.target.value);
     const handleInboundChanged = (event) => setInboundValue(event.target.value);
 
+    const [inboundRoute, setInboundRoute] = useState();
+
+    useEffect(() => {
+        setPricing(calculatePricing(inboundRoute, pricing.price, pricing.volume, pricing.janice));
+    }, [inboundRoute]);
+
+    const [outboundRoute, setOutboundRoute] = useState();
+
+    const handlePricingChange = (price, volume, janice) => {
+        setPricing(calculatePricing(inboundRoute, price, volume, janice));
+    };
+
     return (
-        <div class="flex justify-between">
-            <fieldset>
+        <div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">
+            <fieldset className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
                 <legend>Select the outbound and inbound:</legend>
-                <label for="outbound">Outbound:</label>
+                <div>
+                <label htmlFor="outbound">Outbound:</label>
                 <select name="outbound" defaultValue={outboundValue} onChange={handleOutboundChanged} >
                     <option disabled hidden value=''></option>
                     {DataService.routes.map(route => (
@@ -26,7 +71,9 @@ export default function ContractCreator() {
                         </optgroup>
                     ))}
                 </select>
-                <label for="inbound">Inbound:</label>
+                </div>
+                <div>
+                <label htmlFor="inbound">Inbound:</label>
                 <select name="inbound" defaultValue="" onChange={handleInboundChanged} >
                     <option value="">None</option>
                     {DataService.getRoutes(outboundValue).map(route => (
@@ -37,10 +84,14 @@ export default function ContractCreator() {
                         </optgroup>
                     ))}
                 </select>
+                </div>
             </fieldset>
-            <RouteDetails outbound={outboundValue} inbound={inboundValue}/>
-            <PackageDetails outbound={outboundValue} inbound={inboundValue}/>
-            <OrderTicket />
+            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
+                <PackageDetails system={inboundRoute} onPricingChange={handlePricingChange} />
+            </div>
+            <div className="my-1 px-1 overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
+                <OrderTicket outbound={outboundRoute} inbound={inboundRoute} pricing={pricing} />
+            </div>
         </div>
     );
 };

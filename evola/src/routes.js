@@ -7,10 +7,12 @@ import NavigationBar from './components/nav-bar';
 
 const Routes = () => {
   return (
+    <div className="min-h-screen bg-gray-300">
     <Router>
       <div>
         <NavigationBar/>
         <hr />
+        <div className="container mx-auto">
         <Switch>
           <Route exact path="/">
             <MainPage />
@@ -19,8 +21,10 @@ const Routes = () => {
             <FreightingPage />
           </Route>
         </Switch>
+        </div>
       </div>
     </Router>
+    </div>
   );
 }
 

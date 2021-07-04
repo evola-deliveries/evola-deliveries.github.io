@@ -1,26 +1,38 @@
 import React, { useState } from 'react';
-import DataService from '../../services/data-service';
-/*
-"reward": {"volume": 1175.00, "collateral": 1.00 }, 
-"limits": { "volume": 130000.00, "collateral": 3500000000 }, 
-"minimumReward": 50000000
-*/
-export default function PackageDetails({outbound, inbound}) {
-    const system = DataService.getInboundRoute(outbound, inbound);
-    const [content, setContent] = useState("");
-    
-    const handleContentChange = (event) => setContent(event.target.value);
-    const getJanicePrices = (event) => undefined;
+import Janice from '../../services/janice-service';
 
-    return (
+export default function PackageDetails({ system, onPricingChange }) {
+    const [content, setContent] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
+
+    const handleContentChange = (event) => setContent(event.target.value);
+    const HandledAppraisal = (result) => {
+        setErrorMessage(undefined);
+
+        onPricingChange(result.effectivePrices.totalSellPrice, Janice.getTotalVolume(result), result.code);
+    };
+
+    const getJanicePrices = (event) => {
+        if (content !== '' || content === undefined) {
+            Janice.getAppraisal(content)
+                .then(HandledAppraisal)
+                .catch((reason) => setErrorMessage(reason.message));
+        } else {
+            setErrorMessage("Please enter at least one item to the package.")
+        }
+    };
+
+    const isDisabled = () => system === undefined;
+
+    return (<div>
         <fieldset>
             <legend>Package Details</legend>
             <div>
-                <textarea onChange={handleContentChange}>{content}</textarea>
+                <textarea disabled={isDisabled()} onChange={handleContentChange}></textarea>
             </div>
             <div>
-                <button onClick={getJanicePrices}>Get Prices</button>
+                <button disabled={isDisabled()} onClick={getJanicePrices}>Get Prices</button>
             </div>
-        </fieldset>
-    )
+        </fieldset>{errorMessage ? <p>{errorMessage}</p> : ""}
+    </div>)
 }

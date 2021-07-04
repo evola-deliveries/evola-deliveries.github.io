@@ -33,6 +33,15 @@ const service = {
         const inboundSystem = find(inboundRegion.systems, (value) => value.system === inboundSystemName);
 
         return inboundSystem;
+    },
+    getOutboundRoute(outbound) {
+        const regionName = outbound.split('|')[0];
+        const systemName = outbound.split('|')[1];
+    
+        const region = find(this.routes, (value) => value.region === regionName);
+        const system = find(region.systems, (value) => value.system === systemName);
+    
+        return system;
     }
 };
 
