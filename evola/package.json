@@ -1,5 +1,5 @@
 {
-  "homepage": "https://evola-deliveries.github.io",
+  "homepage": "https://www.evolaeve.com",
   "name": "evola",
   "version": "0.1.0",
   "private": true,
@@ -21,7 +21,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && echo \"www.evolaeve.com\" > build/CNAME",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
