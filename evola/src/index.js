@@ -3,15 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import { BrowserRouter } from 'react-router-dom';
-
-import Routes from './routes';
+import MainPage from './components/main-page';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes/>
-   </BrowserRouter>
+      <MainPage/>
   </React.StrictMode>,
   document.getElementById('root')
 );

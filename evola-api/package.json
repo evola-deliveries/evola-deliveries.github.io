@@ -4,7 +4,7 @@
   "description": "evola-api",
   "main": "settings.js",
   "scripts": {
-    "start-docker": "docker build -t dmportella/evola-api . && docker run -it --rm --name evola-api -p 1880:1880 dmportella/evola-api",
+    "start-docker": "docker build -t dmportella/evola-api . && docker run -it --rm --name evola-api -e APIKEY=$APIKEY -p 1880:1880 dmportella/evola-api",
     "start": "docker run -it --rm --name evola-api -p 1880:1880 -v $PWD/settings.js:/data/settings.js -v $PWD/node_modules:/data/node_modules -v $PWD/package.json:/data/package.json -v $PWD/flow.json:/data/flow.json -e FLOWS=flow.json nodered/node-red",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

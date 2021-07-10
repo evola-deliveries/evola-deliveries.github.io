@@ -174,7 +174,7 @@ module.exports = {
     // See https://github.com/troygoode/node-cors#configuration-options for
     // details on its contents. The following is a basic permissive set of options:
     httpNodeCors: {
-        origin: process.env.ORIGIN || "http://localhost:3000",
+        origin: process.env.ORIGIN || ["http://localhost:3000", "http://localhost:5000", "http://192.168.1.171:3000"],
         methods: "GET,PUT,POST,DELETE"
     },
 

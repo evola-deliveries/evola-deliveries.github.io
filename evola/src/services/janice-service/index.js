@@ -1,4 +1,5 @@
 import { reduceRight } from 'lodash';
+import Config from '../config-service';
 
 const service = {
     async getAppraisal(content = "") {
@@ -14,7 +15,8 @@ const service = {
             referrerPolicy: 'no-referrer',
             body: content
         };
-        return await fetch('http://localhost:1880/getAppraisal', config).then(response => {
+        console.log(Config.janice_api_url);
+        return await fetch(Config.evola_api_url, config).then(response => {
             const contentType = response.headers.get('content-type');
             if (!contentType || !contentType.includes('application/json')) {
                 throw new TypeError("Oops, we haven't got JSON!");

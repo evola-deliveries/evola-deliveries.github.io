@@ -15,8 +15,8 @@
         "method": "post",
         "upload": false,
         "swaggerDoc": "",
-        "x": 110,
-        "y": 280,
+        "x": 210,
+        "y": 120,
         "wires": [
             [
                 "413d0ea6.7b2ce8"
@@ -30,8 +30,8 @@
         "name": "",
         "statusCode": "200",
         "headers": {},
-        "x": 640,
-        "y": 260,
+        "x": 680,
+        "y": 120,
         "wires": []
     },
     {
@@ -47,8 +47,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 470,
-        "y": 340,
+        "x": 530,
+        "y": 120,
         "wires": [
             [
                 "70cc2683.ee42c"
@@ -65,8 +65,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 300,
-        "y": 300,
+        "x": 380,
+        "y": 120,
         "wires": [
             [
                 "87fe4b9d.1712"

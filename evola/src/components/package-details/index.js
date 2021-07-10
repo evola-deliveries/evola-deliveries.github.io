@@ -7,7 +7,12 @@ export default function PackageDetails({ system, onPricingChange }) {
 
     const handleContentChange = (event) => setContent(event.target.value);
     const HandledAppraisal = (result) => {
-        setErrorMessage(undefined);
+        
+        if (result.items.length === 0) {
+            setErrorMessage("No Prices Found for items.");
+        } else {
+            setErrorMessage("");
+        }        
 
         onPricingChange(result.effectivePrices.totalSellPrice, Janice.getTotalVolume(result), result.code);
     };
@@ -24,15 +29,16 @@ export default function PackageDetails({ system, onPricingChange }) {
 
     const isDisabled = () => system === undefined;
 
-    return (<div>
-        <fieldset>
-            <legend>Package Details</legend>
+    return (
+        <div>
+            <h3 className="w-full font-bold text-lg leading-tight">Package Details</h3>
             <div>
-                <textarea disabled={isDisabled()} onChange={handleContentChange}></textarea>
+                <textarea className="w-full" disabled={isDisabled()} onChange={handleContentChange}></textarea>
             </div>
             <div>
-                <button disabled={isDisabled()} onClick={getJanicePrices}>Get Prices</button>
+                <button className="bg-gray-500 text-white px-6 py-2 rounded font-medium hover:bg-gray-600 transition duration-200 each-in-out" disabled={isDisabled()} onClick={getJanicePrices}>Calculate Prices</button>
             </div>
-        </fieldset>{errorMessage ? <p>{errorMessage}</p> : ""}
-    </div>)
+            {errorMessage ? <p className="flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">{errorMessage}</p> : ""}
+        </div>
+    )
 }
