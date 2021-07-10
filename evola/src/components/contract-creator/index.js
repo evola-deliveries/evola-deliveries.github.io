@@ -39,7 +39,7 @@ export default function ContractCreator() {
 
     useEffect(() => {
         setInboundRoute(DataService.getInboundRoute(outboundValue, inboundValue));
-    }, [inboundValue]);
+    }, [inboundValue]); // eslint-disable-line react-hooks/exhaustive-deps
 
     const handleOutboundChanged = (event) => setOutboundValue(event.target.value);
     const handleInboundChanged = (event) => setInboundValue(event.target.value);
@@ -48,7 +48,7 @@ export default function ContractCreator() {
 
     useEffect(() => {
         setPricing(calculatePricing(inboundRoute, pricing.price, pricing.volume, pricing.janice));
-    }, [inboundRoute]);
+    }, [inboundRoute]); // eslint-disable-line react-hooks/exhaustive-deps
 
     const [outboundRoute, setOutboundRoute] = useState();
 

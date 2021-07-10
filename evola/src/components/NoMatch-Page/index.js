@@ -9,7 +9,7 @@ export default function NoMatchPage() {
                 <div class="flex">
                     <div class="m-auto text-center">
                         <div>
-                            <img src={NotFoundSvg} />
+                            <img src={NotFoundSvg} alt="404"/>
                         </div>
                         <p class="text-sm md:text-base text-yellow-300 p-2 mb-4">The stuff you were looking for doesn't exist
                         </p>
