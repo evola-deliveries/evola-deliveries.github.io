@@ -24,5 +24,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install --prefix=evola
-    - run: npm run git --prefix=evola
-    - run: npm run deploy --prefix=evola
+    - run: npm run predeploy --prefix=evola
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./evola/build
+        cname: www.evolaeve.com
+
