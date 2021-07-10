@@ -4,11 +4,11 @@
         { "region": "The Forge", "systems": [
             { "system": "Jita", "station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "regions": [
                 { "region": "Vale of the Silent", "systems":[
-                    { "system": "4-HWWF","station": "4-HWWF - WinterCo. Central Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
-                    { "system": "DBT-GB","station": "DBT-GB - The Kings Swing", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
-                    { "system": "1-GBBP","station": "1-GBBP - Icy's Sweet Home", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
-                    { "system": "VI2K-J","station": "VI2K-J - Fort LORDE", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
-                    { "system": "VALE","station": "Any System In VALE", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 }
+                    { "system": "4-HWWF", "station": "4-HWWF - WinterCo. Central Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
+                    { "system": "DBT-GB", "station": "DBT-GB - The Kings Swing", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
+                    { "system": "1-GBBP", "station": "1-GBBP - Icy's Sweet Home", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
+                    { "system": "VI2K-J", "station": "VI2K-J - Fort LORDE", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 },
+                    { "system": "VALE", "station": "Any System In VALE", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 }
                 ]},
                 { "region": "TKE" , "systems": [
                     { "system": "R1O-GN","station": "R1O-GN - B E A N S T A R", "reward": {"volume": 875.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 30000000 }
@@ -31,22 +31,22 @@
         { "region":"Vale of the Silent", "systems":[
             { "system": "4-HWWF","station": "4-HWWF - WinterCo. Central Station", "regions": [
                 { "region": "The Forge", "systems":[
-                    { "system": "Jita", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 20000000 }
+                    { "system": "Jita", "station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 20000000 }
                 ]}
             ]},
             { "system": "DBT-GB","station": "DBT-GB - The Kings Swing", "regions": [
                 { "region": "The Forge", "systems":[
-                    { "system": "Jita", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 20000000 }
+                    { "system": "Jita", "station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 20000000 }
                 ]}
             ]},
             { "system": "1-GBBP","station": "1-GBBP - Icy's Sweet Home", "regions": [
                 { "region": "The Forge", "systems":[
-                    { "system": "Jita", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 20000000 }
+                    { "system": "Jita", "station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 20000000 }
                 ]}
             ]},
             { "system": "VI2K-J","station": "VI2K-J - Fort LORDE", "regions": [
                 { "region": "The Forge", "systems":[
-                    { "system": "Jita", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 20000000 }
+                    { "system": "Jita", "station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 20000000 }
                 ]}
             ]},
             { "system": "VALE", "regions": [
