@@ -15,7 +15,7 @@ const service = {
             referrerPolicy: 'no-referrer',
             body: content
         };
-        console.log(Config.janice_api_url);
+
         return await fetch(Config.evola_api_url, config).then(response => {
             const contentType = response.headers.get('content-type');
             if (!contentType || !contentType.includes('application/json')) {
