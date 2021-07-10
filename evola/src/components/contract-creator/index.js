@@ -40,6 +40,7 @@ export default function ContractCreator() {
     useEffect(() => {
         setInboundRoute(DataService.getInboundRoute(outboundValue, inboundValue));
     }, [inboundValue]); // eslint-disable-line react-hooks/exhaustive-deps
+    // TODO fix this
 
     const handleOutboundChanged = (event) => setOutboundValue(event.target.value);
     const handleInboundChanged = (event) => setInboundValue(event.target.value);

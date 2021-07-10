@@ -72,3 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Trash Links
 
 https://pinegrow.com/tutorials/customizing-a-tailwind-css-theme/
+https://www.npmjs.com/package/leasot
