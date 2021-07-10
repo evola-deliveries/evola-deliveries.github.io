@@ -23,4 +23,5 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - run: echo 'hello'
+    - run: npm install --prefix=evola
+    - run: npm run deploy --prefix=evola
