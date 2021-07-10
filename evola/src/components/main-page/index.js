@@ -18,7 +18,7 @@ const MainPage = () => {
         }}>
         <Switch>
           <Route exact path="/">
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col h-full justify-between">
               <NavigationBar />
               <div className="container mx-auto py-8 px-4 md:py-16 md:px-8">
                 <ContractsPage />
@@ -27,7 +27,7 @@ const MainPage = () => {
             </div>
           </Route>
           <Route path="*">
-            <div className="flex flex-col h-screen justify-between">
+            <div className="flex flex-col h-full justify-between">
               <NavigationBar />
               <div className="container mx-auto py-8 px-4 md:py-16 md:px-8">
                 <NoMatchPage />

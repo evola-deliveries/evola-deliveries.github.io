@@ -62,18 +62,20 @@ export default function ContractCreator() {
 
             <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
                 <div className="shadow-lg rounded-lg bg-white px-2 py-2">
-                <h4 class="md:block text-xl text-gray-400">WELCOME TO</h4>
-                    <h3 class="md:block font-bold text-2xl text-gray-700">EVOLA DELIVERIES</h3>
-                    <p class="text-gray-600 text-justify">
-                        Contracts are issued directly to <span className="select-all">Evola Deliveries</span> Corporation.
-                        If you wish to use our services for a route that is currently not supported please contact <span className="font-bold">Nahtsu</span> directly.
-                        If you have any feedback please let us know!
-                    </p>
-                    <a class="mb-3 flex items-baseline mt-3 text-blue-600 hover:text-blue-900 focus:text-blue-900" href={ConfigService.discord_url} target="_blank" rel="noreferrer">
-                        <span>Join Discord</span>
-                        <span class="text-xs ml-1">&#x279c;</span>
-                    </a>
-                    <hr/>
+                    <div className="my-2">
+                        <h4 class="md:block text-xl text-gray-400">WELCOME TO</h4>
+                        <h3 class="md:block font-bold text-2xl text-gray-700">EVOLA DELIVERIES</h3>
+                        <p class="text-gray-600 text-justify">
+                            Contracts are issued directly to <span className="select-all">Evola Deliveries</span> Corporation.
+                            If you wish to use our services for a route that is currently not supported please contact <span className="font-bold">Nahtsu</span> directly.
+                            If you have any feedback please let us know!
+                        </p>
+                        <a class="flex items-baseline mt-3 text-blue-600 hover:text-blue-900 focus:text-blue-900" href={ConfigService.discord_url} target="_blank" rel="noreferrer">
+                            <span>Join Discord</span>
+                            <span class="text-xs ml-1">&#x279c;</span>
+                        </a>
+                    </div>
+                    <hr />
                     <h2 className="w-full font-bold text-xl">Contract Creator</h2>
                     <h3 className="w-full font-bold text-gl">Select the outbound and inbound</h3>
                     <div className="flex justify-between">
@@ -89,9 +91,9 @@ export default function ContractCreator() {
                             ))}
                         </select>
                     </div>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between my-2">
                         <label>Station:</label>
-                        <span className="select-all">{outboundRoute && outboundRoute.station}</span>
+                        <span className="select-all mx-2">{outboundRoute && outboundRoute.station}</span>
                     </div>
                     <div className="flex justify-between">
                         <label htmlFor="inbound">Inbound:</label>
@@ -106,9 +108,9 @@ export default function ContractCreator() {
                             ))}
                         </select>
                     </div>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between my-2">
                         <label>Station:</label>
-                        <span className="select-all">{inboundRoute && inboundRoute.station}</span>
+                        <span className="select-all mx-2">{inboundRoute && inboundRoute.station}</span>
                     </div>
                     <PackageDetails system={inboundRoute} onPricingChange={handlePricingChange} />
                 </div>
