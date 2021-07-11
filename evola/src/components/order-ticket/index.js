@@ -1,14 +1,16 @@
 import React from 'react';
-//https://play.tailwindcss.com/YStq9HbozS?file=css or https://play.tailwindcss.com/FkK6NzeRPr
 export default function ContractCreator({ outbound, inbound, pricing }) {
     return (
         <div class="py-8">
             <div class="p-1 border-2 border-black font-sans w-80 sm:w-72 bg-white">
                 <div class="flex justify-center text-4xl font-extrabold">Evola</div>
                 <div class="flex justify-center text-4xl font-extrabold">Deliveries</div>
+                <div class="flex justify-center leading-snug border-b-8 border-black">Eve Online Corporation</div>
+                <div class="flex justify-between font-bold border-black">
+                    <div>Contract's</div>
+                </div>
                 <div class="flex justify-between items-end font-extrabold">
                     <div>
-                        <div class="font-bold">Contract's</div>
                         <div class="text-4xl">Packages</div>
                     </div>
                     <div class="text-5xl">1</div>
