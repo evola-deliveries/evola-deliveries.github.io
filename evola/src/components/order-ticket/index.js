@@ -6,11 +6,7 @@ export default function ContractCreator({ outbound, inbound, pricing }) {
             <div class="p-1 border-2 border-black font-sans w-80 sm:w-72 bg-white">
                 <div class="flex justify-center text-4xl font-extrabold">Evola</div>
                 <div class="flex justify-center text-4xl font-extrabold">Deliveries</div>
-                <div class="flex justify-center leading-snug">Little beef's Order</div>
-                <div class="flex justify-between font-bold border-b-8 border-black">
-                    <div>Identifier</div>
-                    <div>I13oM</div>
-                </div>
+                
                 <div class="flex justify-between items-end font-extrabold">
                     <div>
                         <div class="font-bold">Contract's</div>
