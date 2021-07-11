@@ -31,7 +31,7 @@
         "statusCode": "200",
         "headers": {},
         "x": 680,
-        "y": 120,
+        "y": 160,
         "wires": []
     },
     {
@@ -70,6 +70,41 @@
         "wires": [
             [
                 "87fe4b9d.1712"
+            ]
+        ]
+    },
+    {
+        "id": "2ada2d01.d4849a",
+        "type": "http in",
+        "z": "85d09905.9710c8",
+        "name": "root",
+        "url": "/",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "76014038.01f728"
+            ]
+        ]
+    },
+    {
+        "id": "76014038.01f728",
+        "type": "function",
+        "z": "85d09905.9710c8",
+        "name": "body",
+        "func": "msg.payload = { message: \"evola api\" }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 180,
+        "wires": [
+            [
+                "70cc2683.ee42c"
             ]
         ]
     }
