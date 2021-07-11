@@ -6,7 +6,6 @@ export default function ContractCreator({ outbound, inbound, pricing }) {
             <div class="p-1 border-2 border-black font-sans w-80 sm:w-72 bg-white">
                 <div class="flex justify-center text-4xl font-extrabold">Evola</div>
                 <div class="flex justify-center text-4xl font-extrabold">Deliveries</div>
-                
                 <div class="flex justify-between items-end font-extrabold">
                     <div>
                         <div class="font-bold">Contract's</div>
@@ -80,12 +79,19 @@ export default function ContractCreator({ outbound, inbound, pricing }) {
                     </div>
                     <hr class="border-gray-500" />
                     <div class="flex justify-between">
-                        <div class="pl-4">Volume</div>
+                        <div>
+                            <span class="font-bold">Total Collateral</span>
+                        </div>
+                        <div className={pricing && pricing.totals.collateralInvalid ? "font-bold text-red-600" : "font-bold text-green-600"}><span class="select-all">{pricing && Number(pricing.price).toLocaleString('en')}</span> isk</div>
+                    </div>
+                    <hr class="border-gray-500" />
+                    <div class="flex justify-between">
+                        <div class="pl-4">Volume Cost</div>
                         <div><span class="select-all">{pricing && Number(pricing.totals.volume).toLocaleString('en')}</span> isk</div>
                     </div>
                     <hr class="border-gray-500" />
                     <div class="flex justify-between">
-                        <div class="pl-4">Collateral</div>
+                        <div class="pl-4">Collateral Cost</div>
                         <div><span class="select-all">{pricing && Number(pricing.totals.collateral).toLocaleString('en')}</span> isk</div>
                     </div>
                 </div>
