@@ -7,38 +7,30 @@ import FooterControl from '../footer-control';
 import NoMatchPage from '../NoMatch-Page';
 
 const MainPage = () => {
-  return (
-    <Router>
-      <div className="bg-cover h-full" style={
-        { 
-          "backgroundImage": "url(https://images.pexels.com/photos/41951/solar-system-emergence-spitzer-telescope-telescope-41951.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)",
-          "background-position": "center",
-          "background-repeat": "repeat",
-          "background-size": "cover"
-        }}>
-        <Switch>
-          <Route exact path="/">
-            <div className="flex flex-col h-full justify-between">
-              <NavigationBar />
-              <div className="container mx-auto py-8 px-4 md:py-16 md:px-8">
-                <ContractsPage />
-              </div>
-              <FooterControl />
-            </div>
-          </Route>
-          <Route path="*">
-            <div className="flex flex-col h-full justify-between">
-              <NavigationBar />
-              <div className="container mx-auto py-8 px-4 md:py-16 md:px-8">
-                <NoMatchPage />
-              </div>
-              <FooterControl />
-            </div>
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
+	return (
+		<Router>
+			<div className="bg-cover flex flex-col min-h-screen" style={
+				{
+					"backgroundImage": "url(https://images.pexels.com/photos/41951/solar-system-emergence-spitzer-telescope-telescope-41951.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)",
+					"background-position": "center",
+					"background-repeat": "repeat",
+					"background-size": "cover"
+				}}>
+				<NavigationBar />
+				<div className="flex-grow container mx-auto py-8 px-4 md:py-16 md:px-8">
+					<Switch>
+						<Route exact path="/">
+							<ContractsPage />
+						</Route>
+						<Route path="*">
+							<NoMatchPage />
+						</Route>
+					</Switch>
+				</div>
+				<FooterControl />
+			</div>
+		</Router>
+	);
 }
 
 export default MainPage;
