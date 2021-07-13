@@ -1,4 +1,6 @@
 import React from 'react';
+import Config from '../../services/config-service';
+
 export default function ContractCreator({ outbound, inbound, pricing }) {
     return (
         <div class="py-8">
@@ -22,7 +24,7 @@ export default function ContractCreator({ outbound, inbound, pricing }) {
                             <span class="font-bold">Package 1</span>
                         </div>
                         <span>{pricing && pricing.janice !== ""
-                            ? <a href={pricing.janice !== "" && "https://janice.e-351.com/a/" + pricing.janice} target="_blank" rel="noreferrer" class="text-purple-900 font-semibold">Janice {pricing && pricing.janice}</a>
+                            ? <a href={pricing.janice !== "" && Config.janice_url + pricing.janice} target="_blank" rel="noreferrer" class="text-purple-900 font-semibold">Janice {pricing && pricing.janice}</a>
                             : ""}</span>
                     </div>
                     <hr class="border-gray-500" />
