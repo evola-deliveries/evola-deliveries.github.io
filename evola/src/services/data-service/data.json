@@ -23,8 +23,8 @@
                     { "system": "Y-RAW3","station": "Y-RAW3 - Scary DaSpooky Trade Hub", "reward": {"volume": 1900.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 500000000 }
                 ]},
                  { "region": "Fountain", "systems": [
-                    { "system": "9R4-EJ","station": "9R4-EJ - Rohan", "reward": {"volume": 1600.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 500000000 },
-                    { "system": "B17O-R","station": "B17O-R - Stellar pride", "reward": {"volume": 1600.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 500000000 }
+                    { "system": "9R4-EJ","station": "9R4-EJ - Rohan", "reward": {"volume": 1600.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 10000000000 }, "minimumReward": 500000000 },
+                    { "system": "B17O-R","station": "B17O-R - Stellar pride", "reward": {"volume": 1600.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 10000000000 }, "minimumReward": 500000000 }
                 ]}
             ]}
         ]},
@@ -63,6 +63,13 @@
             ]}
         ]},
         { "region":"Malpais", "systems":[
+            { "system": "NSI-MW","station": "NSI-MW - Stellar Core", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 50000000 }
+                ]}
+            ]}
+        ]},
+        { "region":"Oasa", "systems":[
             { "system": "RF-X7V","station": "RF-X7V - Forums.WinTerCo.org", "regions": [
                 { "region": "The Forge", "systems":[
                    { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1175.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 50000000 }
