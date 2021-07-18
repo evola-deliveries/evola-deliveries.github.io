@@ -59,7 +59,6 @@ export default function ContractCreator() {
 
     return (
         <div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">
-
             <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
                 <div className="shadow-lg rounded-lg bg-white px-2 py-2">
                     <div className="my-2">
@@ -91,8 +90,8 @@ export default function ContractCreator() {
                             ))}
                         </select>
                     </div>
-                    <div className="flex justify-between my-2">
-                        <label>Station:</label>
+                    <div className="flex justify-between my-2 border-b-2 border-dashed border-green-700">
+                        <label>Station (from):</label>
                         <span className="select-all mx-2">{outboundRoute && outboundRoute.station}</span>
                     </div>
                     <div className="flex justify-between">
@@ -108,8 +107,8 @@ export default function ContractCreator() {
                             ))}
                         </select>
                     </div>
-                    <div className="flex justify-between my-2">
-                        <label>Station:</label>
+                    <div className="flex justify-between my-2 border-b-2 border-dashed border-green-700">
+                        <label>Station (to):</label>
                         <span className="select-all mx-2">{inboundRoute && inboundRoute.station}</span>
                     </div>
                     <PackageDetails system={inboundRoute} onPricingChange={handlePricingChange} />

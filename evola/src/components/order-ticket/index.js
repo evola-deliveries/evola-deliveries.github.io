@@ -79,7 +79,7 @@ export default function ContractCreator({ outbound, inbound, pricing }) {
                         <div>
                             <span class="font-bold">Total Reward</span>
                         </div>
-                        <div class="font-bold"><span class="select-all">{pricing && Number(pricing.totals.total).toLocaleString('en')}</span> isk</div>
+                        <div class="font-bold text-green-600"><span class="select-all">{pricing && Number(pricing.totals.total).toLocaleString('en')}</span> isk</div>
                     </div>
                     <hr class="border-gray-500" />
                     <div class="flex justify-between">
