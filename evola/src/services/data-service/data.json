@@ -9,9 +9,6 @@
                 { "region": "Malpais", "systems": [
                     { "system": "NSI-MW","station": "NSI-MW - Stellar Core", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 40000000 }
                 ]},
-                { "region": "Oasa", "systems": [
-                    { "system": "RF-X7V","station": "RF-X7V - Forums.WinTerCo.org", "reward": {"volume": 1175.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 50000000 }
-                ]},
                 { "region": "Cobalt Edge", "systems": [
                     { "system": "Y-RAW3","station": "Y-RAW3 - Scary DaSpooky Trade Hub", "reward": {"volume": 1900.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 50000000 }
                 ]}
@@ -28,13 +25,6 @@
             { "system": "NSI-MW","station": "NSI-MW - Stellar Core", "regions": [
                 { "region": "The Forge", "systems":[
                    { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 40000000 }
-                ]}
-            ]}
-        ]},
-        { "region":"Oasa", "systems":[
-            { "system": "RF-X7V","station": "RF-X7V - Forums.WinTerCo.org", "regions": [
-                { "region": "The Forge", "systems":[
-                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1175.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 50000000 }
                 ]}
             ]}
         ]},
