@@ -3,9 +3,6 @@
     "routes": [
         { "region": "The Forge", "systems": [
             { "system": "Jita", "station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "regions": [
-                { "region": "Vale of the Silent", "systems":[
-                    { "system": "4-HWWF", "station": "4-HWWF - WinterCo. Central Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 20000000 }
-                ]},
                 { "region": "TKE" , "systems": [
                     { "system": "R1O-GN","station": "R1O-GN - B E A N S T A R", "reward": {"volume": 875.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 30000000 }
                 ]},
@@ -19,14 +16,7 @@
                     { "system": "Y-RAW3","station": "Y-RAW3 - Scary DaSpooky Trade Hub", "reward": {"volume": 1900.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 30000000000 }, "minimumReward": 50000000 }
                 ]}
             ]}
-        ]},
-        { "region":"Vale of the Silent", "systems":[
-            { "system": "4-HWWF","station": "4-HWWF - WinterCo. Central Station", "regions": [
-                { "region": "The Forge", "systems":[
-                    { "system": "Jita", "station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 20000000 }
-                ]}
-            ]}
-        ]},            
+        ]},          
         { "region":"TKE", "systems":[
             { "system": "R1O-GN","station": "R1O-GN - B E A N S T A R", "regions": [
                 { "region": "The Forge", "systems":[
