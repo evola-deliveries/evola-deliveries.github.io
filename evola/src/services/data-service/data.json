@@ -20,13 +20,16 @@
                 ]},
                 { "region": "Perrigen Falls", "systems": [
                     { "system": "Perrigen Falls [Horde Rental Only]","station": "REGION WIDE", "reward": {"volume":1000, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 50000000 } 
+                ]},
+                { "region": "Deklein", "systems": [
+                    { "system": "GY5-26","station": "GY5-26 - Rheinmetall Werke", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 30000000 }
                 ]}
             ]}
         ]},          
         { "region":"TKE", "systems":[
             { "system": "R1O-GN","station": "R1O-GN - B E A N S T A R", "regions": [
                 { "region": "The Forge", "systems":[
-                    { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 850.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 40000000 }
+                    { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 850.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 40000000 }
                 ]},
                 { "region": "TKE", "systems": [
                     { "system": "RQOO-U","station": "RQOO-U - T2 Reactions", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 20000000 },
@@ -43,7 +46,7 @@
             ]},
             { "system": "RQOO-U","station": "RQOO-U - T2 Reactions", "regions": [
                 { "region": "The Forge", "systems":[
-                    { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 850.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 40000000 }
+                    { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 850.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 40000000 }
                 ]},
                 { "region": "TKE" , "systems": [
                     { "system": "R1O-GN","station": "R1O-GN - B E A N S T A R", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 5000000 }
@@ -51,7 +54,7 @@
             ]},
             { "system": "BGMZ-0","station": "BGMZ-0 - T2 Reactions", "regions": [
                 { "region": "The Forge", "systems":[
-                    { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 850.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 40000000 }
+                    { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 850.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 40000000 }
                 ]},
                 { "region": "TKE" , "systems": [
                     { "system": "R1O-GN","station": "R1O-GN - B E A N S T A R", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 5000000 }
@@ -59,7 +62,7 @@
             ]},
             { "system": "I2D3","station": "I2D3 - T2 Reactions", "regions": [
                 { "region": "The Forge", "systems":[
-                    { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 850.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 40000000 }
+                    { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 850.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 40000000 }
                 ]},
                 { "region": "TKE" , "systems": [
                     { "system": "R1O-GN","station": "R1O-GN - B E A N S T A R", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 5000000 }
@@ -69,14 +72,14 @@
         { "region":"Malpais", "systems":[
             { "system": "NSI-MW","station": "NSI-MW - Stellar Core", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 850.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 40000000 }
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 850.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 40000000 }
                 ]}
             ]}
         ]},
         { "region":"Perrigen Falls", "systems":[
             { "system": "REGION WIDE","station": "Perrigen Falls [Horde Rental Only]", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 50000000 }
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 50000000 }
                 ]},
                 { "region": "TKE" , "systems": [
                     { "system": "R1O-GN","station": "R1O-GN - B E A N S T A R", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 5000000 },
@@ -93,7 +96,7 @@
         { "region":"Etherium Reach", "systems":[
             { "system": "LXQ2-T","station": "LXQ2-T - G A T E S T A R", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 30000000 }
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "TKE", "systems": [
                     { "system": "R1O-GN","station": "R1O-GN - B E A N S T A R", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 20000000 }
@@ -103,7 +106,14 @@
         { "region":"Cobalt Edge", "systems":[
             { "system": "Y-RAW3","station": "Y-RAW3 - Scary DaSpooky Trade Hub", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1700.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 3500000000 }, "minimumReward": 50000000 }
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1700.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 50000000 }
+                ]}
+            ]}
+        ]},
+        { "region":"Deklein", "systems":[
+            { "system": "GY5-26","station": "GY5-26 - Rheinmetall Werke", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 40000000 }
                 ]}
             ]}
         ]}
