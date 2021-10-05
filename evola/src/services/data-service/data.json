@@ -23,6 +23,9 @@
                 ]},
                 { "region": "Deklein", "systems": [
                     { "system": "GY5-26","station": "GY5-26 - Rheinmetall Werke", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 30000000 }
+                ]},
+                { "region": "Immensea", "systems": [
+                    { "system": "W4E-IT","station": "W4E-IT - Protector of the Constellation", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
                 ]}
             ]}
         ]},          
@@ -114,6 +117,13 @@
             { "system": "GY5-26","station": "GY5-26 - Rheinmetall Werke", "regions": [
                 { "region": "The Forge", "systems":[
                    { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 10000000 }
+                ]}
+            ]}
+        ]},
+        { "region":"Immensea", "systems":[
+            { "system": "W4E-IT","station": "W4E-IT - Protector of the Constellation", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 35000000 }
                 ]}
             ]}
         ]}
