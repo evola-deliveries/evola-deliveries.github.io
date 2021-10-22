@@ -22,7 +22,7 @@
                     { "system": "Perrigen Falls [Horde Rental Only]","station": "REGION WIDE", "reward": {"volume":9000, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 50000000 } 
                 ]},
                 { "region": "Immensea", "systems": [
-                    { "system": "W4E-IT","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 10000000000 }, "minimumReward": 30000000 }
+                    { "system": "W4E-IT","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 10000000000 }, "minimumReward": 30000000 }
                 ]}
             ]}
         ]},          
@@ -113,7 +113,7 @@
         { "region":"Immensea", "systems":[
             { "system": "W4E-IT","station": "W4E-IT - The Troll Empire", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 35000000 }
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 35000000 }
                 ]}
             ]}
         ]}
