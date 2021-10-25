@@ -5,27 +5,22 @@
             { "system": "Jita", "station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "regions": [
                 { "region": "TKE" , "systems": [
                     { "system": "R1O-GN - B E A N S T A R","station": "R1O-GN - B E A N S T A R", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
-                    { "system": "RQOO-U - T2 Reactions","station": "RQOO-U - T2 Reactions", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
+                    { "system": "R1O-GN - T2 Ore & Ice Refinery","station": "R1O-GN - T2 Ore & Ice Refinery", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
+                    { "system": "R1O-GN - T2 Reactions","station": "R1O-GN - T2 Reactions", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
+                    { "system": "R1O-GN - EC Structures & Fuel","station": "R1O-GN - EC Structures & Fuel", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
+                    { "system": "R1O-GN - EC Mods, Drones, Fighters","station": "R1O-GN - EC Mods, Drones, Fighters", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
+                    { "system": "R1O-GN - EC T1 Small Med Large Ships","station": "R1O-GN - EC T1 Small Med Large Ships", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
+                    { "system": "GQ-7SP - Horde Industry Park","station": "GQ-7SP - Horde Industry Park", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
+                    { "system": "GQ-7SP - T2 ICE & ORE Refinery","station": "GQ-7SP - T2 ICE & ORE Refinery", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
+                    { "system": "GQ-7SP - T2 Reactions","station": "GQ-7SP - T2 Reactions", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
+                    { "system": ""GQ-7SP - EC Invention & Copying","station": "GQ-7SP - EC Invention & Copying", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
+                    { "system": "RQOO-U - T2 Reactions,"station": "RQOO-U - T2 Reactions", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
+                    { "system": "RQOO-U - T2 Ore Refinery","station": "RQOO-U - T2 Ore Refinery", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
+                    { "system": "RQOO-U - EC Capital Ships","station": "RQOO-U - EC Capital Ships", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
                     { "system": "BGMZ-0 - T2 Reactions","station": "BGMZ-0 - T2 Reactions", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
-                    { "system": "I2D3-5 - T2 Reactions","station": "I2D3-5 - T2 Reactions", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 }
-                ]},
-                { "region": "Etherium Reach", "systems": [
-                    { "system": "LXQ2-T","station": "LXQ2-T - G A T E S T A R", "reward": {"volume": 650.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 20000000 }
-                ]},
-                { "region": "Malpais", "systems": [
-                    { "system": "NSI-MW","station": "NSI-MW - Stellar Core", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 30000000 }
-                ]},
-                { "region": "Cobalt Edge", "systems": [
-                    { "system": "Y-RAW3","station": "Y-RAW3 - Scary DaSpooky Trade Hub", "reward": {"volume": 1600.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 50000000 }
-                ]},
-                { "region": "Perrigen Falls", "systems": [
-                    { "system": "Perrigen Falls [Horde Rental Only]","station": "REGION WIDE", "reward": {"volume":9000, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 50000000 } 
-                ]},
-                { "region": "Immensea", "systems": [
-                    { "system": "W4E-IT","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 10000000000 }, "minimumReward": 30000000 }
-                ]}
-            ]}
-        ]},          
+                    { "system": "I2D3-5 - T2 Reactions","station": "I2D3-5 - T2 Reactions", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
+                    { "system": "EPCD-D - The Reactions Reactor","station": "EPCD-D - The Reactions Reactor", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 }
+                ]},         
         { "region":"TKE", "systems":[
             { "system": "R1O-GN","station": "R1O-GN - B E A N S T A R", "regions": [
                 { "region": "The Forge", "systems":[
