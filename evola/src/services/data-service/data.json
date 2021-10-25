@@ -20,11 +20,6 @@
                     { "system": "BGMZ-0 - T2 Reactions","station": "BGMZ-0 - T2 Reactions", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
                     { "system": "I2D3-5 - T2 Reactions","station": "I2D3-5 - T2 Reactions", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
                     { "system": "EPCD-D - The Reactions Reactor","station": "EPCD-D - The Reactions Reactor", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 }
-                ]},         
-        { "region":"TKE", "systems":[
-            { "system": "R1O-GN","station": "R1O-GN - B E A N S T A R", "regions": [
-                { "region": "The Forge", "systems":[
-                    { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 20000000 }
                 ]},
                 { "region": "TKE", "systems": [
                     { "system": "RQOO-U","station": "RQOO-U - T2 Reactions", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 5000000 },
