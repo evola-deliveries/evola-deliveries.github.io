@@ -4,7 +4,7 @@
         { "region": "The Forge", "systems": [
             { "system": "Jita", "station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "regions": [
                 { "region": "TKE" , "systems": [
-                    { "system": "R1O-GN","station": "R1O-GN - B E A N S T A R", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
+                    { "system": "R1O-GN - B E A N S T A R","station": "R1O-GN - B E A N S T A R", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
                     { "system": "RQOO-U","station": "RQOO-U - T2 Reactions", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
                     { "system": "BGMZ-0","station": "BGMZ-0 - T2 Reactions", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 },
                     { "system": "I2D3-5","station": "I2D3-5 - T2 Reactions", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 10000000 }
