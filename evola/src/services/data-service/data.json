@@ -22,19 +22,23 @@
                     { "system": "EPCD-D - The Reactions Reactor","station": "EPCD-D - The Reactions Reactor", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 45000000000 }, "minimumReward": 5000000 }
                 ]},
                 { "region": "Geminate", "systems": [
-                    { "system": "04-LQM - NT Sotiyo - Horde Industry Park","station": "04-LQM - NT Sotiyo - Horde Industry Park", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 45000000000 }, "minimumReward": 5000000 }
+                    { "system": "04-LQM - NT Sotiyo - Horde Industry Park","station": "04-LQM - NT Sotiyo - Horde Industry Park", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 20000000000 }, "minimumReward": 5000000 },
+                    { "system": "LX-ZOJ - P13M5","station": "LX-ZOJ - P13M5", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 20000000000 }, "minimumReward": 1500000 }
                 ]},
                 { "region": "Etherium Reach", "systems": [
-                    { "system": "LXQ2-T - G A T E S T A R","station": "LXQ2-T - G A T E S T A R", "reward": {"volume": 650.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 45000000000 }, "minimumReward": 1000000 }
+                    { "system": "LXQ2-T - G A T E S T A R","station": "LXQ2-T - G A T E S T A R", "reward": {"volume": 650.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 1000000 }
                 ]},
                 { "region": "Malpais", "systems": [
-                    { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 45000000000 }, "minimumReward": 30000000 }
+                    { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Perrigen Falls", "systems": [
-                    { "system": "Perrigen Falls [Horde Rental Only]","station": "REGION WIDE", "reward": {"volume":9000, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 45000000000 }, "minimumReward": 50000000 } 
+                    { "system": "Perrigen Falls [Horde Rental Only]","station": "REGION WIDE", "reward": {"volume":900, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 25000000000 }, "minimumReward": 50000000 } 
                 ]},
                 { "region": "Immensea", "systems": [
-                    { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 5000000000 }, "minimumReward": 30000000 }
+                    { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
+                ]},
+                { "region": "Insmother", "systems": [
+                    { "system": "J-ZYSZ - DICHSTAR 4 ","station": "J-ZYSZ - DICHSTAR 4 ", "reward": {"volume": 1300.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 1500000000 }, "minimumReward": 30000000 }
                 ]}
             ]},
             { "system": "Perimeter","station": "Perimeter - Tranquility Trading Tower", "regions": [
@@ -57,7 +61,8 @@
                     { "system": "EPCD-D - The Reactions Reactor","station": "EPCD-D - The Reactions Reactor", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 45000000000 }, "minimumReward": 5000000 }
                 ]},
                 { "region": "Geminate", "systems": [
-                    { "system": "04-LQM - NT Sotiyo - Horde Industry Park","station": "04-LQM - NT Sotiyo - Horde Industry Park", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 45000000000 }, "minimumReward": 20000000 }
+                    { "system": "04-LQM - NT Sotiyo - Horde Industry Park","station": "04-LQM - NT Sotiyo - Horde Industry Park", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 20000000000 }, "minimumReward": 5000000 },
+                    { "system": "LX-ZOJ - P13M5","station": "LX-ZOJ - P13M5", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 20000000000 }, "minimumReward": 1500000 }
                 ]},
                 { "region": "Etherium Reach", "systems": [
                     { "system": "LXQ2-T - G A T E S T A R","station": "LXQ2-T - G A T E S T A R", "reward": {"volume": 650.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 45000000000 }, "minimumReward": 20000000 }
@@ -66,10 +71,13 @@
                     { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 45000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Perrigen Falls", "systems": [
-                    { "system": "Perrigen Falls [Horde Rental Only]","station": "REGION WIDE", "reward": {"volume":9000, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 45000000000 }, "minimumReward": 50000000 } 
+                    { "system": "Perrigen Falls [Horde Rental Only]","station": "REGION WIDE", "reward": {"volume":900, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 45000000000 }, "minimumReward": 50000000 } 
                 ]},
                 { "region": "Immensea", "systems": [
-                    { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 5000000000 }, "minimumReward": 30000000 }
+                    { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 2000000000 }, "minimumReward": 30000000 }
+                ]},
+                { "region": "Insmother", "systems": [
+                    { "system": "J-ZYSZ - DICHSTAR 4 ","station": "J-ZYSZ - DICHSTAR 4 ", "reward": {"volume": 1300.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 1500000000 }, "minimumReward": 30000000 }
                 ]}
             ]}
         ]},          
@@ -123,9 +131,6 @@
             { "system": "I2D3","station": "I2D3 - T2 Reactions", "regions": [
                 { "region": "The Forge", "systems":[
                     { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 40000000 }
-                ]},
-                { "region": "TKE" , "systems": [
-                    { "system": "R1O-GN","station": "R1O-GN - B E A N S T A R", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 45000000000 }, "minimumReward": 5000000 }
                 ]}
             ]}
         ]},
@@ -178,8 +183,16 @@
         { "region":"Immensea", "systems":[
             { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 35000000 },
-                    { "system": "Perimeter","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 20000000 }
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 30000000 },
+                    { "system": "Perimeter","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 30000000 }
+                ]}
+            ]}
+        ]},
+        { "region":"Insmother", "systems":[
+            { "system": "J-ZYSZ - DICHSTAR 4 ","station": "W4E-IT - The Troll Empire", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1300.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 30000000 },
+                    { "system": "Perimeter","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 1300.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 30000000 }
                 ]}
             ]}
         ]}
