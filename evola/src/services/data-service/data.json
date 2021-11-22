@@ -40,8 +40,8 @@
                 { "region": "Insmother", "systems": [
                     { "system": "J-ZYSZ - DICHSTAR 4 ","station": "J-ZYSZ - DICHSTAR 4 ", "reward": {"volume": 1300.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 1500000000 }, "minimumReward": 30000000 }
                 ]},
-                { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 2000000000 }, "minimumReward": 0 }
+                { "region": "Overseer & Red Loot NPC Vendor", "systems": [
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]},
             { "system": "Perimeter","station": "Perimeter - Tranquility Trading Tower", "regions": [
@@ -82,8 +82,8 @@
                 { "region": "Insmother", "systems": [
                     { "system": "J-ZYSZ - DICHSTAR 4 ","station": "J-ZYSZ - DICHSTAR 4 ", "reward": {"volume": 1300.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 1500000000 }, "minimumReward": 30000000 }
                 ]},
-                { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 2000000000 }, "minimumReward": 0 }
+                { "region": "Overseer & Red Loot NPC Vendor", "systems": [
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]}
         ]},          
@@ -117,8 +117,8 @@
                 { "region": "Perrigen Falls", "systems": [
                     { "system": "Perrigen Falls [Horde Rental Only]","station": "REGION WIDE", "reward": {"volume":800, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 45000000000 }, "minimumReward": 50000000 } 
                 ]},
-                { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 2000000000 }, "minimumReward": 0 }
+                { "region": "Overseer & Red Loot NPC Vendor", "systems": [
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]},
             { "system": "RQOO-U","station": "RQOO-U - T2 Reactions", "regions": [
@@ -150,7 +150,7 @@
                     { "system": "Perimeter","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 130000.00, "collateral": 4500000000 }, "minimumReward": 20000000 }
                 ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 2000000000 }, "minimumReward": 0 }
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]}
         ]},
