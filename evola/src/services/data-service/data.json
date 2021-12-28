@@ -38,7 +38,7 @@
                     { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Insmother", "systems": [
-                    { "system": "J-ZYSZ - DICHSTAR 4 ","station": "J-ZYSZ - DICHSTAR 4 ", "reward": {"volume": 1300.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 1500000000 }, "minimumReward": 30000000 }
+                    { "system": "J-ZYSZ - DICHSTAR 4 ","station": "J-ZYSZ - DICHSTAR 4 ", "reward": {"volume": 1300.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Overseer & Red Loot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 20000000000 }, "minimumReward": 0 }
@@ -80,7 +80,7 @@
                     { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 2000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Insmother", "systems": [
-                    { "system": "J-ZYSZ - DICHSTAR 4 ","station": "J-ZYSZ - DICHSTAR 4 ", "reward": {"volume": 1300.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 1500000000 }, "minimumReward": 30000000 }
+                    { "system": "J-ZYSZ - DICHSTAR 4 ","station": "J-ZYSZ - DICHSTAR 4 ", "reward": {"volume": 1300.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Overseer & Red Loot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 329000.00, "collateral": 20000000000 }, "minimumReward": 0 }
