@@ -35,7 +35,8 @@
                     { "system": "Perrigen Falls [Horde Rental Only]","station": "REGION WIDE", "reward": {"volume":900, "collateral": 1.00 }, "limits": { "volume": 339000.00, "collateral": 25000000000 }, "minimumReward": 50000000 } 
                 ]},
                 { "region": "Immensea", "systems": [
-                    { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 339000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
+                    { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 339000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
+                    { "system": "Y19P-1 - TIRE Sector Command Delta","station": "Y19P-1 - TIRE Sector Command Delta", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 339000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Insmother", "systems": [
                     { "system": "J-ZYSZ - DICHSTAR 4 ","station": "J-ZYSZ - DICHSTAR 4 ", "reward": {"volume": 1300.00, "collateral": 1.00 }, "limits": { "volume": 339000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
@@ -80,7 +81,8 @@
                     { "system": "Perrigen Falls [Horde Rental Only]","station": "REGION WIDE", "reward": {"volume":900, "collateral": 1.00 }, "limits": { "volume": 339000.00, "collateral": 45000000000 }, "minimumReward": 50000000 } 
                 ]},
                 { "region": "Immensea", "systems": [
-                    { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 339000.00, "collateral": 2000000000 }, "minimumReward": 30000000 }
+                    { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 339000.00, "collateral": 2000000000 }, "minimumReward": 30000000 },
+                    { "system": "Y19P-1 - TIRE Sector Command Delta","station": "Y19P-1 - TIRE Sector Command Delta", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 339000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Insmother", "systems": [
                     { "system": "J-ZYSZ - DICHSTAR 4 ","station": "J-ZYSZ - DICHSTAR 4 ", "reward": {"volume": 1300.00, "collateral": 1.00 }, "limits": { "volume": 339000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
@@ -208,7 +210,13 @@
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 339000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
-            ]}
+            ]},
+            { "system": "Y19P-1 - TIRE Sector Command Delta","station": "Y19P-1 - TIRE Sector Command Delta", "regions": [
+                { "region": "The Forge", "systems":[
+                    { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 30000000 },
+                    { "system": "Perimeter","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 30000000 }
+                ]}
+             ]}    
         ]},
         { "region":"Insmother", "systems":[
             { "system": "J-ZYSZ - DICHSTAR 4 ","station": "J-ZYSZ - DICHSTAR 4", "regions": [
@@ -218,6 +226,7 @@
                 ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 339000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+    
                 ]}
             ]}
         ]},
