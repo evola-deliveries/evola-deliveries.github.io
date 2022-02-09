@@ -117,9 +117,6 @@
                 { "region": "Malpais", "systems": [
                     { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 25000000000 }, "minimumReward": 30000000 }
                 ]},
-                { "region": "LXQ2-T - G A T E S T A R", "systems": [
-                    { "system": "LXQ2-T - G A T E S T A R","station": "LXQ2-T - G A T E S T A R", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 20000000 }
-                ]},
                 { "region": "Etherium Reach", "systems": [
                     { "system": "LXQ2-T - G A T E S T A R","station": "LXQ2-T - G A T E S T A R", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 20000000 }
                 ]},
@@ -156,10 +153,10 @@
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 550.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 20000000 }
                 ]},
                 { "region": "The Kalevala Expanse", "systems": [
-                    { "system": "R1O-GN","station": "R1O-GN - Z E N S T A R", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 20000000 }
+                    { "system": "R1O-GN","station": "R1O-GN - Z E N S T A R", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 5000000 }
                 ]},
-                { "region": "LXQ2-T - G A T E S T A R", "systems": [
-                    { "system": "LXQ2-T - G A T E S T A R","station": "LXQ2-T - G A T E S T A R", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 20000000 }
+                { "region": "Etherium Reach", "systems": [
+                    { "system": "LXQ2-T - G A T E S T A R","station": "LXQ2-T - G A T E S T A R", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 5000000 }
                 ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 20000000000 }, "minimumReward": 0 }
@@ -173,10 +170,10 @@
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 650.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 20000000 }
                 ]},
                 { "region": "The Kalevala Expanse", "systems": [
-                    { "system": "R1O-GN","station": "R1O-GN - Z E N S T A R", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 20000000 }
+                    { "system": "R1O-GN","station": "R1O-GN - Z E N S T A R", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 5000000 }
                 ]},
                 { "region": "Malpais", "systems": [
-                    { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 25000000000 }, "minimumReward": 30000000 }
+                    { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 25000000000 }, "minimumReward": 5000000 }
                 ]}
             ]}
         ]},
@@ -188,6 +185,12 @@
                 ]},
                 { "region": "The Kalevala Expanse", "systems": [
                     { "system": "R1O-GN - Z E N S T A R","station": "R1O-GN - Z E N S T A R", "reward": {"volume": 250.00, "collateral": 0.5 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 20000000 }
+                ]},
+                { "region": "Etherium Reach", "systems": [
+                    { "system": "LXQ2-T - G A T E S T A R","station": "LXQ2-T - G A T E S T A R", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 5000000 }
+                ]},
+                { "region": "Malpais", "systems": [
+                    { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 25000000000 }, "minimumReward": 5000000 }
                 ]}
             ]}
         ]},
@@ -225,16 +228,19 @@
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 30000000 },
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 30000000 }
                 ]},
-            { "system": "ZMV9-A - Thermopylae","station": "ZMV9-A - Thermopylae", "regions": [
-                { "region": "The Forge", "systems":[
-                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 20000000 },
-                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 30000000 }
-                ]}
-            ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
-            ]}
+            ]},
+            { "system": "ZMV9-A - Thermopylae","station": "ZMV9-A - Thermopylae", "regions": [
+                { "region": "The Forge", "systems":[
+                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 30000000 },
+                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 30000000 }
+                ]},
+                { "region": "Overseer & Redloot NPC Vendor", "systems": [
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                ]}
+             ]}    
         ]}
     ]
 }
