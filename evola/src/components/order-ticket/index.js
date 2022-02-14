@@ -104,7 +104,7 @@ export default function ContractCreator({ outbound, inbound, pricing }) {
                 <div class="border-t-8 border-black flex leading-none text-xs pt-2 pb-1">
                     <div class="pr-1">*</div>
                     <div>
-                        Contracts are issued directly to <span class="font-bold">Evola Deliveries Corporation</span>. If you wish to use our services for a route that is currently not supported please contact <span class="font-bold">Nahtsu</span> directly.<br />
+                        Contracts are issued directly to <span class="font-bold">Evola Deliveries</span>. If you wish to use our services for a route that is currently not supported please contact <span class="font-bold">Nahtsu</span> directly.<br />
                         If you have any feedback please let us know!
                     </div>
                 </div>
