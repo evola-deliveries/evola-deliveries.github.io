@@ -19,7 +19,7 @@ export default function HeroWelcome() {
                     <h4 class="hidden md:block text-xl text-gray-400">WELCOME TO</h4>
                     <h3 class="hidden md:block font-bold text-2xl text-gray-700">EVOLA DELIVERIES</h3>
                     <p class="text-gray-600 text-justify">
-                    Contracts are issued directly to <span className="select-all">Evola Deliveries</span> Corporation.
+                    Contracts are issued directly to <span className="select-all">Evola Deliveries</span>.
 If you wish to use our services for a route that is currently not supported please contact <span className="font-bold">Nahtsu</span> directly.
 If you have any feedback please let us know!
                     </p>
