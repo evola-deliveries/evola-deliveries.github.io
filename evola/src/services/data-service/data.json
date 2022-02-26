@@ -173,7 +173,7 @@
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 550.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 20000000 }
                 ]},
                 { "region": "Perrigen Falls", "systems": [
-                    { "system": "MJ-5F9 - B E A N S T A R ","station": "MJ-5F9 - B E A N S T A R ", "reward": {"volume": 120.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 40000000000 }, "minimumReward": 1 }
+                    { "system": "MJ-5F9 - B E A N S T A R ","station": "MJ-5F9 - B E A N S T A R ", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 40000000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "The Kalevala Expanse", "systems": [
                     { "system": "R1O-GN","station": "R1O-GN - Z E N S T A R", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 5000000 }
@@ -210,7 +210,7 @@
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 20000000 }
                 ]},
                 { "region": "Perrigen Falls", "systems": [
-                    { "system": "MJ-5F9 - B E A N S T A R ","station": "MJ-5F9 - B E A N S T A R ", "reward": {"volume": 250.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 40000000000 }, "minimumReward": 1 }
+                    { "system": "MJ-5F9 - B E A N S T A R ","station": "MJ-5F9 - B E A N S T A R ", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 40000000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "The Kalevala Expanse", "systems": [
                     { "system": "R1O-GN - Z E N S T A R","station": "R1O-GN - Z E N S T A R", "reward": {"volume": 250.00, "collateral": 1.0 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 20000000 }
