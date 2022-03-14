@@ -106,15 +106,14 @@
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]},   
-            { "system": "3VL6-I","station": "3VL6-I", "regions": [
+            { "system": "Tactical Feed. Home","station": "Tactical Feed. Home", "regions": [
                 { "region": "Oasa", "systems": [
-                    { "system": "Tactical Feed. Home","station": "Tactical Feed. Home", "reward": {"volume": 60.00, "collateral": 0.00 }, "limits": { "volume": 340000.00, "collateral": 25000000000 }, "minimumReward": 0 },
                     { "system": "3VL6-I","station": "3VL6-I", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 25000000000 }, "minimumReward": 0 }
                 ]}
             ]}
         ]},
         { "region":"Oasa", "systems":[
-            { "system": "MJ-5F9 - Any Station","station": "MJ-5F9 - Any Station", "regions": [
+            { "system": "Tactical Feed. Home","station": "Tactical Feed. Home", "regions": [
                 { "region": "The Forge", "systems":[
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 1 },
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 1 }
@@ -124,6 +123,9 @@
                 { "region": "The Forge", "systems":[
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 1 },
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 1 }
+                ]},
+                { "region": "Perrigen Falls", "systems":[
+                   { "system": "MJ-5F9 - B E A N S T A R","station": "MJ-5F9 - B E A N S T A R", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 1 }
                 ]}
             ]}
         ]},         
