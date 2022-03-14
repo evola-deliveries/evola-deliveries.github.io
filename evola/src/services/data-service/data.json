@@ -35,7 +35,8 @@
                     { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "reward": {"volume": 550.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 25000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Immensea", "systems": [
-                    { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
+                    { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
+                    { "system": "GM-0K7 - Kings Landing","station": "GM-0K7 - Kings Landing", "reward": {"volume": 1200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Insmother", "systems": [
                     { "system": "J-ZYSZ - DICHSTAR 4 ","station": "J-ZYSZ - DICHSTAR 4 ", "reward": {"volume": 1300.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
@@ -78,7 +79,8 @@
                     { "system": "LXQ2-T - G A T E S T A R","station": "LXQ2-T - G A T E S T A R", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 20000000 }
                 ]},
                 { "region": "Malpais", "systems": [
-                    { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "reward": {"volume": 550.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 30000000 }
+                    { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "reward": {"volume": 550.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 45000000000 }, "minimumReward": 30000000 },
+                    { "system": "GM-0K7 - Kings Landing","station": "GM-0K7 - Kings Landing", "reward": {"volume": 1200.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Immensea", "systems": [
                     { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 2000000000 }, "minimumReward": 30000000 },
@@ -108,7 +110,7 @@
             ]},   
             { "system": "Tactical Feed. Home","station": "Tactical Feed. Home", "regions": [
                 { "region": "Oasa", "systems": [
-                    { "system": "3VL6-I","station": "3VL6-I", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 25000000000 }, "minimumReward": 0 }
+                    { "system": "MJ-5F9 - B E A N S T A R","station": "MJ-5F9 - B E A N S T A R", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 25000000000 }, "minimumReward": 0 }
                 ]}
             ]}
         ]},
@@ -125,7 +127,7 @@
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "Perrigen Falls", "systems":[
-                   { "system": "MJ-5F9 - B E A N S T A R","station": "MJ-5F9 - B E A N S T A R", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 1 }
+                   { "system": "MJ-5F9 - B E A N S T A R","station": "MJ-5F9 - B E A N S T A R", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 113000.00, "collateral": 4500000000 }, "minimumReward": 1 }
                 ]}
             ]}
         ]},         
