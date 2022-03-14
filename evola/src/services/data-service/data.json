@@ -47,6 +47,9 @@
                 { "region": "Tenerifis", "systems": [
                     { "system": "PDF-3Z - Morgy check your head","station": "PDF-3Z - Morgy check your head", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "ZMV9-A - Thermopylae","station": "ZMV9-A - Thermopylae", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
+                ]},
+                { "region": "Oasa", "systems": [
+                    { "system": "3VL6-I","station": "3VL6-I", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 20000000000 }, "minimumReward": 40000000 }
                 ]}
             ]},
             { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "regions": [
@@ -95,6 +98,9 @@
                 { "region": "Tenerifis", "systems": [
                     { "system": "PDF-3Z","station": "PDF-3Z - Morgy check your head", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "ZMV9-A - Thermopylae","station": "ZMV9-A - Thermopylae", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
+                ]},
+                { "region": "Oasa", "systems": [
+                    { "system": "3VL6-I","station": "3VL6-I", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 20000000000 }, "minimumReward": 40000000 }
                 ]}
             ]}
         ]},
