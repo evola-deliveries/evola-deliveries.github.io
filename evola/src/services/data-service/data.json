@@ -114,7 +114,7 @@
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}, 
                 { "region": "Oasa", "systems": [
-                    { "system": "MJ-5F9 - B E A N S T A R","station": "MJ-5F9 - B E A N S T A R", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 25000000000 }, "minimumReward": 0 }
+                    { "system": "3VL6-I","station": "3VL6-I", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 25000000000 }, "minimumReward": 0 }
                 ]}
             ]}
         ]},
