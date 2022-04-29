@@ -44,8 +44,7 @@
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]},
                 { "region": "Tenerifis", "systems": [
-                    { "system": "PDF-3Z - Morgy check your head","station": "PDF-3Z - Morgy check your head", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
-                    { "system": "T2-V8F - Kinky","station": "T2-V8F - Kinky", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
+                    { "system": "PDF-3Z - Morgy check your head","station": "PDF-3Z - Morgy check your head", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Oasa", "systems": [
                     { "system": "3VL6-I- Any HORDE Station","station": "3VL6-I", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 40000000 },
@@ -99,8 +98,7 @@
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]},
                 { "region": "Tenerifis", "systems": [
-                    { "system": "PDF-3Z","station": "PDF-3Z - Morgy check your head", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
-                    { "system": "T2-V8F - Kinky","station": "T2-V8F - Kinky", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
+                    { "system": "PDF-3Z","station": "PDF-3Z - Morgy check your head", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Oasa", "systems": [
                     { "system": "3VL6-I","station": "3VL6-I", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 40000000 },
@@ -214,9 +212,6 @@
                 ]}
             ]}    
         ]},
-        { "region": "Tenerifis", "systems": [
-                    { "system": "T2-V8F - Kinky","station": "T2-V8F - Kinky", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
-                ]},
         { "region":"Oasa", "systems":[
             { "system": "Tactical Feed. Home","station": "Tactical Feed. Home", "regions": [
                 { "region": "The Forge", "systems":[
