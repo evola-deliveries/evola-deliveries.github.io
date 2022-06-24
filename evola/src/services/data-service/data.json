@@ -40,7 +40,6 @@
                 { "region": "Immensea", "systems": [
                     { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "DW-N2S - Infrared Horizon","station": "DW-N2S - Infrared Horizon", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
-                    { "system": "XVV-21 - Bastion Green","station": "XVV-21 - Bastion Green", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "Y19P-1 - TIRE Sector Command Delta","station": "Y19P-1 - TIRE Sector Command Delta", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "Y-FZ5N - Deep As Nine","station": "Y-FZ5N - Deep As Nine", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
                 ]},
@@ -98,7 +97,6 @@
                 { "region": "Immensea", "systems": [
                     { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 2000000000 }, "minimumReward": 30000000 },
                     { "system": "DW-N2S - Infrared Horizon","station": "DW-N2S - Infrared Horizon", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
-                    { "system": "XVV-21 - Bastion Green","station": "XVV-21 - Bastion Green", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "Y19P-1 - TIRE Sector Command Delta","station": "Y19P-1 - TIRE Sector Command Delta", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "Y-FZ5N - Deep As Nine","station": "Y-FZ5N - Deep As Nine", "reward": {"volume": 1000.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
                 ]},
@@ -137,9 +135,6 @@
                 { "region": "Perrigen Falls", "systems": [
                     { "system": "REGION WIDE - Horde Stations","station": "REGION WIDE- Horde Stations", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 25000000000 }, "minimumReward": 15000000 },
                     { "system": "PA-ALN - NF - Costco","station": "PA-ALN - NF - Costco", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 1 }
-                ]}, 
-                { "region": "Immensea", "systems": [
-                    { "system": "XVV-21 - Bastion Green","station": "XVV-21 - Bastion Green", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 25000000000 }, "minimumReward": 15000000 }
                 ]}
             ]},
             { "system": "7M4-4C - Any HORDE Station","station": "7M4-4C - Any HORDE Station", "regions": [
