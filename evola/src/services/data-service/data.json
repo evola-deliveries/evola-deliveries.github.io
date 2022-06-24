@@ -131,7 +131,10 @@
                 ]}, 
                 { "region": "Oasa", "systems": [
                     { "system": "3VL6-I","station": "3VL6-I", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 25000000000 }, "minimumReward": 0 }
-                ]}, 
+                ]},  
+                { "region": "Tenerifis", "systems": [
+                    { "system": "T2-V8F - Kinky","station": "T2-V8F - Kinky", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 25000000000 }, "minimumReward": 0 }
+                ]},
                 { "region": "Perrigen Falls", "systems": [
                     { "system": "REGION WIDE - Horde Stations","station": "REGION WIDE- Horde Stations", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 25000000000 }, "minimumReward": 15000000 },
                     { "system": "PA-ALN - NF - Costco","station": "PA-ALN - NF - Costco", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 1 }
@@ -228,9 +231,6 @@
                 ]}
             ]}    
         ]},
-        { "region": "Tenerifis", "systems": [
-                { "system": "T2-V8F - Kinky","station": "T2-V8F - Kinky", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 25000000000 }, "minimumReward": 1000000 }
-                ]},
         { "region":"Oasa", "systems":[
             { "system": "Tactical Feed. Home","station": "Tactical Feed. Home", "regions": [
                 { "region": "The Forge", "systems":[
