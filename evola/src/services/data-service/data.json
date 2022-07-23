@@ -54,6 +54,9 @@
                 ]},
                 { "region": "Cobalt Edge", "systems": [
                     { "system": "5HN-D6 - Any HORDE Station","station": "5HN-D6", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 40000000 }
+                ]},
+                { "region": "Curse", "systems": [
+                    { "system": "HLW-HP VI - Moon 14 - Serpentis Corporation Chemical Refinery","station": "HLW-HP VI - Moon 14 - Serpentis Corporation Chemical Refinery", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 40000000 }
                 ]}
             ]},
             { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "regions": [
@@ -108,6 +111,9 @@
                 ]},
                 { "region": "Cobalt Edge", "systems": [
                     { "system": "5HN-D6 - Any HORDE Station","station": "5HN-D6", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 40000000 }
+                ]},
+                { "region": "Curse", "systems": [
+                    { "system": "HLW-HP VI - Moon 14 - Serpentis Corporation Chemical Refinery","station": "HLW-HP VI - Moon 14 - Serpentis Corporation Chemical Refinery", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 40000000 }
                 ]}
             ]}
         ]},
@@ -440,6 +446,17 @@
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 40000000 }
                 ]}
             ]}    
+        ]},
+        { "region":"Curse", "systems":[
+            { "system": "HLW-HP VI - Moon 14 - Serpentis Corporation Chemical Refinery","station": "HLW-HP VI - Moon 14 - Serpentis Corporation Chemical Refinery", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 },
+                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 }
+                ]},
+                { "region": "Overseer & Redloot NPC Vendor", "systems": [
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                ]}
+            ]}
         ]}
     ]
 }
