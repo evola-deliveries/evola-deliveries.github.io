@@ -17,7 +17,6 @@
                     { "system": "7M4-4C - Any HORDE Station","station": "7M4-4C - Any HORDE Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 1 },
                     { "system": "AY9X-Q - Any HORDE Station","station": "AY9X-Q - Any HORDE Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 1 },
                     { "system": "XU7-CH - Any HORDE Station","station": "XU7-CH - Any HORDE Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 1 },
-                    { "system": "9WVY-F - Any HORDE Station","station": "9WVY-F - Any HORDE Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 1 },
                     { "system": "U-W436 - Any HORDE Station","station": "U-W436 - Any HORDE Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 1 },
                     { "system": "Z-ENUD - Any HORDE Station","station": "Z-ENUD - Any HORDE Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 1 },
                     { "system": "BEG-RL - Any HORDE Station","station": "BEG-RL - Any HORDE Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 1 },
@@ -38,7 +37,6 @@
                     { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "DW-N2S - Infrared Horizon","station": "DW-N2S - Infrared Horizon", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "Y19P-1 - TIRE Sector Command Delta","station": "Y19P-1 - TIRE Sector Command Delta", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
-                    { "system": "Y-FZ5N - Deep As Nine","station": "Y-FZ5N - Deep As Nine", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "M-ZJWJ - M-Zero INIT USTZ Presence","station": "M-ZJWJ - M-Zero INIT USTZ Presence", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Insmother", "systems": [
@@ -95,7 +93,6 @@
                     { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 2000000000 }, "minimumReward": 30000000 },
                     { "system": "DW-N2S - Infrared Horizon","station": "DW-N2S - Infrared Horizon", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "Y19P-1 - TIRE Sector Command Delta","station": "Y19P-1 - TIRE Sector Command Delta", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
-                    { "system": "Y-FZ5N - Deep As Nine","station": "Y-FZ5N - Deep As Nine", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "M-ZJWJ - M-Zero INIT USTZ Presence","station": "M-ZJWJ - M-Zero INIT USTZ Presence", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Insmother", "systems": [
@@ -392,15 +389,6 @@
                 ]}
             ]},
             { "system": "Y19P-1 - TIRE Sector Command Delta","station": "Y19P-1 - TIRE Sector Command Delta", "regions": [
-                { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 },
-                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 }
-                ]},
-                { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
-                ]}
-            ]},
-            { "system": "Y-FZ5N - Deep As Nine","station": "Y-FZ5N - Deep As Nine", "regions": [
                 { "region": "The Forge", "systems":[
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 },
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 }
