@@ -125,6 +125,7 @@
             ]}
         ]},
         { "region":"Detorid - (Horde War Deployment)", "systems":[
+            { "system": "Detorid - (Horde War Deployment)","station": "O3-4MN - Valhalla", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 5000000 }
                 { "region": "Perrigen Falls", "systems": [
                     { "system": "MJ-5F9 - Any HORDE Station","station": "MJ-5F9 - Any HORDE Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 1 }
                 ]},
