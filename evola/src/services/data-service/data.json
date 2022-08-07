@@ -125,17 +125,7 @@
             ]}
         ]},
         { "region":"Detorid - (Horde War Deployment)", "systems":[
-            { "system": "Detorid - (Horde War Deployment)","station": "O3-4MN - Valhalla", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 5000000 }
-                { "region": "Perrigen Falls", "systems": [
-                    { "system": "MJ-5F9 - Any HORDE Station","station": "MJ-5F9 - Any HORDE Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 1 }
-                ]},
-                { "region": "Etherium Reach", "systems": [
-                    { "system": "LXQ2-T - Keepstar","station": "LXQ2-T - Keepstar", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 20000000 }
-                ]},
-                { "region": "Malpais", "systems": [
-                    { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 30000000 }
-                ]},
-            { "system": "Detorid - (Horde War Deployment)","station": "03-4MN - Valhalla", "regions": [
+            { "system": "Detorid - (Horde War Deployment)","station": "  O3-4MN - Valhalla", "regions": [
                 { "region": "The Forge", "systems":[
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 },
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 }
@@ -292,9 +282,6 @@
             ]}
         ]},         
         { "region":"The Kalevala Expanse", "systems":[
-              { "region": "Detorid - (War Deployment)" , "systems": [
-                    { "system": "Detorid - (Horde War Deployment)","station": "O3-4MN - Valhalla", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 5000000 }
-                ]},
             { "system": "R1O-GN - Any HORDE Station","station": "R1O-GN - Any HORDE Station", "regions": [
                 { "region": "The Forge", "systems":[
                     { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 20000000 },
@@ -345,9 +332,6 @@
         ]},
         { "region":"Malpais", "systems":[
             { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "regions": [
-                  { "region": "Detorid - (War Deployment)" , "systems": [
-                    { "system": "Detorid - (Horde War Deployment)","station": "O3-4MN - Valhalla", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 5000000 }
-                ]},
                 { "region": "The Forge", "systems":[
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 40000000 },
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 20000000 }
@@ -370,9 +354,6 @@
             ]}
         ]},
         { "region":"Etherium Reach", "systems":[
-            { "region": "Detorid - (War Deployment)" , "systems": [
-                    { "system": "Detorid - (Horde War Deployment)","station": "O3-4MN - Valhalla", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 5000000 }
-                ]},
             { "system": "LXQ2-T - Any HORDE Station","station": "LXQ2-T - Any HORDE Station", "regions": [
                 { "region": "The Forge", "systems":[
                     { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 20000000 },
