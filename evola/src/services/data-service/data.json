@@ -3,6 +3,9 @@
     "routes": [
         { "region": "The Forge", "systems": [
             { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "regions": [
+                { "region": "Detorid - (War Deployment)" , "systems": [
+                    { "system": "Detorid - (Horde War Deployment)","station": "O3-4MN - Valhalla", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 5000000 }
+                ]},
                 { "region": "The Kalevala Expanse" , "systems": [
                     { "system": "R1O-GN - Any HORDE Station","station": "R1O-GN - Any HORDE Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 5000000 },
                     { "system": "GQ-7SP - Any HORDE Station","station": "GQ-7SP - Any HORDE Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 5000000 },
@@ -34,7 +37,6 @@
                     { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 25000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Immensea", "systems": [
-                    { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "DW-N2S - Infrared Horizon","station": "DW-N2S - Infrared Horizon", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "Y19P-1 - TIRE Sector Command Delta","station": "Y19P-1 - TIRE Sector Command Delta", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "M-ZJWJ - M-Zero INIT USTZ Presence","station": "M-ZJWJ - M-Zero INIT USTZ Presence", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
@@ -55,9 +57,15 @@
                 ]},
                 { "region": "Curse", "systems": [
                     { "system": "HLW-HP VI - Moon 14 - Serpentis Corporation Chemical Refinery","station": "HLW-HP VI - Moon 14 - Serpentis Corporation Chemical Refinery", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 40000000 }
+                ]},
+                { "region": "Detorid", "systems": [
+                    { "system": "QXE-1N - WASME Detention Centre (RHC)","station": "QXE-1N - WASME Detention Centre (RHC)", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 40000000 }
                 ]}
             ]},
             { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "regions": [
+                { "region": "Detorid - (War Deployment)" , "systems": [
+                    { "system": "Detorid - (Horde War Deployment)","station": "O3-4MN - Valhalla", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 5000000 }
+                ]},
                 { "region": "The Kalevala Expanse" , "systems": [
                     { "system": "R1O-GN - Any HORDE Station","station": "R1O-GN - Any HORDE Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 5000000 },
                     { "system": "GQ-7SP - Any HORDE Station","station": "GQ-7SP - Any HORDE Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 5000000 },
@@ -90,7 +98,6 @@
                     { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 30000000 }
                 ]},
                 { "region": "Immensea", "systems": [
-                    { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 2000000000 }, "minimumReward": 30000000 },
                     { "system": "DW-N2S - Infrared Horizon","station": "DW-N2S - Infrared Horizon", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "Y19P-1 - TIRE Sector Command Delta","station": "Y19P-1 - TIRE Sector Command Delta", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 },
                     { "system": "M-ZJWJ - M-Zero INIT USTZ Presence","station": "M-ZJWJ - M-Zero INIT USTZ Presence", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 15000000000 }, "minimumReward": 30000000 }
@@ -111,11 +118,28 @@
                 ]},
                 { "region": "Curse", "systems": [
                     { "system": "HLW-HP VI - Moon 14 - Serpentis Corporation Chemical Refinery","station": "HLW-HP VI - Moon 14 - Serpentis Corporation Chemical Refinery", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 40000000 }
+                ]},
+                { "region": "Detorid", "systems": [
+                    { "system": "QXE-1N - WASME Detention Centre (RHC)","station": "QXE-1N - WASME Detention Centre (RHC)", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 40000000 }
+                ]}
+            ]}
+        ]},
+        { "region":"Detorid - (Horde War Deployment)", "systems":[
+            { "system": "Detorid - (Horde War Deployment)","station": "  O3-4MN - Valhalla", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 },
+                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 }
+                ]},
+                { "region": "Overseer & Redloot NPC Vendor", "systems": [
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]}
         ]},
         { "region":"Perrigen Falls", "systems":[
             { "system": "MJ-5F9 - Any HORDE Station","station": "MJ-5F9 - Any HORDE Station", "regions": [
+                { "region": "Detorid - (Horde War Deployment)", "systems":[
+                   { "system": "Horde War Staging - O3","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 1 }
+                ]},
                 { "region": "The Forge", "systems":[
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 1 },
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 1 }
@@ -369,53 +393,6 @@
                 ]}
             ]}
         ]},
-        { "region":"Immensea", "systems":[
-            { "system": "W4E-IT - The Troll Empire","station": "W4E-IT - The Troll Empire", "regions": [
-                { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 },
-                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 }
-                ]},
-                { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
-                ]}
-            ]},
-            { "system": "DW-N2S - Infrared Horizon","station": "DW-N2S - Infrared Horizon", "regions": [
-                { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 },
-                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 }
-                ]},
-                { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
-                ]}
-            ]},
-            { "system": "Y19P-1 - TIRE Sector Command Delta","station": "Y19P-1 - TIRE Sector Command Delta", "regions": [
-                { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 },
-                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 1050.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 }
-                ]},
-                { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
-                ]}
-            ]},
-            { "system": "M-ZJWJ - M-Zero INIT USTZ Presence","station": "M-ZJWJ - M-Zero INIT USTZ Presence", "regions": [
-                { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 },
-                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 30000000 }
-                ]},
-                { "region": "Perrigen Falls", "systems": [
-                    { "system": "MJ-5F9 - Any HORDE Station","station": "MJ-5F9 - Any HORDE Station", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 1 }
-                ]},
-                { "region": "Malpais", "systems": [
-                    { "system": "NSI-MW - Stellar Core","station": "NSI-MW - Stellar Core", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 25000000000 }, "minimumReward": 30000000 }
-                ]},
-                { "region": "Etherium Reach", "systems": [
-                    { "system": "LXQ2-T - Any HORDE Station","station": "LXQ2-T - Any HORDE Station", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 40000000000 }, "minimumReward": 20000000 }
-                ]},
-                { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
-                ]}
-            ]} 
-        ]},
         { "region":"Insmother", "systems":[
             { "system": "J-ZYSZ - DICHSTAR 4 ","station": "J-ZYSZ - DICHSTAR 4", "regions": [
                 { "region": "The Forge", "systems":[
@@ -445,6 +422,14 @@
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]}
+        ]},
+        { "region":"Detorid", "systems":[
+            { "system": "QXE-1N - WASME Detention Centre","station": "QXE-1N - WASME Detention Centre", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 40000000 },
+                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 4000000000 }, "minimumReward": 40000000 }
+                ]}
+            ]}    
         ]}
     ]
 }
