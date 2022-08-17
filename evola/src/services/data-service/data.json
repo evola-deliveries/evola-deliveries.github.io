@@ -100,34 +100,6 @@
                 ]}
             ]}
          ]},
-        { "region":"The Kalevala Expanse", "systems":[
-            { "system": "R1O-GN","station": "Any Horde Station", "regions": [
-               { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 6000000000 }, "minimumReward": 1 },
-                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 6000000000 }, "minimumReward": 1 }
-                ]}
-            ]},
-            { "system": "Any Industry System","station": "Any Horde Station", "regions": [
-               { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 6000000000 }, "minimumReward": 1 },
-                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 6000000000 }, "minimumReward": 1 }
-                ]}
-            ]},
-            { "system": "Any System Region Wide","station": "Any Horde Station", "regions": [
-               { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 6000000000 }, "minimumReward": 1 },
-                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 6000000000 }, "minimumReward": 1 }
-                ]}
-            ]},
-            { "system": "Intra-Regional","station": "Horde Stations", "regions": [
-               { "region": "The Kalevala Expanse", "systems":[
-                   { "system": "Any Horde System","station": "Any Horde Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 20000000 }
-                ]}
-            ]},
-                { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
-                ]}
-         ]},
          { "region":"NSI-MW", "systems":[
             { "system": "NSI-MW","station": "NSI-MW - Stellar Core", "regions": [
                { "region": "The Forge", "systems":[
