@@ -11,11 +11,6 @@
                 { "region": "Horde Deployment" , "systems": [
                     { "system": "O3-4MN","station": "O3-4MN - Valhalla", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
-                { "region": "The Kalevala Expanse" , "systems": [
-                    { "system": "R1O-GN","station": "Any Horde Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "Any Industry System","station": "Any Horde Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "Any System Region Wide","station": "Any Horde Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
-                ]},
                 { "region": "Malpais" , "systems": [
                     { "system": "NSI-MW","station": "NSI-MW - Stellar Core", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "P3X-TN","station": "P3X-TN - Black-Horizons", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
