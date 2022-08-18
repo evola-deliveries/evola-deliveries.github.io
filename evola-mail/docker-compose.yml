@@ -1,0 +1,16 @@
+version: '3'
+services:
+  evola-api:
+    image: dmportella/evola-mail:1.3
+    container_name: evola-mail
+    restart: unless-stopped
+    env_file:
+      - web-variables.env
+    networks:
+      - docker
+    volumes:
+      - /root/evola-mail/data:/usr/app/src/data
+
+networks: 
+  docker:
+    external: true
