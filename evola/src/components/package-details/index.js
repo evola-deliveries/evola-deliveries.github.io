@@ -38,7 +38,7 @@ export default function PackageDetails({ system, onPricingChange }) {
             <h3 className="w-full font-bold text-lg leading-tight">Package Details</h3>
             <p>Select a outbound route and a inbound route to enable the text area below.</p>
             <div>
-                <textarea className="w-full rounded disabled:bg-gray-200" disabled={isDisabled()} onChange={handleContentChange} placeholder="Tritium 1000 ..."></textarea>
+                <textarea className="w-full rounded disabled:bg-gray-200" disabled={isDisabled()} onChange={handleContentChange} placeholder="Tritanium 1000 ..."></textarea>
             </div>
             <div>
                 <button className="bg-green-700 disabled:bg-gray-500 text-white px-6 py-2 rounded font-medium hover:bg-green-600 transition duration-200 each-in-out" disabled={isDisabled()} onClick={getJanicePrices}>Calculate Prices</button>
