@@ -1,0 +1,13 @@
+#Deriving the latest base image
+FROM python:latest
+
+WORKDIR /usr/app/src
+
+COPY evola-mail.py ./
+COPY requirements.txt ./
+
+RUN pip install -r requirements.txt
+
+VOLUME "/data"
+
+CMD [ "python", "./evola-mail.py"]

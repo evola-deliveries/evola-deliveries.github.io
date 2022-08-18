@@ -87,7 +87,7 @@ module.exports = {
     // By default, the Node-RED UI is available at http://localhost:1880/
     // The following property can be used to specify a different root path.
     // If set to false, this is disabled.
-    httpAdminRoot: (process.env.ADMIN && process.env.ADMIN === true) ? '/admin' : false,
+    httpAdminRoot: (process.env.ADMIN && process.env.ADMIN === 'true') ? '/admin' : false,
 
     // Some nodes, such as HTTP In, can be used to listen for incoming http requests.
     // By default, these are served relative to '/'. The following property
@@ -167,7 +167,7 @@ module.exports = {
     // The following property can be used to disable the editor. The admin API
     // is not affected by this option. To disable both the editor and the admin
     // API, use either the httpRoot or httpAdminRoot properties
-    disableEditor: (process.env.ADMIN && process.env.ADMIN === true) ? true : false,
+    disableEditor: (process.env.ADMIN && process.env.ADMIN === 'false') ? true : false,
 
     // The following property can be used to configure cross-origin resource sharing
     // in the HTTP nodes.
