@@ -59,8 +59,7 @@
                     { "system": "HLW-HP VI - Moon 14 - Serpentis Corporation Chemical Refinery","station": "HLW-HP VI - Moon 14 - Serpentis Corporation Chemical Refinery", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 40000000 }
                 ]},
                 { "region": "Detorid", "systems": [
-                    { "system": "JFV-ID","station": "QXE-1N - WASME Detention Centre (RHC)", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 40000000 },
-                     { "system": "QXE-1N - WASME Detention Centre (RHC)","station": "QXE-1N - WASME Detention Centre (RHC)", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 40000000 }
+                    { "system": "QXE-1N - WASME Detention Centre (RHC)","station": "QXE-1N - WASME Detention Centre (RHC)", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 40000000 }
                 ]}
             ]},
             { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "regions": [
@@ -451,7 +450,7 @@
             ]},
             { "system": "O3-4MN","station": "O3-4MN - Valhalla", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "JFV-ID","station": "JFV-ID - Royal Star", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 4000000000 }, "minimumReward": 1 }
+                   { "system": "JFV-ID","station": "JFV-ID - Royal Star", "reward": {"volume": 50.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 4000000000 }, "minimumReward": 1 }
                 ]}
             ]}
 
