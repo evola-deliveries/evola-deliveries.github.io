@@ -450,7 +450,7 @@
             ]},
             { "system": "O3-4MN","station": "O3-4MN - Valhalla", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "JFV-ID","station": "JFV-ID - Royal Star", "reward": {"volume": 50.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 4000000000 }, "minimumReward": 1 }
+                   { "system": "JFV-ID","station": "JFV-ID - Royal Star", "reward": {"volume": 50.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 80000000000 }, "minimumReward": 1 }
                 ]}
             ]}
 
