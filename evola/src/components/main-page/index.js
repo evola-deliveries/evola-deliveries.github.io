@@ -11,7 +11,7 @@ const MainPage = () => {
 		<Router>
 			<div className="bg-cover flex flex-col min-h-screen" style={
 				{
-					"backgroundImage": "url(https://cdn.discordapp.com/attachments/376647838710628355/1009872730604179537/evobgtest-min.png)",
+					"backgroundImage": "url(https://cdn.discordapp.com/attachments/844608846525104158/1012346074561790062/evobg2-min2.png)",
 					"background-position": "center",
 					"background-repeat": "repeat",
 					"background-size": "cover"
