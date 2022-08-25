@@ -76,9 +76,9 @@ export default function ContractCreator() {
                     </div>
                     <hr />
                     <h2 className="w-full font-bold text-xl">Contract Creator</h2>
-                    <h3 className="w-full font-bold text-gl">Select the outbound and inbound</h3>
+                    <h3 className="w-full font-bold text-gl">Select the Pickup and Dropoff</h3>
                     <div className="flex justify-between">
-                        <label htmlFor="outbound">Outbound:</label>
+                        <label htmlFor="outbound">Pickup:</label>
                         <select name="outbound" defaultValue={outboundValue} onChange={handleOutboundChanged} >
                             <option disabled hidden value=''></option>
                             {DataService.routes.map(route => (
@@ -95,7 +95,7 @@ export default function ContractCreator() {
                         <span className="select-all mx-2">{outboundRoute && outboundRoute.station}</span>
                     </div>
                     <div className="flex justify-between">
-                        <label htmlFor="inbound">Inbound:</label>
+                        <label htmlFor="inbound">Dropoff:</label>
                         <select name="inbound" defaultValue="" onChange={handleInboundChanged} >
                             <option value="">None</option>
                             {DataService.getRoutes(outboundValue).map(route => (
