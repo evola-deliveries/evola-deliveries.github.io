@@ -1,96 +1,124 @@
-import React from 'react';
-import Config from '../../services/config-service';
+import React, { useEffect, useState } from 'react';
+import PackageDetails from '../package-details';
+import OrderTicket from '../order-ticket';
+import DataService from '../../services/data-service';
+import ConfigService from '../../services/config-service';
 
-export default function ContractCreator({ outbound, inbound, pricing }) {
+function calculatePricing(inboundRouteDeep, price, volume, janice) {
+    const volumeIsk = inboundRouteDeep ? Math.ceil(volume * inboundRouteDeep.reward.volume) : 0;
+    const collateralIsk = inboundRouteDeep ? Math.ceil((price / 100) * inboundRouteDeep.reward.collateral) : 0;
+    const volumeInvalid = inboundRouteDeep ? inboundRouteDeep.limits.volume < volume : false;
+    const collateralInvalid = inboundRouteDeep ? inboundRouteDeep.limits.collateral < price : false;
+    let total = volumeIsk + collateralIsk;
+    if (inboundRouteDeep && total < inboundRouteDeep.minimumReward) total = inboundRouteDeep.minimumReward;
+
+    return {
+        price: price,
+        volume: volume,
+        janice: janice,
+        totals: {
+            volumeInvalid: volumeInvalid,
+            collateralInvalid: collateralInvalid,
+            volume: volumeIsk,
+            collateral: collateralIsk,
+            total: total
+        }
+    };
+}
+
+export default function ContractCreator() {
+    const [pricing, setPricing] = useState(calculatePricing(null, 0, 0, ""));
+
+    const [outboundValue, setOutboundValue] = useState(DataService.default.region + "|" + DataService.default.system);
+
+    useEffect(() => {
+        setOutboundRoute(DataService.getOutboundRoute(outboundValue));
+    }, [outboundValue]);
+
+    const [inboundValue, setInboundValue] = useState("");
+
+    useEffect(() => {
+        setInboundRoute(DataService.getInboundRoute(outboundValue, inboundValue));
+    }, [inboundValue]); // eslint-disable-line react-hooks/exhaustive-deps
+    // TODO fix this
+
+    const handleOutboundChanged = (event) => setOutboundValue(event.target.value);
+    const handleInboundChanged = (event) => setInboundValue(event.target.value);
+
+    const [inboundRoute, setInboundRoute] = useState();
+
+    useEffect(() => {
+        setPricing(calculatePricing(inboundRoute, pricing.price, pricing.volume, pricing.janice));
+    }, [inboundRoute]); // eslint-disable-line react-hooks/exhaustive-deps
+
+    const [outboundRoute, setOutboundRoute] = useState();
+
+    const handlePricingChange = (price, volume, janice) => {
+        setPricing(calculatePricing(inboundRoute, price, volume, janice));
+    };
+
     return (
-        <div class="py-8">
-            <div class="p-1 border-2 border-black font-sans w-80 sm:w-72 bg-white">
-                <div class="flex justify-center text-4xl font-extrabold">Evola</div>
-                <div class="flex justify-center text-4xl font-extrabold">Deliveries</div>
-                <div class="flex justify-center leading-snug border-b-4 border-black">Eve Online Corporation</div>
-                <div class="text-sm pb-1">
-                    <hr class="border-gray-500" />
-                    <div class="flex justify-between">
-                        <div>
-                            <span class="font-bold">Package Details</span>
-                        </div>
-                        <span>{pricing && pricing.janice !== ""
-                            ? <a href={pricing.janice !== "" && Config.janice_url + pricing.janice} target="_blank" rel="noreferrer" class="text-purple-900 font-semibold">Janice {pricing && pricing.janice}</a>
-                            : ""}</span>
+        <div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">
+            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
+                <div className="shadow-lg rounded-lg bg-white px-2 py-2">
+                    <div className="my-2">
+                        <h4 class="md:block text-xl text-gray-400">WELCOME TO</h4>
+                        <h3 class="md:block font-bold text-2xl text-gray-700">EVOLA DELIVERIES</h3>
+                        <p class="text-gray-600 text-justify">
+                            Contracts are issued directly to <span className="select-all">Evola Deliveries</span>.
+                            If you wish to use our services for a route that is currently not supported please contact <span className="font-bold">Nahtsu</span> directly.
+                            If you have any feedback please let us know!
+                        </p>
+                        <a class="flex items-baseline mt-3 text-blue-600 hover:text-blue-900 focus:text-blue-900" href={ConfigService.discord_url} target="_blank" rel="noreferrer">
+                            <span>Join Discord</span>
+                            <span class="text-xs ml-1">&#x279c;</span>
+                        </a>
                     </div>
-                    <hr class="border-gray-500" />
-                    <div class="flex justify-between">
-                        <span class="italic pl-4">Appraisal Reference</span>
-                        <div><span class="select-all">{pricing.janice !== "" && pricing.janice}</span></div>
+                    <hr />
+                    <h2 className="w-full font-bold text-xl">Contract Creator</h2>
+                    <h3 className="w-full font-bold text-gl">Select the Pickup and Dropoff</h3>
+                    <div className="flex justify-between">
+                        <label htmlFor="outbound">Pickup:</label>
+                        <select name="outbound" defaultValue={outboundValue} onChange={handleOutboundChanged} >
+                            <option disabled hidden value=''></option>
+                            {DataService.routes.map(route => (
+                                <optgroup key={route.region} label={route.region}>
+                                    {route.systems.map(system => (
+                                        <option value={route.region + "|" + system.system}>{system.system}</option>
+                                    ))}
+                                </optgroup>
+                            ))}
+                        </select>
                     </div>
-
-                    <div class="flex justify-between">
-                        <span class="italic pl-4">Cubic Meter's</span>
-                        <div className={pricing && pricing.totals.volumeInvalid ? "font-bold text-red-600" : "font-bold text-green-600"}><span class="select-all">{pricing && Number(pricing.volume).toLocaleString('en')}</span> m3</div>
+                    <div className="flex justify-between my-2 border-b-2 border-dashed border-green-700">
+                        <label>Station (from):</label>
+                        <span className="select-all mx-2">{outboundRoute && outboundRoute.station}</span>
                     </div>
-
-
-<div class="flex justify-between">
-                        <div class="font-bold">Pricing</div>
-            
+                    <div className="flex justify-between">
+                        <label htmlFor="inbound">Dropoff:</label>
+                        <select name="inbound" defaultValue="" onChange={handleInboundChanged} >
+                            <option value="">None</option>
+                            {DataService.getRoutes(outboundValue).map(route => (
+                                <optgroup key={route.region} label={route.region}>
+                                    {route.systems.map(system => (
+                                        <option value={route.region + "|" + system.system}>{system.system}</option>
+                                    ))}
+                                </optgroup>
+                            ))}
+                        </select>
                     </div>
-                    <hr class="border-gray-500" />
-<div class="flex justify-between">
-                        <div class="pl-4">Volume</div>
-                        <div className={pricing && pricing.totals.volumeInvalid ? "font-bold text-red" : ""}><span class="select-all">{inbound && Number(inbound.reward.volume).toLocaleString('en')}</span> m3</div>
+                    <div className="flex justify-between my-2 border-b-2 border-dashed border-green-700">
+                        <label>Station (to):</label>
+                        <span className="select-all mx-2">{inboundRoute && inboundRoute.station}</span>
                     </div>
-                    <div class="flex justify-between">
-                        <div class="pl-4">Collateral</div>
-                        <div>{inbound && Number(inbound.reward.collateral).toLocaleString('en')}%</div>
-                    </div>
-                    <div class="flex justify-between">
-                        <div>
-                            <span class="font-bold">Limits</span>
-                        </div>
-                    </div>
-                    <hr class="border-gray-500" />
-                    <div class="flex justify-between">
-                        <div class="pl-4">Min Reward</div>
-                        <div><span class="select-all">{inbound && Number(inbound.minimumReward).toLocaleString('en')}</span> isk</div>
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="pl-4">Max Volume</div>
-                        <div><span class="select-all">{inbound && Number(inbound.limits.volume).toLocaleString('en')}</span> m3</div>
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="pl-4">Max Collateral</div>
-                        <div><span class="select-all">{inbound && Number(inbound.limits.collateral).toLocaleString('en')}</span> isk</div>
-                    </div>
-                    <hr class="border-gray-500" />
-                    <div class="flex justify-between">
-                        <div>
-                            <span class="font-bold">Total Reward</span>
-                        </div>
-                        <div class="font-bold text-green-600"><span class="select-all">{pricing && Number(pricing.totals.total).toLocaleString('en')}</span> isk</div>
-                    </div>
-
-                    <div class="flex justify-between">
-                        <div>
-                            <span class="font-bold">Total Collateral</span>
-                        </div>
-                        <div className={pricing && pricing.totals.collateralInvalid ? "font-bold text-red-600" : "font-bold text-green-600"}><span class="select-all">{pricing && Number(pricing.price).toLocaleString('en')}</span> isk</div>
-                    </div>
-
-
+                    <PackageDetails system={inboundRoute} onPricingChange={handlePricingChange} />
                 </div>
-
-                <div class="flex justify-center"></div>
-                <div class="border-t-4 border-black flex leading-none text-xs pt-2 pb-1">
-                    <div class="pr-1">*</div>
-                    <div>
-                        Contracts are issued directly to: <br/>
-                        <span class="font-bold">Evola Deliveries</span>.<br/><br/>
-                        <span class="font-bold">No Containers!</span><br />
-                        <span class="font-bold">No Assembled Ships!</span><br/><br/>
-                        If you have any feedback please contact <span class="font-bold">Nahtsu#9654</span>
-                    </div>
+            </div>
+            <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
+                <div className="flex justify-center w-full">
+                    <OrderTicket outbound={outboundRoute} inbound={inboundRoute} pricing={pricing} />
                 </div>
             </div>
         </div>
     );
-}
+};
