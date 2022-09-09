@@ -11,7 +11,7 @@ const MainPage = () => {
 		<Router>
 			<div className="bg-cover flex flex-col min-h-screen" style={
 				{
-					"backgroundImage": "url(https://images.pexels.com/photos/41951/solar-system-emergence-spitzer-telescope-telescope-41951.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)",
+					"backgroundImage": "url(https://cdn.discordapp.com/attachments/886069436371583036/1012352848366948392/Background.webp)",
 					"background-position": "center",
 					"background-repeat": "repeat",
 					"background-size": "cover"
