@@ -46,7 +46,10 @@
         "tls": "",
         "persist": false,
         "proxy": "",
+        "insecureHTTPParser": false,
         "authType": "",
+        "senderr": false,
+        "headers": [],
         "x": 530,
         "y": 120,
         "wires": [
@@ -65,6 +68,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 380,
         "y": 120,
         "wires": [
@@ -100,6 +104,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 380,
         "y": 180,
         "wires": [
@@ -107,5 +112,201 @@
                 "70cc2683.ee42c"
             ]
         ]
+    },
+    {
+        "id": "6ad893986c109683",
+        "type": "function",
+        "z": "85d09905.9710c8",
+        "name": "setGlobals",
+        "func": "msg.page = 1\nmsg.contracts = []\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 640,
+        "wires": [
+            [
+                "46a9940b002fe417"
+            ]
+        ]
+    },
+    {
+        "id": "84e034956fded3c5",
+        "type": "http request",
+        "z": "85d09905.9710c8",
+        "name": "getContracts",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://esi.evetech.net/latest/corporations/98684131/contracts/?datasource=tranquility&page={{page}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 550,
+        "y": 720,
+        "wires": [
+            [
+                "9fe02df565db798e"
+            ]
+        ]
+    },
+    {
+        "id": "46a9940b002fe417",
+        "type": "function",
+        "z": "85d09905.9710c8",
+        "name": "headers",
+        "func": "const options = {\n  'Authorization': 'Bearer ' + global.get(\"ESIAPIKEY\"),\n  'Content-Type': 'application/json'\n}\nmsg.headers = options;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 720,
+        "wires": [
+            [
+                "84e034956fded3c5"
+            ]
+        ]
+    },
+    {
+        "id": "9fe02df565db798e",
+        "type": "function",
+        "z": "85d09905.9710c8",
+        "name": "handleResponse",
+        "func": "if (msg.payload.length == 1000)\n{\n    //more contracts\n    global.set(\"CONTRACTS\", msg.payload)\n    msg.page = msg.page + 1\n    msg.contracts.push(msg.payload)\n    return [msg, null, null]\n}\nelse if (msg.payload.error == \"token is expired\")\n{\n    //token expired\n    return [null, msg, null];\n}\nelse\n{\n    //no more contracts\n    msg.contracts.push(msg.payload)\n    return [null, null, msg]\n}\nreturn [null, null, null];",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 600,
+        "wires": [
+            [
+                "46a9940b002fe417"
+            ],
+            [
+                "e7d6766c4f4d1c85"
+            ],
+            [
+                "1336ee99b3dc038e"
+            ]
+        ]
+    },
+    {
+        "id": "fd7304565eefb4d9",
+        "type": "http request",
+        "z": "85d09905.9710c8",
+        "name": "refreshTokens",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://login.eveonline.com/v2/oauth/token/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 880,
+        "y": 820,
+        "wires": [
+            [
+                "409c75a68b0f06f6"
+            ]
+        ]
+    },
+    {
+        "id": "e7d6766c4f4d1c85",
+        "type": "function",
+        "z": "85d09905.9710c8",
+        "name": "refreshHeaders",
+        "func": "msg.headers = {\n    \"Content-Type\": \"application/x-www-form-urlencoded\",\n    \"Authorization\": global.get(\"AUTHTOKEN\")\n};\n\n\nmsg.payload = {\n    \"grant_type\": \"refresh_token\",\n    \"refresh_token\": global.get(\"REFRESHTOKEN\")\n};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 720,
+        "wires": [
+            [
+                "fd7304565eefb4d9"
+            ]
+        ]
+    },
+    {
+        "id": "409c75a68b0f06f6",
+        "type": "function",
+        "z": "85d09905.9710c8",
+        "name": "setToken",
+        "func": "global.set(\"ESIAPIKEY\", msg.payload.access_token)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 820,
+        "wires": [
+            [
+                "46a9940b002fe417"
+            ]
+        ]
+    },
+    {
+        "id": "1336ee99b3dc038e",
+        "type": "function",
+        "z": "85d09905.9710c8",
+        "name": "processContracts",
+        "func": "var allContracts = []\nfor (var i in msg.contracts) {\n    for (var j in msg.contracts[i]) {\n        allContracts.push(msg.contracts[i][j])\n    }\n}\n\nvar validContracts = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"outstanding\")\n\nvar validContractsProgress = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"in_progress\")\n\nmsg.payload = \n{\n    \"Outstanding\": validContracts.length,\n    \"InProgress\": validContractsProgress.length\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 600,
+        "wires": [
+            [
+                "11dc75cc41e4d1d9"
+            ]
+        ]
+    },
+    {
+        "id": "03a3abbbeaf621c1",
+        "type": "http in",
+        "z": "85d09905.9710c8",
+        "name": "getContracts",
+        "url": "/getContracts",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 70,
+        "y": 600,
+        "wires": [
+            [
+                "6ad893986c109683"
+            ]
+        ]
+    },
+    {
+        "id": "11dc75cc41e4d1d9",
+        "type": "http response",
+        "z": "85d09905.9710c8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1080,
+        "y": 520,
+        "wires": []
     }
 ]
