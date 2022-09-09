@@ -71,8 +71,10 @@ export default function ContractCreator() {
             <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
                 <div className="shadow-lg rounded-lg bg-white px-2 py-2">
                     <div className="my-2">
-                        <h4 class="md:block text-xl text-gray-400">WELCOME TO</h4>
-                        <h3 class="md:block font-bold text-2xl text-gray-700">EVOLA DELIVERIES</h3>
+                    <div className="headerCont">
+                            <h4 class="md:block text-xl text-gray-400">WELCOME TO</h4>
+                            <h3 class="md:block font-bold text-2xl text-gray-700">EVOLA DELIVERIES</h3>
+                        </div>
                         <div className="headerCont2">
                             <h4 class="md:block text-xl text-gray-400">Queue Status:</h4>
                             <h3 class="font-bold text-2xl inLine outstandingColor">{outstandingContracts}</h3>
