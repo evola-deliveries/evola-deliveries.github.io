@@ -3,6 +3,7 @@ import PackageDetails from '../package-details';
 import OrderTicket from '../order-ticket';
 import DataService from '../../services/data-service';
 import ConfigService from '../../services/config-service';
+import ContractService from "../../services/esi-service";
 
 function calculatePricing(inboundRouteDeep, price, volume, janice) {
     const volumeIsk = inboundRouteDeep ? Math.ceil(volume * inboundRouteDeep.reward.volume) : 0;
@@ -57,6 +58,14 @@ export default function ContractCreator() {
         setPricing(calculatePricing(inboundRoute, price, volume, janice));
     };
 
+    const [outstandingContracts, setOutstandingContracts] = useState();
+    const [progressContracts, setProgressContracts] = useState();
+
+    ContractService.getContracts().then(r => {
+        setOutstandingContracts(r.Outstanding)
+        setProgressContracts(r.InProgress)
+    })
+
     return (
         <div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">
             <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
@@ -64,6 +73,13 @@ export default function ContractCreator() {
                     <div className="my-2">
                         <h4 class="md:block text-xl text-gray-400">WELCOME TO</h4>
                         <h3 class="md:block font-bold text-2xl text-gray-700">EVOLA DELIVERIES</h3>
+                        <div className="headerCont2">
+                            <h4 class="md:block text-xl text-gray-400">Queue Status:</h4>
+                            <h3 class="font-bold text-2xl inLine outstandingColor">{outstandingContracts}</h3>
+                            <h3 className="font-bold text-2xl text-gray-700 inLine">&nbsp;Outstanding&nbsp;</h3>
+                            <h3 class="font-bold text-2xl inLine inProgressColor">{progressContracts}</h3>
+                            <h3 className="font-bold text-2xl text-gray-700 inLine">&nbsp;In Progress</h3>
+                        </div>
                         <p class="text-gray-600 text-justify">
                             Contracts are issued directly to <span className="select-all">Evola Deliveries</span>.
                             If you wish to use our services for a route that is currently not supported please contact <span className="font-bold">Nahtsu</span> directly.

@@ -6,3 +6,28 @@
     background-image: url( https://images.pexels.com/photos/41951/solar-system-emergence-spitzer-telescope-telescope-41951.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260 );
     background-blend-mode: multiply;
 }
+
+.statusContainer {
+    height: 100px;
+}
+
+.headerCont {
+    width: 40%;
+    display: inline-block;
+}
+
+.headerCont2 {
+    display: inline-block;
+}
+
+.inLine {
+    display: inline-block;
+}
+
+.outstandingColor {
+    color: rgba(5, 150, 105);
+}
+
+.inProgressColor {
+    color: rgba(5, 150, 105);
+}
