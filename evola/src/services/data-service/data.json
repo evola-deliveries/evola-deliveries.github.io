@@ -22,7 +22,7 @@
                     { "system": "Region Wide","station": "Horde Must be able to dock", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "Spire" , "systems": [
-                    { "system": "Y8K-5B","station": "Y8K-5B - Ringing Coins House (Blank-Space)", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                    { "system": "Y8K-5B","station": "Y8K-5B - RC House", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "Etherium Reach" , "systems": [
                     { "system": "LXQ2-T","station": "LXQ2-T - G A T E S T A R", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
@@ -186,7 +186,7 @@
         ]},
 
         { "region":"Spire", "systems":[
-            { "system": "Y8K-5B","station": "Y8K-5B - Ringing Coins House (Blank-Space)","regions": [
+            { "system": "Y8K-5B","station": "Y8K-5B - RC House","regions": [
                 { "region": "The Forge", "systems":[
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 1 },
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 1 }
