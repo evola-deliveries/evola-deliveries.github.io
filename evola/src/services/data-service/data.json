@@ -33,7 +33,8 @@
                 ]},
                 { "region": "Cobalt Edge" , "systems": [
                     { "system": "5HN-D6","station": "5HN-D6 - Any Horde Station", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 },
-                    { "system": "QT-EBC","station": "QT-EBC - Any Horde Station", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 }
+                    { "system": "QT-EBC","station": "QT-EBC - Any Horde Station", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 },
+                    { "system": "4GSZ-1","station": "4GSZ-1 - AT - The Cathedral", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 30000000000 }, "minimumReward": 25000000 }
                 ]},
                 { "region": "Insmother" , "systems": [
                     { "system": "J-ZYSZ","station": "J-ZYSZ - DICHSTAR 4 ", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 30000000000 }, "minimumReward": 15000000 }
@@ -71,8 +72,9 @@
                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 5000000 }
                 ]},
                 { "region": "Cobalt Edge" , "systems": [
-                    { "system": "5HN-D6","station": "5HN-D6 - Any Horde Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 },
-                    { "system": "QT-EBC","station": "QT-EBC - Any Horde Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 }
+                    { "system": "5HN-D6","station": "5HN-D6 - Any Horde Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 },
+                    { "system": "QT-EBC","station": "QT-EBC - Any Horde Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 },
+                    { "system": "4GSZ-1","station": "4GSZ-1 - AT - The Cathedral", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 30000000000 }, "minimumReward": 25000000 }
                 ]}
             ]},
 
@@ -129,10 +131,6 @@
                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 5000000 },
                    { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 5000000 },
                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 5000000 }
-                ]},
-                { "region": "Cobalt Edge" , "systems": [
-                    { "system": "5HN-D6","station": "5HN-D6 - Any Horde Station", "reward": {"volume": 180.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 },
-                    { "system": "QT-EBC","station": "QT-EBC - Any Horde Station", "reward": {"volume": 180.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 }
                 ]}
             ]},
 
@@ -154,6 +152,7 @@
                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 5000000 }
                 ]}
             ]},
+
             
             { "system": "Any System Region Wide","station": "Any Horde Station", "regions": [
                 { "region": "The Forge", "systems":[
@@ -258,10 +257,10 @@
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 10000000 }
                 ]},
                 { "region": "Panfam Hubs", "systems":[
-                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
-                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
-                    { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
-                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 }
+                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
+                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
+                    { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
@@ -273,14 +272,32 @@
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 10000000 }
                 ]},
                 { "region": "Panfam Hubs", "systems":[
-                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
-                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
-                    { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
-                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 }
+                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
+                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
+                    { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
-                ]}
+                ]},
+                    { "region": "Panfam Hubs", "systems":[
+                        { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
+                        { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
+                        { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
+                        { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 }
+                     ]}
+            ]},
+            { "system": "4GSZ-1","station": "4GSZ-1 - AT - The Cathedral", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 10000000 },
+                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 10000000 }
+                ]},
+                { "region": "Panfam Hubs", "systems":[
+                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
+                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
+                    { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 },
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 10000000 }
+                 ]}
             ]}
         ]},
         { "region":"Insmother", "systems":[
