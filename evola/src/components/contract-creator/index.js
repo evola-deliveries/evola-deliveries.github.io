@@ -64,6 +64,8 @@ export default function ContractCreator() {
     ContractService.getContracts().then(r => {
         setOutstandingContracts(r.Outstanding)
         setProgressContracts(r.InProgress)
+    }).catch(reason => {
+        console.log(reason);
     })
 
     return (
@@ -72,24 +74,24 @@ export default function ContractCreator() {
                 <div className="shadow-lg rounded-lg bg-white px-2 py-2">
                     <div className="my-2">
                     <div className="headerCont">
-                            <h4 class="md:block text-xl text-gray-400">WELCOME TO</h4>
-                            <h3 class="md:block font-bold text-2xl text-gray-700">EVOLA DELIVERIES</h3>
+                            <h4 className="md:block text-xl text-gray-400">WELCOME TO</h4>
+                            <h3 className="md:block font-bold text-2xl text-gray-700">EVOLA DELIVERIES</h3>
                         </div>
                         <div className="headerCont2">
-                            <h4 class="md:block text-xl text-gray-400">Queue Status:</h4>
-                            <h3 class="font-bold text-2xl inLine outstandingColor">{outstandingContracts}</h3>
+                            <h4 className="md:block text-xl text-gray-400">Queue Status:</h4>
+                            <h3 className="font-bold text-2xl inLine outstandingColor">{outstandingContracts}</h3>
                             <h3 className="font-bold text-2xl text-gray-700 inLine">&nbsp;Outstanding&nbsp;</h3>
-                            <h3 class="font-bold text-2xl inLine inProgressColor">{progressContracts}</h3>
+                            <h3 className="font-bold text-2xl inLine inProgressColor">{progressContracts}</h3>
                             <h3 className="font-bold text-2xl text-gray-700 inLine">&nbsp;In Progress</h3>
                         </div>
-                        <p class="text-gray-600 text-justify">
+                        <p className="text-gray-600 text-justify">
                             Contracts are issued directly to <span className="select-all">Evola Deliveries</span>.
                             If you wish to use our services for a route that is currently not supported please contact <span className="font-bold">Nahtsu</span> directly.
                             If you have any feedback please let us know!
                         </p>
-                        <a class="flex items-baseline mt-3 text-blue-600 hover:text-blue-900 focus:text-blue-900" href={ConfigService.discord_url} target="_blank" rel="noreferrer">
+                        <a className="flex items-baseline mt-3 text-blue-600 hover:text-blue-900 focus:text-blue-900" href={ConfigService.discord_url} target="_blank" rel="noreferrer">
                             <span>Join Discord</span>
-                            <span class="text-xs ml-1">&#x279c;</span>
+                            <span className="text-xs ml-1">&#x279c;</span>
                         </a>
                     </div>
                     <hr />
