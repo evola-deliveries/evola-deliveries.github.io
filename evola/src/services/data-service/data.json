@@ -36,14 +36,14 @@
                 ]},
                 { "region": "Cobalt Edge" , "systems": [
                     { "system": "5HN-D6","station": "5HN-D6 - Any Horde Station", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 },
-                    { "system": "QT-EBC","station": "QT-EBC - Any Horde Station", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 },
+                    { "system": "QT-EBC","station": "QT-EBC - D R A G O N . S T A R ", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 },
                     { "system": "4GSZ-1","station": "4GSZ-1 - AT - The Cathedral", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 30000000000 }, "minimumReward": 25000000 }
                 ]},
                 { "region": "Insmother" , "systems": [
                     { "system": "J-ZYSZ","station": "J-ZYSZ - DICHSTAR 4 ", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 30000000000 }, "minimumReward": 15000000 }
                 ]},
                 { "region": "Immensea" , "systems": [
-                    { "system": "DW-N2S","station": "DW-N2S - Valkyrie Fleet Battle Station", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 15000000 },
+                    { "system": "DW-N2S","station": "DW-N2S - Infrared Horizon", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 15000000 },
                     { "system": "Y19P-1","station": "TIRE Sector Command Delta", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 15000000 },
                     { "system": "W4E-IT","station": "W4E-IT - The Comeback Empire", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 15000000 },
                     { "system": "08-N7Q","station": "08-N7Q - FIGLTOPIA", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 15000000 }
@@ -80,8 +80,11 @@
                 ]},
                 { "region": "Cobalt Edge" , "systems": [
                     { "system": "5HN-D6","station": "5HN-D6 - Any Horde Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 },
-                    { "system": "QT-EBC","station": "QT-EBC - Any Horde Station", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 },
+                    { "system": "QT-EBC","station": "QT-EBC - D R A G O N . S T A R ", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 },
                     { "system": "4GSZ-1","station": "4GSZ-1 - AT - The Cathedral", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 30000000000 }, "minimumReward": 25000000 }
+                ]},
+                { "region": "Perrigen Falls" , "systems": [
+                    { "system": "Any Industry System","station": "Any Horde Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 30000000 }
                 ]}
             ]},
 
@@ -282,7 +285,7 @@
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]},
-            { "system": "QT-EBC","station": "QT-EBC - Any Horde Station", "regions": [
+            { "system": "QT-EBC","station": "QT-EBC - D R A G O N . S T A R ", "regions": [
                 { "region": "The Forge", "systems":[
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 10000000 },
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 10000000 }
@@ -328,7 +331,7 @@
             ]}
         ]},
         { "region":"Immensea", "systems":[
-            { "system": "DW-N2S","station": "DW-N2S - Valkyrie Fleet Battle Station", "regions": [
+            { "system": "DW-N2S","station": "DW-N2S - Infrared Horizon", "regions": [
                 { "region": "The Forge", "systems":[
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 10000000 },
                     { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 10000000 }
