@@ -8,7 +8,8 @@
                 ]},
                 { "region": "DEPLOYMENT" , "systems": [
                     { "system": "PUZ-IO","station": "PUZ-IO - Juuzio in PUZ-IO", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "X-7OMU","station": "X-7OMU - Sanctuary School", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                    { "system": "X-7OMU","station": "X-7OMU - Sanctuary School", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                    { "system": "EFM-C4","station": "EFM-C4 - D E F I Z A R", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "Perrigen Falls" , "systems": [
                     { "system": "MJ-5F9","station": "Any Horde Station", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
@@ -53,7 +54,8 @@
                 ]},
                 { "region": "DEPLOYMENT", "systems":[
                     { "system": "PUZ-IO","station": "PUZ-IO - Juuzio in PUZ-IO", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "X-7OMU","station": "X-7OMU - Sanctuary School", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 1 }
+                    { "system": "X-7OMU","station": "X-7OMU - Sanctuary School", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 1 },
+                    { "system": "EFM-C4","station": "EFM-C4 - D E F I Z A R", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "The Forge", "systems":[
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 1 },
@@ -128,7 +130,8 @@
                 ]},
                 { "region": "DEPLOYMENT", "systems":[
                     { "system": "PUZ-IO","station": "PUZ-IO - Juuzio in PUZ-IO", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "X-7OMU","station": "X-7OMU - Sanctuary School", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 1 }
+                    { "system": "X-7OMU","station": "X-7OMU - Sanctuary School", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 1 },
+                    { "system": "EFM-C4","station": "EFM-C4 - D E F I Z A R", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 0.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
@@ -222,7 +225,8 @@
                 ]},
                 { "region": "DEPLOYMENT", "systems":[
                     { "system": "PUZ-IO","station": "PUZ-IO - Juuzio in PUZ-IO", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "X-7OMU","station": "X-7OMU - Sanctuary School", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 1 }
+                    { "system": "X-7OMU","station": "X-7OMU - Sanctuary School", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 1 },
+                    { "system": "EFM-C4","station": "EFM-C4 - D E F I Z A R", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "Faction Warfare - Sinq Laison" , "systems": [
                     { "system": "Egghelende","station": "Egghelende V - Moon 13 - University of Caille", "reward": {"volume": 600.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 30000000000 }, "minimumReward": 1 }
@@ -358,6 +362,20 @@
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 600.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1000000 },
                     { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 600.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1000000 },
                     { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 600.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1000000 }
+                 ]}
+            ]}
+        ]},
+        { "region":"Insmother", "systems":[
+            { "system": "EFM-C4","station": "EFM-C4 - D E F I Z A R", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 1 },
+                    { "system": "Perimeter - Tranquility Trading Tower","station": "Perimeter - Tranquility Trading Tower", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 1 }
+                ]},
+                { "region": "Panfam Hubs", "systems":[
+                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                    { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 35.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                  ]}
             ]}
         ]}
