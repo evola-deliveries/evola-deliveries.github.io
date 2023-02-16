@@ -84,7 +84,7 @@ export default function ContractCreator({ outbound, inbound, pricing }) {
                     <div className="pr-1">*</div>
                     <div>
                         Contracts are issued directly to: <br/>
-                        <span className="font-bold">Evola Deliveries</span>.<br/><br/>
+                        <span className="font-bold">Evola Deliveries</span><br/><br/>
                         <span className="font-bold">No Containers!</span><br />
                         <span className="font-bold">No Assembled Ships!</span><br/><br/>
                         If you have any feedback please contact <span className="font-bold">Nahtsu#9654</span>
