@@ -86,7 +86,9 @@ export default function ContractCreator({ outbound, inbound, pricing }) {
                         Contracts are issued directly to: <br/>
                         <span className="font-bold">Evola Deliveries</span><br/><br/>
                         <span className="font-bold">No Containers!</span><br />
-                        <span className="font-bold">No Assembled Ships!</span><br/><br/>
+                        <span className="font-bold">No Assembled Ships!</span><br/>
+                        <span className="font-bold">Expiration: 7 Days</span><br/>
+                        <span className="font-bold">Days to Complete: 7 Days</span><br/><br/>
                         If you have any feedback please contact <span className="font-bold">Nahtsu#9654</span>
                     </div>
                 </div>

@@ -89,6 +89,9 @@ export default function ContractCreator() {
                             If you wish to use our services for a route that is currently not supported please contact <span className="font-bold">Nahtsu</span> directly.
                             If you have any feedback please let us know!
                         </p>
+                        <p>
+                        <span className="font-bold">Notice:</span> Most destinations should have couriers delivered within 48 hours.
+                        </p>
                         <a className="flex items-baseline mt-3 text-blue-600 hover:text-blue-900 focus:text-blue-900" href={ConfigService.discord_url} target="_blank" rel="noreferrer">
                             <span>Join Discord</span>
                             <span className="text-xs ml-1">&#x279c;</span>
