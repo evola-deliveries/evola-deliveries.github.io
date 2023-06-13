@@ -1,7 +1,7 @@
 version: '3'
 services:
   evola-api:
-    image: dmportella/evola-api:2.0
+    image: dmportella/evola-api:${HASH}
     container_name: evola-api
     restart: unless-stopped
     env_file:

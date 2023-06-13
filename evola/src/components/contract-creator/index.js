@@ -68,6 +68,8 @@ export default function ContractCreator() {
         setProgressContracts(r.InProgress)
         setLast100ContractTime(r.HundredContracts)
         setLast100MJJitaContracts(r.MJJitaHundredContracts)
+    }).catch(reason => {
+        console.log(reason);
     })
 
     return (
@@ -102,6 +104,9 @@ export default function ContractCreator() {
                             Contracts are issued directly to <span className="select-all">Evola Deliveries</span>.
                             If you wish to use our services for a route that is currently not supported please contact <span className="font-bold">Nahtsu</span> directly.
                             If you have any feedback please let us know!
+                        </p>
+                        <p>
+                            <span className="font-bold">Notice:</span> Most destinations should have couriers delivered within 48 hours.
                         </p>
                     </div>
                     <hr />
