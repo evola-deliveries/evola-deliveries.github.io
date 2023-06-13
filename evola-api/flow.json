@@ -187,7 +187,7 @@
         "finalize": "",
         "libs": [],
         "x": 610,
-        "y": 600,
+        "y": 580,
         "wires": [
             [
                 "46a9940b002fe417"
@@ -267,7 +267,7 @@
         "type": "function",
         "z": "85d09905.9710c8",
         "name": "processContracts",
-        "func": "var allContracts = []\nfor (var i in msg.contracts) {\n    for (var j in msg.contracts[i]) {\n        allContracts.push(msg.contracts[i][j])\n    }\n}\n\nvar validContracts = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"outstanding\")\n\nvar validContractsProgress = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"in_progress\")\n\nmsg.payload = \n{\n    \"Outstanding\": validContracts.length,\n    \"InProgress\": validContractsProgress.length\n}\n\nreturn msg;",
+        "func": "var allContracts = []\nfor (var i in msg.contracts) {\n    for (var j in msg.contracts[i]) {\n        allContracts.push(msg.contracts[i][j])\n    }\n}\n\nvar validContracts = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"outstanding\")\n\nvar validContractsProgress = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"in_progress\")\n\nvar last100Contracts = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"finished\").sort((a, b) => {\n    if (a.date_completed < b.date_completed)\n    {\n        return 1\n    }\n    if (b.date_completed < a.date_completed) {\n        return -1\n    }\n    return 0\n}).slice(0, 100)\n\nvar last100MJJitaContracts = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"finished\")\n    .filter(contract => (contract.end_location_id == 1038457641673 || contract.end_location_id == 60003760) && (contract.start_location_id == 1038457641673 || contract.start_location_id == 60003760)).sort((a, b) => {\n    if (a.date_completed < b.date_completed) {\n        return 1\n    }\n    if (b.date_completed < a.date_completed) {\n        return -1\n    }\n    return 0\n}).slice(0, 100)\n\nvar contractsTime = 0\nfor (var i in last100Contracts)\n{\n    var completeDate = new Date(last100Contracts[i].date_completed)\n    var endDate = new Date(last100Contracts[i].date_issued)\n    contractsTime = contractsTime + (completeDate.valueOf() - endDate.valueOf())\n}\n\nvar mJJitacontractsTime = 0\nfor (var i in last100MJJitaContracts) {\n    var completeDate = new Date(last100MJJitaContracts[i].date_completed)\n    var endDate = new Date(last100MJJitaContracts[i].date_issued)\n    mJJitacontractsTime = mJJitacontractsTime + (completeDate.valueOf() - endDate.valueOf())\n}\n\nvar Last100ContractsAVGTime = contractsTime / 100\n\nvar Last100MJJitaContractsAVGTime = mJJitacontractsTime / 100\n\nfunction msToTime(s) {\n    var ms = s % 1000;\n    s = (s - ms) / 1000;\n    var secs = s % 60;\n    s = (s - secs) / 60;\n    var mins = s % 60;\n    var hrs = (s - mins) / 60;\n\n    //return hrs + ':' + mins + ':' + secs;\n    return hrs;\n}\n\nmsg.payload = \n{\n    \"Outstanding\": validContracts.length,\n    \"InProgress\": validContractsProgress.length,\n    \"HundredContracts\": msToTime(Last100ContractsAVGTime),\n    \"MJJitaHundredContracts\": msToTime(Last100MJJitaContractsAVGTime)\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
