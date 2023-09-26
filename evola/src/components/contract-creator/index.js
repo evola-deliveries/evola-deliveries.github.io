@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PackageDetails from '../package-details';
-import OrderTicket from '../order-ticket';
 import DataService from '../../services/data-service';
-import ConfigService from '../../services/config-service';
-import ContractService from "../../services/esi-service";
 
 function calculatePricing(inboundRouteDeep, price, volume, janice) {
     const volumeIsk = inboundRouteDeep ? Math.ceil(volume * inboundRouteDeep.reward.volume) : 0;
@@ -57,20 +54,6 @@ export default function ContractCreator() {
     const handlePricingChange = (price, volume, janice) => {
         setPricing(calculatePricing(inboundRoute, price, volume, janice));
     };
-
-    const [outstandingContracts, setOutstandingContracts] = useState();
-    const [progressContracts, setProgressContracts] = useState();
-    const [HundredContracts, setLast100ContractTime] = useState();
-    const [MJJitaHundredContracts, setLast100MJJitaContracts] = useState();
-
-    ContractService.getContracts().then(r => {
-        setOutstandingContracts(r.Outstanding)
-        setProgressContracts(r.InProgress)
-        setLast100ContractTime(r.HundredContracts)
-        setLast100MJJitaContracts(r.MJJitaHundredContracts)
-    }).catch(reason => {
-        console.log(reason);
-    })
 
     return (
         <div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">
