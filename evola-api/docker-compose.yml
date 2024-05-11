@@ -8,7 +8,7 @@ services:
     ports:
       - "1880:1880"
     networks:
-      - dockerfuck
+      - evola-api_default
 
   nginx:
     image: nginx:alpine
@@ -22,7 +22,7 @@ services:
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot
     networks:
-      - dockerfuck
+      - evola-api_default
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
 
   certbot:
@@ -35,6 +35,6 @@ services:
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
 
 networks: 
-  dockerfuck:
-    name: dockerfuck
+  evola-api_default:
+    name: evola-api_default
     external: true
