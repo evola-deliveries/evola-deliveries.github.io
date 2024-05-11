@@ -11,7 +11,7 @@ const MainPage = () => {
 		<Router>
 			<div className="bg-cover flex flex-col min-h-screen" style={
 				{
-					"backgroundImage": "url(https://cdn.discordapp.com/attachments/844608846525104158/1086606908670091305/Original.webp)",
+					"backgroundImage": "url(https://media.discordapp.net/attachments/812351111427129424/1238855555926458438/Original.webp?ex=6640cda5&is=663f7c25&hm=5fbfd0dba050782a8a98309b553ba75f17aaff470a4b15c6e97e5f9991fe7656&=&format=webp&width=1440&height=603)",
 					"background-position": "center",
 					"background-repeat": "repeat",
 					"background-size": "cover"
