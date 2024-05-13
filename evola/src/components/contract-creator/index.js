@@ -101,7 +101,6 @@ export default function ContractCreator() {
                             </div>
                         </div>
                         <p class="text-gray-600 text-justify">
-                            <span className="font-bold">We're Back!!!</span>
                             Contracts are issued directly to <span className="select-all">Evola Deliveries</span>.
                             If you have any feedback please let us know!
                         </p>
