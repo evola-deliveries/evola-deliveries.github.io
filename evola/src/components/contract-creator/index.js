@@ -101,17 +101,17 @@ export default function ContractCreator() {
                             </div>
                         </div>
                         <p class="text-gray-600 text-justify">
+                            <span className="select-all">We're Back!!!</span>.
                             Contracts are issued directly to <span className="select-all">Evola Deliveries</span>.
-                            If you wish to use our services for a route that is currently not supported please contact <span className="font-bold">Nahtsu</span> directly.
                             If you have any feedback please let us know!
                         </p>
                         <p>
-                            <span className="font-bold">Notice:</span> Most destinations should have couriers delivered within 48 hours.
+                            <span className="font-bold">Notice:</span> Despite the initial low volume, we will attempt to keep all couriers under 48 hours.
                         </p>
                     </div>
                     <hr />
                     <h2 className="w-full font-bold text-xl">Contract Creator</h2>
-                    <h3 className="w-full font-bold text-gl">Select the Pickup and Dropoff</h3>
+                    <h3 className="w-full font-bold text-gl">Select the Pickup and Dropoff stations</h3>
                     <div className="flex justify-between">
                         <label htmlFor="outbound">Pickup:</label>
                         <select name="outbound" defaultValue={outboundValue} onChange={handleOutboundChanged} >
