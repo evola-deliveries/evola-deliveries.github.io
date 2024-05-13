@@ -1,4 +1,3 @@
-version: '3'
 services:
   evola-api:
     image: dmportella/evola-mail:${HASH}
