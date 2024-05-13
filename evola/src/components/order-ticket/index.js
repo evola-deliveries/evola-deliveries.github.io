@@ -89,7 +89,7 @@ export default function ContractCreator({ outbound, inbound, pricing }) {
                         <span className="font-bold">No Assembled Ships!</span><br/>
                         <span className="font-bold">Expiration: 7 Days</span><br/>
                         <span className="font-bold">Days to Complete: 7 Days</span><br/><br/>
-                        If you have any feedback please contact <span className="font-bold">Nahtsu#9654</span>
+                        If you have any feedback please contact <span className="font-bold">Nahtsu</span>
                     </div>
                 </div>
             </div>
