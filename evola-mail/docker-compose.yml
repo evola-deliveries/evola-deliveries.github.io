@@ -6,10 +6,11 @@ services:
     env_file:
       - web-variables.env
     networks:
-      - docker
+      - evola-api_default
     volumes:
-      - /root/evola-mail/data:/usr/app/src/data
+      - ./data:/usr/app/src/data
 
 networks: 
-  docker:
+  evola-api_default:
+    name: evola-api_default
     external: true
