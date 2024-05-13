@@ -11,7 +11,7 @@ const MainPage = () => {
 		<Router>
 			<div className="bg-cover flex flex-col min-h-screen" style={
 				{
-					"backgroundImage": "./public/background.png",
+					"backgroundImage": "./background.png",
 					"background-position": "center",
 					"background-repeat": "repeat",
 					"background-size": "cover"
