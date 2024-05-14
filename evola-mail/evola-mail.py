@@ -56,7 +56,7 @@ def sendMail(contract):
 
     data = {
       "approved_cost": 0,
-      "body": "Thank You for using Evola! Your <url=contract:" + str(contract['start_location_id']) + "//" + str(contract['contract_id']) + ">package</url> has been delivered. If you enjoyed our service, remember to check us out on <url=https://discord.com/invite/9HVAP3sSjY/>Discord</url> and <url=https://www.pandemic-horde.org/forum/index.php?threads/evola-deliveries-horde-courier-service.3266/>our forum post</url> for updated pricing and route status. -Evola",
+      "body": "Thank You for using Evola! Your <url=contract:" + str(contract['start_location_id']) + "//" + str(contract['contract_id']) + ">package</url> has been delivered. If you enjoyed our service, remember to check us out on <url=https://discord.gg/ZGt6eUwuXt/>Discord</url> and <url=https://www.pandemic-horde.org/forum/index.php?threads/evola-deliveries-horde-courier-service.3266/>our forum post</url> for updated pricing and route status. -Evola",
       "recipients": [
         {
           "recipient_id": contract['issuer_id'],
