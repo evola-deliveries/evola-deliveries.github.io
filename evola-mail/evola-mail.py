@@ -85,12 +85,11 @@ def refreshTokens(res):
                 headers = {
                     "Content-Type": "application/x-www-form-urlencoded",
                     "Host": "login.eveonline.com",
-                    "Authorization": "Bearer " + access_token
+                    "Authorization": "Basic " + clientId
                 }
 
                 form_values = {
                     "grant_type": "refresh_token",
-                    "client_id": clientId,
                     "refresh_token": refreshToken
                 }
 
