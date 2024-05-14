@@ -8,7 +8,7 @@ services:
     networks:
       - evola-api_default
     volumes:
-      - ./data:/usr/app/src/data
+      - ./data:/usr/app/src/data:rw
 
 networks: 
   evola-api_default:
