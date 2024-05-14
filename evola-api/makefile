@@ -5,13 +5,13 @@ default:
 	@echo "image" ${HASH}
 	
 network:
-  @docker network create evola-api_default
+	@docker network create evola-api_default
 
 up:
- @docker compose up
+	@docker compose up
 
 down:
- @docker compose down
+	@docker compose down
 
 daemon:
- @docker compose up -d
+	@docker compose up -d

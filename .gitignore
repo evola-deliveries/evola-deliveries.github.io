@@ -103,3 +103,8 @@ dist
 
 # TernJS port file
 .tern-port
+
+evola-api/data/certbot/
+evola-api/web-variables.env
+evola-mail/data/evola-tokens.txt
+evola-mail/web-variables.env
