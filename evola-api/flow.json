@@ -101,7 +101,6 @@
         "name": "body",
         "func": "msg.payload = { message: \"evola api\" }\nreturn msg;",
         "outputs": 1,
-        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -121,7 +120,6 @@
         "name": "setGlobals",
         "func": "msg.page = 1\nmsg.contracts = []\nreturn msg;",
         "outputs": 1,
-        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -150,8 +148,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 550,
-        "y": 720,
+        "x": 590,
+        "y": 760,
         "wires": [
             [
                 "9fe02df565db798e"
@@ -163,15 +161,15 @@
         "type": "function",
         "z": "85d09905.9710c8",
         "name": "headers",
-        "func": "const options = {\n  'Authorization': 'Bearer ' + global.get(\"ESIAPIKEY\"),\n  'Content-Type': 'application/json'\n}\nmsg.headers = options;\nreturn msg;",
+        "func": "const options = {\n  'Authorization': 'Bearer ' + global.get(\"AUTHTOKEN\"),\n  'Content-Type': 'application/json'\n}\nmsg.headers = options;\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 400,
-        "y": 720,
+        "x": 420,
+        "y": 760,
         "wires": [
             [
                 "84e034956fded3c5"
@@ -183,15 +181,15 @@
         "type": "function",
         "z": "85d09905.9710c8",
         "name": "handleResponse",
-        "func": "if (msg.payload.length == 1000)\n{\n    //more contracts\n    global.set(\"CONTRACTS\", msg.payload)\n    msg.page = msg.page + 1\n    msg.contracts.push(msg.payload)\n    return [msg, null, null]\n}\nelse if (msg.payload.error == \"token is expired\")\n{\n    //token expired\n    return [null, msg, null];\n}\nelse\n{\n    //no more contracts\n    msg.contracts.push(msg.payload)\n    return [null, null, msg]\n}\nreturn [null, null, null];",
+        "func": "if (msg.payload.length == 1000)\n{\n    //more contracts\n    global.set(\"CONTRACTS\", msg.payload)\n    msg.page = msg.page + 1\n    msg.contracts.push(msg.payload)\n    return [msg, null, null]\n}\nelse if (msg.statusCode === 403 && msg.payload.error && msg.payload.error === \"token is expired\")\n{\n    //token expired\n    return [null, msg, null];\n} if (msg.statusCode !== 200) {\n    return [null, null, msg]\n}\nelse\n{\n    //no more contracts\n    msg.contracts.push(msg.payload)\n    return [null, null, msg]\n}\nreturn [null, null, null];",
         "outputs": 3,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 610,
-        "y": 580,
+        "x": 510,
+        "y": 620,
         "wires": [
             [
                 "46a9940b002fe417"
@@ -220,8 +218,8 @@
         "authType": "basic",
         "senderr": false,
         "headers": [],
-        "x": 880,
-        "y": 820,
+        "x": 1060,
+        "y": 640,
         "wires": [
             [
                 "409c75a68b0f06f6"
@@ -233,15 +231,15 @@
         "type": "function",
         "z": "85d09905.9710c8",
         "name": "refreshHeaders",
-        "func": "msg.headers = {\n    \"Content-Type\": \"application/x-www-form-urlencoded\",\n    \"Authorization\": global.get(\"ESIAPIKEY\")\n};\n\n\nmsg.payload = {\n    \"grant_type\": \"refresh_token\",\n    \"refresh_token\": global.get(\"REFRESHTOKEN\")\n};\nreturn msg;",
+        "func": "msg.headers = {\n    \"Content-Type\": \"application/x-www-form-urlencoded\",\n    \"Authorization\": \"Basic \" + global.get(\"ESIAPIKEY\")\n};\n\n\nmsg.payload = {\n    \"grant_type\": \"refresh_token\",\n    \"refresh_token\": global.get(\"REFRESHTOKEN\")\n};\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
-        "y": 720,
+        "x": 860,
+        "y": 640,
         "wires": [
             [
                 "fd7304565eefb4d9"
@@ -253,18 +251,21 @@
         "type": "function",
         "z": "85d09905.9710c8",
         "name": "setToken",
-        "func": "global.set(\"ESIAPIKEY\", msg.payload.access_token)\nreturn msg;",
-        "outputs": 1,
+        "func": "if (msg.statusCode === 200) {\n    global.set(\"AUTHTOKEN\", msg.payload.access_token);\n    return [msg, null];\n} else { \n    msg.payload =\n    {\n        \"Outstanding\": 0,\n        \"InProgress\": 0,\n        \"HundredContracts\": 0,\n        \"MJJitaHundredContracts\": 0,\n        \"error\": true\n    }\n    return [null, msg];\n}",
+        "outputs": 2,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1080,
-        "y": 820,
+        "x": 1060,
+        "y": 680,
         "wires": [
             [
                 "46a9940b002fe417"
+            ],
+            [
+                "11dc75cc41e4d1d9"
             ]
         ]
     },
@@ -312,7 +313,7 @@
         "name": "",
         "statusCode": "200",
         "headers": {},
-        "x": 1100,
+        "x": 1240,
         "y": 600,
         "wires": []
     }
