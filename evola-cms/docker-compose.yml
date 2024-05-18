@@ -17,8 +17,6 @@ services:
   
   directus:
     image: directus/directus:10.11.0
-    ports:
-      - 8055:8055
     volumes:
       - ./uploads:/directus/uploads:rw
       - ./extensions:/directus/extensions:rw
