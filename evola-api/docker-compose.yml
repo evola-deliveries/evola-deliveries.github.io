@@ -17,6 +17,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
+      - "8055:8055"
     volumes:
       - ./data/nginx:/etc/nginx
       - ./data/certbot/conf:/etc/letsencrypt:ro
