@@ -100,7 +100,7 @@ export default function PackageDetails({ system, onPricingChange }) {
                 <button className="bg-green-700 disabled:bg-gray-500 text-white px-6 py-2 rounded font-medium hover:bg-green-600 transition duration-200 each-in-out" disabled={isDisabled()} onClick={getJanicePrices}>Calculate Prices</button>
                 <div className='px-6 py-2'>
                     <input className="form-check-input appearance-none border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value={overridePriceCheck} onChange={handleOverridePriceCheck} disabled={isDisabled()} id="overridePrice" />
-                    <label className="form-check-label inline-block text-gray-800" for="overridePrice">
+                    <label className="form-check-label inline-block text-gray-800" htmlFor="overridePrice">
                         Override Price
                     </label>
                 </div>

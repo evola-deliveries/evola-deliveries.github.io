@@ -11,10 +11,10 @@ const MainPage = () => {
 		<Router>
 			<div className="bg-cover flex flex-col min-h-screen" style={
 				{
-					"background-image": "url(./background.png)",
-					"background-position": "center",
-					"background-repeat": "repeat",
-					"background-size": "cover"
+					"backgroundImage": "url(./background.png)",
+					"backgroundPosition": "center",
+					"backgroundRepeat": "repeat",
+					"backgroundSize": "cover"
 				}}>
 				<NavigationBar />
 				<div className="flex-grow container mx-auto py-8 px-4 md:py-16 md:px-8">
