@@ -1,8 +1,10 @@
-FROM nodered/node-red
+FROM nodered/node-red:latest as base
 
 EXPOSE 1880
 
 ENV FLOWS=flow.json
+
+FROM base as final
 
 # Uncomment if you want to include custom modules to be available in the flows.
 # ADD node_modules /data/node_modules

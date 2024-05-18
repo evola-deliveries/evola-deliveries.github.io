@@ -1,16 +1,16 @@
 services:
   evola-api:
-    image: dmportella/evola-mail:${HASH}
+    image: dmportella/evola-mail:latest
     container_name: evola-mail
     restart: unless-stopped
     env_file:
       - web-variables.env
     networks:
-      - evola-api_default
+      - network
     volumes:
       - ./data:/usr/app/src/data:rw
 
 networks: 
-  evola-api_default:
-    name: evola-api_default
+  network:
+    name: evola_network
     external: true

@@ -4,9 +4,6 @@ default:
 	@echo "Evola api make"
 	@echo "image" ${HASH}
 	
-network:
-	@docker network create evola-api_default
-
 up:
 	@docker compose up
 

@@ -120,6 +120,7 @@
         "name": "setGlobals",
         "func": "msg.page = 1\nmsg.contracts = []\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -316,5 +317,97 @@
         "x": 1240,
         "y": 600,
         "wires": []
+    },
+    {
+        "id": "deed2557d083e3f9",
+        "type": "http in",
+        "z": "85d09905.9710c8",
+        "name": "",
+        "url": "/routes",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "d7e1430948dd9e0d"
+            ]
+        ]
+    },
+    {
+        "id": "c982a84091b031cf",
+        "type": "http request",
+        "z": "85d09905.9710c8",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://directus:8055/items/Routes?fields=*.*.*.*",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 610,
+        "y": 400,
+        "wires": [
+            [
+                "3d3b5b26e28e9098"
+            ]
+        ]
+    },
+    {
+        "id": "b2af9774874e7029",
+        "type": "http response",
+        "z": "85d09905.9710c8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 930,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "3d3b5b26e28e9098",
+        "type": "function",
+        "z": "85d09905.9710c8",
+        "name": "transform",
+        "func": "function transformData(oldData) {\n    // Initialize the new data structure\n    const newData = {\n        default: { region: \"The Forge\", system: \"Jita\" },\n        routes: []\n    };\n\n    // Create a map to avoid duplication of regions and systems\n    const regionMap = new Map();\n\n    oldData.data.forEach(route => {\n        const fromRegionName = route.From_Station.System.Region.Region;\n        const fromSystemName = route.From_Station.System.System;\n        const fromStationName = route.From_Station.Station;\n\n        const toRegionName = route.To_Station.System.Region.Region;\n        const toSystemName = route.To_Station.System.System;\n        const toStationName = route.To_Station.Station;\n\n        const pricing = route.Pricing;\n\n        // Create the target station object\n        const targetStation = {\n            system: toSystemName,\n            station: toStationName,\n            reward: {\n                volume: parseFloat(pricing.Reward_Volume),\n                collateral: parseFloat(pricing.Reward_Collateral)\n            },\n            limits: {\n                volume: parseFloat(pricing.Limits_Volume),\n                collateral: parseFloat(pricing.Limits_Collateral)\n            },\n            minimumReward: parseInt(pricing.Reward_Minimum, 10)\n        };\n\n        // Check if fromRegion exists in the map\n        if (!regionMap.has(fromRegionName)) {\n            regionMap.set(fromRegionName, { region: fromRegionName, systems: new Map() });\n        }\n        const fromRegion = regionMap.get(fromRegionName);\n\n        // Check if fromSystem exists in the fromRegion's systems\n        if (!fromRegion.systems.has(fromSystemName)) {\n            fromRegion.systems.set(fromSystemName, { system: fromSystemName, station: fromStationName, regions: new Map() });\n        }\n        const fromSystem = fromRegion.systems.get(fromSystemName);\n\n        // Check if toRegion exists in the fromSystem's regions\n        if (!fromSystem.regions.has(toRegionName)) {\n            fromSystem.regions.set(toRegionName, { region: toRegionName, systems: [] });\n        }\n        const toRegion = fromSystem.regions.get(toRegionName);\n\n        // Add the target station to the toRegion's systems\n        toRegion.systems.push(targetStation);\n    });\n\n    // Convert the map structure to the required format\n    regionMap.forEach(region => {\n        const regionEntry = { region: region.region, systems: [] };\n        region.systems.forEach(system => {\n            const systemEntry = { system: system.system, station: system.station, regions: [] };\n            system.regions.forEach(region => {\n                systemEntry.regions.push({ region: region.region, systems: region.systems });\n            });\n            regionEntry.systems.push(systemEntry);\n        });\n        newData.routes.push(regionEntry);\n    });\n\n    return newData;\n}\n\nmsg.payload = transformData(msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 400,
+        "wires": [
+            [
+                "b2af9774874e7029"
+            ]
+        ]
+    },
+    {
+        "id": "d7e1430948dd9e0d",
+        "type": "function",
+        "z": "85d09905.9710c8",
+        "name": "Bearer Token",
+        "func": "msg.headers = { \n    Authorization: `Bearer ${global.get(\"DIRECTUS_TOKEN\") }`\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 400,
+        "wires": [
+            [
+                "c982a84091b031cf"
+            ]
+        ]
     }
 ]

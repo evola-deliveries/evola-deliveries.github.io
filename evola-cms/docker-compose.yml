@@ -1,0 +1,37 @@
+services:
+  database:
+    image: postgis/postgis:13-master
+    # Required when running on platform other than amd64, like Apple M1/M2:
+    # platform: linux/amd64
+    volumes:
+      - ./data/database:/var/lib/postgresql/data:rw
+    networks:
+      - network
+    env_file:
+      - db-variables.env
+
+  cache:
+    image: redis:6
+    networks:
+      - network
+  
+  directus:
+    image: directus/directus:10.11.0
+    ports:
+      - 8055:8055
+    volumes:
+      - ./uploads:/directus/uploads:rw
+      - ./extensions:/directus/extensions:rw
+      - ./snapshots:/directus/snapshots:rw
+    depends_on:
+      - cache
+      - database
+    networks:
+      - network
+    env_file:
+      - web-variables.env
+
+networks:
+  network:
+    driver: bridge
+    name: evola_network

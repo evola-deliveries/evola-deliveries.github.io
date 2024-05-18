@@ -1,6 +1,6 @@
 services:
   evola-api:
-    image: dmportella/evola-api:${HASH}
+    image: dmportella/evola-api:latest
     container_name: evola-api
     restart: unless-stopped
     env_file:
@@ -8,7 +8,7 @@ services:
     ports:
       - "1880:1880"
     networks:
-      - evola-api_default
+      - network
 
   nginx:
     image: nginx:alpine
@@ -22,7 +22,7 @@ services:
       - ./data/certbot/conf:/etc/letsencrypt:ro
       - ./data/certbot/www:/var/www/certbot:ro
     networks:
-      - evola-api_default
+      - network
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
 
   certbot:
@@ -36,6 +36,6 @@ services:
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
 
 networks: 
-  evola-api_default:
-    name: evola-api_default
+  network:
+    name: evola_network
     external: true

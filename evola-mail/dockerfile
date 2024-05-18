@@ -1,12 +1,17 @@
 #Deriving the latest base image
-FROM python:latest
+FROM python:alpine as base
 
 WORKDIR /usr/app/src
 
-COPY evola-mail.py ./
+FROM base as build
+
 COPY requirements.txt ./
 
 RUN pip install -r requirements.txt
+
+From build as final
+
+COPY evola-mail.py ./
 
 VOLUME "/data"
 

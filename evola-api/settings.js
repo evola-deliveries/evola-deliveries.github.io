@@ -87,13 +87,13 @@ module.exports = {
     // By default, the Node-RED UI is available at http://localhost:1880/
     // The following property can be used to specify a different root path.
     // If set to false, this is disabled.
-    httpAdminRoot: (process.env.ADMIN && process.env.ADMIN === 'true') ? '/admin' : false,
+    httpAdminRoot: (() => process.env.ADMIN ? '/admin' : false)(),
 
     // Some nodes, such as HTTP In, can be used to listen for incoming http requests.
     // By default, these are served relative to '/'. The following property
     // can be used to specifiy a different root path. If set to false, this is
     // disabled.
-    //httpNodeRoot: '/red-nodes',
+    httpNodeRoot: '/',
 
     // The following property can be used in place of 'httpAdminRoot' and 'httpNodeRoot',
     // to apply the same root to both parts.
@@ -174,8 +174,8 @@ module.exports = {
     // See https://github.com/troygoode/node-cors#configuration-options for
     // details on its contents. The following is a basic permissive set of options:
     httpNodeCors: {
-        origin: process.env.CORS_DOMAIN ? ["https://evolaeve.com", "https://www.evolaeve.com"] : ["http://localhost:3000", "http://localhost:5000", "http://192.168.1.171:3000"],
-        methods: "GET,PUT,POST,DELETE"
+        origin: process.env.CORS_DOMAIN && process.env.CORS_DOMAIN === 'true' ? [ "https://evolaeve.com", "https://www.evolaeve.com" ] : "*",
+        methods: "GET,POST"
     },
 
     // If you need to set an http proxy please set an environment variable
@@ -241,7 +241,8 @@ module.exports = {
         APIKEY: process.env.APIKEY || "change me",
         AUTHTOKEN: process.env.AUTHTOKEN,
         REFRESHTOKEN: process.env.REFRESHTOKEN,
-        ESIAPIKEY: process.env.ESIAPIKEY
+        ESIAPIKEY: process.env.ESIAPIKEY,
+        DIRECTUS_TOKEN: process.env.DIRECTUS_TOKEN
         // os:require('os'),
         // jfive:require("johnny-five"),
         // j5board:require("johnny-five").Board({repl:false})
