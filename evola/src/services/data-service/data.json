@@ -30,8 +30,6 @@
                     { "system": "DYS-CGF ","station": "DYS-CG - S A U S T A R", "reward": {"volume": 380.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 70000000000 }, "minimumReward": 10000000},
                     { "system": "DYS-CGF ","station": "DYS-CG - Schwabenschmiede", "reward": {"volume": 380.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 70000000000 }, "minimumReward": 10000000}
                 ]},
-                ]},
-                ]},
                 { "region": "Spire" , "systems": [
                     { "system": "Y8K-5B","station": "Y8K-5B - RC House", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
