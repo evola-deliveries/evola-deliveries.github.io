@@ -240,6 +240,14 @@
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 750.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]}
             ]}
+        ]},
+
+        { "region":"Spire", "systems":[
+            { "system": "Y8K-5B","station": "RC House", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 5000000000 }, "minimumReward": 1 }
+                ]}
+            ]}
         ]}
     ]
 }
