@@ -155,7 +155,7 @@ export default function ContractCreator() {
                         </div>
                         <div className="flex justify-end">
                             <span className="select-all cursor-pointer mx-2" onClick={() => inboundRoute && UtilsService.clipboardCopy(inboundRoute.station)}>{inboundRoute && inboundRoute.station}</span>
-                            <FontAwesomeIcon className="cursor-pointer" icon={faCopy} onClick={() => outboundRoute && UtilsService.clipboardCopy(outboundRoute.station)} />
+                            <FontAwesomeIcon className="cursor-pointer" icon={faCopy} onClick={() => inboundRoute && UtilsService.clipboardCopy(inboundRoute.station)} />
                         </div>
                     </div>
                     <PackageDetails system={inboundRoute} onPricingChange={handlePricingChange} />
