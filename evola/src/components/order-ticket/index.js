@@ -23,7 +23,7 @@ export default function ContractCreator({ outbound, inbound, pricing }) {
                     </div>
                     <hr className="border-gray-500" />
                     <div className="flex justify-between">
-                        <span className="italic pl-4">Appraisal Reference</span>
+                        <span className="italic cursor-pointer pl-4" onClick={() => UtilsService.clipboardCopy((pricing.janice !== "" && pricing.janice) || "")} >Appraisal Reference <FontAwesomeIcon className="cursor-pointer ml-2" icon={faCopy} onClick={() => UtilsService.clipboardCopy((pricing.janice !== "" && pricing.janice) || "")} /></span>
                         <div><span className="select-all">{pricing.janice !== "" && pricing.janice}</span></div>
                     </div>
 
