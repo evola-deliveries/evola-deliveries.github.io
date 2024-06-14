@@ -1,5 +1,8 @@
 import React from 'react';
 import Config from '../../services/config-service';
+import UtilsService from '../../services/utils-service';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopy } from '@fortawesome/free-regular-svg-icons';
 
 export default function ContractCreator({ outbound, inbound, pricing }) {
     return (
@@ -64,16 +67,18 @@ export default function ContractCreator({ outbound, inbound, pricing }) {
                     <hr className="border-gray-500" />
                     <div className="flex justify-between">
                         <div>
-                            <span className="font-bold">Total Reward</span>
+                            <span className="font-bold cursor-pointer" onClick={() => UtilsService.clipboardCopy(pricing && Number(pricing.totals.total).toLocaleString('en'))}>Total Reward</span>
+                            <FontAwesomeIcon className="cursor-pointer ml-2" icon={faCopy} onClick={() => UtilsService.clipboardCopy(pricing && Number(pricing.totals.total).toLocaleString('en'))} />
                         </div>
-                        <div className="font-bold text-green-600"><span className="select-all">{pricing && Number(pricing.totals.total).toLocaleString('en')}</span> isk</div>
+                        <div className="font-bold text-green-600"><span className="select-all" onClick={() => UtilsService.clipboardCopy(pricing && Number(pricing.totals.total).toLocaleString('en'))}>{pricing && Number(pricing.totals.total).toLocaleString('en')}</span> isk</div>
                     </div>
 
                     <div className="flex justify-between">
                         <div>
-                            <span className="font-bold">Total Collateral</span>
+                            <span className="font-bold cursor-pointer" onClick={() => UtilsService.clipboardCopy(pricing && Number(pricing.price).toLocaleString('en'))}>Total Collateral</span>
+                            <FontAwesomeIcon className="cursor-pointer ml-2" icon={faCopy} onClick={() => UtilsService.clipboardCopy(pricing && Number(pricing.price).toLocaleString('en'))} />
                         </div>
-                        <div className={pricing && pricing.totals.collateralInvalid ? "font-bold text-red-600" : "font-bold text-green-600"}><span className="select-all">{pricing && Number(pricing.price).toLocaleString('en')}</span> isk</div>
+                        <div className={pricing && pricing.totals.collateralInvalid ? "font-bold text-red-600" : "font-bold text-green-600"}><span className="select-all" onClick={() => UtilsService.clipboardCopy(pricing && Number(pricing.price).toLocaleString('en'))}>{pricing && Number(pricing.price).toLocaleString('en')}</span> isk</div>
                     </div>
 
 
@@ -83,8 +88,8 @@ export default function ContractCreator({ outbound, inbound, pricing }) {
                 <div className="border-t-4 border-black flex leading-none text-xs pt-2 pb-1">
                     <div className="pr-1">*</div>
                     <div>
-                        Contracts are issued directly to: <br/>
-                        <span className="font-bold">Evola Deliveries</span><br/><br/>
+                        Contracts are issued directly to: <br/><br/>
+                        <span className="font-bold select-all cursor-pointer" onClick={() => UtilsService.clipboardCopy("Evola Deliveries")}>Evola Deliveries</span> <FontAwesomeIcon className="cursor-pointer" icon={faCopy} onClick={() => UtilsService.clipboardCopy("Evola Deliveries")} /><br/><br/>
                         <span className="font-bold">No Containers!</span><br />
                         <span className="font-bold">No Assembled Ships!</span><br/>
                         <span className="font-bold">Expiration: 7 Days</span><br/>

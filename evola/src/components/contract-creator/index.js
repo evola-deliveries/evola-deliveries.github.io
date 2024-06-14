@@ -4,6 +4,9 @@ import OrderTicket from '../order-ticket';
 import DataService from '../../services/data-service';
 import ConfigService from '../../services/config-service';
 import ContractService from "../../services/esi-service";
+import UtilsService from "../../services/utils-service";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopy } from '@fortawesome/free-regular-svg-icons';
 
 function calculatePricing(inboundRouteDeep, price, volume, janice) {
     const volumeIsk = inboundRouteDeep ? Math.ceil(volume * inboundRouteDeep.reward.volume) : 0;
@@ -124,9 +127,14 @@ export default function ContractCreator() {
                             ))}
                         </select>
                     </div>
-                    <div className="flex justify-between my-2 border-b-2 border-dashed border-green-700">
-                        <label>Station (from):</label>
-                        <span className="select-all mx-2">{outboundRoute && outboundRoute.station}</span>
+                    <div className='flex justify-between my-2 border-b-2 border-dashed border-green-700'>
+                        <div className="flex justify-start">
+                            <label>Station (from):</label>
+                        </div>
+                        <div className="flex justify-end">
+                            <span className="select-all cursor-pointer mx-2" onClick={() => outboundRoute && UtilsService.clipboardCopy(outboundRoute.station)}>{outboundRoute && outboundRoute.station}</span>
+                            <FontAwesomeIcon className="cursor-pointer" icon={faCopy} onClick={() => outboundRoute && UtilsService.clipboardCopy(outboundRoute.station)} />
+                        </div>
                     </div>
                     <div className="flex justify-between">
                         <label htmlFor="inbound">Dropoff:</label>
@@ -141,9 +149,14 @@ export default function ContractCreator() {
                             ))}
                         </select>
                     </div>
-                    <div className="flex justify-between my-2 border-b-2 border-dashed border-green-700">
-                        <label>Station (to):</label>
-                        <span className="select-all mx-2">{inboundRoute && inboundRoute.station}</span>
+                    <div className='flex justify-between my-2 border-b-2 border-dashed border-green-700'>
+                        <div className="flex justify-start">
+                            <label>Station (from):</label>
+                        </div>
+                        <div className="flex justify-end">
+                            <span className="select-all cursor-pointer mx-2" onClick={() => inboundRoute && UtilsService.clipboardCopy(inboundRoute.station)}>{inboundRoute && inboundRoute.station}</span>
+                            <FontAwesomeIcon className="cursor-pointer" icon={faCopy} onClick={() => outboundRoute && UtilsService.clipboardCopy(outboundRoute.station)} />
+                        </div>
                     </div>
                     <PackageDetails system={inboundRoute} onPricingChange={handlePricingChange} />
                 </div>
