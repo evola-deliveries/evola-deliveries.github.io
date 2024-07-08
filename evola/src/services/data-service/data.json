@@ -43,6 +43,10 @@
                 ]},
                  { "region": "DEPLOYMENT", "systems": [
                      { "system": "U-QVWD","station": "U-QVWD - B E A M E R S T A R", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
+                ]},
+                 { "region": "Cobalt Edge", "systems": [
+                     { "system": "E-B957","station": "E-B957 - Builders Edge", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 },
+					 { "system": "4A-6NI","station": "4A-6NI - Keepstar", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
                 ]}
             ]}
         ]},
@@ -101,7 +105,7 @@
                     { "system": "Y8K-5B","station": "Y8K-5B - RC House", "reward": {"volume": 80.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
                  { "region": "Outer Ring", "systems": [
-                     { "system": "4C-B7X","station": "V - Moon 7 - Chemal Tech Factory", "reward": {"volume": 750.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
+                     { "system": "4C-B7X","station": "V - Moon 7 - Chemal Tech Factory", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
                  ]}
             ]},
             { "system": "Any System Region Wide","station": "Any Horde Station", "regions": [
@@ -263,6 +267,32 @@
                 ]}
             ]}
         ]},
+        { "region":"Cobalt Edge", "systems":[
+            { "system": "E-B957","station": "E-B957 - Builders Edge", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000 }
+                ]},
+                { "region": "Panfam Hubs", "systems":[
+                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
+                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
+                    { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 }
+                 ]}
+
+            ]},
+	     { "system": "4A-6NI","station": "4A-6NI - Keepstar", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000 }
+                ]},
+                { "region": "Panfam Hubs", "systems":[
+                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
+                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
+                    { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 }
+                 ]}
+
+            ]}
+        ]},
         { "region":"DEPLOYMENT", "systems":[
             { "system": "U-QVWD","station": "U-QVWD - B E A M E R S T A R", "regions": [
                 { "region": "The Forge", "systems":[
@@ -279,3 +309,4 @@
         ]}
     ]
 }
+
