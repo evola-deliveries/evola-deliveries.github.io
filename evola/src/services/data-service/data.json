@@ -294,7 +294,7 @@
             ]}
         ]},
         { "region":"DEPLOYMENT", "systems":[
-            { "system": "U-QVWD","station": "U-QVWD - B E A M E R S T A R", "regions": [
+            { "system": "1P-WGB","station": "Any Panfam Station", "regions": [
                 { "region": "The Forge", "systems":[
                    { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000 }
                 ]},
@@ -303,6 +303,9 @@
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
                     { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
                     { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 }
+                 ]}]},
+                { "region": "DEPLOYMENT", "systems":[
+                    { "system": "1P-WGB","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 }
                  ]}
 
             ]}
