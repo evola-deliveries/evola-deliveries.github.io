@@ -307,7 +307,7 @@
 
             ]}
         ]},
-        { "region":"Temporary":[
+        { "region":"Temporary", "systems":[
             { "system": "U-QVWD ","station": "U-QVWD", "regions": [
                  { "region": "DEPLOYMENT", "systems": [
                      { "system": "1P-WGB","station": "1P-WGB - C E E C E E S T A R", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
