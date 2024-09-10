@@ -48,6 +48,9 @@
                 ]},
                  { "region": "Outer Passage", "systems": [
                      { "system": "R3P0-Z","station": "Any HORDE Station", "reward": {"volume": 550.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 20000000 }
+                ]},
+                 { "region": "Insmother", "systems": [
+                     { "system": "Q-3HS5","station": "Q-3HS5 - Phoenix Rises", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
                 ]}
             ]}
         ]},
@@ -65,6 +68,9 @@
                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                    { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
+                ]},
+                 { "region": "Insmother", "systems": [
+                     { "system": "Q-3HS5","station": "Q-3HS5 - Phoenix Rises", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
                 ]}
             ]},
             { "system": "Any System Region Wide","station": "Any Horde Station", "regions": [
@@ -107,6 +113,9 @@
                 ]},
                 { "region": "Outer Passage" , "systems": [
                     { "system": "R3P0-Z","station": "Any HORDE", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 20000000 }
+                ]},
+                 { "region": "Insmother", "systems": [
+                     { "system": "Q-3HS5","station": "Q-3HS5 - Phoenix Rises", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
                 ]}
             ]},
             { "system": "Any System Region Wide","station": "Any Horde Station", "regions": [
@@ -157,6 +166,9 @@
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                ]},
+                 { "region": "Insmother", "systems": [
+                     { "system": "Q-3HS5","station": "Q-3HS5 - Phoenix Rises", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
                 ]}
             ]}
         ]},
@@ -205,6 +217,9 @@
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                ]},
+                 { "region": "Insmother", "systems": [
+                     { "system": "Q-3HS5","station": "Q-3HS5 - Phoenix Rises", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
                 ]}
             ]}
         ]},
@@ -295,6 +310,20 @@
 
             ]}
         ]},
+        { "region":"Insmother", "systems":[
+            { "system": "Q-3HS5","station": "Q-3HS5 - PHOENIX RISES?!?", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000 }
+                ]},
+                { "region": "Panfam Hubs", "systems":[
+                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
+                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
+                    { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 }
+                 ]}
+
+            ]}
+        ]},
         { "region":"DEPLOYMENT", "systems":[
             { "system": "1P-WGB","station": "1P-WGB - C E E C E E S T A R", "regions": [
                 { "region": "The Forge", "systems":[
@@ -320,4 +349,3 @@
         ]}
     ]
 }
-
