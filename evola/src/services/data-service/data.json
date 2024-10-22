@@ -346,16 +346,6 @@
                  ]}
 
             ]}
-        ]},
-        { "region":"SHAFT", "systems":[
-            { "system": "SHAFT","station": "Tactical Feed. Members Only", "regions": [
-                { "region": "The Forge", "systems":[
-                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 1 }
-                ]},
-                { "region": "Panfam Hubs", "systems":[
-                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
-
-            ]}
         ]}
     ]
 }
