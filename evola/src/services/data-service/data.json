@@ -5,7 +5,7 @@
             { "system": "Jita", "station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "regions": [
                 { "region": "Etherium Reach" , "systems": [
                     { "system": "LXQ2-T","station": "LXQ2-T - G A T E S T A R", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 10000000 },
-                    { "system": "F9-FUV","station": "F9-FUV - ICS Procropolis", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                    { "system": "F9-FUV","station": "F9-FUV - ICS Ackaroth We Will Miss You", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "Geminate" , "systems": [
                     { "system": "04-LQM","station": "04-LQM - Any HORDE Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
@@ -22,7 +22,8 @@
                 { "region": "Malpais" , "systems": [
                     { "system": "NSI-MW","station": "NSI-MW - Stellar Core", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "P3X-TN","station": "P3X-TN - Ragzs's Fault ", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "Region Wide","station": "Horde Must be able to dock", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                    { "system": "Region Wide","station": "Horde Must be able to dock", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                    { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "Oasa" , "systems": [
                     { "system": "RF-X7V","station": "RF-X7V - RF-X7V - NF Fortress Mineski", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
@@ -39,8 +40,7 @@
                     { "system": "SHAFT","station": "SHAFT", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
                  { "region": "DEPLOYMENT", "systems": [
-                     { "system": "1P-WGB","station": "1P-WGB - C E E C E E S T A R", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 1 },
-					 { "system": "319-3D","station": "319-3D IX  - Blood Raiders Logistic Support", "reward": {"volume": 2600.00, "collateral": 1.00 }, "limits": { "volume": 350000.00, "collateral": 60000000000 }, "minimumReward": 30000000 }
+                     { "system": "1P-WGB","station": "1P-WGB - C E E C E E S T A R", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 1 }
                 ]},
                  { "region": "Cobalt Edge", "systems": [
                      { "system": "E-B957","station": "E-B957 - Builders Edge", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 1 },
@@ -67,7 +67,8 @@
                    { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                    { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
-                   { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
+                   { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                 ]},
                  { "region": "Insmother", "systems": [
                      { "system": "Q-3HS5","station": "Q-3HS5 - Phoenix Rises", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
@@ -105,7 +106,8 @@
                    { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                    { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                   { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                   { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "Oasa" , "systems": [
                     { "system": "IG-40F","station": "IG-40F - The Maricadie Mansion", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 1 },
@@ -130,7 +132,8 @@
                    { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                    { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                   { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                   { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                 ]},
                  { "region": "DEPLOYMENT", "systems": [
                      { "system": "U-QVWD","station": "U-QVWD - B E A M E R S T A R", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 1 }
@@ -148,13 +151,14 @@
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                     { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
-                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]},
-            { "system": "F9-FUV","station": "F9-FUV - ICS Procropolis", "regions": [
+            { "system": "F9-FUV","station": "F9-FUV - ICS Ackaroth We Will Miss You", "regions": [
                 { "region": "The Forge", "systems":[
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 1 }
                 ]},
@@ -162,7 +166,8 @@
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                     { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
-                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
@@ -182,7 +187,8 @@
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                     { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
-                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
@@ -196,7 +202,8 @@
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 175.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 175.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                     { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 175.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
-                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 175.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 175.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 175.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
@@ -213,13 +220,28 @@
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                     { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
-                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]},
                  { "region": "Insmother", "systems": [
                      { "system": "Q-3HS5","station": "Q-3HS5 - Phoenix Rises", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
+                ]}
+            ]},
+            { "system": "863P-X","station": "863P-X - The Library", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 1 }
+                ]},
+                { "region": "Panfam Hubs", "systems":[
+                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
+                    { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
+                    { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
+                 ]},
+                { "region": "Overseer & Redloot NPC Vendor", "systems": [
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]}
         ]},
@@ -233,7 +255,8 @@
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                  { "region": "Overseer & Redloot NPC Vendor", "systems": [
                      { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
@@ -247,7 +270,8 @@
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 80.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 0.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                  { "region": "Overseer & Redloot NPC Vendor", "systems": [
                      { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
@@ -278,7 +302,8 @@
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]}
 
             ]},
@@ -291,7 +316,8 @@
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]}
 
             ]}
@@ -305,7 +331,8 @@
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]}
 
             ]}
@@ -319,7 +346,8 @@
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
                     { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
-                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 }
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 25000000 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 1100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]}
 
             ]}
@@ -333,16 +361,8 @@
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
-                 ]}
-
-            ]},
-			{ "system": "319-3D","station": "319-3D - Blood Raiders Logistic Support", "regions": [
-                { "region": "The Forge", "systems":[
-                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 2600.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 30000000 }
-                ]},
-                { "region": "Panfam Hubs", "systems":[
-                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 3000.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                   { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]}
 
             ]}
