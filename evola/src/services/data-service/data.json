@@ -51,6 +51,9 @@
                 ]},
                  { "region": "Insmother", "systems": [
                      { "system": "Q-3HS5","station": "Q-3HS5 - Phoenix Rises", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
+                ]},
+                 { "region": "Curse", "systems": [
+                     { "system": "Q-3HS5","station": "Y-DW5K IV - Moon 5 - Archangels Logistic Support", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
                 ]}
             ]}
         ]},
@@ -364,6 +367,17 @@
                     { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                    { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]}
+
+            ]}
+        ]},
+        { "region":"NPC Delve", "systems":[
+            { "system": "NPC DELVE","station": "NPC DELVE", "regions": [
+                { "region": "The Forge", "systems":[
+                   { "system": "Y-DW5K","station": "Y-DW5K IV - Moon 5 - Archangels Logistic Suppor", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 9000000000 }, "minimumReward": 25000000 }
+                ]},
+                { "region": "The Forge", "systems":[
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 1 }
+                ]}
 
             ]}
         ]}
