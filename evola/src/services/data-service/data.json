@@ -112,6 +112,9 @@
                 ]},
                 { "region": "Outer Passage" , "systems": [
                     { "system": "R3P0-Z","station": "Any HORDE", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 20000000 }
+                ]},
+                 { "region": "Delve", "systems": [
+					 { "system": "PR-8CA","station": "PR-8CA III - Blood Raiders Logistic Support", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]}
             ]},
             { "system": "Any System Region Wide","station": "Any Horde Station", "regions": [
