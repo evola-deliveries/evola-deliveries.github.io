@@ -328,11 +328,11 @@
         { "region":"NPC Delve", "systems":[
             { "system": "NPC DELVE","station": "NPC DELVE", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 9000000000 }, "minimumReward": 25000000 }
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000 }
                 ]},
-                { "region": "The Forge", "systems":[
-                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000 }
-                ]}
+                { "region": "Panfam Hubs", "systems":[
+                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 25000000 }
+                 ]}
 
             ]},
             { "system": "PR-8CA","station": "PR-8CA III - Blood Raiders Logistic Support", "regions": [
