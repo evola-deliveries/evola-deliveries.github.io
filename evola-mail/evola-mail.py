@@ -108,30 +108,34 @@ def refreshTokens(res):
 
                 print("refreshed token")
 
+def safe_json(res):
+    try:
+        return res.json()
+    except ValueError:
+        print(f"Failed to decode JSON. Status: {res.status_code}, Body: {res.text}")
+        return None
+
 def checkContracts():
-    #print("checking contracts.....")
     allContracts = []
     page = 1
-    
+
     headers = {
         "Authorization": "Bearer " + access_token,
         "Content-Type": "application/json"
     }
 
-    res = requests.get(
-        "https://esi.evetech.net/latest/corporations/" + corporationId + "/contracts/?datasource=tranquility&page=" + str(page),
-        headers=headers,
-    )
-
-    while not "error" in res.json():
+    while True:
         res = requests.get(
-            "https://esi.evetech.net/latest/corporations/" + corporationId + "/contracts/?datasource=tranquility&page=" + str(page),
+            f"https://esi.evetech.net/latest/corporations/{corporationId}/contracts/?datasource=tranquility&page={page}",
             headers=headers,
         )
 
-        if not "error" in res.json():
-            allContracts.append(res.json())
-        page = page + 1
+        data = safe_json(res)
+        if not data or "error" in data:
+            break
+
+        allContracts.append(data)
+        page += 1
 
     #print(allContracts)
 
