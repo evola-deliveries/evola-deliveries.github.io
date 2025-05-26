@@ -6,7 +6,7 @@
                 { "region": "Etherium Reach" , "systems": [
                     { "system": "LXQ2-T","station": "LXQ2-T - G A T E S T A R", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 10000000 },
                     { "system": "F9-FUV","station": "F9-FUV - ICS Ackaroth We Will Miss You", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "UAV-1E","station": "UAV-1E - Wolves Den", "reward": {"volume": 510.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                    { "system": "UAV-1E","station": "UAV-1E - Wolves Den", "reward": {"volume": 520.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 15000000 }
                 ]},
                 { "region": "Geminate" , "systems": [
                     { "system": "04-LQM","station": "04-LQM - Any HORDE Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
@@ -55,6 +55,9 @@
                 ]},
                  { "region": "Delve", "systems": [
                      { "system": "PR-8CA","station": "PR-8CA III - Blood Raiders Logistic Support", "reward": {"volume": 850.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
+                ]},
+                 { "region": "Active Deployment", "systems": [
+                     { "system": "G-QTSD","station": "G-QTSD - P E P E S T A R", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
                 ]}
             ]}
         ]},
@@ -88,6 +91,9 @@
                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                    { "system": "LXQ2-T","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
+                ]},
+                 { "region": "Active Deployment", "systems": [
+                     { "system": "G-QTSD","station": "G-QTSD - P E P E S T A R", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
                 ]}
             ]}
         ]},
@@ -141,6 +147,9 @@
                 ]},
                  { "region": "Delve", "systems": [
 					 { "system": "PR-8CA","station": "PR-8CA III - Blood Raiders Logistic Support", "reward": {"volume": 950.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                ]},
+                 { "region": "Active Deployment", "systems": [
+                     { "system": "G-QTSD","station": "G-QTSD - P E P E S T A R", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
                 ]}
 
             ]}
@@ -179,7 +188,7 @@
             ]},
             { "system": "UAV-1E","station": "UAV-1E - Wolves Den", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 510.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 1 }
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 520.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 15000000 }
                 ]},
                 { "region": "Panfam Hubs", "systems":[
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
@@ -223,6 +232,9 @@
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                ]},
+                 { "region": "Active Deployment", "systems": [
+                     { "system": "G-QTSD","station": "G-QTSD - P E P E S T A R", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
                 ]}
             ]}
         ]},
@@ -255,6 +267,9 @@
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                ]},
+                 { "region": "Active Deployment", "systems": [
+                     { "system": "G-QTSD","station": "G-QTSD - P E P E S T A R", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
                 ]}
             ]}
         ]},
