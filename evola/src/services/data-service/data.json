@@ -125,6 +125,9 @@
                 ]},
                  { "region": "Delve", "systems": [
 					 { "system": "PR-8CA","station": "PR-8CA III - Blood Raiders Logistic Support", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
+                ]},
+                 { "region": "Active Deployment", "systems": [
+                     { "system": "G-QTSD","station": "G-QTSD - P E P E S T A R", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
                 ]}
             ]},
             { "system": "Any System Region Wide","station": "Any Horde Station", "regions": [
