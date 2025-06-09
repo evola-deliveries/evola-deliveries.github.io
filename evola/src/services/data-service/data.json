@@ -5,8 +5,8 @@
             { "system": "Jita", "station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "regions": [
                 { "region": "Etherium Reach" , "systems": [
                     { "system": "LXQ2-T","station": "LXQ2-T - G A T E S T A R", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 10000000 },
-                    { "system": "F9-FUV","station": "F9-FUV - ICS Ackaroth We Will Miss You", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "UAV-1E","station": "UAV-1E - Wolves Den", "reward": {"volume": 520.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 15000000 }
+                    { "system": "F9-FUV","station": "F9-FUV - ICS Ackaroth We Will Miss You", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                    { "system": "UAV-1E","station": "UAV-1E - Wolves Den", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 15000000 }
                 ]},
                 { "region": "Geminate" , "systems": [
                     { "system": "04-LQM","station": "04-LQM - Any HORDE Station", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
@@ -22,30 +22,30 @@
                 ]},
                 { "region": "Malpais" , "systems": [
                     { "system": "NSI-MW","station": "NSI-MW - Stellar Core", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "P3X-TN","station": "P3X-TN - Ragzs's Fault ", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                    { "system": "P3X-TN","station": "P3X-TN - Ragzs's Fault ", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "Region Wide","station": "Horde Must be able to dock", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "Oasa" , "systems": [
-                    { "system": "RF-X7V","station": "RF-X7V - RF-X7V - NF Fortress Mineski", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
-                    { "system": "IG-40F ","station": "IG-40F - The Maricadie Mansion", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 1 },
+                    { "system": "RF-X7V","station": "RF-X7V - RF-X7V - NF Fortress Mineski", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                    { "system": "IG-40F ","station": "IG-40F - The Maricadie Mansion", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 1 },
                     { "system": "DYS-CG ","station": "Any XSAUX Station", "reward": {"volume": 380.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 70000000000 }, "minimumReward": 10000000}
                 ]},
                 { "region": "Spire" , "systems": [
                     { "system": "Y8K-5B","station": "Y8K-5B - RC House", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 10000000 }
                 ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 0.50 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]},
                 { "region": "Tactical Feed. Members Only" , "systems": [
                     { "system": "SHAFT","station": "SHAFT", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
                  { "region": "Cobalt Edge", "systems": [
-                     { "system": "E-B957","station": "E-B957 - Builders Edge", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 1 },
-					 { "system": "4A-6NI","station": "4A-6NI - Keepstar", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 1 }
+                     { "system": "E-B957","station": "E-B957 - Builders Edge", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 1 },
+					 { "system": "4A-6NI","station": "4A-6NI - Keepstar", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 1 }
                 ]},
                  { "region": "Outer Passage", "systems": [
-                     { "system": "R3P0-Z","station": "Any HORDE Station", "reward": {"volume": 550.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 20000000 }
+                     { "system": "R3P0-Z","station": "Any HORDE Station", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 20000000 }
                 ]},
                  { "region": "Curse", "systems": [
                      { "system": "Y-DW5K","station": "Y-DW5K IV - Moon 5 - Archangels Logistic Support", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
@@ -107,7 +107,7 @@
                     { "system": "Y8K-5B","station": "Y8K-5B - RC House", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 0.50 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]},
                 { "region": "Panfam Hubs", "systems":[
                    { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
@@ -171,12 +171,12 @@
                    { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 0.50 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]},
             { "system": "F9-FUV","station": "F9-FUV - ICS Ackaroth We Will Miss You", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 1 }
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "Panfam Hubs", "systems":[
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
@@ -186,12 +186,12 @@
                    { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 0.50 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]},
             { "system": "UAV-1E","station": "UAV-1E - Wolves Den", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 520.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 15000000 }
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 15000000 }
                 ]},
                 { "region": "Panfam Hubs", "systems":[
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
@@ -201,7 +201,7 @@
                    { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 0.50 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]}
         ]},
@@ -219,7 +219,7 @@
                    { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 0.50 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]},
             { "system": "Region Wide","station": "Horde Must be able to dock", "regions": [
@@ -234,7 +234,7 @@
                    { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 175.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 0.50 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]},
                  { "region": "Active Deployment", "systems": [
                      { "system": "G-QTSD","station": "G-QTSD - P E P E S T A R", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
@@ -245,7 +245,7 @@
         { "region":"Malpais", "systems":[
             { "system": "NSI-MW","station": "R1O-GN - Any HORDE Station", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 1 }
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "Panfam Hubs", "systems":[
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 },
@@ -255,7 +255,7 @@
                    { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 0.50 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]}
             ]},
             { "system": "863P-X","station": "863P-X - The Library", "regions": [
@@ -269,7 +269,7 @@
                     { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                    { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 0.50 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]},
                  { "region": "Active Deployment", "systems": [
                      { "system": "G-QTSD","station": "G-QTSD - P E P E S T A R", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
@@ -290,7 +290,7 @@
                    { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                  { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 0.50 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                  ]}
             ]},
             { "system": "DYS-CG","station": "Any XSAUX Station", "regions": [
@@ -305,7 +305,7 @@
                    { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                  ]},
                  { "region": "Overseer & Redloot NPC Vendor", "systems": [
-                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 0.50 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                  ]}
 
             ]}
@@ -324,7 +324,7 @@
         { "region":"Cobalt Edge", "systems":[
             { "system": "E-B957","station": "E-B957 - Builders Edge", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 1 }
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "Panfam Hubs", "systems":[
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 450.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
@@ -338,7 +338,7 @@
 			
 	     { "system": "4A-6NI","station": "4A-6NI - Keepstar", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 1 }
+                   { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 1 }
                 ]},
                 { "region": "Panfam Hubs", "systems":[
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
