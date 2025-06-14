@@ -78,35 +78,45 @@ def sendMail(contract):
 def refreshTokens(res):
     global access_token
     global refreshToken
-    #refresh token if we have to
-    if not isinstance(res.json(), int):
-        if "error" in res.json():
-            if res.json()['error'] == "token is expired":
-                headers = {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                    "Host": "login.eveonline.com",
-                    "Authorization": "Basic " + clientId
-                }
 
-                form_values = {
-                    "grant_type": "refresh_token",
-                    "refresh_token": refreshToken
-                }
+    res_json = safe_json(res)
+    if not res_json:
+        print("Failed to refresh token or bad response.")
+        return
 
-                res = requests.post(
-                    "https://login.eveonline.com/v2/oauth/token/",
-                    data=form_values,
-                    headers=headers,
-                )
+    # Check if token is expired
+    if "error" in res_json:
+        if res_json['error'] == "token is expired":
+            headers = {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Host": "login.eveonline.com",
+                "Authorization": "Basic " + clientId
+            }
 
-                access_token = res.json()['access_token']
-                refreshToken = res.json()['refresh_token']
+            form_values = {
+                "grant_type": "refresh_token",
+                "refresh_token": refreshToken
+            }
 
-                saveString = json.dumps(res.json()).replace("'",'"')
-                with open("./data/evola-tokens.txt", 'w') as filetowrite:
-                    filetowrite.write(saveString)
+            res = requests.post(
+                "https://login.eveonline.com/v2/oauth/token/",
+                data=form_values,
+                headers=headers,
+            )
 
-                print("refreshed token")
+            res_json = safe_json(res)
+            if not res_json:
+                print("Failed to refresh token!")
+                return
+
+            access_token = res_json.get('access_token')
+            refreshToken = res_json.get('refresh_token')
+
+            saveString = json.dumps(res_json)
+            with open("./data/evola-tokens.txt", 'w') as filetowrite:
+                filetowrite.write(saveString)
+
+            print("refreshed token")
 
 def safe_json(res):
     try:
