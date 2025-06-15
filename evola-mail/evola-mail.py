@@ -56,7 +56,7 @@ def sendMail(contract):
 
     data = {
       "approved_cost": 0,
-      "body": "Thank You for using Evola! Your <url=contract:" + str(contract['start_location_id']) + "//" + str(contract['contract_id']) + ">package</url> has been delivered. If you enjoyed our service, remember to check us out on <url=https://discord.gg/ZGt6eUwuXt/>Discord</url> and <url=https://www.pandemic-horde.org/forum/index.php?threads/evola-deliveries-horde-courier-service.3266/>our forum post</url> for updated pricing and route status. -Evola",
+      "body": "Thank You for using Evola! Your <url=contract:" + str(contract['start_location_id']) + "//" + str(contract['contract_id']) + ">package</url> has been delivered. If you enjoyed our service, remember to check us out on <url=https://discord.gg/ZGt6eUwuXt>Discord</url> and <url=https://www.pandemic-horde.org/forum/index.php?threads/evola-deliveries-horde-courier-service.3266/>our forum post</url> for updated pricing and route status. -Evola",
       "recipients": [
         {
           "recipient_id": contract['issuer_id'],
@@ -78,74 +78,60 @@ def sendMail(contract):
 def refreshTokens(res):
     global access_token
     global refreshToken
+    #refresh token if we have to
+    if not isinstance(res.json(), int):
+        if "error" in res.json():
+            if res.json()['error'] == "token is expired":
+                headers = {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Host": "login.eveonline.com",
+                    "Authorization": "Basic " + clientId
+                }
 
-    res_json = safe_json(res)
-    if not res_json:
-        print("Failed to refresh token or bad response.")
-        return
+                form_values = {
+                    "grant_type": "refresh_token",
+                    "refresh_token": refreshToken
+                }
 
-    # Check if token is expired
-    if "error" in res_json:
-        if res_json['error'] == "token is expired":
-            headers = {
-                "Content-Type": "application/x-www-form-urlencoded",
-                "Host": "login.eveonline.com",
-                "Authorization": "Basic " + clientId
-            }
+                res = requests.post(
+                    "https://login.eveonline.com/v2/oauth/token/",
+                    data=form_values,
+                    headers=headers,
+                )
 
-            form_values = {
-                "grant_type": "refresh_token",
-                "refresh_token": refreshToken
-            }
+                access_token = res.json()['access_token']
+                refreshToken = res.json()['refresh_token']
 
-            res = requests.post(
-                "https://login.eveonline.com/v2/oauth/token/",
-                data=form_values,
-                headers=headers,
-            )
+                saveString = json.dumps(res.json()).replace("'",'"')
+                with open("./data/evola-tokens.txt", 'w') as filetowrite:
+                    filetowrite.write(saveString)
 
-            res_json = safe_json(res)
-            if not res_json:
-                print("Failed to refresh token!")
-                return
-
-            access_token = res_json.get('access_token')
-            refreshToken = res_json.get('refresh_token')
-
-            saveString = json.dumps(res_json)
-            with open("./data/evola-tokens.txt", 'w') as filetowrite:
-                filetowrite.write(saveString)
-
-            print("refreshed token")
-
-def safe_json(res):
-    try:
-        return res.json()
-    except ValueError:
-        print(f"Failed to decode JSON. Status: {res.status_code}, Body: {res.text}")
-        return None
+                print("refreshed token")
 
 def checkContracts():
+    #print("checking contracts.....")
     allContracts = []
     page = 1
-
+    
     headers = {
         "Authorization": "Bearer " + access_token,
         "Content-Type": "application/json"
     }
 
-    while True:
+    res = requests.get(
+        "https://esi.evetech.net/latest/corporations/" + corporationId + "/contracts/?datasource=tranquility&page=" + str(page),
+        headers=headers,
+    )
+
+    while not "error" in res.json():
         res = requests.get(
-            f"https://esi.evetech.net/latest/corporations/{corporationId}/contracts/?datasource=tranquility&page={page}",
+            "https://esi.evetech.net/latest/corporations/" + corporationId + "/contracts/?datasource=tranquility&page=" + str(page),
             headers=headers,
         )
 
-        data = safe_json(res)
-        if not data or "error" in data:
-            break
-
-        allContracts.append(data)
-        page += 1
+        if not "error" in res.json():
+            allContracts.append(res.json())
+        page = page + 1
 
     #print(allContracts)
 
@@ -158,6 +144,7 @@ def checkContracts():
     for contractChunk in allContracts:
         for contract in contractChunk:
             if contract['status'] == "finished" and contract['type'] == "courier":
+                #print(contract['date_completed'])
                 if contract['date_completed'] > startTime and contract['contract_id'] not in sentMailContractIDs:
                     print("new contract")
                     needMailContracts.append(contract)
@@ -165,6 +152,7 @@ def checkContracts():
 
     #now send mails
     #currently send to replacent while I test
+    #print(needMailContracts)
     for contract in needMailContracts:
         print("New complete: ")
         print(contract)
