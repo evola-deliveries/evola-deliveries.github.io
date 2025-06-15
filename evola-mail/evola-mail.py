@@ -5,171 +5,216 @@ import pytz
 import os
 from datetime import datetime, timedelta
 
+# === Load ENV Variables ===
 clientId = os.getenv('CLIENTID')
 corporationId = os.getenv('CORPID')
 characterId = os.getenv('CHARACTERID')
 
-tok = open("./data/evola-tokens.txt")
-tokens = tok.read()
-print(tokens)
-access_token = json.loads(tokens)['access_token']
-refreshToken = json.loads(tokens)['refresh_token']
+if not clientId or not corporationId or not characterId:
+    raise ValueError("Missing one or more environment variables: CLIENTID, CORPID, CHARACTERID")
 
-sentMailContractIDs = []
+# === Load Tokens ===
+with open("./data/evola-tokens.txt", 'r') as tok:
+    tokens = json.load(tok)
+    access_token = tokens['access_token']
+    refreshToken = tokens['refresh_token']
 
-def testSendMail():
+# === Tracking ===
+trackedContracts = {}
+
+# === Safe JSON Parser ===
+def safe_json(res):
+    try:
+        return res.json()
+    except ValueError:
+        print(f"Failed to decode JSON. Status: {res.status_code}, Body: {res.text}")
+        return {}
+
+# === Token Refresher (Manual Trigger) ===
+def refreshTokenOnly():
+    global access_token, refreshToken
+
     headers = {
-        "Authorization": "Bearer " + access_token,
-        "Content-Type": "application/json"
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Host": "login.eveonline.com",
+        "Authorization": "Basic " + clientId
     }
 
-    data = {
-      "approved_cost": 0,
-      "body": "Test Body <url=https://www.pandemic-horde.org/forum/index.php?threads/evola-deliveries-horde-courier-service.3266/>LINK</url>",
-      "recipients": [
-        {
-          "recipient_id": 2115718841,
-          "recipient_type": "character"
-        }
-      ],
-      "subject": "Test Subject"
+    form_values = {
+        "grant_type": "refresh_token",
+        "refresh_token": refreshToken
     }
 
     res = requests.post(
-        "https://esi.evetech.net/latest/characters/" + characterId + "/mail/?datasource=tranquility",
-        data = json.dumps(data),
+        "https://login.eveonline.com/v2/oauth/token/",
+        data=form_values,
         headers=headers,
     )
 
-    print(res.json())
-    refreshTokens(res)
+    new_tokens = safe_json(res)
+    if not new_tokens or 'access_token' not in new_tokens:
+        print("Failed to refresh token: ", new_tokens)
+        return
 
+    access_token = new_tokens.get('access_token')
+    refreshToken = new_tokens.get('refresh_token')
+
+    with open("./data/evola-tokens.txt", 'w') as f:
+        json.dump(new_tokens, f)
+
+    print("Access token refreshed successfully.")
+
+# === Send Mail on Completion ===
 def sendMail(contract):
-    #Send mail
-    if contract['acceptor_id'] == 2115718841:
+    if contract.get('acceptor_id') == 2117867283:
         contract['acceptor_id'] = 2116763424
-        
+
     headers = {
-        "Authorization": "Bearer " + access_token,
+        "Authorization": f"Bearer {access_token}",
         "Content-Type": "application/json"
     }
 
     data = {
-      "approved_cost": 0,
-      "body": "Thank You for using Evola! Your <url=contract:" + str(contract['start_location_id']) + "//" + str(contract['contract_id']) + ">package</url> has been delivered. If you enjoyed our service, remember to check us out on <url=https://discord.gg/ZGt6eUwuXt>Discord</url> and <url=https://www.pandemic-horde.org/forum/index.php?threads/evola-deliveries-horde-courier-service.3266/>our forum post</url> for updated pricing and route status. -Evola",
-      "recipients": [
-        {
-          "recipient_id": contract['issuer_id'],
-          "recipient_type": "character"
-        }
-      ],
-      "subject": "Your Delivery"
+        "approved_cost": 0,
+        "body": f"Thank You for using Evola! Your <url=contract:{contract['start_location_id']}//{contract['contract_id']}>package</url> has been delivered. If you enjoyed our service, remember to check us out on <url=https://discord.gg/ZGt6eUwuXt>Discord</url> and <url=https://www.pandemic-horde.org/forum/index.php?threads/evola-deliveries-horde-courier-service.3266/>our forum post</url> for updated pricing and route status. -Evola",
+        "recipients": [
+            {
+                "recipient_id": contract['issuer_id'],
+                "recipient_type": "character"
+            }
+        ],
+        "subject": "Your Delivery"
     }
 
     res = requests.post(
-        "https://esi.evetech.net/latest/characters/" + characterId + "/mail/?datasource=tranquility",
-        data = json.dumps(data),
+        f"https://esi.evetech.net/latest/characters/{characterId}/mail/?datasource=tranquility",
+        data=json.dumps(data),
         headers=headers,
     )
 
-    print(res.json())
-    refreshTokens(res)
+    try:
+        response_data = res.json()
+        print(response_data)
+        if isinstance(response_data, dict) and "error" in response_data:
+            print(f"Mail send error: {response_data['error']}")
+    except Exception as e:
+        print(f"Failed to decode mail response: {e}")
 
-def refreshTokens(res):
-    global access_token
-    global refreshToken
-    #refresh token if we have to
-    if not isinstance(res.json(), int):
-        if "error" in res.json():
-            if res.json()['error'] == "token is expired":
-                headers = {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                    "Host": "login.eveonline.com",
-                    "Authorization": "Basic " + clientId
-                }
+# === Update Tracked Contracts ===
+def updateTrackedContracts(allContracts):
+    global trackedContracts
 
-                form_values = {
-                    "grant_type": "refresh_token",
-                    "refresh_token": refreshToken
-                }
+    currentMap = {
+        c['contract_id']: c
+        for c in allContracts
+        if c['type'] == "courier"
+    }
 
-                res = requests.post(
-                    "https://login.eveonline.com/v2/oauth/token/",
-                    data=form_values,
-                    headers=headers,
-                )
+    # Add new outstanding contracts
+    for cid, contract in currentMap.items():
+        if cid not in trackedContracts and contract['status'] == "outstanding":
+            print(f"Tracking new contract: {cid}")
+            trackedContracts[cid] = contract
 
-                access_token = res.json()['access_token']
-                refreshToken = res.json()['refresh_token']
+    # Detect completions or disappearances
+    for cid in list(trackedContracts.keys()):
+        old = trackedContracts[cid]
+        updated = currentMap.get(cid)
 
-                saveString = json.dumps(res.json()).replace("'",'"')
-                with open("./data/evola-tokens.txt", 'w') as filetowrite:
-                    filetowrite.write(saveString)
+        if updated is None:
+            print(f"Contract {cid} has vanished. Assuming expired/withdrawn.")
+            del trackedContracts[cid]
+            continue
 
-                print("refreshed token")
+        if updated['status'] == "finished":
+            print(f"Contract {cid} is now finished.")
+            sendMail(updated)
+            del trackedContracts[cid]
 
+# === Fetch Contracts from ESI ===
 def checkContracts():
-    #print("checking contracts.....")
+    global access_token
+
     allContracts = []
     page = 1
-    
+    max_pages = 1
+
+    while page <= max_pages:
+        headers = {
+            "Authorization": f"Bearer {access_token}",
+            "Content-Type": "application/json"
+        }
+
+        url = f"https://esi.evetech.net/latest/corporations/{corporationId}/contracts/?datasource=tranquility&page={page}"
+        res = requests.get(url, headers=headers)
+
+        if res.status_code == 401:
+            print("Token expired or unauthorized. Attempting to refresh...")
+            refreshTokenOnly()
+            continue  # retry page fetch after refresh
+
+        if res.status_code != 200:
+            print(f"Error fetching page {page}: {res.status_code}")
+            break
+
+        data = safe_json(res)
+        if not data:
+            print(f"No data on page {page}, stopping.")
+            break
+
+        allContracts.extend(data)
+
+        if page == 1:
+            try:
+                max_pages = int(res.headers.get("X-Pages", "1"))
+                #print(f"X-Pages header: {max_pages}")
+            except ValueError:
+                print("Invalid X-Pages header; defaulting to 1.")
+
+        page += 1
+
+    updateTrackedContracts(allContracts)
+
+# === Optional Test Mail ===
+def testSendMail():
     headers = {
-        "Authorization": "Bearer " + access_token,
+        "Authorization": f"Bearer {access_token}",
         "Content-Type": "application/json"
     }
 
-    res = requests.get(
-        "https://esi.evetech.net/latest/corporations/" + corporationId + "/contracts/?datasource=tranquility&page=" + str(page),
+    data = {
+        "approved_cost": 0,
+        "body": "Test Body <url=https://www.pandemic-horde.org/forum/index.php?threads/evola-deliveries-horde-courier-service.3266/>LINK</url>",
+        "recipients": [
+            {
+                "recipient_id": 2117867283,
+                "recipient_type": "character"
+            }
+        ],
+        "subject": "Test Subject"
+    }
+
+    res = requests.post(
+        f"https://esi.evetech.net/latest/characters/{characterId}/mail/?datasource=tranquility",
+        data=json.dumps(data),
         headers=headers,
     )
 
-    while not "error" in res.json():
-        res = requests.get(
-            "https://esi.evetech.net/latest/corporations/" + corporationId + "/contracts/?datasource=tranquility&page=" + str(page),
-            headers=headers,
-        )
+    try:
+        print(res.json())
+    except Exception as e:
+        print(f"Failed to decode test mail response: {e}")
 
-        if not "error" in res.json():
-            allContracts.append(res.json())
-        page = page + 1
-
-    #print(allContracts)
-
-    utc = pytz.timezone('utc')
-    now = datetime.now(utc)
-    date_time = now.strftime("%Y-%m-%dT%H:%M:%SZ")
-        
-    needMailContracts = []
-    
-    for contractChunk in allContracts:
-        for contract in contractChunk:
-            if contract['status'] == "finished" and contract['type'] == "courier":
-                #print(contract['date_completed'])
-                if contract['date_completed'] > startTime and contract['contract_id'] not in sentMailContractIDs:
-                    print("new contract")
-                    needMailContracts.append(contract)
-                    sentMailContractIDs.append(contract['contract_id'])
-
-    #now send mails
-    #currently send to replacent while I test
-    #print(needMailContracts)
-    for contract in needMailContracts:
-        print("New complete: ")
-        print(contract)
-        sendMail(contract)
-
-    refreshTokens(res)
-
+# === Optional Start Time (unused, placeholder) ===
 utc = pytz.timezone('utc')
 now = datetime.now(utc)
-startTime = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+startTime = (now - timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
 
+# === Main Loop ===
 while True:
-    #Check contracts
-    checkContracts()
-
-    #Test send mail
-    #testSendMail()
-
-    #loop timer
-    time.sleep(10)
+    try:
+        checkContracts()
+        time.sleep(10)
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        time.sleep(30)
