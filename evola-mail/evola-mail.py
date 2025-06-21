@@ -179,6 +179,7 @@ def checkContracts():
     allContracts = []
     page = 1
     max_pages = 1
+    error_occurred = False  # 🕯️A little flag to tell if all went well...
 
     while page <= max_pages:
         headers = {
@@ -196,11 +197,13 @@ def checkContracts():
 
         if res.status_code != 200:
             print(f"Error fetching page {page}: {res.status_code}")
+            error_occurred = True  # 💥 Trouble happened, mark it...
             break
 
         data = safe_json(res)
         if not data:
             print(f"No data on page {page}, stopping.")
+            error_occurred = True  # 🧊 Still an issue, my liege
             break
 
         allContracts.extend(data)
@@ -208,13 +211,15 @@ def checkContracts():
         if page == 1:
             try:
                 max_pages = int(res.headers.get("X-Pages", "1"))
-                #print(f"X-Pages header: {max_pages}")
             except ValueError:
                 print("Invalid X-Pages header; defaulting to 1.")
 
         page += 1
 
-    updateTrackedContracts(allContracts)
+    if not error_occurred:
+        updateTrackedContracts(allContracts)  # 🎀 Only if everything is nice and clean!
+    else:
+        print("Skipped updating tracked contracts due to earlier errors.")
 
 # === Optional Test Mail ===
 def testSendMail():
