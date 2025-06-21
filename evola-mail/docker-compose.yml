@@ -1,5 +1,5 @@
 services:
-  evola-api:
+  evola-mail:
     image: dmportella/evola-mail:latest
     container_name: evola-mail
     restart: unless-stopped

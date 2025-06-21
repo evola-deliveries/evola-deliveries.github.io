@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 
 COPY evola-mail.py ./
 
-CMD [ "python", "./evola-mail.py"]
+CMD [ "python", "-u", "./evola-mail.py"]
