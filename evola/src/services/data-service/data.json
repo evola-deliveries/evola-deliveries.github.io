@@ -58,7 +58,7 @@
                      { "system": "PR-8CA","station": "PR-8CA III - Blood Raiders Logistic Support", "reward": {"volume": 850.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
                 ]},
                  { "region": "Active Deployment", "systems": [
-                     { "system": "E8-432","station": "E8-432 - P A N F A M S T A R ", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
+                     { "system": "E8-432","station": "E8-432 - P A N F A M S T A R", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
                 ]}
             ]}
         ]},
@@ -94,7 +94,7 @@
                    { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
                 ]},
                  { "region": "Active Deployment", "systems": [
-                     { "system": "E8-432","station": "E8-432 - P A N F A M S T A R ", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
+                     { "system": "E8-432","station": "E8-432 - P A N F A M S T A R", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
                 ]}
             ]}
         ]},
@@ -128,7 +128,7 @@
 					 { "system": "PR-8CA","station": "PR-8CA III - Blood Raiders Logistic Support", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
                  { "region": "Active Deployment", "systems": [
-                     { "system": "E8-432","station": "E8-432 - P A N F A M S T A R ", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
+                     { "system": "E8-432","station": "E8-432 - P A N F A M S T A R", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
                 ]}
             ]},
             { "system": "Any System Region Wide","station": "Any Horde Station", "regions": [
@@ -153,7 +153,7 @@
 					 { "system": "PR-8CA","station": "PR-8CA III - Blood Raiders Logistic Support", "reward": {"volume": 950.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
                  { "region": "Active Deployment", "systems": [
-                     { "system": "E8-432","station": "E8-432 - P A N F A M S T A R ", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
+                     { "system": "E8-432","station": "E8-432 - P A N F A M S T A R", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
                 ]}
 
             ]}
@@ -253,7 +253,7 @@
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 0.50 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]},
                  { "region": "Active Deployment", "systems": [
-                     { "system": "G-QTSD","station": "G-QTSD - P E P E S T A R", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
+                     { "system": "E8-432","station": "E8-432", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
                 ]}
             ]}
         ]},
@@ -272,6 +272,9 @@
                  ]},
                 { "region": "Overseer & Redloot NPC Vendor", "systems": [
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 0.50 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
+                ]},
+                 { "region": "Active Deployment", "systems": [
+                     { "system": "E8-432","station": "E8-432 - P A N F A M S T A R", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
                 ]}
             ]},
             { "system": "863P-X","station": "863P-X - The Library", "regions": [
@@ -288,7 +291,7 @@
                     { "system": "Todifrauan","station": "Todifrauan VII - Moon 8 - DED Assembly Plant", "reward": {"volume": 1.00, "collateral": 0.50 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 0 }
                 ]},
                  { "region": "Active Deployment", "systems": [
-                     { "system": "E8-432","station": "E8-432 - P A N F A M S T A R ", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
+                     { "system": "E8-432","station": "E8-432 - P A N F A M S T A R", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
                 ]}
             ]}
         ]},
@@ -412,7 +415,7 @@
             ]}
         ]},
         { "region":"Active Deployment", "systems":[
-            { "system": "G-QTSD","station": "No Longer Staging!", "regions": [
+            { "system": "G-QTSD","station": "G-QTSD - Any Horde", "regions": [
                 { "region": "The Forge", "systems":[
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000 }
                 ]},
@@ -422,9 +425,12 @@
                     { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                    { "system": "863P-X","station": "863P-X - The Library", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 1 }
-                 ]}
+                 ]},
+                 { "region": "Active Deployment", "systems": [
+                     { "system": "E8-432","station": "E8-432 - P A N F A M S T A R", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
+                ]}
             ]},
-            { "system": "E8-432","station": "E8-432 - P A N F A M S T A R ", "regions", "regions": [
+			{ "system": "E8-432","station": "E8-432 - P A N F A M S T A R", "regions": [
                 { "region": "The Forge", "systems":[
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000 }
                 ]},
