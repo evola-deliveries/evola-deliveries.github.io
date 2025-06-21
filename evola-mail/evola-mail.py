@@ -5,6 +5,14 @@ import pytz
 import os
 from datetime import datetime, timedelta
 
+# how often to refresh contracts from ESI
+CHECK_INTERVAL = 60  # seconds
+
+# location for persisted data
+DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
+CONTRACTS_FILE = os.path.join(DATA_DIR, "tracked-contracts.json")
+os.makedirs(DATA_DIR, exist_ok=True)
+
 # === Load ENV Variables ===
 clientId = os.getenv('CLIENTID')
 corporationId = os.getenv('CORPID')
@@ -14,13 +22,39 @@ if not clientId or not corporationId or not characterId:
     raise ValueError("Missing one or more environment variables: CLIENTID, CORPID, CHARACTERID")
 
 # === Load Tokens ===
-with open("./data/evola-tokens.txt", 'r') as tok:
+with open(os.path.join(DATA_DIR, "evola-tokens.txt"), 'r') as tok:
     tokens = json.load(tok)
     access_token = tokens['access_token']
     refreshToken = tokens['refresh_token']
 
 # === Tracking ===
 trackedContracts = {}
+
+# Load tracked contracts from disk if available
+def loadTrackedContracts():
+    global trackedContracts
+    if os.path.exists(CONTRACTS_FILE):
+        try:
+            with open(CONTRACTS_FILE, 'r') as f:
+                data = json.load(f)
+                # keys are contract ids, store as ints for consistency
+                trackedContracts = {int(k): v for k, v in data.items()}
+        except Exception as e:
+            print(f"Failed to load tracked contracts: {e}")
+            trackedContracts = {}
+    else:
+        trackedContracts = {}
+
+# Persist tracked contracts to disk
+def saveTrackedContracts():
+    try:
+        with open(CONTRACTS_FILE, 'w') as f:
+            json.dump(trackedContracts, f)
+    except Exception as e:
+        print(f"Failed to save tracked contracts: {e}")
+
+# initialize contracts from file on startup
+loadTrackedContracts()
 
 # === Safe JSON Parser ===
 def safe_json(res):
@@ -59,7 +93,7 @@ def refreshTokenOnly():
     access_token = new_tokens.get('access_token')
     refreshToken = new_tokens.get('refresh_token')
 
-    with open("./data/evola-tokens.txt", 'w') as f:
+    with open(os.path.join(DATA_DIR, "evola-tokens.txt"), 'w') as f:
         json.dump(new_tokens, f)
 
     print("Access token refreshed successfully.")
@@ -112,7 +146,7 @@ def updateTrackedContracts(allContracts):
 
     # Add new outstanding contracts
     for cid, contract in currentMap.items():
-        if cid not in trackedContracts and contract['status'] == "outstanding":
+        if cid not in trackedContracts and contract['status'] in ("outstanding", "in_progress"):
             print(f"Tracking new contract: {cid}")
             trackedContracts[cid] = contract
 
@@ -130,6 +164,13 @@ def updateTrackedContracts(allContracts):
             print(f"Contract {cid} is now finished.")
             sendMail(updated)
             del trackedContracts[cid]
+            continue
+        
+         # update status for in-progress/outstanding changes
+        trackedContracts[cid] = updated
+
+    # Persist any changes
+    saveTrackedContracts()
 
 # === Fetch Contracts from ESI ===
 def checkContracts():
@@ -214,7 +255,7 @@ startTime = (now - timedelta(days=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
 while True:
     try:
         checkContracts()
-        time.sleep(10)
+        time.sleep(CHECK_INTERVAL)
     except Exception as e:
         print(f"Unexpected error: {e}")
-        time.sleep(30)
+        time.sleep(CHECK_INTERVAL)
