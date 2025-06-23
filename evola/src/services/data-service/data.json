@@ -153,7 +153,7 @@
 					 { "system": "PR-8CA","station": "PR-8CA III - Blood Raiders Logistic Support", "reward": {"volume": 950.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 }
                 ]},
                  { "region": "Active Deployment", "systems": [
-                     { "system": "E8-432","station": "E8-432 - P A N F A M S T A R", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
+                     { "system": "E8-432","station": "E8-432 - P A N F A M S T A R", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 5000000 }
                 ]}
 
             ]}
@@ -420,7 +420,7 @@
                    { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000 }
                 ]},
                 { "region": "Panfam Hubs", "systems":[
-                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
+                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 50.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "R1O-GN","station": "Any Panfam Station", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "NSI-MW","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
                     { "system": "F9-FUV","station": "Any Panfam Station", "reward": {"volume": 100.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 60000000000 }, "minimumReward": 1 },
