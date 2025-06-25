@@ -67,30 +67,55 @@ export default function ContractCreator() {
     }, [inboundValue, outboundValue]);
 
     useEffect(() => {
-        setPricing(calculatePricing(inboundRoute, pricing.price, pricing.volume, pricing.janice, rushFee, rushOrderCheck && rushAllowed));
-    }, [inboundRoute]);
+        setPricing(calculatePricing(
+            inboundRoute,
+            pricing.price,
+            pricing.volume,
+            pricing.janice,
+            rushFee,
+            rushOrderCheck && rushAllowed
+        ));
+    }, [
+        inboundRoute,
+        pricing.price,
+        pricing.volume,
+        pricing.janice,
+        rushFee,
+        rushOrderCheck,
+        rushAllowed
+    ]);
 
     useEffect(() => {
         setRushOrderCheck(false);
-        setPricing(calculatePricing(inboundRoute, pricing.price, pricing.volume, pricing.janice, rushFee, false));
-    }, [outboundRoute]);
-
-    useEffect(() => {
-        if (!rushAllowed && rushOrderCheck) {
-            setRushOrderCheck(false);
-        }
-        setPricing(calculatePricing(inboundRoute, pricing.price, pricing.volume, pricing.janice, rushFee, rushOrderCheck && rushAllowed));
-    }, [inboundRoute, outboundRoute]);
-
-    useEffect(() => {
-        setPricing(calculatePricing(inboundRoute, pricing.price, pricing.volume, pricing.janice, rushFee, rushOrderCheck && rushAllowed));
-    }, [rushOrderCheck]);
+        setPricing(calculatePricing(
+            inboundRoute,
+            pricing.price,
+            pricing.volume,
+            pricing.janice,
+            rushFee,
+            false
+        ));
+    }, [
+        outboundRoute,
+        inboundRoute,
+        pricing.price,
+        pricing.volume,
+        pricing.janice,
+        rushFee
+    ]);
 
     const handleOutboundChanged = (event) => setOutboundValue(event.target.value);
     const handleInboundChanged = (event) => setInboundValue(event.target.value);
 
     const handlePricingChange = (price, volume, janice) => {
-        setPricing(calculatePricing(inboundRoute, price, volume, janice, rushFee, rushOrderCheck && rushAllowed));
+        setPricing(calculatePricing(
+            inboundRoute,
+            price,
+            volume,
+            janice,
+            rushFee,
+            rushOrderCheck && rushAllowed
+        ));
     };
 
     useEffect(() => {
@@ -101,7 +126,6 @@ export default function ContractCreator() {
             setLast100MJJitaContracts(r.MJJitaHundredContracts);
         }).catch(console.log);
     }, []);
-
 
     return (
         <div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">
