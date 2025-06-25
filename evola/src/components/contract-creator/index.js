@@ -238,7 +238,7 @@ export default function ContractCreator() {
             </div>
             <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
                 <div className="flex justify-center w-full">
-                    <OrderTicket outbound={outboundRoute} inbound={inboundRoute} pricing={pricing} rushFee={rushFee} />
+                    <OrderTicket outbound={outboundRoute} inbound={inboundRoute} pricing={pricing} rushFee={rushOrderCheck && rushAllowed ? rushFee : 0} />
                 </div>
             </div>
         </div>
