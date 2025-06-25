@@ -182,7 +182,7 @@
         "type": "function",
         "z": "85d09905.9710c8",
         "name": "handleResponse",
-        "func": "if (msg.payload.length == 1000)\n{\n    //more contracts\n    global.set(\"CONTRACTS\", msg.payload)\n    msg.page = msg.page + 1\n    msg.contracts.push(msg.payload)\n    return [msg, null, null]\n}\nelse if (msg.statusCode === 403 && msg.payload.error && msg.payload.error === \"token is expired\")\n{\n    //token expired\n    return [null, msg, null];\n} if (msg.statusCode !== 200) {\n    return [null, null, msg]\n}\nelse\n{\n    //no more contracts\n    msg.contracts.push(msg.payload)\n    return [null, null, msg]\n}\nreturn [null, null, null];",
+        "func": "if (msg.payload.length == 1000)\n{\n    //more contracts\n    global.set(\"CONTRACTS\", msg.payload)\n    msg.page = msg.page + 1\n    msg.contracts.push(msg.payload)\n    return [msg, null, null]\n}\nelse if (msg.statusCode === 401 || (msg.statusCode === 403 && msg.payload.error && msg.payload.error === \"token is expired\"))\n{\n    //token expired\n    return [null, msg, null];\n} if (msg.statusCode !== 200) {\n    return [null, null, msg]\n}\nelse\n{\n    //no more contracts\n    msg.contracts.push(msg.payload)\n    return [null, null, msg]\n}\nreturn [null, null, null];",
         "outputs": 3,
         "timeout": "",
         "noerr": 0,
