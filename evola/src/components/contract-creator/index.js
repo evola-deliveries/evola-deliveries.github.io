@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import PackageDetails from '../package-details';
 import OrderTicket from '../order-ticket';
 import DataService from '../../services/data-service';
@@ -8,13 +8,20 @@ import UtilsService from "../../services/utils-service";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
 
-function calculatePricing(inboundRouteDeep, price, volume, janice) {
+function calculatePricing(inboundRouteDeep, price, volume, janice, rushFee = 0, applyRushFee = false) {
     const volumeIsk = inboundRouteDeep ? Math.ceil(volume * inboundRouteDeep.reward.volume) : 0;
     const collateralIsk = inboundRouteDeep ? Math.ceil((price / 100) * inboundRouteDeep.reward.collateral) : 0;
     const volumeInvalid = inboundRouteDeep ? inboundRouteDeep.limits.volume < volume : false;
     const collateralInvalid = inboundRouteDeep ? inboundRouteDeep.limits.collateral < price : false;
     let total = volumeIsk + collateralIsk;
-    if (inboundRouteDeep && total < inboundRouteDeep.minimumReward) total = inboundRouteDeep.minimumReward;
+
+    if (inboundRouteDeep && total < inboundRouteDeep.minimumReward) {
+        total = inboundRouteDeep.minimumReward;
+    }
+
+    if (applyRushFee) {
+        total += rushFee;
+    }
 
     return {
         price: price,
@@ -25,6 +32,7 @@ function calculatePricing(inboundRouteDeep, price, volume, janice) {
             collateralInvalid: collateralInvalid,
             volume: volumeIsk,
             collateral: collateralIsk,
+            rush: applyRushFee ? rushFee : 0,
             total: total
         }
     };
@@ -32,48 +40,68 @@ function calculatePricing(inboundRouteDeep, price, volume, janice) {
 
 export default function ContractCreator() {
     const [pricing, setPricing] = useState(calculatePricing(null, 0, 0, ""));
-
     const [outboundValue, setOutboundValue] = useState(DataService.default.region + "|" + DataService.default.system);
-
-    useEffect(() => {
-        setOutboundRoute(DataService.getOutboundRoute(outboundValue));
-    }, [outboundValue]);
-
     const [inboundValue, setInboundValue] = useState("");
-
-    useEffect(() => {
-        setInboundRoute(DataService.getInboundRoute(outboundValue, inboundValue));
-    }, [inboundValue]); // eslint-disable-line react-hooks/exhaustive-deps
-    // TODO fix this
-
-    const handleOutboundChanged = (event) => setOutboundValue(event.target.value);
-    const handleInboundChanged = (event) => setInboundValue(event.target.value);
-
     const [inboundRoute, setInboundRoute] = useState();
-
-    useEffect(() => {
-        setPricing(calculatePricing(inboundRoute, pricing.price, pricing.volume, pricing.janice));
-    }, [inboundRoute]); // eslint-disable-line react-hooks/exhaustive-deps
-
     const [outboundRoute, setOutboundRoute] = useState();
-
-    const handlePricingChange = (price, volume, janice) => {
-        setPricing(calculatePricing(inboundRoute, price, volume, janice));
-    };
-
+    const [rushOrderCheck, setRushOrderCheck] = useState(false);
     const [outstandingContracts, setOutstandingContracts] = useState();
     const [progressContracts, setProgressContracts] = useState();
     const [HundredContracts, setLast100ContractTime] = useState();
     const [MJJitaHundredContracts, setLast100MJJitaContracts] = useState();
 
-    ContractService.getContracts().then(r => {
-        setOutstandingContracts(r.Outstanding)
-        setProgressContracts(r.InProgress)
-        setLast100ContractTime(r.HundredContracts)
-        setLast100MJJitaContracts(r.MJJitaHundredContracts)
-    }).catch(reason => {
-        console.log(reason);
-    })
+    const rushAllowed = inboundRoute?.allowRush === true;
+
+    const rushFee = useMemo(() => {
+        return inboundRoute?.overrideRushFeeAmount ?? DataService.default.fees.rushFeeAmount;
+    }, [inboundRoute]);
+
+    const displayRushFee = rushFee;
+
+    useEffect(() => {
+        setOutboundRoute(DataService.getOutboundRoute(outboundValue));
+    }, [outboundValue]);
+
+    useEffect(() => {
+        setInboundRoute(DataService.getInboundRoute(outboundValue, inboundValue));
+    }, [inboundValue, outboundValue]);
+
+    useEffect(() => {
+        setPricing(calculatePricing(inboundRoute, pricing.price, pricing.volume, pricing.janice, rushFee, rushOrderCheck && rushAllowed));
+    }, [inboundRoute]);
+
+    useEffect(() => {
+        setRushOrderCheck(false);
+        setPricing(calculatePricing(inboundRoute, pricing.price, pricing.volume, pricing.janice, rushFee, false));
+    }, [outboundRoute]);
+
+    useEffect(() => {
+        if (!rushAllowed && rushOrderCheck) {
+            setRushOrderCheck(false);
+        }
+        setPricing(calculatePricing(inboundRoute, pricing.price, pricing.volume, pricing.janice, rushFee, rushOrderCheck && rushAllowed));
+    }, [inboundRoute, outboundRoute]);
+
+    useEffect(() => {
+        setPricing(calculatePricing(inboundRoute, pricing.price, pricing.volume, pricing.janice, rushFee, rushOrderCheck && rushAllowed));
+    }, [rushOrderCheck]);
+
+    const handleOutboundChanged = (event) => setOutboundValue(event.target.value);
+    const handleInboundChanged = (event) => setInboundValue(event.target.value);
+
+    const handlePricingChange = (price, volume, janice) => {
+        setPricing(calculatePricing(inboundRoute, price, volume, janice, rushFee, rushOrderCheck && rushAllowed));
+    };
+
+    useEffect(() => {
+        ContractService.getContracts().then(r => {
+            setOutstandingContracts(r.Outstanding);
+            setProgressContracts(r.InProgress);
+            setLast100ContractTime(r.HundredContracts);
+            setLast100MJJitaContracts(r.MJJitaHundredContracts);
+        }).catch(console.log);
+    }, []);
+
 
     return (
         <div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">
@@ -158,12 +186,35 @@ export default function ContractCreator() {
                             <FontAwesomeIcon className="cursor-pointer" icon={faCopy} onClick={() => inboundRoute && UtilsService.clipboardCopy(inboundRoute.station)} />
                         </div>
                     </div>
+                    {(() => {
+                        return (
+                            <div className="mb-4">
+                                <label className="flex items-center">
+                                    <input
+                                        type="checkbox"
+                                        className="form-check-input appearance-none border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                                        checked={rushOrderCheck}
+                                        onChange={(e) => setRushOrderCheck(e.target.checked)}
+                                        disabled={!rushAllowed}
+                                        id="rushOrderTop"
+                                    />
+                                    <span className={`text-gray-800 font-medium ${!rushAllowed ? 'opacity-50' : ''}`}>
+                                        Request Rush Delivery
+                                    </span>
+                                </label>
+                                <div className={`text-sm pl-7 leading-snug -mt-1 ${!rushAllowed ? 'text-gray-400' : 'text-gray-600'}`}>
+                                    +<span className='font-bold'>{displayRushFee.toLocaleString()}</span> ISK flat fee <span className="font-semibold">*Guaranteed Priority*</span><br />
+                                    <span className="italic">Guaranteed 24-hour delivery or top of queue.</span> Must be clearly marked as <span className="text-blue-600 font-semibold">priority</span>.<br />
+                                </div>
+                            </div>
+                        );
+                    })()}
                     <PackageDetails system={inboundRoute} onPricingChange={handlePricingChange} />
                 </div>
             </div>
             <div className="my-1 px-1 w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-1 md:px-1 md:w-1/2 lg:my-1 lg:px-1 lg:w-1/2 xl:my-1 xl:px-1 xl:w-1/2">
                 <div className="flex justify-center w-full">
-                    <OrderTicket outbound={outboundRoute} inbound={inboundRoute} pricing={pricing} />
+                    <OrderTicket outbound={outboundRoute} inbound={inboundRoute} pricing={pricing} rushFee={rushFee} />
                 </div>
             </div>
         </div>

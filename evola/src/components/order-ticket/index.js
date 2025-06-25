@@ -4,7 +4,7 @@ import UtilsService from '../../services/utils-service';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
 
-export default function ContractCreator({ outbound, inbound, pricing }) {
+export default function ContractCreator({ outbound, inbound, pricing, rushFee }) {
     return (
         <div className="py-8">
             <div className="p-1 border-2 border-black font-sans w-80 sm:w-72 bg-white">
@@ -31,20 +31,21 @@ export default function ContractCreator({ outbound, inbound, pricing }) {
                         <span className="italic pl-4">Cubic Meter's</span>
                         <div className={pricing && pricing.totals.volumeInvalid ? "font-bold text-red-600" : "font-bold text-green-600"}><span className="select-all">{pricing && Number(pricing.volume).toLocaleString('en')}</span> m3</div>
                     </div>
-
-
-<div className="flex justify-between">
+                    <div className="flex justify-between">
                         <div className="font-bold">Pricing</div>
-            
                     </div>
                     <hr className="border-gray-500" />
-<div className="flex justify-between">
+                    <div className="flex justify-between">
                         <div className="pl-4">Volume</div>
                         <div className={pricing && pricing.totals.volumeInvalid ? "font-bold text-red" : ""}><span className="select-all">{inbound && Number(inbound.reward.volume).toLocaleString('en')}</span> m3</div>
                     </div>
                     <div className="flex justify-between">
                         <div className="pl-4">Collateral</div>
                         <div>{inbound && Number(inbound.reward.collateral).toLocaleString('en')}%</div>
+                    </div>
+                    <div className="flex justify-between">
+                        <div className="pl-4">Rush Delivery</div>
+                        <div>{inbound && Number(rushFee).toLocaleString('en')} isk</div>
                     </div>
                     <div className="flex justify-between">
                         <div>
