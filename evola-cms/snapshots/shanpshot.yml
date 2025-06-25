@@ -2,6 +2,30 @@ version: 1
 directus: 10.11.0
 vendor: postgres
 collections:
+  - collection: Defaults
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Defaults
+      color: null
+      display_template: null
+      group: Eve_Data
+      hidden: false
+      icon: settings
+      item_duplication_fields: null
+      note: Evola Defaults
+      preview_url: null
+      singleton: true
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Defaults
   - collection: Eve_Data
     meta:
       accountability: all
@@ -65,7 +89,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 1
+      sort: 2
       sort_field: null
       translations: null
       unarchive_value: null
@@ -135,7 +159,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 3
+      sort: 4
       sort_field: null
       translations: null
       unarchive_value: null
@@ -159,7 +183,7 @@ collections:
       note: null
       preview_url: null
       singleton: false
-      sort: 2
+      sort: 3
       sort_field: null
       translations: null
       unarchive_value: null
@@ -189,6 +213,123 @@ collections:
       unarchive_value: null
       versioning: false
 fields:
+  - collection: Defaults
+    field: id
+    type: integer
+    meta:
+      collection: Defaults
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Defaults
+      data_type: integer
+      default_value: nextval('"Defaults_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Defaults
+    field: RushDeliveryAmount
+    type: string
+    meta:
+      collection: Defaults
+      conditions: null
+      display: null
+      display_options: null
+      field: RushDeliveryAmount
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        placeholder: '0.00'
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: RushDeliveryAmount
+      table: Defaults
+      data_type: character varying
+      default_value: '150000000.00'
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Defaults
+    field: Default_System
+    type: integer
+    meta:
+      collection: Defaults
+      conditions: null
+      display: null
+      display_options: null
+      field: Default_System
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{Region.Region}}, {{System}}'
+      readonly: false
+      required: false
+      sort: 3
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Default_System
+      table: Defaults
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Systems
+      foreign_key_column: id
   - collection: Pricing
     field: id
     type: integer
@@ -329,7 +470,7 @@ fields:
       name: Reward_Collateral
       table: Pricing
       data_type: character varying
-      default_value: null
+      default_value: '1'
       max_length: 255
       numeric_precision: null
       numeric_scale: null
@@ -730,6 +871,45 @@ fields:
       has_auto_increment: false
       foreign_key_table: Pricing
       foreign_key_column: id
+  - collection: Routes
+    field: AllowRush
+    type: boolean
+    meta:
+      collection: Routes
+      conditions: null
+      display: null
+      display_options: null
+      field: AllowRush
+      group: null
+      hidden: false
+      interface: boolean
+      note: Allow Rush Delivery
+      options: null
+      readonly: false
+      required: false
+      sort: 6
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: AllowRush
+      table: Routes
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
   - collection: Stations
     field: id
     type: integer
@@ -965,6 +1145,27 @@ fields:
       foreign_key_table: Regions
       foreign_key_column: id
 relations:
+  - collection: Defaults
+    field: Default_System
+    related_collection: Systems
+    meta:
+      junction_field: null
+      many_collection: Defaults
+      many_field: Default_System
+      one_allowed_collections: null
+      one_collection: Systems
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: Defaults
+      column: Default_System
+      foreign_key_table: Systems
+      foreign_key_column: id
+      constraint_name: defaults_default_system_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
   - collection: Routes
     field: From_Station
     related_collection: Stations
