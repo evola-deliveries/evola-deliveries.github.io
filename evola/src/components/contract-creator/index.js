@@ -86,14 +86,20 @@ export default function ContractCreator() {
     ]);
 
     useEffect(() => {
-        setRushOrderCheck(false);
+        const rushStillAllowed = inboundRoute?.allowRush === true;
+        const shouldApplyRush = rushOrderCheck && rushStillAllowed;
+
+        if (!rushStillAllowed && rushOrderCheck) {
+            setRushOrderCheck(false);
+        }
+
         setPricing(calculatePricing(
             inboundRoute,
             pricing.price,
             pricing.volume,
             pricing.janice,
             rushFee,
-            false
+            shouldApplyRush
         ));
     }, [
         outboundRoute,
@@ -101,7 +107,8 @@ export default function ContractCreator() {
         pricing.price,
         pricing.volume,
         pricing.janice,
-        rushFee
+        rushFee,
+        rushOrderCheck
     ]);
 
     const handleOutboundChanged = (event) => setOutboundValue(event.target.value);
