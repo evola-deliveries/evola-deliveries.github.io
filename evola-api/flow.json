@@ -473,5 +473,77 @@
                 "b2af9774874e7029"
             ]
         ]
+    },
+    {
+        "id": "707f7b126e9f5ec3",
+        "type": "http in",
+        "z": "85d09905.9710c8",
+        "name": "",
+        "url": "/content-global",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 390,
+        "y": 960,
+        "wires": [
+            [
+                "8ce30326de02b0bc"
+            ]
+        ]
+    },
+    {
+        "id": "758db48d7b47ec01",
+        "type": "http request",
+        "z": "85d09905.9710c8",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://directus:8055/items/Globals",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 730,
+        "y": 960,
+        "wires": [
+            [
+                "c47cc725fc143d54"
+            ]
+        ]
+    },
+    {
+        "id": "8ce30326de02b0bc",
+        "type": "function",
+        "z": "85d09905.9710c8",
+        "name": "Bearer Token",
+        "func": "msg.headers = { \n    Authorization: `Bearer ${global.get(\"DIRECTUS_TOKEN\") }`\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 960,
+        "wires": [
+            [
+                "758db48d7b47ec01"
+            ]
+        ]
+    },
+    {
+        "id": "c47cc725fc143d54",
+        "type": "http response",
+        "z": "85d09905.9710c8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 870,
+        "y": 960,
+        "wires": []
     }
 ]
