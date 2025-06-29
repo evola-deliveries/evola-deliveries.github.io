@@ -2,7 +2,7 @@ import Config from '../config-service';
 
 const service = {
     async getContracts(content = "") {
-        const config = {
+        const fetchConfig = {
             method: 'GET',
             cache: 'no-cache',
             mode: 'cors',
@@ -14,7 +14,7 @@ const service = {
             referrerPolicy: 'no-referrer',
         };
 
-        return await fetch(Config.esi_url, config).then(response => {
+        return await fetch(`${Config.evola_api_root_url}/getContracts`, fetchConfig).then(response => {
             return response.json();
         });
     },

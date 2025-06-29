@@ -3,7 +3,7 @@ import Config from '../config-service';
 
 const service = {
     async getAppraisal(content = "") {
-        const config = {
+        const fetchConfig = {
             method: 'POST',
             cache: 'no-cache',
             mode: 'cors',
@@ -16,7 +16,7 @@ const service = {
             body: content
         };
 
-        return await fetch(Config.evola_api_url, config).then(response => {
+        return await fetch(`${Config.evola_api_root_url}/getAppraisal`, fetchConfig).then(response => {
             const contentType = response.headers.get('content-type');
             if (!contentType || !contentType.includes('application/json')) {
                 throw new TypeError("Oops, we haven't got JSON!");
