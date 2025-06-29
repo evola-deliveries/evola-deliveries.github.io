@@ -289,7 +289,7 @@ export default function ContractCreator() {
                 </div>
             </div>
             <div className="my-1 px-1 w-full overflow-hidden sm:w-1/2">
-                <div className="flex justify-center w-full bg-gray-800 bg-opacity-80 border border-gray-700 rounded-xl shadow-lg backdrop-blur-sm p-4">
+                <div className="flex justify-center w-full p-4">
                     <OrderTicket
                         outbound={outboundRoute}
                         inbound={inboundRoute}
