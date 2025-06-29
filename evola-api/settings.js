@@ -175,7 +175,10 @@ module.exports = {
     // details on its contents. The following is a basic permissive set of options:
     httpNodeCors: {
         origin: process.env.CORS_DOMAIN && process.env.CORS_DOMAIN === 'true' ? [ "https://evolaeve.com", "https://www.evolaeve.com" ] : "*",
-        methods: "GET,POST"
+        methods: ['GET','POST','OPTIONS'],
+        credentials: true,
+        preflightContinue: false,
+        optionsSuccessStatus: 204
     },
 
     // If you need to set an http proxy please set an environment variable
