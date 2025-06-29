@@ -281,7 +281,7 @@ export default function ContractCreator() {
                             <div>
                                 <p className="font-bold text-white">Informational Notice</p>
                                 <p className="text-sm">Contracts are issued to <span className="select-all text-blue-400">Evola Deliveries</span>. Feedback is welcome!</p>
-                                <p><span className="font-bold text-yellow-400">Note:</span> Though volumes are low, our goal is delivery within 48 hours.</p>
+                                <p><span className="font-bold text-yellow-400">Note:</span> Though volumes are high, our goal is delivery within 48 hours.</p>
                             </div>
                         </div>
                     </div>
