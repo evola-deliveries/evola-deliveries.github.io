@@ -8,6 +8,8 @@ import UtilsService from "../../services/utils-service";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
 
+import EvolaLoyaltyCard from '../loyalty-card';
+
 function calculatePricing(inboundRouteDeep, price, volume, janice, rushFee = 0, applyRushFee = false) {
     const volumeIsk = inboundRouteDeep ? Math.ceil(volume * inboundRouteDeep.reward.volume) : 0;
     const collateralIsk = inboundRouteDeep ? Math.ceil((price / 100) * inboundRouteDeep.reward.collateral) : 0;
@@ -297,6 +299,17 @@ export default function ContractCreator() {
                         rushFee={rushOrderCheck && rushAllowed ? rushFee : 0}
                     />
                 </div>
+                <EvolaLoyaltyCard
+                character={{
+                    id: 2113637343,
+                    name: "Faux Mulder",
+                    birthday: "2018-01-01T02:07:31Z",
+                    security_status: 0.001
+                }}
+                rank="SSS"
+                corpRank="SS"
+                loyaltyPoints={928430}
+                />
             </div>
         </div>
     );
