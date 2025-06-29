@@ -7,98 +7,137 @@ import { faCopy } from '@fortawesome/free-regular-svg-icons';
 export default function ContractCreator({ outbound, inbound, pricing, rushFee }) {
     return (
         <div className="py-8">
-            <div className="p-1 border-2 border-black font-sans w-80 sm:w-72 bg-white">
-                <div className="flex justify-center text-4xl font-extrabold">Evola</div>
-                <div className="flex justify-center text-4xl font-extrabold">Deliveries</div>
-                <div className="flex justify-center leading-snug border-b-4 border-black">Eve Online Corporation</div>
-                <div className="text-sm pb-1">
-                    <hr className="border-gray-500" />
-                    <div className="flex justify-between">
-                        <div>
-                            <span className="font-bold">Package Details</span>
-                        </div>
-                        <span>{pricing && pricing.janice !== ""
-                            ? <a href={pricing.janice !== "" && Config.janice_url + pricing.janice} target="_blank" rel="noreferrer" className="text-purple-900 font-semibold">Janice {pricing && pricing.janice}</a>
-                            : ""}</span>
-                    </div>
-                    <hr className="border-gray-500" />
-                    <div className="flex justify-between">
-                        <span className="italic cursor-pointer pl-4" onClick={() => UtilsService.clipboardCopy((pricing.janice !== "" && pricing.janice) || "")} >Appraisal Reference <FontAwesomeIcon className="cursor-pointer ml-2" icon={faCopy} onClick={() => UtilsService.clipboardCopy((pricing.janice !== "" && pricing.janice) || "")} /></span>
-                        <div><span className="select-all">{pricing.janice !== "" && pricing.janice}</span></div>
-                    </div>
+            <div className="p-4 border border-gray-700 font-mono w-full max-w-md bg-gray-900 rounded-lg shadow-lg text-gray-300 mx-auto">
 
-                    <div className="flex justify-between">
-                        <span className="italic pl-4">Cubic Meter's</span>
-                        <div className={pricing && pricing.totals.volumeInvalid ? "font-bold text-red-600" : "font-bold text-green-600"}><span className="select-all">{pricing && Number(pricing.volume).toLocaleString('en')}</span> m3</div>
-                    </div>
-                    <div className="flex justify-between">
-                        <div className="font-bold">Pricing</div>
-                    </div>
-                    <hr className="border-gray-500" />
-                    <div className="flex justify-between">
-                        <div className="pl-4">Volume</div>
-                        <div className={pricing && pricing.totals.volumeInvalid ? "font-bold text-red" : ""}><span className="select-all">{inbound && Number(inbound.reward.volume).toLocaleString('en')}</span> m3</div>
-                    </div>
-                    <div className="flex justify-between">
-                        <div className="pl-4">Collateral</div>
-                        <div>{inbound && Number(inbound.reward.collateral).toLocaleString('en')}%</div>
-                    </div>
-                    <div className="flex justify-between">
-                        <div className="pl-4">Rush Delivery</div>
-                        <div>{inbound && Number(rushFee).toLocaleString('en')} isk</div>
-                    </div>
-                    <div className="flex justify-between">
-                        <div>
-                            <span className="font-bold">Limits</span>
-                        </div>
-                    </div>
-                    <hr className="border-gray-500" />
-                    <div className="flex justify-between">
-                        <div className="pl-4">Min Reward</div>
-                        <div><span className="select-all">{inbound && Number(inbound.minimumReward).toLocaleString('en')}</span> isk</div>
-                    </div>
-                    <div className="flex justify-between">
-                        <div className="pl-4">Max Volume</div>
-                        <div><span className="select-all">{inbound && Number(inbound.limits.volume).toLocaleString('en')}</span> m3</div>
-                    </div>
-                    <div className="flex justify-between">
-                        <div className="pl-4">Max Collateral</div>
-                        <div><span className="select-all">{inbound && Number(inbound.limits.collateral).toLocaleString('en')}</span> isk</div>
-                    </div>
-                    <hr className="border-gray-500" />
-                    <div className="flex justify-between">
-                        <div>
-                            <span className="font-bold cursor-pointer" onClick={() => UtilsService.clipboardCopy(pricing && Number(pricing.totals.total).toLocaleString('en'))}>Total Reward</span>
-                            <FontAwesomeIcon className="cursor-pointer ml-2" icon={faCopy} onClick={() => UtilsService.clipboardCopy(pricing && Number(pricing.totals.total).toLocaleString('en'))} />
-                        </div>
-                        <div className="font-bold text-green-600"><span className="select-all" onClick={() => UtilsService.clipboardCopy(pricing && Number(pricing.totals.total).toLocaleString('en'))}>{pricing && Number(pricing.totals.total).toLocaleString('en')}</span> isk</div>
-                    </div>
-
-                    <div className="flex justify-between">
-                        <div>
-                            <span className="font-bold cursor-pointer" onClick={() => UtilsService.clipboardCopy(pricing && Number(pricing.price).toLocaleString('en'))}>Total Collateral</span>
-                            <FontAwesomeIcon className="cursor-pointer ml-2" icon={faCopy} onClick={() => UtilsService.clipboardCopy(pricing && Number(pricing.price).toLocaleString('en'))} />
-                        </div>
-                        <div className={pricing && pricing.totals.collateralInvalid ? "font-bold text-red-600" : "font-bold text-green-600"}><span className="select-all" onClick={() => UtilsService.clipboardCopy(pricing && Number(pricing.price).toLocaleString('en'))}>{pricing && Number(pricing.price).toLocaleString('en')}</span> isk</div>
-                    </div>
-
-
+                {/* Header */}
+                <div className="text-center">
+                    <div className="text-2xl font-extrabold text-blue-400 tracking-wide">EVOLA</div>
+                    <div className="text-2xl font-extrabold text-blue-400 tracking-wide mb-1">DELIVERIES</div>
+                    <div className="text-xs uppercase text-gray-500 border-b border-gray-700 pb-1 mb-2">Eve Online Corporation</div>
                 </div>
 
-                <div className="flex justify-center"></div>
-                <div className="border-t-4 border-black flex leading-none text-xs pt-2 pb-1">
-                    <div className="pr-1">*</div>
-                    <div>
-                        Contracts are issued directly to: <br/><br/>
-                        <span className="font-bold select-all cursor-pointer" onClick={() => UtilsService.clipboardCopy("Evola Deliveries")}>Evola Deliveries</span> <FontAwesomeIcon className="cursor-pointer" icon={faCopy} onClick={() => UtilsService.clipboardCopy("Evola Deliveries")} /><br/><br/>
-                        <span className="font-bold">No Containers!</span><br />
-                        <span className="font-bold">No Assembled Ships!</span><br/>
-                        <span className="font-bold">Expiration: 7 Days</span><br/>
-                        <span className="font-bold">Days to Complete: 7 Days</span><br/><br/>
-                        If you have any feedback please contact <span className="font-bold">Nahtsu</span>
+                {/* Janice & Appraisal */}
+                <div className="text-xs">
+                    <div className="flex justify-between items-center mb-1">
+                        <span className="font-semibold text-gray-400">Package Details</span>
+                        {pricing?.janice && (
+                            <a
+                                href={Config.janice_url + pricing.janice}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-purple-400 hover:underline"
+                            >
+                                Janice {pricing.janice}
+                            </a>
+                        )}
                     </div>
+                    <hr className="border-gray-700 mb-2" />
+
+                    <div className="flex justify-between items-center mb-1">
+                        <span
+                            className="italic cursor-pointer pl-1 hover:text-white"
+                            onClick={() => UtilsService.clipboardCopy(pricing?.janice || "")}
+                        >
+                            Appraisal Ref <FontAwesomeIcon icon={faCopy} className="ml-1" />
+                        </span>
+                        <span className="select-all">{pricing?.janice}</span>
+                    </div>
+
+                    <div className="flex justify-between items-center mb-1">
+                        <span className="pl-1 italic">Cubic Meters</span>
+                        <span
+                            className={`font-bold ${pricing?.totals.volumeInvalid ? "text-red-500" : "text-green-400"
+                                }`}
+                        >
+                            {pricing && Number(pricing.volume).toLocaleString("en")} m³
+                        </span>
+                    </div>
+
+                    {/* Pricing */}
+                    <div className="mt-2 mb-1 font-semibold text-gray-400">Pricing</div>
+                    <hr className="border-gray-700 mb-1" />
+
+                    <div className="flex justify-between text-sm mb-1">
+                        <span className="pl-1">Volume</span>
+                        <span className={pricing?.totals.volumeInvalid ? "text-red-500 font-bold" : ""}>
+                            {inbound && Number(inbound.reward.volume).toLocaleString("en")} m³
+                        </span>
+                    </div>
+                    <div className="flex justify-between text-sm mb-1">
+                        <span className="pl-1">Collateral</span>
+                        <span>{inbound && Number(inbound.reward.collateral).toLocaleString("en")}%</span>
+                    </div>
+                    <div className="flex justify-between text-sm mb-1">
+                        <span className="pl-1">Rush Delivery</span>
+                        <span>{inbound && Number(rushFee).toLocaleString("en")} ISK</span>
+                    </div>
+
+                    {/* Limits */}
+                    <div className="mt-2 mb-1 font-semibold text-gray-400">Limits</div>
+                    <hr className="border-gray-700 mb-1" />
+                    <div className="flex justify-between text-sm mb-1">
+                        <span className="pl-1">Min Reward</span>
+                        <span className="select-all">{inbound && Number(inbound.minimumReward).toLocaleString("en")} ISK</span>
+                    </div>
+                    <div className="flex justify-between text-sm mb-1">
+                        <span className="pl-1">Max Volume</span>
+                        <span className="select-all">{inbound && Number(inbound.limits.volume).toLocaleString("en")} m³</span>
+                    </div>
+                    <div className="flex justify-between text-sm mb-2">
+                        <span className="pl-1">Max Collateral</span>
+                        <span className="select-all">{inbound && Number(inbound.limits.collateral).toLocaleString("en")} ISK</span>
+                    </div>
+
+                    {/* Totals */}
+                    <hr className="border-gray-700 mb-1" />
+                    <div className="flex justify-between items-center mb-1">
+                        <span
+                            className="font-semibold cursor-pointer hover:text-white"
+                            onClick={() => UtilsService.clipboardCopy(pricing && Number(pricing.totals.total).toLocaleString("en"))}
+                        >
+                            Total Reward <FontAwesomeIcon icon={faCopy} className="ml-1" />
+                        </span>
+                        <span className="font-bold text-green-400 select-all">
+                            {pricing && Number(pricing.totals.total).toLocaleString("en")} ISK
+                        </span>
+                    </div>
+
+                    <div className="flex justify-between items-center">
+                        <span
+                            className="font-semibold cursor-pointer hover:text-white"
+                            onClick={() => UtilsService.clipboardCopy(pricing && Number(pricing.price).toLocaleString("en"))}
+                        >
+                            Total Collateral <FontAwesomeIcon icon={faCopy} className="ml-1" />
+                        </span>
+                        <span
+                            className={`font-bold select-all ${pricing?.totals.collateralInvalid ? "text-red-500" : "text-green-400"
+                                }`}
+                        >
+                            {pricing && Number(pricing.price).toLocaleString("en")} ISK
+                        </span>
+                    </div>
+                </div>
+
+                {/* Footer */}
+                <div className="border-t border-gray-700 mt-4 pt-2 text-xs text-gray-500 leading-snug">
+                    <p>
+                        Contracts issued to:{" "}
+                        <span
+                            className="text-white font-bold cursor-pointer select-all"
+                            onClick={() => UtilsService.clipboardCopy("Evola Deliveries")}
+                        >
+                            Evola Deliveries
+                        </span>{" "}
+                        <FontAwesomeIcon icon={faCopy} className="cursor-pointer ml-1" />
+                    </p>
+                    <p className="mt-2 text-red-400 font-semibold">No Containers!</p>
+                    <p className="text-red-400 font-semibold">No Assembled Ships!</p>
+                    <p className="text-yellow-400 font-semibold">Expiration: 7 Days</p>
+                    <p className="text-yellow-400 font-semibold">Days to Complete: 7</p>
+                    <p className="mt-2">Feedback? Contact <span className="text-blue-400 font-semibold">Nahtsu</span></p>
                 </div>
             </div>
         </div>
+
     );
 }

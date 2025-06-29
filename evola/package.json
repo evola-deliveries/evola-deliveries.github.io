@@ -24,6 +24,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
+    "exports": "export NODE_OPTIONS=--openssl-legacy-provider",
     "test": "craco test",
     "eject": "react-scripts eject",
     "git": "git config --global user.email 'release-bot@evolaeve.com' && git config --global user.name 'Release Bot'",
