@@ -6,6 +6,7 @@ import ContractsPage from '../contracts-page';
 import NavigationBar from '../nav-bar';
 import FooterControl from '../footer-control';
 import NoMatchPage from '../NoMatch-Page';
+import CallbackPage from '../esi-callback-page';
 
 
 
@@ -55,6 +56,9 @@ const MainPage = () => {
 					<Switch>
 						<Route exact path="/">
 							<ContractsPage />
+						</Route>
+						<Route exact path="/callback">
+							<CallbackPage />
 						</Route>
 						<Route path="*">
 							<NoMatchPage />

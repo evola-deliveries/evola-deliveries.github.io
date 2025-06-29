@@ -1,6 +1,7 @@
 import React from 'react';
 import ConfigService from '../../services/config-service';
 import { Link } from 'react-router-dom';
+import { LoginButton } from '../esi-login-button';
 
 export default function NavigationBar() {
     return (
@@ -18,6 +19,7 @@ export default function NavigationBar() {
                 {/* Navigation (optional links - placeholder) */}
                 <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-400">
                     <Link to="/" className="hover:text-white transition duration-150">Contracts</Link>
+                    <LoginButton />
                     <a
                         href={ConfigService.discord_url}
                         target="_blank"
