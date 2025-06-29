@@ -13,9 +13,11 @@ export default function NavigationBar() {
                         EVOLA <span className="text-red-500">Deliveries</span>
                     </h1>
                 </Link>
+                
 
                 {/* Navigation (optional links - placeholder) */}
                 <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-400">
+                    <Link to="/" className="hover:text-white transition duration-150">Contracts</Link>
                     <a
                         href={ConfigService.discord_url}
                         target="_blank"
@@ -27,6 +29,5 @@ export default function NavigationBar() {
                 </nav>
             </div>
         </header>
-
     );
 };

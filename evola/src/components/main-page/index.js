@@ -31,14 +31,14 @@ const MainPage = () => {
 	}, []);
 
 	const backgroundStyle = {
-  backgroundImage: `
+		backgroundImage: `
     radial-gradient(ellipse at center, rgba(50, 50, 50, 0.6) 0%, rgba(10, 10, 10, 0.8) 100%),
     url(${backgroundImage ? backgroundImage : './background.png'})
   `,
-  backgroundPosition: 'center',
-  backgroundRepeat: 'repeat',
-  backgroundSize: 'cover',
-};
+		backgroundPosition: 'center',
+		backgroundRepeat: 'repeat',
+		backgroundSize: 'cover',
+	};
 
 
 	return (
