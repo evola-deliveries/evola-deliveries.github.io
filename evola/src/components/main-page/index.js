@@ -31,19 +31,27 @@ const MainPage = () => {
 	}, []);
 
 	const backgroundStyle = {
-		backgroundImage: backgroundImage
-			? `url(${backgroundImage})`
-			: 'url(./background.png)',
-		backgroundPosition: 'center',
-		backgroundRepeat: 'repeat',
-		backgroundSize: 'cover',
-	};
+  backgroundImage: `
+    radial-gradient(ellipse at center, rgba(50, 50, 50, 0.6) 0%, rgba(10, 10, 10, 0.8) 100%),
+    url(${backgroundImage ? backgroundImage : './background.png'})
+  `,
+  backgroundPosition: 'center',
+  backgroundRepeat: 'repeat',
+  backgroundSize: 'cover',
+};
+
 
 	return (
 		<Router>
-			<div className="bg-cover flex flex-col min-h-screen" style={backgroundStyle}>
+			<div
+				className="flex flex-col min-h-screen text-gray-300 font-sans"
+				style={backgroundStyle}
+			>
+				{/* Navigation */}
 				<NavigationBar />
-				<div className="flex-grow container mx-auto py-8 px-4 md:py-16 md:px-8">
+
+				{/* Main Content */}
+				<main className="flex-grow px-4 md:px-8 py-8 md:py-16 max-w-7xl mx-auto w-full">
 					<Switch>
 						<Route exact path="/">
 							<ContractsPage />
@@ -52,10 +60,13 @@ const MainPage = () => {
 							<NoMatchPage />
 						</Route>
 					</Switch>
-				</div>
+				</main>
+
+				{/* Footer */}
 				<FooterControl />
 			</div>
 		</Router>
+
 	);
 }
 
