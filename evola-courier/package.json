@@ -1,0 +1,19 @@
+{
+  "name": "courier-processor",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "trigger-fetch": "node dispatcher/trigger-fetch.js",
+    "fetchContracts": "node workers/fetchContracts/worker.js",
+    "processContract": "node workers/processContract/worker.js",
+    "contractCreated": "node workers/contractCreated/worker.js",
+    "contractUpdated": "node workers/contractUpdated/worker.js",
+    "contractCompleted": "node workers/contractCompleted/worker.js"
+  },
+  "dependencies": {
+    "@directus/sdk": "^20.0.0",
+    "bullmq": "^5.56.0",
+    "ioredis": "^5.6.1",
+    "node-fetch": "^3.3.2"
+  }
+}

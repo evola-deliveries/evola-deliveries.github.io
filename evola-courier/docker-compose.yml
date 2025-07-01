@@ -1,0 +1,98 @@
+services:
+  redis:
+    image: redis:alpine
+    networks:
+      - evola_network
+
+  trigger-fetch:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: evolaeve/trigger-fetch
+    env_file:
+      - ./common.env
+      - ./dispatcher/.env
+    command: npm run trigger-fetch
+    depends_on:
+      - redis
+    networks:
+      - evola_network
+    profiles:
+      - manual
+
+  fetch-contracts:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: evolaeve/fetch-contracts
+    env_file:
+      - ./common.env
+      - ./workers/fetchContracts/.env
+    command: npm run fetchContracts
+    depends_on:
+      - redis
+    networks:
+      - evola_network
+
+  process-contract:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: evolaeve/process-contract
+    env_file:
+      - ./common.env
+      - ./workers/processContract/.env
+    command: npm run processContract
+    depends_on:
+      - redis
+    networks:
+      - evola_network
+  contract-created:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: evolaeve/contract-created
+    env_file:
+      - ./common.env
+      - ./workers/contractCreated/.env
+    depends_on:
+      - redis
+    command: npm run contractCreated
+    networks:
+      - evola_network
+
+  contract-updated:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: evolaeve/contract-updated
+    env_file:
+      - ./common.env
+      - ./workers/contractUpdated/.env
+    depends_on:
+      - redis
+    command: npm run contractUpdated
+    networks:
+      - evola_network
+
+  contract-completed:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: evolaeve/contract-completed
+    env_file:
+      - ./common.env
+      - ./workers/contractCompleted/.env
+    depends_on:
+      - redis
+    command: npm run contractCompleted
+    networks:
+      - evola_network
+
+networks:
+  evola_network:
+    driver: bridge
+    name: evola_network
+# networks:
+#   evola_network:
+#     external: true
