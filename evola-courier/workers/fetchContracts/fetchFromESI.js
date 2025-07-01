@@ -1,18 +1,11 @@
-import fetch from 'node-fetch';
+import { eveClient } from '../../shared/eve-esi.js';
+import config from './config.js';
 
 export default async function fetchFromESI() {
-  const url = 'https://didactic-goldfish-p447vg6gjcr6p9-1880.app.github.dev/corporations/98684131/contracts/';
-  const response = await fetch(url, {
-    headers: {
-      'User-Agent': 'YourAgentNameHere',
-      'Authorization': 'Bearer YOUR_ACCESS_TOKEN' // If needed
-    }
-  });
+  const fetched = await eveClient.fetchAllContracts(config.evola_eve_corporation_id);
+	if (!Array.isArray(fetched)) return [];
 
-  if (!response.ok) {
-    throw new Error(`Failed to fetch contracts: ${response.status} ${response.statusText}`);
-  }
+	const courierContracts = fetched.filter(c => c.type === 'courier');
 
-  const contracts = await response.json();
-  return contracts;
+  return courierContracts;
 }
