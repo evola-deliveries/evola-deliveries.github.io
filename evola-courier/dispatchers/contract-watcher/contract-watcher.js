@@ -59,10 +59,14 @@ async function checkForChanges() {
 
 		if (!tracked && (status === 'outstanding' || status === 'in_progress')) {
 			inMemoryContracts.set(id, contract);
+			await processContract.add('process', contract, {
+				attempts: 3,
+				backoff: { type: 'exponential', delay: 2000 }
+			});
 			console.log(`[Tracking] New contract ${id}`);
 		} else if (tracked && status === 'finished') {
 			await processContract.add('process', contract, {
-				attempts: 5,
+				attempts: 3,
 				backoff: { type: 'exponential', delay: 2000 }
 			});
 			inMemoryContracts.delete(id);
