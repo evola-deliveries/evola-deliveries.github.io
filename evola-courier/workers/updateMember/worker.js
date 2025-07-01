@@ -3,8 +3,8 @@ import connection from '../../shared/redis.js';
 import { eveClient } from '../../shared/eve-esi.js';
 import saveOrUpdateMember from './saveOrUpdateMember.js';
 
-new Worker('memberCreated', async job => {
-  console.log(`[memberCreated] Member ${job.data.character_id} created.`);
+new Worker('updateMember', async job => {
+  console.log(`[updateMember] Member ${job.data.character_id} created.`);
   
   const { character_id } = job.data;
   if (!character_id) return;
@@ -17,8 +17,8 @@ new Worker('memberCreated', async job => {
       character_id // Ensure it's saved
     });
 
-    console.log(`[memberCreated] ${result.status}:${character_id}`);		
+    console.log(`[updateMember] Member ${character_id} ${result.status}`);		
   } catch (err) {
-    console.error(`[memberCreated] Failed for member ${character_id}`, err);
+    console.error(`[updateMember] Failed for member ${character_id}`, err);
   }
 }, { connection });

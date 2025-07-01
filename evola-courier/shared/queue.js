@@ -21,6 +21,7 @@ export const contractUpdated = new Queue('contractUpdated', { connection });
 // This happens when a contract status changes to 'finished'.
 export const contractCompleted = new Queue('contractCompleted', { connection });
 
-
-export const memberCreated = new Queue('memberCreated', { connection });
-export const corporationCreated = new Queue('corporationCreated', { connection });
+// This queue will handle the member and corporation changes.
+// It will handle the creation, updates of members and corporations and raise events for further processing if requited.
+export const updateMember = new Queue('updateMember', { connection });
+export const updateCorporation = new Queue('updateCorporation', { connection });

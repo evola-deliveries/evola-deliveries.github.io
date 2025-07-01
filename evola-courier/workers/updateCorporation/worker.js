@@ -3,7 +3,7 @@ import connection from '../../shared/redis.js';
 import { eveClient } from '../../shared/eve-esi.js';
 import saveOrUpdateCorporation from './saveOrUpdateCorporation.js';
 
-new Worker('corporationCreated', async job => {
+new Worker('updateCorporation', async job => {
 	const { corporation_id } = job.data;
 	if (!corporation_id) return;
 
@@ -12,11 +12,11 @@ new Worker('corporationCreated', async job => {
 
 		const result = await saveOrUpdateCorporation({
 			...corpData,
-			corporation_id // Ensure it's saved
+			corporation_id
 		});
 
-		console.log(`[corporationCreated] ${result.status}:${corporation_id}`);		
+		console.log(`[updateCorporation] Corporation ${corporation_id} ${result.status}`);		
 	} catch (err) {
-		console.error(`[corporationCreated] Failed for corp ${corporation_id}`, err);
+		console.error(`[updateCorporation] Failed for corporation ${corporation_id}`, err);
 	}
 }, { connection });

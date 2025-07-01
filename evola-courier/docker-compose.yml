@@ -123,31 +123,31 @@ services:
     networks:
       - evola_network
 
-  corporation-created:
+  update-corporation:
     build:
       context: .
       dockerfile: dockerfile
-    image: evolaeve/corporation-created
+    image: evolaeve/update-corporation
     env_file:
       - ./common.env
-      - ./workers/corporationCreated/worker.env
+      - ./workers/updateCorporation/worker.env
     depends_on:
       - redis
-    command: npm run corporationCreated
+    command: npm run updateCorporation
     networks:
       - evola_network
 
-  member-created:
+  update-member:
     build:
       context: .
       dockerfile: dockerfile
-    image: evolaeve/member-created
+    image: evolaeve/update-member
     env_file:
       - ./common.env
-      - ./workers/memberCreated/worker.env
+      - ./workers/updateMember/worker.env
     depends_on:
       - redis
-    command: npm run memberCreated
+    command: npm run updateMember
     networks:
       - evola_network
 
