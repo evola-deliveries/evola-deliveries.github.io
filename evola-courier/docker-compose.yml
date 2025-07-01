@@ -11,7 +11,7 @@ services:
     image: evolaeve/trigger-fetch
     env_file:
       - ./common.env
-      - ./dispatchers/trigger-fetch/.env
+      - ./dispatchers/trigger-fetch/dispatcher.env
     command: npm run trigger-fetch
     depends_on:
       - redis
@@ -27,7 +27,7 @@ services:
     image: evolaeve/courier-service
     env_file:
       - ./common.env
-      - ./dispatchers/courier-service/.env
+      - ./dispatchers/courier-service/dispatcher.env
     command: npm run courier-service
     depends_on:
       - redis
@@ -45,7 +45,7 @@ services:
     image: evolaeve/contract-watcher
     env_file:
       - ./common.env
-      - ./dispatchers/contract-watcher/.env
+      - ./dispatchers/contract-watcher/dispatcher.env
     command: npm run contract-watcher
     depends_on:
       - redis
@@ -61,7 +61,7 @@ services:
     image: evolaeve/fetch-contracts
     env_file:
       - ./common.env
-      - ./workers/fetchContracts/.env
+      - ./workers/fetchContracts/worker.env
     command: npm run fetchContracts
     depends_on:
       - redis
@@ -75,7 +75,7 @@ services:
     image: evolaeve/process-contract
     env_file:
       - ./common.env
-      - ./workers/processContract/.env
+      - ./workers/processContract/worker.env
     command: npm run processContract
     depends_on:
       - redis
@@ -88,7 +88,7 @@ services:
     image: evolaeve/contract-created
     env_file:
       - ./common.env
-      - ./workers/contractCreated/.env
+      - ./workers/contractCreated/worker.env
     depends_on:
       - redis
     command: npm run contractCreated
@@ -102,7 +102,7 @@ services:
     image: evolaeve/contract-updated
     env_file:
       - ./common.env
-      - ./workers/contractUpdated/.env
+      - ./workers/contractUpdated/worker.env
     depends_on:
       - redis
     command: npm run contractUpdated
@@ -116,7 +116,7 @@ services:
     image: evolaeve/contract-completed
     env_file:
       - ./common.env
-      - ./workers/contractCompleted/.env
+      - ./workers/contractCompleted/worker.env
     depends_on:
       - redis
     command: npm run contractCompleted
@@ -130,7 +130,7 @@ services:
     image: evolaeve/corporation-created
     env_file:
       - ./common.env
-      - ./workers/corporationCreated/.env
+      - ./workers/corporationCreated/worker.env
     depends_on:
       - redis
     command: npm run corporationCreated
@@ -144,7 +144,7 @@ services:
     image: evolaeve/member-created
     env_file:
       - ./common.env
-      - ./workers/memberCreated/.env
+      - ./workers/memberCreated/worker.env
     depends_on:
       - redis
     command: npm run memberCreated
