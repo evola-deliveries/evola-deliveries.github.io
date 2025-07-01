@@ -2,477 +2,33 @@
     {
         "id": "85d09905.9710c8",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Website",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "6d76d60c.549438",
-        "type": "http in",
-        "z": "85d09905.9710c8",
-        "name": "getAppraisal",
-        "url": "/getAppraisal",
-        "method": "post",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 210,
-        "y": 120,
-        "wires": [
-            [
-                "413d0ea6.7b2ce8"
-            ]
-        ]
+        "id": "0ccd8135b6f8eaf1",
+        "type": "tab",
+        "label": "API",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
-        "id": "70cc2683.ee42c",
-        "type": "http response",
-        "z": "85d09905.9710c8",
-        "name": "",
-        "statusCode": "200",
-        "headers": {},
-        "x": 680,
-        "y": 160,
-        "wires": []
+        "id": "1344ff94c1358bb3",
+        "type": "tab",
+        "label": "Calculator",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
-        "id": "87fe4b9d.1712",
-        "type": "http request",
-        "z": "85d09905.9710c8",
-        "name": "janice",
-        "method": "POST",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "https://janice.e-351.com/api/rest/v2/appraisal?market=2&designation=appraisal&pricing=split&pricingVariant=immediate&persist=true&compactize=true&pricePercentage=1",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 530,
-        "y": 120,
-        "wires": [
-            [
-                "70cc2683.ee42c"
-            ]
-        ]
-    },
-    {
-        "id": "413d0ea6.7b2ce8",
-        "type": "function",
-        "z": "85d09905.9710c8",
-        "name": "headers",
-        "func": "const options = {\n  'X-ApiKey': global.get(\"APIKEY\"),\n  'Content-Type': 'text/plain',\n  'Accept': 'application/json' \n}\nmsg.headers = options;\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 380,
-        "y": 120,
-        "wires": [
-            [
-                "87fe4b9d.1712"
-            ]
-        ]
-    },
-    {
-        "id": "2ada2d01.d4849a",
-        "type": "http in",
-        "z": "85d09905.9710c8",
-        "name": "root",
-        "url": "/",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 200,
-        "y": 180,
-        "wires": [
-            [
-                "76014038.01f728"
-            ]
-        ]
-    },
-    {
-        "id": "76014038.01f728",
-        "type": "function",
-        "z": "85d09905.9710c8",
-        "name": "body",
-        "func": "msg.payload = { message: \"evola api\" }\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 380,
-        "y": 180,
-        "wires": [
-            [
-                "70cc2683.ee42c"
-            ]
-        ]
-    },
-    {
-        "id": "6ad893986c109683",
-        "type": "function",
-        "z": "85d09905.9710c8",
-        "name": "setGlobals",
-        "func": "msg.page = 1\nmsg.contracts = []\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 230,
-        "y": 640,
-        "wires": [
-            [
-                "46a9940b002fe417"
-            ]
-        ]
-    },
-    {
-        "id": "84e034956fded3c5",
-        "type": "http request",
-        "z": "85d09905.9710c8",
-        "name": "getContracts",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "https://esi.evetech.net/latest/corporations/98684131/contracts/?datasource=tranquility&page={{page}}",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 590,
-        "y": 760,
-        "wires": [
-            [
-                "9fe02df565db798e"
-            ]
-        ]
-    },
-    {
-        "id": "46a9940b002fe417",
-        "type": "function",
-        "z": "85d09905.9710c8",
-        "name": "headers",
-        "func": "const options = {\n  'Authorization': 'Bearer ' + global.get(\"AUTHTOKEN\"),\n  'Content-Type': 'application/json'\n}\nmsg.headers = options;\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 420,
-        "y": 760,
-        "wires": [
-            [
-                "84e034956fded3c5"
-            ]
-        ]
-    },
-    {
-        "id": "9fe02df565db798e",
-        "type": "function",
-        "z": "85d09905.9710c8",
-        "name": "handleResponse",
-        "func": "if (msg.payload.length == 1000)\n{\n    //more contracts\n    global.set(\"CONTRACTS\", msg.payload)\n    msg.page = msg.page + 1\n    msg.contracts.push(msg.payload)\n    return [msg, null, null]\n}\nelse if (msg.statusCode === 401 || (msg.statusCode === 403 && msg.payload.error && msg.payload.error === \"token is expired\"))\n{\n    //token expired\n    return [null, msg, null];\n} if (msg.statusCode !== 200) {\n    return [null, null, msg]\n}\nelse\n{\n    //no more contracts\n    msg.contracts.push(msg.payload)\n    return [null, null, msg]\n}\nreturn [null, null, null];",
-        "outputs": 3,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 510,
-        "y": 620,
-        "wires": [
-            [
-                "46a9940b002fe417"
-            ],
-            [
-                "e7d6766c4f4d1c85"
-            ],
-            [
-                "1336ee99b3dc038e"
-            ]
-        ]
-    },
-    {
-        "id": "fd7304565eefb4d9",
-        "type": "http request",
-        "z": "85d09905.9710c8",
-        "name": "refreshTokens",
-        "method": "POST",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "https://login.eveonline.com/v2/oauth/token/",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "basic",
-        "senderr": false,
-        "headers": [],
-        "x": 1060,
-        "y": 640,
-        "wires": [
-            [
-                "409c75a68b0f06f6"
-            ]
-        ]
-    },
-    {
-        "id": "e7d6766c4f4d1c85",
-        "type": "function",
-        "z": "85d09905.9710c8",
-        "name": "refreshHeaders",
-        "func": "msg.headers = {\n    \"Content-Type\": \"application/x-www-form-urlencoded\",\n    \"Authorization\": \"Basic \" + global.get(\"ESIAPIKEY\")\n};\n\n\nmsg.payload = {\n    \"grant_type\": \"refresh_token\",\n    \"refresh_token\": global.get(\"REFRESHTOKEN\")\n};\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 860,
-        "y": 640,
-        "wires": [
-            [
-                "fd7304565eefb4d9"
-            ]
-        ]
-    },
-    {
-        "id": "409c75a68b0f06f6",
-        "type": "function",
-        "z": "85d09905.9710c8",
-        "name": "setToken",
-        "func": "if (msg.statusCode === 200) {\n    global.set(\"AUTHTOKEN\", msg.payload.access_token);\n    return [msg, null];\n} else { \n    msg.payload =\n    {\n        \"Outstanding\": 0,\n        \"InProgress\": 0,\n        \"HundredContracts\": 0,\n        \"MJJitaHundredContracts\": 0,\n        \"error\": true\n    }\n    return [null, msg];\n}",
-        "outputs": 2,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1060,
-        "y": 680,
-        "wires": [
-            [
-                "46a9940b002fe417"
-            ],
-            [
-                "11dc75cc41e4d1d9"
-            ]
-        ]
-    },
-    {
-        "id": "1336ee99b3dc038e",
-        "type": "function",
-        "z": "85d09905.9710c8",
-        "name": "processContracts",
-        "func": "var allContracts = []\nfor (var i in msg.contracts) {\n    for (var j in msg.contracts[i]) {\n        allContracts.push(msg.contracts[i][j])\n    }\n}\n\nvar validContracts = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"outstanding\")\n\nvar validContractsProgress = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"in_progress\")\n\nvar last100Contracts = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"finished\").sort((a, b) => {\n    if (a.date_completed < b.date_completed)\n    {\n        return 1\n    }\n    if (b.date_completed < a.date_completed) {\n        return -1\n    }\n    return 0\n}).slice(0, 100)\n\nvar last100MJJitaContracts = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"finished\")\n    .filter(contract => (contract.end_location_id == 1038457641673 || contract.end_location_id == 60003760) && (contract.start_location_id == 1038457641673 || contract.start_location_id == 60003760)).sort((a, b) => {\n    if (a.date_completed < b.date_completed) {\n        return 1\n    }\n    if (b.date_completed < a.date_completed) {\n        return -1\n    }\n    return 0\n}).slice(0, 100)\n\nvar contractsTime = 0\nfor (var i in last100Contracts)\n{\n    var completeDate = new Date(last100Contracts[i].date_completed)\n    var endDate = new Date(last100Contracts[i].date_issued)\n    contractsTime = contractsTime + (completeDate.valueOf() - endDate.valueOf())\n}\n\nvar mJJitacontractsTime = 0\nfor (var i in last100MJJitaContracts) {\n    var completeDate = new Date(last100MJJitaContracts[i].date_completed)\n    var endDate = new Date(last100MJJitaContracts[i].date_issued)\n    mJJitacontractsTime = mJJitacontractsTime + (completeDate.valueOf() - endDate.valueOf())\n}\n\nvar Last100ContractsAVGTime = contractsTime / 100\n\nvar Last100MJJitaContractsAVGTime = mJJitacontractsTime / 100\n\nfunction msToTime(s) {\n    var ms = s % 1000;\n    s = (s - ms) / 1000;\n    var secs = s % 60;\n    s = (s - secs) / 60;\n    var mins = s % 60;\n    var hrs = (s - mins) / 60;\n\n    //return hrs + ':' + mins + ':' + secs;\n    return hrs;\n}\n\nmsg.payload = \n{\n    \"Outstanding\": validContracts.length,\n    \"InProgress\": validContractsProgress.length,\n    \"HundredContracts\": msToTime(Last100ContractsAVGTime),\n    \"MJJitaHundredContracts\": msToTime(Last100MJJitaContractsAVGTime)\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 870,
-        "y": 600,
-        "wires": [
-            [
-                "11dc75cc41e4d1d9"
-            ]
-        ]
-    },
-    {
-        "id": "03a3abbbeaf621c1",
-        "type": "http in",
-        "z": "85d09905.9710c8",
-        "name": "getContracts",
-        "url": "/getContracts",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 70,
-        "y": 600,
-        "wires": [
-            [
-                "6ad893986c109683"
-            ]
-        ]
-    },
-    {
-        "id": "11dc75cc41e4d1d9",
-        "type": "http response",
-        "z": "85d09905.9710c8",
-        "name": "",
-        "statusCode": "200",
-        "headers": {},
-        "x": 1240,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "deed2557d083e3f9",
-        "type": "http in",
-        "z": "85d09905.9710c8",
-        "name": "",
-        "url": "/routes",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 210,
-        "y": 400,
-        "wires": [
-            [
-                "d7e1430948dd9e0d"
-            ]
-        ]
-    },
-    {
-        "id": "c982a84091b031cf",
-        "type": "http request",
-        "z": "85d09905.9710c8",
-        "name": "",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "http://directus:8055/items/Routes?fields=*.*.*.*",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 610,
-        "y": 400,
-        "wires": [
-            [
-                "3d3b5b26e28e9098"
-            ]
-        ]
-    },
-    {
-        "id": "b2af9774874e7029",
-        "type": "http response",
-        "z": "85d09905.9710c8",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 1330,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "d7e1430948dd9e0d",
-        "type": "function",
-        "z": "85d09905.9710c8",
-        "name": "Bearer Token",
-        "func": "msg.headers = { \n    Authorization: `Bearer ${global.get(\"DIRECTUS_TOKEN\") }`\n};\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 410,
-        "y": 400,
-        "wires": [
-            [
-                "c982a84091b031cf"
-            ]
-        ]
-    },
-    {
-        "id": "37dd45b425d8a63e",
-        "type": "http request",
-        "z": "85d09905.9710c8",
-        "name": "",
-        "method": "GET",
-        "ret": "obj",
-        "paytoqs": "ignore",
-        "url": "http://directus:8055/items/Defaults?fields=*.*.*.*",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 1010,
-        "y": 400,
-        "wires": [
-            [
-                "6ea26428eacc31ec"
-            ]
-        ]
-    },
-    {
-        "id": "50c50fb324ba0674",
-        "type": "function",
-        "z": "85d09905.9710c8",
-        "name": "Bearer Token",
-        "func": "msg.headers = { \n    Authorization: `Bearer ${global.get(\"DIRECTUS_TOKEN\") }`\n};\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 810,
-        "y": 400,
-        "wires": [
-            [
-                "37dd45b425d8a63e"
-            ]
-        ]
-    },
-    {
-        "id": "3d3b5b26e28e9098",
-        "type": "function",
-        "z": "85d09905.9710c8",
-        "name": "transform",
-        "func": "function transformData(oldData) {\n    // Initialize the new data structure\n    const newData = {\n        routes: []\n    };\n\n    // Create a map to avoid duplication of regions and systems\n    const regionMap = new Map();\n\n    oldData.data.forEach(route => {\n        const fromRegionName = route.From_Station.System.Region.Region;\n        const fromSystemName = route.From_Station.System.System;\n        const fromStationName = route.From_Station.Station;\n\n        const toRegionName = route.To_Station.System.Region.Region;\n        const toSystemName = route.To_Station.System.System;\n        const toStationName = route.To_Station.Station;\n\n        const pricing = route.Pricing;\n        const allowRush = route.AllowRush;\n\n        // Create the target station object\n        const targetStation = {\n            system: toSystemName,\n            station: toStationName,\n            reward: {\n                volume: parseFloat(pricing.Reward_Volume),\n                collateral: parseFloat(pricing.Reward_Collateral)\n            },\n            limits: {\n                volume: parseFloat(pricing.Limits_Volume),\n                collateral: parseFloat(pricing.Limits_Collateral)\n            },\n            minimumReward: parseInt(pricing.Reward_Minimum, 10),\n            allowRush: allowRush\n        };\n\n        // Check if fromRegion exists in the map\n        if (!regionMap.has(fromRegionName)) {\n            regionMap.set(fromRegionName, { region: fromRegionName, systems: new Map() });\n        }\n        const fromRegion = regionMap.get(fromRegionName);\n\n        // Check if fromSystem exists in the fromRegion's systems\n        if (!fromRegion.systems.has(fromSystemName)) {\n            fromRegion.systems.set(fromSystemName, { system: fromSystemName, station: fromStationName, regions: new Map() });\n        }\n        const fromSystem = fromRegion.systems.get(fromSystemName);\n\n        // Check if toRegion exists in the fromSystem's regions\n        if (!fromSystem.regions.has(toRegionName)) {\n            fromSystem.regions.set(toRegionName, { region: toRegionName, systems: [] });\n        }\n        const toRegion = fromSystem.regions.get(toRegionName);\n\n        // Add the target station to the toRegion's systems\n        toRegion.systems.push(targetStation);\n    });\n\n    // Convert the map structure to the required format\n    regionMap.forEach(region => {\n        const regionEntry = { region: region.region, systems: [] };\n        region.systems.forEach(system => {\n            const systemEntry = { system: system.system, station: system.station, regions: [] };\n            system.regions.forEach(region => {\n                systemEntry.regions.push({ region: region.region, systems: region.systems });\n            });\n            regionEntry.systems.push(systemEntry);\n        });\n        newData.routes.push(regionEntry);\n    });\n\n    return newData;\n}\n\nmsg.data = transformData(msg.payload);\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 720,
-        "y": 320,
-        "wires": [
-            [
-                "50c50fb324ba0674"
-            ]
-        ]
-    },
-    {
-        "id": "6ea26428eacc31ec",
-        "type": "function",
-        "z": "85d09905.9710c8",
-        "name": "transform",
-        "func": "msg.data.default = {\n    region: msg.payload.data.Default_System.Region.Region,\n    system: msg.payload.data.Default_System.System,\n    fees: {\n        rushFeeAmount: parseFloat(msg.payload.data.RushDeliveryAmount)\n    }\n};\n\n// Construct payload with default at the top, followed by the rest\nmsg.payload = {\n    default: msg.data.default,\n    routes: msg.data.routes\n};\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1180,
-        "y": 400,
-        "wires": [
-            [
-                "b2af9774874e7029"
-            ]
-        ]
+        "id": "b0a467b42952d9b8",
+        "type": "tab",
+        "label": "ESI",
+        "disabled": false,
+        "info": "",
+        "env": []
     },
     {
         "id": "707f7b126e9f5ec3",
@@ -483,8 +39,8 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 390,
-        "y": 960,
+        "x": 290,
+        "y": 180,
         "wires": [
             [
                 "8ce30326de02b0bc"
@@ -507,8 +63,8 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 730,
-        "y": 960,
+        "x": 630,
+        "y": 180,
         "wires": [
             [
                 "c47cc725fc143d54"
@@ -527,8 +83,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 570,
-        "y": 960,
+        "x": 470,
+        "y": 180,
         "wires": [
             [
                 "758db48d7b47ec01"
@@ -542,8 +98,487 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 870,
-        "y": 960,
+        "x": 770,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "70cc2683.ee42c",
+        "type": "http response",
+        "z": "0ccd8135b6f8eaf1",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 620,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2ada2d01.d4849a",
+        "type": "http in",
+        "z": "0ccd8135b6f8eaf1",
+        "name": "root",
+        "url": "/",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "76014038.01f728"
+            ]
+        ]
+    },
+    {
+        "id": "76014038.01f728",
+        "type": "function",
+        "z": "0ccd8135b6f8eaf1",
+        "name": "body",
+        "func": "msg.payload = { message: \"evola api\" }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 120,
+        "wires": [
+            [
+                "70cc2683.ee42c"
+            ]
+        ]
+    },
+    {
+        "id": "deed2557d083e3f9",
+        "type": "http in",
+        "z": "1344ff94c1358bb3",
+        "name": "",
+        "url": "/routes",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "d7e1430948dd9e0d"
+            ]
+        ]
+    },
+    {
+        "id": "c982a84091b031cf",
+        "type": "http request",
+        "z": "1344ff94c1358bb3",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://directus:8055/items/Routes?fields=*.*.*.*",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 590,
+        "y": 140,
+        "wires": [
+            [
+                "3d3b5b26e28e9098"
+            ]
+        ]
+    },
+    {
+        "id": "b2af9774874e7029",
+        "type": "http response",
+        "z": "1344ff94c1358bb3",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1430,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d7e1430948dd9e0d",
+        "type": "function",
+        "z": "1344ff94c1358bb3",
+        "name": "Bearer Token",
+        "func": "msg.headers = { \n    Authorization: `Bearer ${global.get(\"DIRECTUS_TOKEN\") }`\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [
+                "c982a84091b031cf"
+            ]
+        ]
+    },
+    {
+        "id": "37dd45b425d8a63e",
+        "type": "http request",
+        "z": "1344ff94c1358bb3",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://directus:8055/items/Defaults?fields=*.*.*.*",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1110,
+        "y": 140,
+        "wires": [
+            [
+                "6ea26428eacc31ec"
+            ]
+        ]
+    },
+    {
+        "id": "50c50fb324ba0674",
+        "type": "function",
+        "z": "1344ff94c1358bb3",
+        "name": "Bearer Token",
+        "func": "msg.headers = { \n    Authorization: `Bearer ${global.get(\"DIRECTUS_TOKEN\") }`\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 140,
+        "wires": [
+            [
+                "37dd45b425d8a63e"
+            ]
+        ]
+    },
+    {
+        "id": "3d3b5b26e28e9098",
+        "type": "function",
+        "z": "1344ff94c1358bb3",
+        "name": "transform",
+        "func": "function transformData(oldData) {\n    const newData = {\n        routes: []\n    };\n\n    const regionMap = new Map();\n\n    oldData.data.forEach(route => {\n        const fromRegionName = route.From_Station.System.Region.Region;\n        const fromSystemName = route.From_Station.System.System;\n        const fromStationName = route.From_Station.Station;\n\n        const toRegionName = route.To_Station.System.Region.Region;\n        const toSystemName = route.To_Station.System.System;\n        const toStationName = route.To_Station.Station;\n\n        const pricing = route.Pricing;\n        const allowRush = route.AllowRush;\n\n        const reward = pricing.Reward;\n        const limits = pricing.Limit;\n\n        const targetStation = {\n            system: toSystemName,\n            station: toStationName,\n            reward: {\n                volume: parseFloat(reward.Volume),\n                collateral: parseFloat(reward.Collateral)\n            },\n            limits: {\n                volume: parseFloat(limits.Volume),\n                collateral: parseFloat(limits.Collateral)\n            },\n            minimumReward: parseInt(reward.Minimum, 10),\n            allowRush: allowRush\n        };\n\n        // Handle region mapping\n        if (!regionMap.has(fromRegionName)) {\n            regionMap.set(fromRegionName, { region: fromRegionName, systems: new Map() });\n        }\n\n        const fromRegion = regionMap.get(fromRegionName);\n\n        if (!fromRegion.systems.has(fromSystemName)) {\n            fromRegion.systems.set(fromSystemName, {\n                system: fromSystemName,\n                station: fromStationName,\n                regions: new Map()\n            });\n        }\n\n        const fromSystem = fromRegion.systems.get(fromSystemName);\n\n        if (!fromSystem.regions.has(toRegionName)) {\n            fromSystem.regions.set(toRegionName, {\n                region: toRegionName,\n                systems: []\n            });\n        }\n\n        const toRegion = fromSystem.regions.get(toRegionName);\n        toRegion.systems.push(targetStation);\n    });\n\n    // Build final structure\n    regionMap.forEach(region => {\n        const regionEntry = {\n            region: region.region,\n            systems: []\n        };\n\n        region.systems.forEach(system => {\n            const systemEntry = {\n                system: system.system,\n                station: system.station,\n                regions: []\n            };\n\n            system.regions.forEach(subRegion => {\n                systemEntry.regions.push({\n                    region: subRegion.region,\n                    systems: subRegion.systems\n                });\n            });\n\n            regionEntry.systems.push(systemEntry);\n        });\n\n        newData.routes.push(regionEntry);\n    });\n\n    return newData;\n}\n\nmsg.data = transformData(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 140,
+        "wires": [
+            [
+                "50c50fb324ba0674"
+            ]
+        ]
+    },
+    {
+        "id": "6ea26428eacc31ec",
+        "type": "function",
+        "z": "1344ff94c1358bb3",
+        "name": "transform",
+        "func": "msg.data.default = {\n    region: msg.payload.data.Default_System.Region.Region,\n    system: msg.payload.data.Default_System.System,\n    fees: {\n        rushFeeAmount: parseFloat(msg.payload.data.RushDeliveryAmount)\n    }\n};\n\n// Construct payload with default at the top, followed by the rest\nmsg.payload = {\n    default: msg.data.default,\n    routes: msg.data.routes\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 140,
+        "wires": [
+            [
+                "b2af9774874e7029"
+            ]
+        ]
+    },
+    {
+        "id": "6d76d60c.549438",
+        "type": "http in",
+        "z": "1344ff94c1358bb3",
+        "name": "getAppraisal",
+        "url": "/getAppraisal",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "413d0ea6.7b2ce8"
+            ]
+        ]
+    },
+    {
+        "id": "87fe4b9d.1712",
+        "type": "http request",
+        "z": "1344ff94c1358bb3",
+        "name": "janice",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://janice.e-351.com/api/rest/v2/appraisal?market=2&designation=appraisal&pricing=split&pricingVariant=immediate&persist=true&compactize=true&pricePercentage=1",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 510,
+        "y": 240,
+        "wires": [
+            [
+                "22bac43090a6d812"
+            ]
+        ]
+    },
+    {
+        "id": "413d0ea6.7b2ce8",
+        "type": "function",
+        "z": "1344ff94c1358bb3",
+        "name": "headers",
+        "func": "const options = {\n  'X-ApiKey': global.get(\"APIKEY\"),\n  'Content-Type': 'text/plain',\n  'Accept': 'application/json' \n}\nmsg.headers = options;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 240,
+        "wires": [
+            [
+                "87fe4b9d.1712"
+            ]
+        ]
+    },
+    {
+        "id": "22bac43090a6d812",
+        "type": "http response",
+        "z": "1344ff94c1358bb3",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 670,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "6ad893986c109683",
+        "type": "function",
+        "z": "b0a467b42952d9b8",
+        "name": "setGlobals",
+        "func": "msg.page = 1\nmsg.contracts = []\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "46a9940b002fe417"
+            ]
+        ]
+    },
+    {
+        "id": "84e034956fded3c5",
+        "type": "http request",
+        "z": "b0a467b42952d9b8",
+        "name": "getContracts",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://esi.evetech.net/latest/corporations/98684131/contracts/?datasource=tranquility&page={{page}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 710,
+        "y": 300,
+        "wires": [
+            [
+                "9fe02df565db798e"
+            ]
+        ]
+    },
+    {
+        "id": "46a9940b002fe417",
+        "type": "function",
+        "z": "b0a467b42952d9b8",
+        "name": "headers",
+        "func": "const options = {\n  'Authorization': 'Bearer ' + global.get(\"AUTHTOKEN\"),\n  'Content-Type': 'application/json'\n}\nmsg.headers = options;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 300,
+        "wires": [
+            [
+                "84e034956fded3c5"
+            ]
+        ]
+    },
+    {
+        "id": "9fe02df565db798e",
+        "type": "function",
+        "z": "b0a467b42952d9b8",
+        "name": "handleResponse",
+        "func": "if (msg.payload.length == 1000)\n{\n    //more contracts\n    global.set(\"CONTRACTS\", msg.payload)\n    msg.page = msg.page + 1\n    msg.contracts.push(msg.payload)\n    return [msg, null, null]\n}\nelse if (msg.statusCode === 401 || (msg.statusCode === 403 && msg.payload.error && msg.payload.error === \"token is expired\"))\n{\n    //token expired\n    return [null, msg, null];\n} if (msg.statusCode !== 200) {\n    return [null, null, msg]\n}\nelse\n{\n    //no more contracts\n    msg.contracts.push(msg.payload)\n    return [null, null, msg]\n}\nreturn [null, null, null];",
+        "outputs": 3,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 160,
+        "wires": [
+            [
+                "46a9940b002fe417"
+            ],
+            [
+                "e7d6766c4f4d1c85"
+            ],
+            [
+                "1336ee99b3dc038e"
+            ]
+        ]
+    },
+    {
+        "id": "fd7304565eefb4d9",
+        "type": "http request",
+        "z": "b0a467b42952d9b8",
+        "name": "refreshTokens",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://login.eveonline.com/v2/oauth/token/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 1180,
+        "y": 180,
+        "wires": [
+            [
+                "409c75a68b0f06f6"
+            ]
+        ]
+    },
+    {
+        "id": "e7d6766c4f4d1c85",
+        "type": "function",
+        "z": "b0a467b42952d9b8",
+        "name": "refreshHeaders",
+        "func": "msg.headers = {\n    \"Content-Type\": \"application/x-www-form-urlencoded\",\n    \"Authorization\": \"Basic \" + global.get(\"ESIAPIKEY\")\n};\n\n\nmsg.payload = {\n    \"grant_type\": \"refresh_token\",\n    \"refresh_token\": global.get(\"REFRESHTOKEN\")\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 180,
+        "wires": [
+            [
+                "fd7304565eefb4d9"
+            ]
+        ]
+    },
+    {
+        "id": "409c75a68b0f06f6",
+        "type": "function",
+        "z": "b0a467b42952d9b8",
+        "name": "setToken",
+        "func": "if (msg.statusCode === 200) {\n    global.set(\"AUTHTOKEN\", msg.payload.access_token);\n    return [msg, null];\n} else { \n    msg.payload =\n    {\n        \"Outstanding\": 0,\n        \"InProgress\": 0,\n        \"HundredContracts\": 0,\n        \"MJJitaHundredContracts\": 0,\n        \"error\": true\n    }\n    return [null, msg];\n}",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 220,
+        "wires": [
+            [
+                "46a9940b002fe417"
+            ],
+            [
+                "11dc75cc41e4d1d9"
+            ]
+        ]
+    },
+    {
+        "id": "1336ee99b3dc038e",
+        "type": "function",
+        "z": "b0a467b42952d9b8",
+        "name": "processContracts",
+        "func": "var allContracts = []\nfor (var i in msg.contracts) {\n    for (var j in msg.contracts[i]) {\n        allContracts.push(msg.contracts[i][j])\n    }\n}\n\nvar validContracts = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"outstanding\")\n\nvar validContractsProgress = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"in_progress\")\n\nvar last100Contracts = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"finished\").sort((a, b) => {\n    if (a.date_completed < b.date_completed)\n    {\n        return 1\n    }\n    if (b.date_completed < a.date_completed) {\n        return -1\n    }\n    return 0\n}).slice(0, 100)\n\nvar last100MJJitaContracts = allContracts.filter(contract => contract.type == \"courier\").filter(contract => contract.status == \"finished\")\n    .filter(contract => (contract.end_location_id == 1038457641673 || contract.end_location_id == 60003760) && (contract.start_location_id == 1038457641673 || contract.start_location_id == 60003760)).sort((a, b) => {\n    if (a.date_completed < b.date_completed) {\n        return 1\n    }\n    if (b.date_completed < a.date_completed) {\n        return -1\n    }\n    return 0\n}).slice(0, 100)\n\nvar contractsTime = 0\nfor (var i in last100Contracts)\n{\n    var completeDate = new Date(last100Contracts[i].date_completed)\n    var endDate = new Date(last100Contracts[i].date_issued)\n    contractsTime = contractsTime + (completeDate.valueOf() - endDate.valueOf())\n}\n\nvar mJJitacontractsTime = 0\nfor (var i in last100MJJitaContracts) {\n    var completeDate = new Date(last100MJJitaContracts[i].date_completed)\n    var endDate = new Date(last100MJJitaContracts[i].date_issued)\n    mJJitacontractsTime = mJJitacontractsTime + (completeDate.valueOf() - endDate.valueOf())\n}\n\nvar Last100ContractsAVGTime = contractsTime / 100\n\nvar Last100MJJitaContractsAVGTime = mJJitacontractsTime / 100\n\nfunction msToTime(s) {\n    var ms = s % 1000;\n    s = (s - ms) / 1000;\n    var secs = s % 60;\n    s = (s - secs) / 60;\n    var mins = s % 60;\n    var hrs = (s - mins) / 60;\n\n    //return hrs + ':' + mins + ':' + secs;\n    return hrs;\n}\n\nmsg.payload = \n{\n    \"Outstanding\": validContracts.length,\n    \"InProgress\": validContractsProgress.length,\n    \"HundredContracts\": msToTime(Last100ContractsAVGTime),\n    \"MJJitaHundredContracts\": msToTime(Last100MJJitaContractsAVGTime)\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 990,
+        "y": 140,
+        "wires": [
+            [
+                "11dc75cc41e4d1d9"
+            ]
+        ]
+    },
+    {
+        "id": "03a3abbbeaf621c1",
+        "type": "http in",
+        "z": "b0a467b42952d9b8",
+        "name": "getContracts",
+        "url": "/getContracts",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "6ad893986c109683"
+            ]
+        ]
+    },
+    {
+        "id": "11dc75cc41e4d1d9",
+        "type": "http response",
+        "z": "b0a467b42952d9b8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 1360,
+        "y": 140,
         "wires": []
     }
 ]

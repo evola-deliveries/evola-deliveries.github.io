@@ -3,4 +3,13 @@ import config from './config.js';
 
 export const directus = createDirectus(config.directus_api_url)
   .with(staticToken(config.directus_token))
-  .with(rest());;
+  .with(rest({
+        onRequest: (options) => ({
+          ...options,
+          headers: {
+            ...options.headers,
+            'cache-control': 'no-store',
+          },
+        }),
+      })
+  );

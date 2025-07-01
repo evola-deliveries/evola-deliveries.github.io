@@ -3,13 +3,13 @@ import connection from '../../shared/redis.js';
 import { contractCompleted } from '../../shared/queue.js';
 
 new Worker('contractUpdated', async job => {
-  const contract = job.data;
+  const contracts = job.data;
 
-  if (contract.status === 'finished') {
-    await contractCompleted.add('completed', contract);
+  if (contracts.old.status !== 'finished' && contracts.new.status === 'finished') {
+    await contractCompleted.add('completed', contracts.new);
   }
 
-  console.log(`[contractUpdated] Updated contract ${job.data.contract_id} to database.`);
+  console.log(`[contractUpdated] Updated contract ${contracts.new.contract_id} to database.`);
 
   // simulate DB write
 }, { connection });

@@ -2,28 +2,27 @@ import { directus } from '../../shared/directus.js';
 import { readItems, createItem, updateItem } from '@directus/sdk';
 
 function shouldUpdate(a, b) {
-  const allKeys = new Set([...Object.keys(a), ...Object.keys(b)]);
+	for (const key of Object.keys(b)) {
+		if (key === "id") continue;
 
-  for (const key of allKeys) {
-    if (key === "id") continue;
+		const aHas = key in a;
 
-    const aHas = key in a;
-    const bHas = key in b;
+		// if new field
+		if (!aHas) return true;
 
-    const aVal = aHas ? String(a[key]) : undefined;
-    const bVal = bHas ? String(b[key]) : undefined;
+		const aVal = String(a[key]);
+		const bVal = String(b[key]);
 
-    if (aVal !== bVal) {
-      return true; // Something differs
-    }
-  }
+		if (aVal !== bVal) return true;
+	}
 
-  return false; // No differences
+	return false;
 }
 
 export default async function saveOrUpdateContract(contract) {
 	const key = contract.contract_id;
-	const existing = await directus.request(
+
+	const result = await directus.request(
 		readItems('Contracts', {
 			filter: {
 				contract_id: {
@@ -33,28 +32,29 @@ export default async function saveOrUpdateContract(contract) {
 		})
 	);
 
-	if (!existing && existing.length === 0) {
-		const result = await directus.request(
+	const existing = Array.isArray(result) && result.length != 0 ? result[0] : null;
+
+	if (!existing) {
+		const created = await directus.request(
 			createItem('Contracts', {
 				...contract
 			})
 		);
 
-		return { contract: result, status: 'created' };
+		return { contract: created, status: 'created' };
 	}
 
-	const changed = shouldUpdate(existing[0], contract)
-	console.log(changed, "should update")
+	const changed = shouldUpdate(existing, contract);
+
 	if (changed) {
-		const result = await directus.request(
-			updateItem('Contracts', existing[0].id, {
+		const updated = await directus.request(
+			updateItem('Contracts', existing.id, {
 				...contract
 			})
 		);
 
-		console.log("updated")
-		return { contract: result, status: 'updated' };
+		return { old: existing, new: updated, status: 'updated' };
 	}
 
-	return { contract: contract, status: 'unchanged' };
+	return { contract: existing, status: 'unchanged' };
 }
