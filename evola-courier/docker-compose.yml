@@ -11,10 +11,28 @@ services:
     image: evolaeve/trigger-fetch
     env_file:
       - ./common.env
-      - ./dispatcher/.env
+      - ./dispatchers/trigger-fetch/.env
     command: npm run trigger-fetch
     depends_on:
       - redis
+    networks:
+      - evola_network
+    profiles:
+      - manual
+
+  courier-service:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: evolaeve/courier-service
+    env_file:
+      - ./common.env
+      - ./dispatchers/courier-service/.env
+    command: npm run courier-service
+    depends_on:
+      - redis
+    ports:
+      - 3000:3000
     networks:
       - evola_network
     profiles:

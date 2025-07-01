@@ -1,4 +1,4 @@
-import { fetchContracts } from '../shared/queue.js';
+import { fetchContracts } from '../../shared/queue.js';
 
 (async () => {
   await fetchContracts.add('start', {}, {
