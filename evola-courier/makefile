@@ -16,3 +16,6 @@ trigger:
 
 courier:
 	@docker-compose --profile manual up courier-service
+
+watcher:
+	@docker-compose --profile manual up contract-watcher

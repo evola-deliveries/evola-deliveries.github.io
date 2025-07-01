@@ -5,6 +5,7 @@
   "scripts": {
     "trigger-fetch": "node dispatchers/trigger-fetch/trigger-fetch.js",
     "courier-service": "node dispatchers/courier-service/courier-service.js",
+    "contract-watcher": "node dispatchers/contract-watcher/contract-watcher.js",
     "fetchContracts": "node workers/fetchContracts/worker.js",
     "processContract": "node workers/processContract/worker.js",
     "contractCreated": "node workers/contractCreated/worker.js",
