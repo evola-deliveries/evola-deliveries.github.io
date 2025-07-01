@@ -580,5 +580,70 @@
         "x": 1360,
         "y": 140,
         "wires": []
+    },
+    {
+        "id": "af07e835437dbeb1",
+        "type": "http in",
+        "z": "b0a467b42952d9b8",
+        "name": "",
+        "url": "/corporations/:corporation_id/contracts/",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 490,
+        "y": 660,
+        "wires": [
+            [
+                "6753e659eb49a1ab"
+            ]
+        ]
+    },
+    {
+        "id": "003d405fc465831f",
+        "type": "http response",
+        "z": "b0a467b42952d9b8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1170,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "6753e659eb49a1ab",
+        "type": "function",
+        "z": "b0a467b42952d9b8",
+        "name": "function 1",
+        "func": "\nmsg.payload = [\n {\n        \"acceptor_id\": 2117867283,\n        \"assignee_id\": 98684131,\n        \"availability\": \"personal\",\n        \"collateral\": 1615863000,\n        \"contract_id\": 219446035,\n        \"date_accepted\": \"2025-06-19T14:47:28Z\",\n        \"date_completed\": \"2025-06-19T14:58:12Z\",\n        \"date_expired\": \"2025-06-25T02:23:39Z\",\n        \"date_issued\": \"2025-06-18T02:23:39Z\",\n        \"days_to_complete\": 7,\n        \"end_location_id\": 1035418656186,\n        \"for_corporation\": true,\n        \"issuer_corporation_id\": 98295309,\n        \"issuer_id\": 2114330853,\n        \"price\": 0,\n        \"reward\": 49158630,\n        \"start_location_id\": 1038536485122,\n        \"status\": \"finished\",\n        \"title\": \"\",\n        \"type\": \"courier\",\n        \"volume\": 330000\n    },\n    {\n        \"acceptor_id\": 0,\n        \"assignee_id\": 98684131,\n        \"availability\": \"personal\",\n        \"collateral\": 3237485184,\n        \"contract_id\": 219457531,\n        \"date_expired\": \"2025-07-16T10:26:30Z\",\n        \"date_issued\": \"2025-06-18T10:26:30Z\",\n        \"days_to_complete\": 14,\n        \"end_location_id\": 1038457641673,\n        \"for_corporation\": false,\n        \"issuer_corporation_id\": 98694583,\n        \"issuer_id\": 203701296,\n        \"price\": 0,\n        \"reward\": 103094685,\n        \"start_location_id\": 60003760,\n        \"status\": \"deleted\",\n        \"title\": \"\",\n        \"type\": \"courier\",\n        \"volume\": 202056.66350000002\n    },\n    {\n        \"acceptor_id\": 308739913,\n        \"assignee_id\": 308739913,\n        \"availability\": \"personal\",\n        \"collateral\": 0,\n        \"contract_id\": 219460924,\n        \"date_accepted\": \"2025-06-18T18:10:39Z\",\n        \"date_completed\": \"2025-06-18T18:10:39Z\",\n        \"date_expired\": \"2025-06-19T12:44:18Z\",\n        \"date_issued\": \"2025-06-18T12:44:18Z\",\n        \"days_to_complete\": 0,\n        \"end_location_id\": 1038457641673,\n        \"for_corporation\": true,\n        \"issuer_corporation_id\": 98684131,\n        \"issuer_id\": 2122769747,\n        \"price\": 1440000000,\n        \"reward\": 0,\n        \"start_location_id\": 1038457641673,\n        \"status\": \"finished\",\n        \"title\": \"https://janice.e-351.com/a/r0O9RZ\",\n        \"type\": \"item_exchange\",\n        \"volume\": 300\n    },\n    {\n        \"acceptor_id\": 2117867283,\n        \"assignee_id\": 98684131,\n        \"availability\": \"personal\",\n        \"collateral\": 550000000,\n        \"contract_id\": 219461352,\n        \"date_accepted\": \"2025-06-18T21:28:14Z\",\n        \"date_completed\": \"2025-06-19T14:04:05Z\",\n        \"date_expired\": \"2025-06-25T12:56:13Z\",\n        \"date_issued\": \"2025-06-18T12:56:13Z\",\n        \"days_to_complete\": 7,\n        \"end_location_id\": 1035927404852,\n        \"for_corporation\": false,\n        \"issuer_corporation_id\": 98177708,\n        \"issuer_id\": 90565654,\n        \"price\": 0,\n        \"reward\": 15500000,\n        \"start_location_id\": 60003760,\n        \"status\": \"finished\",\n        \"title\": \"BPO-BPC-SKILLS ( 80 M3 )\",\n        \"type\": \"courier\",\n        \"volume\": 80.68000000000004\n    },\n    {\n        \"acceptor_id\": 2117867283,\n        \"assignee_id\": 98684131,\n        \"availability\": \"personal\",\n        \"collateral\": 2736679200,\n        \"contract_id\": 219711873,\n        \"date_accepted\": \"2025-06-30T18:54:02Z\",\n        \"date_expired\": \"2025-07-01T11:19:10Z\",\n        \"date_issued\": \"2025-06-24T11:19:10Z\",\n        \"days_to_complete\": 7,\n        \"end_location_id\": 60003760,\n        \"for_corporation\": false,\n        \"issuer_corporation_id\": 98766100,\n        \"issuer_id\": 2117103903,\n        \"price\": 0,\n        \"reward\": 85375292,\n        \"start_location_id\": 1045087024576,\n        \"status\": \"in_progress\",\n        \"title\": \"3dBCOj\",\n        \"type\": \"courier\",\n        \"volume\": 105470\n    },\n    {\n        \"acceptor_id\": 2117867283,\n        \"assignee_id\": 98684131,\n        \"availability\": \"personal\",\n        \"collateral\": 531351793,\n        \"contract_id\": 219711908,\n        \"date_accepted\": \"2025-06-30T18:54:04Z\",\n        \"date_expired\": \"2025-07-01T11:20:44Z\",\n        \"date_issued\": \"2025-06-24T11:20:44Z\",\n        \"days_to_complete\": 7,\n        \"end_location_id\": 60003760,\n        \"for_corporation\": false,\n        \"issuer_corporation_id\": 98766100,\n        \"issuer_id\": 2117103903,\n        \"price\": 0,\n        \"reward\": 63187790,\n        \"start_location_id\": 1045087024576,\n        \"status\": \"in_progress\",\n        \"title\": \"o3PoHo\",\n        \"type\": \"courier\",\n        \"volume\": 105225.948\n    },\n    {\n        \"acceptor_id\": 0,\n        \"assignee_id\": 98684131,\n        \"availability\": \"personal\",\n        \"collateral\": 642615014,\n        \"contract_id\": 219759817,\n        \"date_expired\": \"2025-07-02T16:25:36Z\",\n        \"date_issued\": \"2025-06-25T16:25:36Z\",\n        \"days_to_complete\": 7,\n        \"end_location_id\": 60014946,\n        \"for_corporation\": false,\n        \"issuer_corporation_id\": 98628738,\n        \"issuer_id\": 2121795973,\n        \"price\": 0,\n        \"reward\": 43105862,\n        \"start_location_id\": 60003760,\n        \"status\": \"outstanding\",\n        \"title\": \"\",\n        \"type\": \"courier\",\n        \"volume\": 43152.600000000006\n    },\n    {\n        \"acceptor_id\": 0,\n        \"assignee_id\": 98684131,\n        \"availability\": \"personal\",\n        \"collateral\": 900000000,\n        \"contract_id\": 219813712,\n        \"date_expired\": \"2025-07-04T05:37:23Z\",\n        \"date_issued\": \"2025-06-27T05:37:23Z\",\n        \"days_to_complete\": 3,\n        \"end_location_id\": 1042490470286,\n        \"for_corporation\": true,\n        \"issuer_corporation_id\": 98688782,\n        \"issuer_id\": 2118666624,\n        \"price\": 0,\n        \"reward\": 100000000,\n        \"start_location_id\": 60003760,\n        \"status\": \"outstanding\",\n        \"title\": \"\",\n        \"type\": \"courier\",\n        \"volume\": 330000\n    },\n];\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 660,
+        "wires": [
+            [
+                "003d405fc465831f",
+                "c8d2b6a61f954fb7"
+            ]
+        ]
+    },
+    {
+        "id": "c8d2b6a61f954fb7",
+        "type": "debug",
+        "z": "b0a467b42952d9b8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 760,
+        "wires": []
     }
 ]

@@ -89,6 +89,34 @@ services:
     networks:
       - evola_network
 
+  corporation-created:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: evolaeve/corporation-created
+    env_file:
+      - ./common.env
+      - ./workers/corporationCreated/.env
+    depends_on:
+      - redis
+    command: npm run corporationCreated
+    networks:
+      - evola_network
+
+  member-created:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: evolaeve/member-created
+    env_file:
+      - ./common.env
+      - ./workers/memberCreated/.env
+    depends_on:
+      - redis
+    command: npm run memberCreated
+    networks:
+      - evola_network
+
 networks:
   evola_network:
     driver: bridge

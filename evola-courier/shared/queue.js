@@ -21,3 +21,6 @@ export const contractUpdated = new Queue('contractUpdated', { connection });
 // This happens when a contract status changes to 'finished'.
 export const contractCompleted = new Queue('contractCompleted', { connection });
 
+
+export const memberCreated = new Queue('memberCreated', { connection });
+export const corporationCreated = new Queue('corporationCreated', { connection });

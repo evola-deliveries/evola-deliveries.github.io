@@ -8,7 +8,9 @@
     "processContract": "node workers/processContract/worker.js",
     "contractCreated": "node workers/contractCreated/worker.js",
     "contractUpdated": "node workers/contractUpdated/worker.js",
-    "contractCompleted": "node workers/contractCompleted/worker.js"
+    "contractCompleted": "node workers/contractCompleted/worker.js",
+    "corporationCreated": "node workers/corporationCreated/worker.js",
+    "memberCreated": "node workers/memberCreated/worker.js"
   },
   "dependencies": {
     "@directus/sdk": "^20.0.0",
