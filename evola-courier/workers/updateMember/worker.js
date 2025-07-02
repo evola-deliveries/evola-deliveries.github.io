@@ -4,21 +4,19 @@ import { eveClient } from '../../shared/eve-esi.js';
 import saveOrUpdateMember from './saveOrUpdateMember.js';
 
 new Worker('updateMember', async job => {
-  console.log(`[updateMember] Member ${job.data.character_id} created.`);
-  
-  const { character_id } = job.data;
-  if (!character_id) return;
+	const { character_id } = job.data;
+	if (!character_id) return;
 
-  try {
-    const memberData = await eveClient.getCharacterInfo(character_id);
+	try {
+		const memberData = await eveClient.getCharacterInfo(character_id);
 
-    const result = await saveOrUpdateMember({
-      ...memberData,
-      character_id // Ensure it's saved
-    });
+		const result = await saveOrUpdateMember({
+			...memberData,
+			character_id // Ensure it's saved
+		});
 
-    console.log(`[updateMember] Member ${character_id} ${result.status}`);		
-  } catch (err) {
-    console.error(`[updateMember] Failed for member ${character_id}`, err);
-  }
+		console.log(`[updateMember] Member ${character_id} ${result.status}`);
+	} catch (err) {
+		console.error(`[updateMember] Failed for member ${character_id}`, err);
+	}
 }, { connection });

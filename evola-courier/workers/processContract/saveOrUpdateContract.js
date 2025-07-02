@@ -1,17 +1,19 @@
 import { directus } from '../../shared/directus.js';
 import { readItems, createItem, updateItem } from '@directus/sdk';
 
-function shouldUpdate(a, b) {
-	for (const key of Object.keys(b)) {
-		if (key === "id") continue;
+function shouldUpdate(existing, incoming) {
+	const ignoredKeys = ['id', 'mail_sent'];
 
-		const aHas = key in a;
+    for (const key of Object.keys(incoming)) {
+        if (ignoredKeys.includes(key)) continue;
+
+		const aHas = key in existing;
 
 		// if new field
 		if (!aHas) return true;
 
-		const aVal = String(a[key]);
-		const bVal = String(b[key]);
+		const aVal = String(existing[key]);
+		const bVal = String(incoming[key]);
 
 		if (aVal !== bVal) return true;
 	}
