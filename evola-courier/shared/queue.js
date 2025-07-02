@@ -25,3 +25,7 @@ export const contractCompleted = new Queue('contractCompleted', { connection });
 // It will handle the creation, updates of members and corporations and raise events for further processing if requited.
 export const updateMember = new Queue('updateMember', { connection });
 export const updateCorporation = new Queue('updateCorporation', { connection });
+
+// This queue will handle the eve mailing for the contracts that are marked as completed.
+// It will check if it sent already and if not it will send it.
+export const sendEveMail = new Queue('sendEveMail', { connection });

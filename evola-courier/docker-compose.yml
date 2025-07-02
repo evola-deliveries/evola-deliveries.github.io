@@ -200,6 +200,25 @@ services:
         max-file: "5"
     networks:
       - evola_network
+  
+  send-eve-mail:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: evolaeve/send-eve-mail
+    env_file:
+      - ./.env
+      - ./workers/sendEveMail/.env
+    depends_on:
+      - redis
+    command: npm run sendEveMail
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+    networks:
+      - evola_network
 
 networks:
   evola_network:

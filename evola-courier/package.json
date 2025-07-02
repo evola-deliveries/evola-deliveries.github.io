@@ -12,7 +12,8 @@
     "contractUpdated": "node workers/contractUpdated/worker.js",
     "contractCompleted": "node workers/contractCompleted/worker.js",
     "updateCorporation": "node workers/updateCorporation/worker.js",
-    "updateMember": "node workers/updateMember/worker.js"
+    "updateMember": "node workers/updateMember/worker.js",
+    "sendEveMail": "node workers/sendEveMail/worker.js"
   },
   "dependencies": {
     "@directus/sdk": "^20.0.0",

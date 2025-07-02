@@ -3,9 +3,6 @@ import connection from '../../shared/redis.js';
 import { updateMember, updateCorporation } from '../../shared/queue.js';
 
 new Worker('contractCreated', async job => {
-	console.log(`[contractCreated] Contract ${job.data.contract_id} created.`);
-	// simulate API call or webhook
-
 	const contract = job.data;
 	
 	try {
@@ -25,4 +22,5 @@ new Worker('contractCreated', async job => {
 		console.log(ex);
 		throw new Error();
 	}
+	console.log(`[contractCreated] Contract ${contract.contract_id} created.`);
 }, { connection });

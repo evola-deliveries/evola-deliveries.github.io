@@ -6,7 +6,7 @@ import saveOrUpdateContract from './saveOrUpdateContract.js';
 new Worker('processContract', async job => {
 	const contract = job.data;
 
-	console.log(`[processContract] Processing Contract ${job.data.contract_id}.`);
+	console.log(`[processContract] Processing Contract ${contract.contract_id}.`);
 	let result = { status: null };
 	try {
 		if (contract.type !== 'courier') {
@@ -18,11 +18,19 @@ new Worker('processContract', async job => {
 		console.log(ex);
 		throw new Error();
 	}
-	console.log(`[processContract] Contract ${job.data.contract_id} status ${result.status}.`);
 
-	if (result.status === 'created') {
-		await contractCreated.add('created', result.contract);
-	} else if (result.status === 'updated') {
-		await contractUpdated.add('updated', { old: result.old, new: result.new });
+	console.log(`[processContract] Contract ${contract.contract_id} status ${result.status}.`);
+
+	try {
+		if (result.status === 'created') {
+			await contractCreated.add('created', result.contract);
+		} else if (result.status === 'updated') {
+			await contractUpdated.add('updated', { old: result.old, new: result.new });
+		}
+	} catch (ex) {
+		console.log(ex);
+		throw new Error();
 	}
+
+	console.log(`[processContract] Contract ${contract.contract_id} processed.`);
 }, { connection });

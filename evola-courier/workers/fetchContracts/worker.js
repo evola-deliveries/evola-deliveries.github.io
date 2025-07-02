@@ -16,4 +16,5 @@ new Worker('fetchContracts', async job => {
       backoff: { type: 'exponential', delay: 2000 },
     });
   }
+  console.log(`[fetchContracts] All Contracts queued.`);
 }, { connection });
