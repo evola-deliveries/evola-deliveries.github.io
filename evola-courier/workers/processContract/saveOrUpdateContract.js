@@ -4,8 +4,8 @@ import { readItems, createItem, updateItem } from '@directus/sdk';
 function shouldUpdate(existing, incoming) {
 	const ignoredKeys = ['id', 'mail_sent'];
 
-    for (const key of Object.keys(incoming)) {
-        if (ignoredKeys.includes(key)) continue;
+	for (const key of Object.keys(incoming)) {
+		if (ignoredKeys.includes(key)) continue;
 
 		const aHas = key in existing;
 
@@ -37,9 +37,12 @@ export default async function saveOrUpdateContract(contract) {
 	const existing = Array.isArray(result) && result.length != 0 ? result[0] : null;
 
 	if (!existing) {
+		const { mail_sent, ...rest } = contract;
+
 		const created = await directus.request(
 			createItem('Contracts', {
-				...contract
+				...rest,
+				mail_sent: typeof mail_sent === 'boolean' ? mail_sent : false
 			})
 		);
 
