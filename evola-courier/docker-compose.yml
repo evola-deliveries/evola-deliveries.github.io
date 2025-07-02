@@ -10,8 +10,8 @@ services:
       dockerfile: dockerfile
     image: evolaeve/trigger-fetch
     env_file:
-      - ./common.env
-      - ./dispatchers/trigger-fetch/dispatcher.env
+      - ./.env
+      - ./dispatchers/trigger-fetch/.env
     command: npm run trigger-fetch
     logging:
       driver: json-file
@@ -31,8 +31,8 @@ services:
       dockerfile: dockerfile
     image: evolaeve/courier-service
     env_file:
-      - ./common.env
-      - ./dispatchers/courier-service/dispatcher.env
+      - ./.env
+      - ./dispatchers/courier-service/.env
     command: npm run courier-service
     logging:
       driver: json-file
@@ -54,8 +54,8 @@ services:
       dockerfile: dockerfile
     image: evolaeve/contract-watcher
     env_file:
-      - ./common.env
-      - ./dispatchers/contract-watcher/dispatcher.env
+      - ./.env
+      - ./dispatchers/contract-watcher/.env
     command: npm run contract-watcher
     logging:
       driver: json-file
@@ -75,8 +75,8 @@ services:
       dockerfile: dockerfile
     image: evolaeve/fetch-contracts
     env_file:
-      - ./common.env
-      - ./workers/fetchContracts/worker.env
+      - ./.env
+      - ./workers/fetchContracts/.env
     command: npm run fetchContracts
     logging:
       driver: json-file
@@ -94,8 +94,8 @@ services:
       dockerfile: dockerfile
     image: evolaeve/process-contract
     env_file:
-      - ./common.env
-      - ./workers/processContract/worker.env
+      - ./.env
+      - ./workers/processContract/.env
     command: npm run processContract
     logging:
       driver: json-file
@@ -112,8 +112,8 @@ services:
       dockerfile: dockerfile
     image: evolaeve/contract-created
     env_file:
-      - ./common.env
-      - ./workers/contractCreated/worker.env
+      - ./.env
+      - ./workers/contractCreated/.env
     depends_on:
       - redis
     command: npm run contractCreated
@@ -131,8 +131,8 @@ services:
       dockerfile: dockerfile
     image: evolaeve/contract-updated
     env_file:
-      - ./common.env
-      - ./workers/contractUpdated/worker.env
+      - ./.env
+      - ./workers/contractUpdated/.env
     depends_on:
       - redis
     command: npm run contractUpdated
@@ -150,8 +150,8 @@ services:
       dockerfile: dockerfile
     image: evolaeve/contract-completed
     env_file:
-      - ./common.env
-      - ./workers/contractCompleted/worker.env
+      - ./.env
+      - ./workers/contractCompleted/.env
     depends_on:
       - redis
     command: npm run contractCompleted
@@ -169,8 +169,8 @@ services:
       dockerfile: dockerfile
     image: evolaeve/update-corporation
     env_file:
-      - ./common.env
-      - ./workers/updateCorporation/worker.env
+      - ./.env
+      - ./workers/updateCorporation/.env
     depends_on:
       - redis
     command: npm run updateCorporation
@@ -188,8 +188,8 @@ services:
       dockerfile: dockerfile
     image: evolaeve/update-member
     env_file:
-      - ./common.env
-      - ./workers/updateMember/worker.env
+      - ./.env
+      - ./workers/updateMember/.env
     depends_on:
       - redis
     command: npm run updateMember
