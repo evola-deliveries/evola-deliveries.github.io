@@ -2,12 +2,15 @@ import { Worker } from 'bullmq';
 import connection from '../../shared/redis.js';
 import { eveClient } from '../../shared/eve-esi.js';
 import saveOrUpdateCorporation from './saveOrUpdateCorporation.js';
+import { createFrameMeta } from '../../shared/utils/createEventPayload.js';
+import { logWithMeta } from '../../shared/utils/logWithMeta.js';
 
 new Worker('updateCorporation', async job => {
 	const { __meta, payload } = job.data;
+	const __currentMeta = createFrameMeta(__meta);
 	const { corporation_id } = payload;
 	if (!corporation_id) {
-		console.log(`[updateCorporation] Corporation Id was empty nothing to update.`);		
+		logWithMeta('log', __currentMeta, `[updateCorporation] Corporation Id was empty nothing to update.`);		
 		return;
 	}
 
@@ -19,8 +22,8 @@ new Worker('updateCorporation', async job => {
 			corporation_id
 		});
 
-		console.log(`[updateCorporation] Corporation ${corporation_id} ${result.status}`);		
+		logWithMeta('log', __currentMeta, `[updateCorporation] Corporation ${corporation_id} ${result.status}`);		
 	} catch (err) {
-		console.error(`[updateCorporation] Failed for corporation ${corporation_id}`, err);
+		logWithMeta('error', __currentMeta, `[updateCorporation] Failed for corporation ${corporation_id}`, err);
 	}
 }, { connection });

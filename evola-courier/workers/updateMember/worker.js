@@ -2,12 +2,15 @@ import { Worker } from 'bullmq';
 import connection from '../../shared/redis.js';
 import { eveClient } from '../../shared/eve-esi.js';
 import saveOrUpdateMember from './saveOrUpdateMember.js';
+import { createFrameMeta } from '../../shared/utils/createEventPayload.js';
+import { logWithMeta } from '../../shared/utils/logWithMeta.js';
 
 new Worker('updateMember', async job => {
 	const { __meta, payload } = job.data;
+	const __currentMeta = createFrameMeta(__meta);
 	const { character_id } = payload;
 	if (!character_id) {
-		console.log(`[updateMember] Member character id was empty nothing to update.`);
+		logWithMeta('log', __currentMeta, `[updateMember] Member character id was empty nothing to update.`);
 		return};
 
 	try {
@@ -18,8 +21,8 @@ new Worker('updateMember', async job => {
 			character_id // Ensure it's saved
 		});
 
-		console.log(`[updateMember] Member ${character_id} ${result.status}`);
+		logWithMeta('log', __currentMeta, `[updateMember] Member ${character_id} ${result.status}`);
 	} catch (err) {
-		console.error(`[updateMember] Failed for member ${character_id}`, err);
+		logWithMeta('error', __currentMeta, `[updateMember] Failed for member ${character_id}`, err);
 	}
 }, { connection });

@@ -1,14 +1,17 @@
 // scheduler/fetch-contracts-daily.js
 
 import { fetchContracts } from '../../shared/queue.js';
-import { createEventPayload } from '../../shared/utils/createEventPayload.js';
+import { createEventPayload, createFrameMeta } from '../../shared/utils/createEventPayload.js';
+import { logWithMeta } from '../../shared/utils/logWithMeta.js';
 import config from './config.js';
 
 (async () => {
 	const jobId = 'fetch-contracts-daily-scheduler';
 	const pattern = config.trigger_fetch_cron || '0 4 * * *';
 
-	const payload = createEventPayload();
+	const __currentMeta = createFrameMeta();
+
+	const payload = createEventPayload({}, __currentMeta);
 
 	const jobTemplate = {
 		name: 'fetch-contracts-daily',
@@ -23,5 +26,5 @@ import config from './config.js';
 
 	await fetchContracts.upsertJobScheduler(jobId, { pattern }, jobTemplate);
 
-	console.log(`[fetch-contracts-daily] Job scheduler set: daily at ${pattern} UTC`);
+	logWithMeta('log', __currentMeta, `[fetch-contracts-daily] Job scheduler set: daily at ${pattern} UTC`);
 })();

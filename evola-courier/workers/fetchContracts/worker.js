@@ -2,24 +2,26 @@ import { Worker } from 'bullmq';
 import { processContract } from '../../shared/queue.js';
 import connection from '../../shared/redis.js';
 import fetchFromESI from './fetchFromESI.js';
-import { createEventPayload } from '../../shared/utils/createEventPayload.js';
+import { createEventPayload, createFrameMeta } from '../../shared/utils/createEventPayload.js';
+import { logWithMeta } from '../../shared/utils/logWithMeta.js';
 
 new Worker('fetchContracts', async job => {
 	const { __meta, payload } = job.data;
+	const __currentMeta = createFrameMeta(__meta);
 
-	console.log(`[fetchContracts] Fetching contracts.`);
+	logWithMeta('log', __currentMeta, `[fetchContracts] Fetching contracts.`);
 
 	const contracts = await fetchFromESI();
 
-	console.log(`[fetchContracts] Found ${contracts.length} contracts.`);
+	logWithMeta('log', __currentMeta, `[fetchContracts] Found ${contracts.length} contracts.`);
 
 	for (const contract of contracts) {
-		const nextJob = createEventPayload(contract, __meta);
+		const nextJob = createEventPayload(contract, __currentMeta);
 
 		await processContract.add('process', nextJob, {
 			attempts: 3,
 			backoff: { type: 'exponential', delay: 2000 },
 		});
 	}
-	console.log(`[fetchContracts] All Contracts queued.`);
+	logWithMeta('log', __currentMeta, `[fetchContracts] All Contracts queued.`);
 }, { connection });
