@@ -8,7 +8,9 @@ new Worker('contractCompleted', async job => {
 	try {
 		const character_id = contract.issuer_id;
 		console.log(`[contractCompleted] Send Completion of contract ${contract.contract_id} mail to ${character_id}.`);
-		await sendEveMail.add('process', contract);
+		await sendEveMail.add('process', contract, {
+			jobId: `contract-eve-mail-${contract.contract_id}`
+		});
 	} catch (ex) {
 		console.log(ex);
 		throw new Error();

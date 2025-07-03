@@ -101,32 +101,70 @@ class EveESIClient {
 		return data;
 	}
 
-	async sendMail(characterId, { recipients, subject, body, approved_cost = 0 }) {
+	async sendMail(characterId, { recipients, subject, body, approved_cost = 0 }, attempt = 0) {
 		if (!this.accessToken) await this.refreshAccessToken();
 
-		const res = await fetch(`https://esi.evetech.net/latest/characters/${characterId}/mail/?datasource=tranquility`, {
+		const url = `https://esi.evetech.net/latest/characters/${characterId}/mail/?datasource=tranquility`;
+
+		const payload = {
+			approved_cost,
+			body,
+			recipients,
+			subject
+		};
+
+		const res = await fetch(url, {
 			method: 'POST',
 			headers: {
 				'Authorization': `Bearer ${this.accessToken}`,
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify({
-				approved_cost,
-				body,
-				recipients,
-				subject
-			})
+			body: JSON.stringify(payload)
 		});
 
-		if (!res.ok) {
-			const error = await res.json().catch(() => ({}));
-			console.error(`[EVE ESI] Failed to send mail: ${res.status}`, error);
-			throw new Error(error?.error || `Failed to send mail with status ${res.status}`);
+		const text = await res.text();
+		let data;
+		try {
+			data = JSON.parse(text);
+		} catch {
+			data = { error: text };
 		}
 
-		const mailId = await res.json();
-		console.log(`[EVE ESI] Mail sent successfully: ID ${mailId}`);
-		return mailId;
+		// Success
+		if (res.status === 201) {
+			const mailId = parseInt(text);
+			console.log(`[EVE ESI] Mail sent: ID ${mailId}`);
+			return { status: 'sent', mailId };
+		}
+
+		// Token expired
+		if (res.status === 401 && attempt < 1) {
+			console.warn('[EVE ESI] Unauthorized — retrying after refreshing token');
+			await this.refreshAccessToken();
+			return this.sendMail(characterId, { recipients, subject, body, approved_cost }, attempt + 1);
+		}
+
+		// Rate-limited
+		if (res.status === 420) {
+			console.warn(`[EVE ESI] Rate limited on sendMail for ${characterId}`, data);
+			return { status: 'rate_limited', retryAfter: 30 };
+		}
+
+		// Fatal (no retry)
+		if ([400, 403].includes(res.status)) {
+			console.error(`[EVE ESI] Mail failed for ${characterId}. Status ${res.status}`, data);
+			return { status: 'failed', error: data.error || 'Bad request/Forbidden' };
+		}
+
+		// Transient (retry via BullMQ)
+		if (res.status >= 500 || res.status === 520) {
+			console.error(`[EVE ESI] Server error (${res.status}) for ${characterId}`, data);
+			throw new Error(`ServerError: ${res.status}`);
+		}
+
+		// Unknown response
+		console.error(`[EVE ESI] Unexpected mail response for ${characterId}: ${res.status}`, data);
+		throw new Error(`Unhandled ESI response: ${res.status}`);
 	}
 }
 
