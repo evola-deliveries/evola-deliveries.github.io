@@ -1,8 +1,10 @@
 import { fetchContracts } from '../../shared/queue.js';
+import { createEventPayload } from '../../shared/utils/createEventPayload.js';
 
 (async () => {
-  await fetchContracts.add('start', {}, {
-    attempts: 3,
-    backoff: { type: 'exponential', delay: 3000 }
-  });
+	const newJob = createEventPayload();
+	await fetchContracts.add('start', newJob, {
+		attempts: 3,
+		backoff: { type: 'exponential', delay: 3000 }
+	});
 })();

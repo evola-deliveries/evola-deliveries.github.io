@@ -2,9 +2,11 @@ import { Worker } from 'bullmq';
 import connection from '../../shared/redis.js';
 import { contractCreated, contractUpdated } from '../../shared/queue.js';
 import saveOrUpdateContract from './saveOrUpdateContract.js';
+import { createEventPayload } from '../../shared/utils/createEventPayload.js';
 
 new Worker('processContract', async job => {
-	const contract = job.data;
+	const { __meta, payload } = job.data;
+	const contract = payload;
 
 	console.log(`[processContract] Processing Contract ${contract.contract_id}.`);
 	let result = { status: null };
@@ -23,9 +25,17 @@ new Worker('processContract', async job => {
 
 	try {
 		if (result.status === 'created') {
-			await contractCreated.add('created', result.contract);
+			const nextJob = createEventPayload(result.contract, __meta);
+			await contractCreated.add('created', nextJob, {
+				attempts: 3,
+				backoff: { type: 'exponential', delay: 2000 },
+			});
 		} else if (result.status === 'updated') {
-			await contractUpdated.add('updated', { old: result.old, new: result.new });
+			const nextJob = createEventPayload({ old: result.old, new: result.new }, __meta);
+			await contractUpdated.add('updated', nextJob, {
+				attempts: 3,
+				backoff: { type: 'exponential', delay: 2000 },
+			});
 		}
 	} catch (ex) {
 		console.log(ex);

@@ -4,7 +4,8 @@ import { eveClient } from '../../shared/eve-esi.js';
 import saveOrUpdateCorporation from './saveOrUpdateCorporation.js';
 
 new Worker('updateCorporation', async job => {
-	const { corporation_id } = job.data;
+	const { __meta, payload } = job.data;
+	const { corporation_id } = payload;
 	if (!corporation_id) return;
 
 	try {
