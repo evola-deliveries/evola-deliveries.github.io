@@ -8,6 +8,16 @@ class EveESIClient {
 		this.clientSecret = clientSecret;
 		this.refreshToken = refreshToken;
 		this.accessToken = null;
+
+		const uaParts = [
+			config.esi_user_agent_app,
+			`(${config.esi_user_agent_email})`,
+			config.esi_user_agent_source,
+			config.esi_user_agent_discord,
+			`(${config.esi_user_agent_eve})`,
+		].filter(Boolean); // only keep non-null
+
+		this.userAgent = uaParts.join(' ');
 	}
 
 	async refreshAccessToken() {
@@ -42,7 +52,8 @@ class EveESIClient {
 			headers: {
 				'Authorization': `Bearer ${this.accessToken}`,
 				'Content-Type': 'application/json',
-			},
+				'User-Agent': this.userAgent
+			}
 		});
 
 		if (res.status === 401 && attempt < 1) {

@@ -6,7 +6,9 @@ import saveOrUpdateMember from './saveOrUpdateMember.js';
 new Worker('updateMember', async job => {
 	const { __meta, payload } = job.data;
 	const { character_id } = payload;
-	if (!character_id) return;
+	if (!character_id) {
+		console.log(`[updateMember] Member character id was empty nothing to update.`);
+		return};
 
 	try {
 		const memberData = await eveClient.getCharacterInfo(character_id);

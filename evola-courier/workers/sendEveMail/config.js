@@ -9,6 +9,9 @@ const config = {
 		rawOverride.trim().toLowerCase() === 'false' ||
 		rawOverride.trim().toLowerCase() === 'null'
 	) ? null : rawOverride,
+	send_mail_buffer: process.env.SEND_EVE_MAIL_SEND_MAIL_BUFFER,
+	queue_limiter_max: process.env.SEND_EVE_MAIL_QUEUE_LIMITER_MAX,
+	queue_limiter_duration: process.env.SEND_EVE_MAIL_QUEUE_LIMITER_DURATION,
 
 	...evolaConfig
 };

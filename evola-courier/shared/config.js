@@ -7,7 +7,13 @@ const config = {
     
     eve_esi_client_id: process.env.EVOLA_EVE_ESI_CLIENT_ID,
     eve_esi_client_secret: process.env.EVOLA_EVE_ESI_CLIENT_SECRET,    
-    eve_esi_refresh_token: process.env.EVOLA_EVE_ESI_REFRESH_TOKEN
+    eve_esi_refresh_token: process.env.EVOLA_EVE_ESI_REFRESH_TOKEN,
+
+    esi_user_agent_email: process.env.ESI_USER_AGENT_EMAIL,
+    esi_user_agent_app: process.env.ESI_USER_AGENT_APP,
+    esi_user_agent_source: process.env.ESI_USER_AGENT_SOURCE,
+    esi_user_agent_discord: process.env.ESI_USER_AGENT_DISCORD,
+    esi_user_agent_eve: process.env.ESI_USER_AGENT_EVE,
 }
 
 export default config;
