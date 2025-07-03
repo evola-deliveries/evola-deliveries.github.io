@@ -8,6 +8,9 @@ default:
 build:
 	@docker compose --profile manual build
 
+down:
+	@docker-compose --profile manual down --remove-orphans
+
 up:
 	@docker compose up
 	
