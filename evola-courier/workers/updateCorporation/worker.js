@@ -6,7 +6,10 @@ import saveOrUpdateCorporation from './saveOrUpdateCorporation.js';
 new Worker('updateCorporation', async job => {
 	const { __meta, payload } = job.data;
 	const { corporation_id } = payload;
-	if (!corporation_id) return;
+	if (!corporation_id) {
+		console.log(`[updateCorporation] Corporation Id was empty nothing to update.`);		
+		return;
+	}
 
 	try {
 		const corpData = await eveClient.getCorporationInfo(corporation_id);

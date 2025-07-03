@@ -4,6 +4,7 @@ import { processContract } from '../../shared/queue.js';
 import connection from '../../shared/redis.js';
 import { eveClient } from '../../shared/eve-esi.js';
 import config from './config.js';
+import { createEventPayload } from '../../shared/utils/createEventPayload.js';
 
 const REDIS_KEY = config.redis_key;
 const CHECK_INTERVAL = parseInt(config.check_interval || '600');
@@ -59,13 +60,15 @@ async function checkForChanges() {
 
 		if (!tracked && (status === 'outstanding' || status === 'in_progress')) {
 			inMemoryContracts.set(id, contract);
-			await processContract.add('process', contract, {
+			const newJob = createEventPayload(contract);
+			await processContract.add('process', newJob, {
 				attempts: 3,
 				backoff: { type: 'exponential', delay: 2000 }
 			});
 			console.log(`[Tracking] New contract ${id}`);
 		} else if (tracked && status === 'finished') {
-			await processContract.add('process', contract, {
+			const newJob = createEventPayload(contract);
+			await processContract.add('process', newJob, {
 				attempts: 3,
 				backoff: { type: 'exponential', delay: 2000 }
 			});
