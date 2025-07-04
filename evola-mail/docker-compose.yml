@@ -15,5 +15,5 @@ services:
 
 networks: 
   network:
-    name: evola_network
+    name: evola
     external: true
