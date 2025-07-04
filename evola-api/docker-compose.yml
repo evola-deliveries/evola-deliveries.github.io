@@ -4,7 +4,7 @@ services:
     container_name: evola-api
     restart: unless-stopped
     env_file:
-      - web-variables.env
+      - .env
     ports:
       - "1880:1880"
     networks:

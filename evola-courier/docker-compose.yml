@@ -220,10 +220,10 @@ services:
     networks:
       - evola_network
 
-networks:
-  evola_network:
-    driver: bridge
-    name: evola_network
 # networks:
 #   evola_network:
-#     external: true
+#     driver: bridge
+#     name: evola_network
+networks:
+  evola_network:
+    external: true
