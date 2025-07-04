@@ -3,6 +3,9 @@ services:
     image: dmportella/evola-mail:latest
     container_name: evola-mail
     restart: unless-stopped
+    build:
+      context: .
+      dockerfile: dockerfile
     env_file:
       - .env
     networks:
