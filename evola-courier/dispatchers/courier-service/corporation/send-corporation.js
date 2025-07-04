@@ -1,6 +1,6 @@
 // dispatcher/send-contract.js
-import { updateCorporation } from '../../shared/queue.js'
-import { createEventPayload } from '../../shared/utils/createEventPayload.js';
+import { updateCorporation } from '../../../shared/queue.js'
+import { createEventPayload } from '../../../shared/utils/createEventPayload.js';
 
 export async function sendCorporationToQueue(corporation_id, __currentMeta) {
   const newJob = createEventPayload({ corporation_id: corporation_id }, __currentMeta);
