@@ -13,6 +13,7 @@ services:
       - ./.env
       - ./dispatchers/trigger-fetch/.env
     command: npm run trigger-fetch
+    restart: unless-stopped
     logging:
       driver: json-file
       options:
@@ -32,6 +33,7 @@ services:
       - ./.env
       - ./dispatchers/courier-service/.env
     command: npm run courier-service
+    restart: unless-stopped
     logging:
       driver: json-file
       options:
@@ -53,6 +55,7 @@ services:
       - ./.env
       - ./dispatchers/contract-watcher/.env
     command: npm run contract-watcher
+    restart: unless-stopped
     logging:
       driver: json-file
       options:
@@ -72,6 +75,7 @@ services:
       - ./.env
       - ./workers/fetchContracts/.env
     command: npm run fetchContracts
+    restart: unless-stopped
     logging:
       driver: json-file
       options:
@@ -89,6 +93,7 @@ services:
       - ./.env
       - ./workers/processContract/.env
     command: npm run processContract
+    restart: unless-stopped
     logging:
       driver: json-file
       options:
@@ -105,6 +110,7 @@ services:
       - ./.env
       - ./workers/contractCreated/.env
     command: npm run contractCreated
+    restart: unless-stopped
     logging:
       driver: json-file
       options:
@@ -122,6 +128,7 @@ services:
       - ./.env
       - ./workers/contractUpdated/.env
     command: npm run contractUpdated
+    restart: unless-stopped
     logging:
       driver: json-file
       options:
@@ -139,6 +146,7 @@ services:
       - ./.env
       - ./workers/contractCompleted/.env
     command: npm run contractCompleted
+    restart: unless-stopped
     logging:
       driver: json-file
       options:
@@ -156,6 +164,7 @@ services:
       - ./.env
       - ./workers/updateCorporation/.env
     command: npm run updateCorporation
+    restart: unless-stopped
     logging:
       driver: json-file
       options:
@@ -173,6 +182,7 @@ services:
       - ./.env
       - ./workers/updateMember/.env
     command: npm run updateMember
+    restart: unless-stopped
     logging:
       driver: json-file
       options:
@@ -190,6 +200,7 @@ services:
       - ./.env
       - ./workers/sendEveMail/.env
     command: npm run sendEveMail
+    restart: unless-stopped
     logging:
       driver: json-file
       options:

@@ -9,11 +9,13 @@ services:
       - network
     env_file:
       - ./configs/database/.env
+    restart: unless-stopped
 
   cache:
     image: redis:alpine
     networks:
       - network
+    restart: unless-stopped
   
   directus:
     image: directus/directus:10.11.0
@@ -28,6 +30,7 @@ services:
       - network
     env_file:
       - ./configs/directus/.env
+    restart: unless-stopped
 
 networks:
   network:
