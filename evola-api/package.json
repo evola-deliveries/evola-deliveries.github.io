@@ -4,7 +4,8 @@
   "description": "evola-api",
   "main": "settings.js",
   "scripts": {
-    "start": "docker build -t dmportella/evola-api . && docker run -it --rm --name evola-api --env-file ./web-variables.env --network evola_network -p 1880:1880 dmportella/evola-api",
+    "start": "docker run -it --rm --name evola-api --env-file ./web-variables.env --network evola_network -p 1880:1880 dmportella/evola-api",
+    "build:latest": "docker build -t dmportella/evola-api .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "docker build -t dmportella/evola-api:$VERSION -q . && docker tag dmportella/evola-api:$VERSION dmportella/evola-api:latest",
     "publish": "docker push dmportella/evola-api:$VERSION && docker push dmportella/evola-api:latest"

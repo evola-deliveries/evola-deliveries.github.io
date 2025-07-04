@@ -4,7 +4,7 @@ services:
     container_name: evola-mail
     restart: unless-stopped
     env_file:
-      - web-variables.env
+      - .env
     networks:
       - network
     volumes:

@@ -8,7 +8,7 @@ services:
     networks:
       - network
     env_file:
-      - db-variables.env
+      - ./configs/database/.env
 
   cache:
     image: redis:6
@@ -27,7 +27,7 @@ services:
     networks:
       - network
     env_file:
-      - web-variables.env
+      - ./configs/directus/.env
 
 networks:
   network:
