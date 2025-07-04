@@ -9,6 +9,11 @@ services:
       - ./dispatchers/trigger-fetch/.env
     command: npm run trigger-fetch
     restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
     networks:
       - evola_network
 
@@ -22,8 +27,6 @@ services:
       - ./dispatchers/courier-service/.env
     command: npm run courier-service
     restart: unless-stopped
-    ports:
-      - 3000:3000
     networks:
       - evola_network
 
@@ -37,6 +40,11 @@ services:
       - ./dispatchers/contract-watcher/.env
     command: npm run contract-watcher
     restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
     networks:
       - evola_network
 
@@ -50,6 +58,11 @@ services:
       - ./workers/fetchContracts/.env
     command: npm run fetchContracts
     restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
     networks:
       - evola_network
 
@@ -63,8 +76,14 @@ services:
       - ./workers/processContract/.env
     command: npm run processContract
     restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
     networks:
       - evola_network
+
   contract-created:
     build:
       context: .
@@ -75,6 +94,11 @@ services:
       - ./workers/contractCreated/.env
     command: npm run contractCreated
     restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
     networks:
       - evola_network
 
@@ -88,6 +112,11 @@ services:
       - ./workers/contractUpdated/.env
     command: npm run contractUpdated
     restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
     networks:
       - evola_network
 
@@ -101,6 +130,11 @@ services:
       - ./workers/contractCompleted/.env
     command: npm run contractCompleted
     restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
     networks:
       - evola_network
 
@@ -114,6 +148,11 @@ services:
       - ./workers/updateCorporation/.env
     command: npm run updateCorporation
     restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
     networks:
       - evola_network
 
@@ -127,6 +166,11 @@ services:
       - ./workers/updateMember/.env
     command: npm run updateMember
     restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
     networks:
       - evola_network
   
@@ -140,13 +184,14 @@ services:
       - ./workers/sendEveMail/.env
     command: npm run sendEveMail
     restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
     networks:
       - evola_network
 
-# networks:
-#   evola_network:
-#     driver: bridge
-#     name: evola_network
 networks:
   evola_network:
     external: true
