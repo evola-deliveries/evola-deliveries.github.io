@@ -21,8 +21,6 @@ services:
         max-file: "5"
     networks:
       - evola_network
-    profiles:
-      - manual
 
   courier-service:
     build:
@@ -43,8 +41,6 @@ services:
       - 3000:3000
     networks:
       - evola_network
-    profiles:
-      - manual
 
   contract-watcher:
     build:
@@ -63,8 +59,6 @@ services:
         max-file: "5"
     networks:
       - evola_network
-    profiles:
-      - manual
 
   fetch-contracts:
     build:
