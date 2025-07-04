@@ -35,8 +35,8 @@ services:
       - ./data/certbot/www:/var/www/certbot:rw
       - ./data/certbot/logs:/var/log/letsencrypt:rw
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
-
-networks: 
+    
+networks:
   network:
-    name: evola_network
     external: true
+    name: evola
