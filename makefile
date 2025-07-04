@@ -6,13 +6,16 @@ default:
 	@echo ${HASH}
 	
 build:
-	@docker build -t dmportella/evola-api:${HASH} ./evola-api
-	@docker tag dmportella/evola-api:${HASH} dmportella/evola-api:latest
-	
-	@docker build -t dmportella/evola-mail:${HASH} ./evola-mail
-	@docker tag dmportella/evola-mail:${HASH} dmportella/evola-mail:latest
-	
-	@echo "Current Version Hash: "${HASH}
-	
-deploy:
-	@docker compose --project-directory=./evola-mail up 
+	@docker compose --project-directory=./evola-api build
+	@docker compose --project-directory=./evola-mail build 
+	@docker compose --project-directory=./evola-courier build
+
+run:
+	@docker compose --project-directory=./evola-api up -d
+	@docker compose --project-directory=./evola-cms up -d
+	@docker compose --project-directory=./evola-courier up -d
+
+stop:
+	@docker compose --project-directory=./evola-api down
+	@docker compose --project-directory=./evola-cms down
+	@docker compose --project-directory=./evola-courier down

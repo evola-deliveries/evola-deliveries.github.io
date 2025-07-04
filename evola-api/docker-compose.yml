@@ -2,6 +2,9 @@ services:
   evola-api:
     image: dmportella/evola-api:latest
     container_name: evola-api
+    build:
+      context: .
+      dockerfile: dockerfile
     restart: unless-stopped
     env_file:
       - .env
