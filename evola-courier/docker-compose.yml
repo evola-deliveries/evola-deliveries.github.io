@@ -195,3 +195,4 @@ services:
 networks:
   evola_network:
     external: true
+    name: evola

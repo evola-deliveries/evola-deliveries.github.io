@@ -34,5 +34,5 @@ services:
 
 networks:
   network:
-    driver: bridge
-    name: evola_network
+    external: true
+    name: evola
