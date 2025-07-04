@@ -11,7 +11,7 @@ services:
       - ./configs/database/.env
 
   cache:
-    image: redis:6
+    image: redis:alpine
     networks:
       - network
   
