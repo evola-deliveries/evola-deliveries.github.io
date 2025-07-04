@@ -14,8 +14,11 @@ new Worker('contractCreated', async job => {
 		logWithMeta('log', __currentMeta, `[contractCreated] Update Member ${character_id}.`);
 		const nextJob = createEventPayload({ character_id: character_id }, __currentMeta);
 		await updateMember.add('process', { character_id: character_id }, nextJob, {
+				jobId: `update-member-${character_id}`,
 				attempts: 3,
 				backoff: { type: 'exponential', delay: 2000 },
+				removeOnComplete: true,
+				removeOnFail: true,
 			});
 	} catch (ex) {
 		logWithMeta('error', __currentMeta, ex);
@@ -27,8 +30,11 @@ new Worker('contractCreated', async job => {
 		logWithMeta('log', __currentMeta, `[contractCreated] Update Corporation ${corporation_id}.`);
 		const nextJob = createEventPayload({ corporation_id: corporation_id }, __currentMeta);
 		await updateCorporation.add('process', nextJob, {
+				jobId: `update-corp-${corporation_id}`,
 				attempts: 3,
 				backoff: { type: 'exponential', delay: 2000 },
+				removeOnComplete: true,
+				removeOnFail: true,
 			});
 	} catch (ex) {
 		logWithMeta('error', __currentMeta, ex);
