@@ -7,6 +7,10 @@ import sendEveMailRoute from './send-eve-mail/send-eve-mail.js'
 const app = express();
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.status(200).send({ message: 'ok' });
+});
+
 app.use('/contract', contractRoute);
 app.use('/corporation', corporationRoute);
 app.use('/member', memberRoute);

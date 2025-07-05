@@ -1,6 +1,6 @@
 services:
   database:
-    image: postgis/postgis:13-master
+    image: postgis/postgis:17-master
     # Required when running on platform other than amd64, like Apple M1/M2:
     # platform: linux/amd64
     volumes:
@@ -10,22 +10,37 @@ services:
     env_file:
       - ./configs/database/.env
     restart: unless-stopped
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}"]
+      interval: 30s
+      timeout: 60s
+      retries: 5
+      start_period: 80s
 
   cache:
     image: redis:alpine
     networks:
       - network
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "[ $$(redis-cli ping) = 'PONG' ]"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_interval: 5s
+      start_period: 30s
   
   directus:
-    image: directus/directus:10.11.0
+    image: directus/directus:11.9.2
     volumes:
       - ./uploads:/directus/uploads:rw
       - ./extensions:/directus/extensions:rw
       - ./snapshots:/directus/snapshots:rw
     depends_on:
-      - cache
-      - database
+      database:
+        condition: service_healthy
+      cache:
+        condition: service_healthy
     networks:
       - network
     env_file:
