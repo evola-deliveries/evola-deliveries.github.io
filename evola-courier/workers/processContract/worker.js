@@ -43,6 +43,4 @@ new Worker('processContract', async job => {
 		logWithMeta('error', __currentMeta, ex);
 		throw new Error();
 	}
-
-	logWithMeta('log', __currentMeta, `[processContract] Contract ${contract.contract_id} processed.`);
 }, { connection });
