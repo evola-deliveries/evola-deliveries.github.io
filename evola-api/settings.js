@@ -245,7 +245,9 @@ module.exports = {
         AUTHTOKEN: process.env.AUTHTOKEN,
         REFRESHTOKEN: process.env.REFRESHTOKEN,
         ESIAPIKEY: process.env.ESIAPIKEY,
-        DIRECTUS_TOKEN: process.env.DIRECTUS_TOKEN
+        DIRECTUS_TOKEN: process.env.DIRECTUS_TOKEN,
+        EVE_DATA_JITA_STATION_ID: process.env.EVE_DATA_JITA_STATION_ID,
+        EVE_DATA_HOMESYSTEM_STATION_ID: process.env.EVE_DATA_HOMESYSTEM_STATION_ID
         // os:require('os'),
         // jfive:require("johnny-five"),
         // j5board:require("johnny-five").Board({repl:false})
