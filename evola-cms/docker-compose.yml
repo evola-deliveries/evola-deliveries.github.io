@@ -10,12 +10,25 @@ services:
     env_file:
       - ./configs/database/.env
     restart: unless-stopped
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}"]
+      interval: 30s
+      timeout: 60s
+      retries: 5
+      start_period: 80s
 
   cache:
     image: redis:alpine
     networks:
       - network
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "[ $$(redis-cli ping) = 'PONG' ]"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_interval: 5s
+      start_period: 30s
   
   directus:
     image: directus/directus:10.11.0
@@ -24,8 +37,10 @@ services:
       - ./extensions:/directus/extensions:rw
       - ./snapshots:/directus/snapshots:rw
     depends_on:
-      - cache
-      - database
+      database:
+        condition: service_healthy
+      cache:
+        condition: service_healthy
     networks:
       - network
     env_file:

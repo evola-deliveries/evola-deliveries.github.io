@@ -8,8 +8,6 @@ services:
     restart: unless-stopped
     env_file:
       - .env
-    ports:
-      - "1880:1880"
     networks:
       - network
 

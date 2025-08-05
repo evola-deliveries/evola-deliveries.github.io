@@ -1,0 +1,4528 @@
+version: 1
+directus: 10.11.0
+vendor: postgres
+collections:
+  - collection: Contracts
+    meta:
+      accountability: null
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Contracts
+      color: null
+      display_template: null
+      group: Courier
+      hidden: false
+      icon: package
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Contracts
+  - collection: Corporation
+    meta:
+      accountability: null
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Corporation
+      color: null
+      display_template: null
+      group: Courier
+      hidden: false
+      icon: groups
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 2
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Corporation
+  - collection: Courier
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Courier
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: trolley
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+  - collection: Defaults
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Defaults
+      color: null
+      display_template: null
+      group: Eve_Data
+      hidden: false
+      icon: settings
+      item_duplication_fields: null
+      note: Evola Defaults
+      preview_url: null
+      singleton: true
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Defaults
+  - collection: Eve_Data
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Eve_Data
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: launcher_assistant_on
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 3
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+  - collection: Globals
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Globals
+      color: null
+      display_template: null
+      group: Website
+      hidden: false
+      icon: perm_data_setting
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: true
+      sort: 1
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Globals
+  - collection: Limits
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Limits
+      color: null
+      display_template: null
+      group: Shipping
+      hidden: false
+      icon: production_quantity_limits
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 4
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Limits
+  - collection: Member
+    meta:
+      accountability: null
+      archive_app_filter: true
+      archive_field: null
+      archive_value: archived
+      collapse: open
+      collection: Member
+      color: null
+      display_template: null
+      group: Courier
+      hidden: false
+      icon: card_membership
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 3
+      sort_field: null
+      translations: null
+      unarchive_value: draft
+      versioning: false
+    schema:
+      name: Member
+  - collection: Permits
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Permits
+      color: null
+      display_template: null
+      group: Courier
+      hidden: false
+      icon: settings_account_box
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 4
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Permits
+  - collection: Permits_Corporation
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Permits_Corporation
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 5
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Permits_Corporation
+  - collection: Permits_Member
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Permits_Member
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 6
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Permits_Member
+  - collection: Pricing
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Pricing
+      color: null
+      display_template: null
+      group: Shipping
+      hidden: false
+      icon: currency_bitcoin
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 2
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Pricing
+  - collection: Regions
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Regions
+      color: null
+      display_template: null
+      group: Eve_Data
+      hidden: false
+      icon: grid_4x4
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 2
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Regions
+  - collection: Rewards
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Rewards
+      color: null
+      display_template: null
+      group: Shipping
+      hidden: false
+      icon: currency_exchange
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 3
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Rewards
+  - collection: Routes
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Routes
+      color: null
+      display_template: null
+      group: Shipping
+      hidden: false
+      icon: route
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 1
+      sort_field: sort
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Routes
+  - collection: Routes_Permits
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Routes_Permits
+      color: null
+      display_template: null
+      group: null
+      hidden: true
+      icon: import_export
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 7
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Routes_Permits
+  - collection: Shipping
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Shipping
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: local_shipping
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 2
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+  - collection: Stations
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Stations
+      color: null
+      display_template: null
+      group: Eve_Data
+      hidden: false
+      icon: castle
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 4
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Stations
+  - collection: Systems
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Systems
+      color: null
+      display_template: null
+      group: Eve_Data
+      hidden: false
+      icon: album
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 3
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+    schema:
+      name: Systems
+  - collection: Website
+    meta:
+      accountability: all
+      archive_app_filter: true
+      archive_field: null
+      archive_value: null
+      collapse: open
+      collection: Website
+      color: null
+      display_template: null
+      group: null
+      hidden: false
+      icon: globe_asia
+      item_duplication_fields: null
+      note: null
+      preview_url: null
+      singleton: false
+      sort: 4
+      sort_field: null
+      translations: null
+      unarchive_value: null
+      versioning: false
+fields:
+  - collection: Contracts
+    field: id
+    type: uuid
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Contracts
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: acceptor_id
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: acceptor_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 14
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: acceptor_id
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: assignee_id
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: assignee_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 15
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: assignee_id
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: availability
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: availability
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 16
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: availability
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: collateral
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: collateral
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: collateral
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: contract_id
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: contract_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: contract_id
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: date_accepted
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: date_accepted
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 17
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: date_accepted
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: date_completed
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: date_completed
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 18
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: date_completed
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: date_expired
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: date_expired
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 19
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: date_expired
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: date_issued
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: date_issued
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 20
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: date_issued
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: days_to_complete
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: days_to_complete
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 21
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: days_to_complete
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: end_location_id
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: end_location_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 13
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: end_location_id
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: for_corporation
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: for_corporation
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: for_corporation
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: issuer_corporation_id
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: issuer_corporation_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: issuer_corporation_id
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: issuer_id
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: issuer_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: issuer_id
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: price
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: price
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: price
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: reward
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: reward
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: reward
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: start_location_id
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: start_location_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 12
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: start_location_id
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: status
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: status
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: status
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: title
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: title
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 11
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: title
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: type
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: type
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 22
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: type
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: volume
+    type: string
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: volume
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: volume
+      table: Contracts
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: mail_sent
+    type: boolean
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: mail_sent
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options:
+        label: Eve Mail Sent
+      readonly: false
+      required: false
+      sort: 23
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: mail_sent
+      table: Contracts
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Contracts
+    field: mail_attempted
+    type: boolean
+    meta:
+      collection: Contracts
+      conditions: null
+      display: null
+      display_options: null
+      field: mail_attempted
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options:
+        label: Mail Attempted
+      readonly: false
+      required: true
+      sort: 24
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: mail_attempted
+      table: Contracts
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: id
+    type: uuid
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Corporation
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: corporation_id
+    type: string
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: corporation_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        iconLeft: corporate_fare
+      readonly: false
+      required: true
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: corporation_id
+      table: Corporation
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: name
+    type: string
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: name
+      table: Corporation
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: ceo_id
+    type: string
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: ceo_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: ceo_id
+      table: Corporation
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: creator_id
+    type: string
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: creator_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: creator_id
+      table: Corporation
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: date_founded
+    type: string
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: date_founded
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 10
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: date_founded
+      table: Corporation
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: home_station_id
+    type: string
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: home_station_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 11
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: home_station_id
+      table: Corporation
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: member_count
+    type: string
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: member_count
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: member_count
+      table: Corporation
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: shares
+    type: string
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: shares
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 12
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: shares
+      table: Corporation
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: tax_rate
+    type: string
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: tax_rate
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 13
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: tax_rate
+      table: Corporation
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: ticker
+    type: string
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: ticker
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: ticker
+      table: Corporation
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: war_eligible
+    type: string
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: war_eligible
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 14
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: war_eligible
+      table: Corporation
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: url
+    type: string
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: url
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 15
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: url
+      table: Corporation
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: alliance_id
+    type: string
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: alliance_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 16
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: alliance_id
+      table: Corporation
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Corporation
+    field: faction_id
+    type: string
+    meta:
+      collection: Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: faction_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 17
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: faction_id
+      table: Corporation
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Defaults
+    field: id
+    type: integer
+    meta:
+      collection: Defaults
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Defaults
+      data_type: integer
+      default_value: nextval('"Defaults_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Defaults
+    field: RushDeliveryAmount
+    type: string
+    meta:
+      collection: Defaults
+      conditions: null
+      display: null
+      display_options: null
+      field: RushDeliveryAmount
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        placeholder: '0.00'
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: RushDeliveryAmount
+      table: Defaults
+      data_type: character varying
+      default_value: '150000000.00'
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Defaults
+    field: Default_System
+    type: integer
+    meta:
+      collection: Defaults
+      conditions: null
+      display: null
+      display_options: null
+      field: Default_System
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{Region.Region}}, {{System}}'
+      readonly: false
+      required: false
+      sort: 3
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Default_System
+      table: Defaults
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Systems
+      foreign_key_column: id
+  - collection: Globals
+    field: id
+    type: integer
+    meta:
+      collection: Globals
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Globals
+      data_type: integer
+      default_value: nextval('"Globals_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Globals
+    field: Background
+    type: uuid
+    meta:
+      collection: Globals
+      conditions: null
+      display: null
+      display_options: null
+      field: Background
+      group: null
+      hidden: false
+      interface: file-image
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special:
+        - file
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Background
+      table: Globals
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: directus_files
+      foreign_key_column: id
+  - collection: Globals
+    field: Notification
+    type: boolean
+    meta:
+      collection: Globals
+      conditions: null
+      display: null
+      display_options: null
+      field: Notification
+      group: null
+      hidden: false
+      interface: boolean
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Notification
+      table: Globals
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Globals
+    field: NotificationText
+    type: text
+    meta:
+      collection: Globals
+      conditions: null
+      display: null
+      display_options: null
+      field: NotificationText
+      group: null
+      hidden: false
+      interface: input-rich-text-html
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: NotificationText
+      table: Globals
+      data_type: text
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Limits
+    field: id
+    type: integer
+    meta:
+      collection: Limits
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Limits
+      data_type: integer
+      default_value: nextval('"Limits_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Limits
+    field: Volume
+    type: string
+    meta:
+      collection: Limits
+      conditions: null
+      display: null
+      display_options: null
+      field: Volume
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Volume
+      table: Limits
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Limits
+    field: Collateral
+    type: string
+    meta:
+      collection: Limits
+      conditions: null
+      display: null
+      display_options: null
+      field: Collateral
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Collateral
+      table: Limits
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Limits
+    field: Name
+    type: string
+    meta:
+      collection: Limits
+      conditions: null
+      display: null
+      display_options: null
+      field: Name
+      group: null
+      hidden: false
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Name
+      table: Limits
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Member
+    field: id
+    type: uuid
+    meta:
+      collection: Member
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Member
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Member
+    field: character_id
+    type: string
+    meta:
+      collection: Member
+      conditions: null
+      display: null
+      display_options: null
+      field: character_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options:
+        iconLeft: emoji_people
+      readonly: false
+      required: true
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: character_id
+      table: Member
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Member
+    field: name
+    type: string
+    meta:
+      collection: Member
+      conditions: null
+      display: null
+      display_options: null
+      field: name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 6
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: name
+      table: Member
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Member
+    field: birthday
+    type: string
+    meta:
+      collection: Member
+      conditions: null
+      display: null
+      display_options: null
+      field: birthday
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 7
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: birthday
+      table: Member
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Member
+    field: bloodline_id
+    type: string
+    meta:
+      collection: Member
+      conditions: null
+      display: null
+      display_options: null
+      field: bloodline_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 8
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: bloodline_id
+      table: Member
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Member
+    field: corporation_id
+    type: string
+    meta:
+      collection: Member
+      conditions: null
+      display: null
+      display_options: null
+      field: corporation_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 9
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: corporation_id
+      table: Member
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Member
+    field: gender
+    type: string
+    meta:
+      collection: Member
+      conditions: null
+      display: null
+      display_options: null
+      field: gender
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 11
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: gender
+      table: Member
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Member
+    field: race_id
+    type: string
+    meta:
+      collection: Member
+      conditions: null
+      display: null
+      display_options: null
+      field: race_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 12
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: race_id
+      table: Member
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Member
+    field: security_status
+    type: string
+    meta:
+      collection: Member
+      conditions: null
+      display: null
+      display_options: null
+      field: security_status
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 13
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: security_status
+      table: Member
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Member
+    field: faction_id
+    type: string
+    meta:
+      collection: Member
+      conditions: null
+      display: null
+      display_options: null
+      field: faction_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 14
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: faction_id
+      table: Member
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Member
+    field: alliance_id
+    type: string
+    meta:
+      collection: Member
+      conditions: null
+      display: null
+      display_options: null
+      field: alliance_id
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 15
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: alliance_id
+      table: Member
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Permits
+    field: id
+    type: uuid
+    meta:
+      collection: Permits
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special:
+        - uuid
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Permits
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Permits
+    field: Name
+    type: string
+    meta:
+      collection: Permits
+      conditions: null
+      display: null
+      display_options: null
+      field: Name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Name
+      table: Permits
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Permits
+    field: permitted_corporations
+    type: alias
+    meta:
+      collection: Permits
+      conditions: null
+      display: related-values
+      display_options:
+        template: >-
+          {{Corporation_id.name}} ({{Corporation_id.ticker}}) -
+          {{Corporation_id.corporation_id}}
+      field: permitted_corporations
+      group: null
+      hidden: false
+      interface: list-m2m
+      note: null
+      options:
+        enableCreate: false
+        template: >-
+          {{Corporation_id.name}} ({{Corporation_id.ticker}}) -
+          {{Corporation_id.corporation_id}}
+      readonly: false
+      required: false
+      sort: 3
+      special:
+        - m2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: Permits
+    field: permitted_members
+    type: alias
+    meta:
+      collection: Permits
+      conditions: null
+      display: related-values
+      display_options:
+        template: >-
+          {{Member_id.name}} ({{Member_id.character_id}}) - Corporation ID
+          ({{Member_id.corporation_id}})
+      field: permitted_members
+      group: null
+      hidden: false
+      interface: list-m2m
+      note: null
+      options:
+        enableCreate: false
+        template: "{{Member_id.name}}\_({{Member_id.character_id}}) - Corporation ID ({{Member_id.corporation_id}})"
+      readonly: false
+      required: false
+      sort: 4
+      special:
+        - m2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: Permits_Corporation
+    field: id
+    type: integer
+    meta:
+      collection: Permits_Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Permits_Corporation
+      data_type: integer
+      default_value: nextval('"Permits_Corporation_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Permits_Corporation
+    field: Permits_id
+    type: uuid
+    meta:
+      collection: Permits_Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: Permits_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Permits_id
+      table: Permits_Corporation
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Permits
+      foreign_key_column: id
+  - collection: Permits_Corporation
+    field: Corporation_id
+    type: uuid
+    meta:
+      collection: Permits_Corporation
+      conditions: null
+      display: null
+      display_options: null
+      field: Corporation_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Corporation_id
+      table: Permits_Corporation
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Corporation
+      foreign_key_column: id
+  - collection: Permits_Member
+    field: id
+    type: integer
+    meta:
+      collection: Permits_Member
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Permits_Member
+      data_type: integer
+      default_value: nextval('"Permits_Member_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Permits_Member
+    field: Permits_id
+    type: uuid
+    meta:
+      collection: Permits_Member
+      conditions: null
+      display: null
+      display_options: null
+      field: Permits_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Permits_id
+      table: Permits_Member
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Permits
+      foreign_key_column: id
+  - collection: Permits_Member
+    field: Member_id
+    type: uuid
+    meta:
+      collection: Permits_Member
+      conditions: null
+      display: null
+      display_options: null
+      field: Member_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Member_id
+      table: Permits_Member
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Member
+      foreign_key_column: id
+  - collection: Pricing
+    field: id
+    type: integer
+    meta:
+      collection: Pricing
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Pricing
+      data_type: integer
+      default_value: nextval('"Pricing_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Pricing
+    field: Name
+    type: string
+    meta:
+      collection: Pricing
+      conditions: null
+      display: raw
+      display_options: null
+      field: Name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Name
+      table: Pricing
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Pricing
+    field: Reward
+    type: integer
+    meta:
+      collection: Pricing
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{Name}}, V {{Volume}}, C {{Collateral}}, M {{Minimum}}'
+      field: Reward
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        enableCreate: false
+        template: '{{Name}}, V {{Volume}}, C {{Collateral}}, M {{Minimum}}'
+      readonly: false
+      required: true
+      sort: 8
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Reward
+      table: Pricing
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Rewards
+      foreign_key_column: id
+  - collection: Pricing
+    field: Limit
+    type: integer
+    meta:
+      collection: Pricing
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{Name}}, V {{Volume}}, C {{Collateral}}'
+      field: Limit
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        enableCreate: false
+        template: '{{Name}}, V {{Volume}}, C {{Collateral}}'
+      readonly: false
+      required: true
+      sort: 9
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Limit
+      table: Pricing
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Limits
+      foreign_key_column: id
+  - collection: Regions
+    field: id
+    type: integer
+    meta:
+      collection: Regions
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Regions
+      data_type: integer
+      default_value: nextval('"Regions_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Regions
+    field: Region
+    type: string
+    meta:
+      collection: Regions
+      conditions: null
+      display: raw
+      display_options: null
+      field: Region
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Region
+      table: Regions
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Rewards
+    field: id
+    type: integer
+    meta:
+      collection: Rewards
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Rewards
+      data_type: integer
+      default_value: nextval('"Rewards_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Rewards
+    field: Volume
+    type: string
+    meta:
+      collection: Rewards
+      conditions: null
+      display: null
+      display_options: null
+      field: Volume
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Volume
+      table: Rewards
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Rewards
+    field: Collateral
+    type: string
+    meta:
+      collection: Rewards
+      conditions: null
+      display: null
+      display_options: null
+      field: Collateral
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 4
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Collateral
+      table: Rewards
+      data_type: character varying
+      default_value: '1'
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Rewards
+    field: Minimum
+    type: string
+    meta:
+      collection: Rewards
+      conditions: null
+      display: null
+      display_options: null
+      field: Minimum
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 5
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Minimum
+      table: Rewards
+      data_type: character varying
+      default_value: '1'
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: false
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Rewards
+    field: Name
+    type: string
+    meta:
+      collection: Rewards
+      conditions: null
+      display: null
+      display_options: null
+      field: Name
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Name
+      table: Rewards
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Routes
+    field: id
+    type: integer
+    meta:
+      collection: Routes
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Routes
+      data_type: integer
+      default_value: nextval('"Routes_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Routes
+    field: sort
+    type: integer
+    meta:
+      collection: Routes
+      conditions: null
+      display: null
+      display_options: null
+      field: sort
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: sort
+      table: Routes
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Routes
+    field: From_Station
+    type: integer
+    meta:
+      collection: Routes
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{Station}} -> {{System.System}} -> {{System.Region.Region}}'
+      field: From_Station
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{Station}} -> {{System.System}} -> {{System.Region.Region}}'
+      readonly: false
+      required: true
+      sort: 3
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: From_Station
+      table: Routes
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Stations
+      foreign_key_column: id
+  - collection: Routes
+    field: To_Station
+    type: integer
+    meta:
+      collection: Routes
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{Station}} <- {{System.System}} <- {{System.Region.Region}}'
+      field: To_Station
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{Station}} <- {{System.System}} <- {{System.Region.Region}}'
+      readonly: false
+      required: true
+      sort: 4
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: To_Station
+      table: Routes
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Stations
+      foreign_key_column: id
+  - collection: Routes
+    field: Pricing
+    type: integer
+    meta:
+      collection: Routes
+      conditions: null
+      display: related-values
+      display_options:
+        template: "{{Name}}, Reward\_{{Reward.Name}}($\_{{Reward.Volume}}), Limit {{Limit.Name}} ({{Limit.Volume}})"
+      field: Pricing
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: >-
+          {{Name}}, Reward {{Reward.Name}}($ {{Reward.Volume}}), Limit
+          {{Limit.Name}} ({{Limit.Volume}})
+      readonly: false
+      required: true
+      sort: 5
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Pricing
+      table: Routes
+      data_type: integer
+      default_value: 1
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Pricing
+      foreign_key_column: id
+  - collection: Routes
+    field: AllowRush
+    type: boolean
+    meta:
+      collection: Routes
+      conditions: null
+      display: null
+      display_options: null
+      field: AllowRush
+      group: null
+      hidden: false
+      interface: boolean
+      note: Allow Rush Delivery
+      options: null
+      readonly: false
+      required: false
+      sort: 6
+      special:
+        - cast-boolean
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: AllowRush
+      table: Routes
+      data_type: boolean
+      default_value: false
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Routes
+    field: Permits
+    type: alias
+    meta:
+      collection: Routes
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{Permits_id.Name}}'
+      field: Permits
+      group: null
+      hidden: false
+      interface: list-m2m
+      note: null
+      options:
+        enableCreate: false
+        template: '{{Permits_id.Name}}'
+      readonly: false
+      required: false
+      sort: 7
+      special:
+        - m2m
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+  - collection: Routes_Permits
+    field: id
+    type: integer
+    meta:
+      collection: Routes_Permits
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Routes_Permits
+      data_type: integer
+      default_value: nextval('"Routes_Permits_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Routes_Permits
+    field: Routes_id
+    type: integer
+    meta:
+      collection: Routes_Permits
+      conditions: null
+      display: null
+      display_options: null
+      field: Routes_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Routes_id
+      table: Routes_Permits
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Routes
+      foreign_key_column: id
+  - collection: Routes_Permits
+    field: Permits_id
+    type: uuid
+    meta:
+      collection: Routes_Permits
+      conditions: null
+      display: null
+      display_options: null
+      field: Permits_id
+      group: null
+      hidden: true
+      interface: null
+      note: null
+      options: null
+      readonly: false
+      required: false
+      sort: 3
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Permits_id
+      table: Routes_Permits
+      data_type: uuid
+      default_value: null
+      max_length: null
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Permits
+      foreign_key_column: id
+  - collection: Stations
+    field: id
+    type: integer
+    meta:
+      collection: Stations
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Stations
+      data_type: integer
+      default_value: nextval('"Stations_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Stations
+    field: Station
+    type: string
+    meta:
+      collection: Stations
+      conditions: null
+      display: raw
+      display_options: null
+      field: Station
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Station
+      table: Stations
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Stations
+    field: System
+    type: integer
+    meta:
+      collection: Stations
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{System}} -> ( {{Region.Region}} )'
+      field: System
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{System}}'
+      readonly: false
+      required: true
+      sort: 3
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: System
+      table: Stations
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Systems
+      foreign_key_column: id
+  - collection: Systems
+    field: id
+    type: integer
+    meta:
+      collection: Systems
+      conditions: null
+      display: null
+      display_options: null
+      field: id
+      group: null
+      hidden: true
+      interface: input
+      note: null
+      options: null
+      readonly: true
+      required: false
+      sort: 1
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: id
+      table: Systems
+      data_type: integer
+      default_value: nextval('"Systems_id_seq"'::regclass)
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: false
+      is_unique: true
+      is_primary_key: true
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: true
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Systems
+    field: System
+    type: string
+    meta:
+      collection: Systems
+      conditions: null
+      display: raw
+      display_options: null
+      field: System
+      group: null
+      hidden: false
+      interface: input
+      note: null
+      options: null
+      readonly: false
+      required: true
+      sort: 2
+      special: null
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: System
+      table: Systems
+      data_type: character varying
+      default_value: null
+      max_length: 255
+      numeric_precision: null
+      numeric_scale: null
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: null
+      foreign_key_column: null
+  - collection: Systems
+    field: Region
+    type: integer
+    meta:
+      collection: Systems
+      conditions: null
+      display: related-values
+      display_options:
+        template: '{{Region}}'
+      field: Region
+      group: null
+      hidden: false
+      interface: select-dropdown-m2o
+      note: null
+      options:
+        template: '{{Region}}'
+      readonly: false
+      required: true
+      sort: 3
+      special:
+        - m2o
+      translations: null
+      validation: null
+      validation_message: null
+      width: full
+    schema:
+      name: Region
+      table: Systems
+      data_type: integer
+      default_value: null
+      max_length: null
+      numeric_precision: 32
+      numeric_scale: 0
+      is_nullable: true
+      is_unique: false
+      is_primary_key: false
+      is_generated: false
+      generation_expression: null
+      has_auto_increment: false
+      foreign_key_table: Regions
+      foreign_key_column: id
+relations:
+  - collection: Defaults
+    field: Default_System
+    related_collection: Systems
+    meta:
+      junction_field: null
+      many_collection: Defaults
+      many_field: Default_System
+      one_allowed_collections: null
+      one_collection: Systems
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: Defaults
+      column: Default_System
+      foreign_key_table: Systems
+      foreign_key_column: id
+      constraint_name: defaults_default_system_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: Globals
+    field: Background
+    related_collection: directus_files
+    meta:
+      junction_field: null
+      many_collection: Globals
+      many_field: Background
+      one_allowed_collections: null
+      one_collection: directus_files
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: Globals
+      column: Background
+      foreign_key_table: directus_files
+      foreign_key_column: id
+      constraint_name: globals_background_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: Permits_Corporation
+    field: Corporation_id
+    related_collection: Corporation
+    meta:
+      junction_field: Permits_id
+      many_collection: Permits_Corporation
+      many_field: Corporation_id
+      one_allowed_collections: null
+      one_collection: Corporation
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: Permits_Corporation
+      column: Corporation_id
+      foreign_key_table: Corporation
+      foreign_key_column: id
+      constraint_name: permits_corporation_corporation_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: Permits_Corporation
+    field: Permits_id
+    related_collection: Permits
+    meta:
+      junction_field: Corporation_id
+      many_collection: Permits_Corporation
+      many_field: Permits_id
+      one_allowed_collections: null
+      one_collection: Permits
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: permitted_corporations
+      sort_field: null
+    schema:
+      table: Permits_Corporation
+      column: Permits_id
+      foreign_key_table: Permits
+      foreign_key_column: id
+      constraint_name: permits_corporation_permits_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: Permits_Member
+    field: Member_id
+    related_collection: Member
+    meta:
+      junction_field: Permits_id
+      many_collection: Permits_Member
+      many_field: Member_id
+      one_allowed_collections: null
+      one_collection: Member
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: Permits_Member
+      column: Member_id
+      foreign_key_table: Member
+      foreign_key_column: id
+      constraint_name: permits_member_member_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: Permits_Member
+    field: Permits_id
+    related_collection: Permits
+    meta:
+      junction_field: Member_id
+      many_collection: Permits_Member
+      many_field: Permits_id
+      one_allowed_collections: null
+      one_collection: Permits
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: permitted_members
+      sort_field: null
+    schema:
+      table: Permits_Member
+      column: Permits_id
+      foreign_key_table: Permits
+      foreign_key_column: id
+      constraint_name: permits_member_permits_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: Pricing
+    field: Reward
+    related_collection: Rewards
+    meta:
+      junction_field: null
+      many_collection: Pricing
+      many_field: Reward
+      one_allowed_collections: null
+      one_collection: Rewards
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: Pricing
+      column: Reward
+      foreign_key_table: Rewards
+      foreign_key_column: id
+      constraint_name: pricing_reward_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: Pricing
+    field: Limit
+    related_collection: Limits
+    meta:
+      junction_field: null
+      many_collection: Pricing
+      many_field: Limit
+      one_allowed_collections: null
+      one_collection: Limits
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: Pricing
+      column: Limit
+      foreign_key_table: Limits
+      foreign_key_column: id
+      constraint_name: pricing_limit_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: Routes
+    field: From_Station
+    related_collection: Stations
+    meta:
+      junction_field: null
+      many_collection: Routes
+      many_field: From_Station
+      one_allowed_collections: null
+      one_collection: Stations
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: Routes
+      column: From_Station
+      foreign_key_table: Stations
+      foreign_key_column: id
+      constraint_name: routes_from_station_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: Routes
+    field: To_Station
+    related_collection: Stations
+    meta:
+      junction_field: null
+      many_collection: Routes
+      many_field: To_Station
+      one_allowed_collections: null
+      one_collection: Stations
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: Routes
+      column: To_Station
+      foreign_key_table: Stations
+      foreign_key_column: id
+      constraint_name: routes_to_station_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: Routes
+    field: Pricing
+    related_collection: Pricing
+    meta:
+      junction_field: null
+      many_collection: Routes
+      many_field: Pricing
+      one_allowed_collections: null
+      one_collection: Pricing
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: Routes
+      column: Pricing
+      foreign_key_table: Pricing
+      foreign_key_column: id
+      constraint_name: routes_pricing_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: Routes_Permits
+    field: Permits_id
+    related_collection: Permits
+    meta:
+      junction_field: Routes_id
+      many_collection: Routes_Permits
+      many_field: Permits_id
+      one_allowed_collections: null
+      one_collection: Permits
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: Routes_Permits
+      column: Permits_id
+      foreign_key_table: Permits
+      foreign_key_column: id
+      constraint_name: routes_permits_permits_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: Routes_Permits
+    field: Routes_id
+    related_collection: Routes
+    meta:
+      junction_field: Permits_id
+      many_collection: Routes_Permits
+      many_field: Routes_id
+      one_allowed_collections: null
+      one_collection: Routes
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: Permits
+      sort_field: null
+    schema:
+      table: Routes_Permits
+      column: Routes_id
+      foreign_key_table: Routes
+      foreign_key_column: id
+      constraint_name: routes_permits_routes_id_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: Stations
+    field: System
+    related_collection: Systems
+    meta:
+      junction_field: null
+      many_collection: Stations
+      many_field: System
+      one_allowed_collections: null
+      one_collection: Systems
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: Stations
+      column: System
+      foreign_key_table: Systems
+      foreign_key_column: id
+      constraint_name: stations_system_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
+  - collection: Systems
+    field: Region
+    related_collection: Regions
+    meta:
+      junction_field: null
+      many_collection: Systems
+      many_field: Region
+      one_allowed_collections: null
+      one_collection: Regions
+      one_collection_field: null
+      one_deselect_action: nullify
+      one_field: null
+      sort_field: null
+    schema:
+      table: Systems
+      column: Region
+      foreign_key_table: Regions
+      foreign_key_column: id
+      constraint_name: systems_region_foreign
+      on_update: NO ACTION
+      on_delete: SET NULL
