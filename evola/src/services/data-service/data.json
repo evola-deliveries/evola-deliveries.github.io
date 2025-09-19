@@ -52,8 +52,8 @@
                      { "system": "R3P0-Z","station": "Any HORDE Station", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 20000000 }
                 ]},
                  { "region": "Curse", "systems": [
-                     { "system": "Y-DW5K","station": "Y-DW5K IV - Moon 5 - Archangels Logistic Support", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 },
-                     { "system": "UW9B-F","station": "UW9B-F X - Guardian Angels Logistic Support", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
+                     { "system": "Y-DW5K","station": "Y-DW5K IV - Moon 5 - Archangels Logistic Support", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 },
+                     { "system": "UW9B-F","station": "UW9B-F X - Guardian Angels Logistic Support", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
                 ]},
                  { "region": "Stain", "systems": [
                      { "system": "TG-Z23 III","station": "TG-Z23 III - Moon 8 - True Power Logistic Support", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 20000000000 }, "minimumReward": 25000000 }
@@ -399,10 +399,10 @@
         { "region":"Curse", "systems":[
             { "system": "Y-DW5K","station": "Y-DW5K IV - Moon 5 - Archangels Logistic Support", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000, "allowRush": false, "overrideRushFeeAmount": 300000000.00 }
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000, "allowRush": false, "overrideRushFeeAmount": 300000000.00 }
                 ]},
                 { "region": "Panfam Hubs", "systems":[
-                    { "system": "E8-432","station": "Any Panfam Station", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 25000000, "allowRush": false, "overrideRushFeeAmount": 300000000.00 }
+                    { "system": "E8-432","station": "Any Panfam Station", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 25000000, "allowRush": false, "overrideRushFeeAmount": 300000000.00 }
                  ]},
                 { "region": "Curse", "systems":[
                     { "system": "UW9B-F","station": "UW9B-F X - Guardian Angels Logistic Support", "reward": {"volume": 150.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 25000000, "allowRush": false, "overrideRushFeeAmount": 300000000.00 }
@@ -411,26 +411,26 @@
             ]},
             { "system": "UW9B-F","station": "UW9B-F X - Guardian Angels Logistic Support", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000, "allowRush": false, "overrideRushFeeAmount": 300000000.00 }
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000, "allowRush": false, "overrideRushFeeAmount": 300000000.00 }
                 ]},
                 { "region": "Panfam Hubs", "systems":[
-                    { "system": "E8-432","station": "Any Panfam Station", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 25000000, "allowRush": false, "overrideRushFeeAmount": 300000000.00 }
+                    { "system": "E8-432","station": "Any Panfam Station", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 25000000, "allowRush": false, "overrideRushFeeAmount": 300000000.00 }
                 ]}
             ]}
         ]},
         { "region":"NPC Delve", "systems":[
             { "system": "NPC DELVE","station": "NPC DELVE", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 700.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000, "allowRush": true, "overrideRushFeeAmount": 250000000.00 }
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000, "allowRush": true, "overrideRushFeeAmount": 250000000.00 }
                 ]},
                 { "region": "Panfam Hubs", "systems":[
-                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 800.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 30000000, "allowRush": true, "overrideRushFeeAmount": 250000000.00 }
+                    { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 30000000, "allowRush": true, "overrideRushFeeAmount": 250000000.00 }
                  ]}
 
             ]},
             { "system": "PR-8CA","station": "PR-8CA III - Blood Raiders Logistic Support", "regions": [
                 { "region": "The Forge", "systems":[
-                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 850.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000 }
+                   { "system": "Jita IV - Moon 4 - Caldari Navy Assembly Plant","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 900.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 25000000 }
                 ]},
                 { "region": "Panfam Hubs", "systems":[
                     { "system": "MJ-5F9","station": "Any Panfam Station", "reward": {"volume": 950.00, "collateral": 1.00 }, "limits": { "volume": 330000.00, "collateral": 6000000000 }, "minimumReward": 25000000 }
