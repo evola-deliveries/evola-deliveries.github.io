@@ -11,6 +11,8 @@ import NoMatchPage from '../NoMatch-Page';
 
 const MainPage = () => {
 	const [backgroundImage, setBackgroundImage] = useState(null);
+	const [notificationEnabled, setNotificationEnabled] = useState(false);
+	const [notificationText, setNotificationText] = useState(null);
 
 	useEffect(() => {
 		const fetchBackground = async () => {
@@ -18,10 +20,13 @@ const MainPage = () => {
 				const response = await fetch(`${Config.evola_api_root_url}/content-global`);
 				const json = await response.json();
 				const bgId = json?.data?.Background;
-
+				const notificationBool = json?.data?.Notification;
+				const notification = json?.data?.NotificationText;
 				if (bgId) {
 					setBackgroundImage(`${Config.evola_api_root_url}/assets/${bgId}`);
 				}
+				if(notificationBool) setNotificationEnabled(notificationBool);
+				if(notification) setNotificationText(notification);
 			} catch (error) {
 				console.error('Failed to fetch background:', error);
 			}
@@ -52,6 +57,12 @@ const MainPage = () => {
 
 				{/* Main Content */}
 				<main className="flex-grow px-4 md:px-8 py-8 md:py-16 max-w-7xl mx-auto w-full">
+					{/* Notification Bar */}
+					{notificationEnabled && (
+					<div className="mb-6 bg-gray-800 bg-opacity-80 border-l-4 border-blue-500 text-blue-300 shadow-md rounded-md px-6 py-3 flex items-center justify-between font-mono tracking-wide text-sm backdrop-blur-sm">
+						<span dangerouslySetInnerHTML={{ __html: notificationText }} />
+					</div>
+					)}
 					<Switch>
 						<Route exact path="/">
 							<ContractsPage />
