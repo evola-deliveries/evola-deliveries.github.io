@@ -33,7 +33,7 @@
 			{ "system": "49V-E4", "station": "49V-E4 - Bow Ties Are Cool", "regions": [
                  { "region": "Move OPS", "systems": [
 					 { "system": "MTO-2","station": "MTO2-2 - D R O N E S T A R", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true },
-					 { "system": "Otsasai","station": "Otsasai VIII - Moon 8 - Caldari Navy Assembly Plant", "reward": {"volume": 00.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 15000000, "allowRush": true },
+					 { "system": "Otsasai","station": "Otsasai VIII - Moon 8 - Caldari Navy Assembly Plant", "reward": {"volume": 500.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 15000000, "allowRush": true },
                 ]},
             ]},
 			{ "system": "NSI-MW", "station": "NSI-MW - Stellar Core", "regions": [
@@ -63,3 +63,5 @@
 					 { "system": "Otsasai","station": "Otsasai VIII - Moon 8 - Caldari Navy Assembly Plant", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 35000000, "allowRush": true },
                 ]},
             ]}
+
+300
