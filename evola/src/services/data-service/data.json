@@ -18,7 +18,7 @@
                 ]}
             ]}
 		]},
-		{ "region": "Lowsec, "systems": [
+        { "region": "Low Sec", "systems": [
             { "system": "Ihakana VIII", "station": "Ihakana VIII - Moon 6 - Nugoeihuvi Corporation Development Studio", "regions": [
                  { "region": "Cloud Ring", "systems": [
 					 { "system": "F7C-H0","station": "F7C-H0 - Bean Bag", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true },
