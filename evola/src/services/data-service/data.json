@@ -29,7 +29,7 @@
                  { "region": "Move OPS", "systems": [
 					 { "system": "F7C-H0","station": "F7C-H0 - Bean Bag", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true },
 					 { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 1060000.00, "collateral": 9000000000 }, "minimumReward": 1, "allowRush": true }
-        ]}
+        ]},
 		{ "region": "Asset Safety", "systems": [
             { "system": "Odebeinn", "station": "Moon 5 - Kaalakiota Corporation Factory", "regions": [
                  { "region": "Move OPS", "systems": [
