@@ -1,4 +1,4 @@
-{
+
     "default": { "region": "The Forge", "system": "Jita", "fees": { "rushFeeAmount": 150000000.00 } },
     "routes": [
         { "region": "The Forge", "systems": [
@@ -19,9 +19,15 @@
             ]}
 		]},
 		 { "region": "Low Security", "systems": [
-				{ "system": "Ihakana VIII", "station": "Ihakana VIII - Moon 6 - Nugoeihuvi Corporation Development Studio", "regions": [
+				{ "system": "Otsasai", "station": "Otsasai VIII - Moon 8 - Caldari Navy Assembly Plan", "regions": [
                  { "region": "Cloud Ring", "systems": [
 					 { "system": "F7C-H0","station": "F7C-H0 - Bean Bag", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true },
+					 { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 90000000000 }, "minimumReward": 1, "allowRush": true }
+                ]}
+            ]},
+				{ "system": "Ihakana VIII", "station": "Ihakana VIII - Moon 6 - Nugoeihuvi Corporation Development Studio", "regions": [
+                 { "region": "Cloud Ring", "systems": [
+					 { "system": "F7C-H0","station": "F7C-H0 - Bean Bag", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true },
 					 { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 90000000000 }, "minimumReward": 1, "allowRush": true }
                 ]}
             ]}
@@ -30,15 +36,18 @@
             { "system": "Odebeinn", "station": "Moon 5 - Kaalakiota Corporation Factory", "regions": [
                  { "region": "Move OPS", "systems": [
 					 { "system": "Otsasai","station": "Otsasai VIII - Moon 8 - Caldari Navy Assembly Plant", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 35000000, "allowRush": true },
-					 { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 90000000000 }, "minimumReward": 1, "allowRush": true }
+					 { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 90000000000 }, "minimumReward": 1, "allowRush": true },
+					 { "system": "F7C-H0","station": "F7C-H0 - Bean Bag", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true }
                 ]}
             ]},
 			{ "system": "Konora", "station": "Kaalakiota Corporation Factory ", "regions": [
                  { "region": "Move OPS", "systems": [
 					 { "system": "Otsasai","station": "Otsasai VIII - Moon 8 - Caldari Navy Assembly Plant", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 35000000, "allowRush": true },
-					 { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 90000000000 }, "minimumReward": 1, "allowRush": true }
+					 { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 90000000000 }, "minimumReward": 1, "allowRush": true },
+					 { "system": "F7C-H0","station": "F7C-H0 - Bean Bag", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true }
         ]}
       ]}
     ]}
   ]
 }
+
