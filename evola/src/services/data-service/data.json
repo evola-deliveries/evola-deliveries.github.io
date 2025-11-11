@@ -1,4 +1,4 @@
-
+{
     "default": { "region": "The Forge", "system": "Jita", "fees": { "rushFeeAmount": 150000000.00 } },
     "routes": [
         { "region": "The Forge", "systems": [
@@ -47,7 +47,13 @@
 					 { "system": "F7C-H0","station": "F7C-H0 - Bean Bag", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true }
         ]}
       ]}
+    ]},
+		{ "region": "Etherium Reach", "systems": [
+            { "system": "F9-FUV", "station": "F9-FUV - ICS Ackaroth We Will Miss You", "regions": [
+                 { "region": "Low Sec", "systems": [
+					 { "system": "Oijanen","station": "Oijanen - LowSec Free Hub", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 35000000, "allowRush": true }
+        ]}
+      ]}
     ]}
   ]
 }
-
