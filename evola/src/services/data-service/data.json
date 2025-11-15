@@ -4,7 +4,7 @@
         { "region": "The Forge", "systems": [
             { "system": "Jita", "station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "regions": [
                  { "region": "Cloud Ring", "systems": [
-                     { "system": "F7C-H0","station": "F7C-H0 - Bean Bag", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true }
+                     { "system": "F7C-H0","station": "F7C-H0 - B E A N B A G", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true }
                 ]},
 				 { "region": "Move OPS", "systems": [
 					 { "system": "Otsasai","station": "Otsasai VIII - Moon 8 - Caldari Navy Assembly Plant", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true }
@@ -12,7 +12,7 @@
             ]}
         ]},
         { "region": "Cloud Ring", "systems": [
-            { "system": "F7C-H0", "station": "F7C-H0 - Bean Bag", "regions": [
+            { "system": "F7C-H0", "station": "F7C-H0 - B E A N B A G", "regions": [
                  { "region": "The Forge", "systems": [
 					 { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 9000000000 }, "minimumReward": 1, "allowRush": true }
                 ]}
@@ -21,13 +21,13 @@
 		 { "region": "Low Security", "systems": [
 				{ "system": "Otsasai", "station": "Otsasai VIII - Moon 8 - Caldari Navy Assembly Plan", "regions": [
                  { "region": "Cloud Ring", "systems": [
-					 { "system": "F7C-H0","station": "F7C-H0 - Bean Bag", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true },
+					 { "system": "F7C-H0","station": "F7C-H0 - B E A N B A G", "reward": {"volume": 300.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true },
 					 { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 90000000000 }, "minimumReward": 1, "allowRush": true }
                 ]}
             ]},
 				{ "system": "Ihakana VIII", "station": "Ihakana VIII - Moon 6 - Nugoeihuvi Corporation Development Studio", "regions": [
                  { "region": "Cloud Ring", "systems": [
-					 { "system": "F7C-H0","station": "F7C-H0 - Bean Bag", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true },
+					 { "system": "F7C-H0","station": "F7C-H0 - B E A N B A G", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true },
 					 { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 90000000000 }, "minimumReward": 1, "allowRush": true }
                 ]}
             ]}
@@ -37,21 +37,14 @@
                  { "region": "Move OPS", "systems": [
 					 { "system": "Otsasai","station": "Otsasai VIII - Moon 8 - Caldari Navy Assembly Plant", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 35000000, "allowRush": true },
 					 { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 90000000000 }, "minimumReward": 1, "allowRush": true },
-					 { "system": "F7C-H0","station": "F7C-H0 - Bean Bag", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true }
+					 { "system": "F7C-H0","station": "F7C-H0 - B E A N B A G", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true }
                 ]}
             ]},
 			{ "system": "Konora", "station": "Kaalakiota Corporation Factory ", "regions": [
                  { "region": "Move OPS", "systems": [
 					 { "system": "Otsasai","station": "Otsasai VIII - Moon 8 - Caldari Navy Assembly Plant", "reward": {"volume": 350.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 35000000, "allowRush": true },
 					 { "system": "Jita","station": "Jita IV - Moon 4 - Caldari Navy Assembly Plant", "reward": {"volume": 200.00, "collateral": 1.00 }, "limits": { "volume": 106000.00, "collateral": 90000000000 }, "minimumReward": 1, "allowRush": true },
-					 { "system": "F7C-H0","station": "F7C-H0 - Bean Bag", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true }
-        ]}
-      ]}
-    ]},
-		{ "region": "Etherium Reach", "systems": [
-            { "system": "F9-FUV", "station": "F9-FUV - ICS Ackaroth We Will Miss You", "regions": [
-                 { "region": "Low Sec", "systems": [
-					 { "system": "Oijanen","station": "Oijanen - LowSec Free Hub", "reward": {"volume": 400.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 35000000, "allowRush": true }
+					 { "system": "F7C-H0","station": "F7C-H0 - B E A N B A G", "reward": {"volume": 600.00, "collateral": 1.00 }, "limits": { "volume": 340000.00, "collateral": 80000000000 }, "minimumReward": 1, "allowRush": true }
         ]}
       ]}
     ]}
