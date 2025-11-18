@@ -19,3 +19,7 @@ stop:
 	@docker compose --project-directory=./evola-api down
 	@docker compose --project-directory=./evola-cms down
 	@docker compose --project-directory=./evola-courier down
+
+update-api:
+	@docker compose --project-directory=./evola-api build
+	@docker compose --project-directory=./evola-api up --force-recreate evola-api -d
