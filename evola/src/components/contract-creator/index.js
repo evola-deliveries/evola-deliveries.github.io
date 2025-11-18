@@ -176,7 +176,7 @@ export default function ContractCreator() {
 
                                 {/* Box 3: MJ to Jita */}
                                 <div className="bg-gray-900 border border-gray-700 rounded-lg p-6 text-center shadow-lg">
-                                    <h2 className="text-sm uppercase text-gray-400 tracking-widest mb-2">E8 ↔ Jita Travel</h2>
+                                    <h2 className="text-sm uppercase text-gray-400 tracking-widest mb-2">F7 ↔ Jita Travel</h2>
                                     <p className="text-4xl font-extrabold text-purple-400">{MJJitaHundredContracts}h</p>
                                     <p className="text-xs text-gray-500 mt-1">Journey Duration</p>
                                 </div>
