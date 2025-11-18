@@ -39,12 +39,19 @@ function calculatePricing(inboundRouteDeep, price, volume, janice, rushFee = 0, 
 }
 
 export default function ContractCreator() {
+    // API-loaded data
+    const [data, setData] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+
     const [pricing, setPricing] = useState(calculatePricing(null, 0, 0, ""));
-    const [outboundValue, setOutboundValue] = useState(DataService.default.region + "|" + DataService.default.system);
+    const [outboundValue, setOutboundValue] = useState(""); // will be set after data load
     const [inboundValue, setInboundValue] = useState("");
+
     const [inboundRoute, setInboundRoute] = useState();
     const [outboundRoute, setOutboundRoute] = useState();
+
     const [rushOrderCheck, setRushOrderCheck] = useState(false);
+
     const [outstandingContracts, setOutstandingContracts] = useState();
     const [progressContracts, setProgressContracts] = useState();
     const [HundredContracts, setLast100ContractTime] = useState();
@@ -52,20 +59,54 @@ export default function ContractCreator() {
 
     const rushAllowed = inboundRoute?.allowRush === true;
 
+    // Rush fee: override on route, else default from API data, else hardcoded fallback
     const rushFee = useMemo(() => {
-        return inboundRoute?.overrideRushFeeAmount ?? DataService.default.fees.rushFeeAmount;
-    }, [inboundRoute]);
+        if (inboundRoute?.overrideRushFeeAmount != null) {
+            return inboundRoute.overrideRushFeeAmount;
+        }
+        if (data?.default?.fees?.rushFeeAmount != null) {
+            return data.default.fees.rushFeeAmount;
+        }
+        // Fallback if API default missing
+        return 150000000;
+    }, [inboundRoute, data]);
 
     const displayRushFee = rushFee;
 
+    // Load data from API (routes + default)
     useEffect(() => {
-        setOutboundRoute(DataService.getOutboundRoute(outboundValue));
-    }, [outboundValue]);
+        DataService.getData().then(content => {
+            setData(content);
+            if (content?.default?.region && content?.default?.system) {
+                setOutboundValue(content.default.region + "|" + content.default.system);
+            }
+            setIsLoaded(true);
+        });
+    }, []);
 
+    // Load contract stats
     useEffect(() => {
-        setInboundRoute(DataService.getInboundRoute(outboundValue, inboundValue));
-    }, [inboundValue, outboundValue]);
+        ContractService.getContracts().then(r => {
+            setOutstandingContracts(r.Outstanding);
+            setProgressContracts(r.InProgress);
+            setLast100ContractTime(r.HundredContracts);
+            setLast100MJJitaContracts(r.MJJitaHundredContracts);
+        }).catch(console.log);
+    }, []);
 
+    // Update outbound route when outboundValue or data changes
+    useEffect(() => {
+        if (!data || !outboundValue) return;
+        setOutboundRoute(DataService.getOutboundRoute(data, outboundValue));
+    }, [data, outboundValue]);
+
+    // Update inbound route when inboundValue / outboundValue / data changes
+    useEffect(() => {
+        if (!data) return;
+        setInboundRoute(DataService.getInboundRoute(data, outboundValue, inboundValue));
+    }, [data, outboundValue, inboundValue]);
+
+    // Recalculate pricing when route / inputs / rush info changes
     useEffect(() => {
         setPricing(calculatePricing(
             inboundRoute,
@@ -75,6 +116,7 @@ export default function ContractCreator() {
             rushFee,
             rushOrderCheck && rushAllowed
         ));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [
         inboundRoute,
         pricing.price,
@@ -85,6 +127,7 @@ export default function ContractCreator() {
         rushAllowed
     ]);
 
+    // Ensure rush checkbox is disabled/cleared when rush stops being allowed
     useEffect(() => {
         const rushStillAllowed = inboundRoute?.allowRush === true;
         const shouldApplyRush = rushOrderCheck && rushStillAllowed;
@@ -101,6 +144,7 @@ export default function ContractCreator() {
             rushFee,
             shouldApplyRush
         ));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [
         outboundRoute,
         inboundRoute,
@@ -124,15 +168,6 @@ export default function ContractCreator() {
             rushOrderCheck && rushAllowed
         ));
     };
-
-    useEffect(() => {
-        ContractService.getContracts().then(r => {
-            setOutstandingContracts(r.Outstanding);
-            setProgressContracts(r.InProgress);
-            setLast100ContractTime(r.HundredContracts);
-            setLast100MJJitaContracts(r.MJJitaHundredContracts);
-        }).catch(console.log);
-    }, []);
 
     return (
         <div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">
@@ -187,68 +222,98 @@ export default function ContractCreator() {
                     </div>
                     <h2 className="w-full text-xl text-blue-400 font-bold uppercase tracking-wider mb-1">Contract Creator</h2>
                     <h3 className="w-full text-gray-400 font-medium text-sm mb-4">Select the Pickup and Dropoff stations</h3>
+
+                    {/* Pickup */}
                     <div className="flex justify-between items-center text-sm text-gray-300 mb-2">
                         <label htmlFor="outbound" className="mr-2">Pickup:</label>
                         <select
                             name="outbound"
-                            defaultValue={outboundValue}
+                            value={outboundValue}
                             onChange={handleOutboundChanged}
                             className="bg-gray-800 border border-gray-600 text-gray-200 px-3 py-1 rounded w-2/3"
                         >
                             <option disabled hidden value=''></option>
-                            {DataService.routes.map(route => (
-                                <optgroup key={route.region} label={route.region}>
-                                    {route.systems.map(system => (
-                                        <option key={`${route.region}-${system.system}`} value={route.region + "|" + system.system}>
-                                            {system.system}
-                                        </option>
-                                    ))}
-                                </optgroup>
-                            ))}
+                            {isLoaded && data
+                                ? data.routes.map(route => (
+                                    <optgroup key={route.region} label={route.region}>
+                                        {route.systems.map(system => (
+                                            <option
+                                                key={`${route.region}-${system.system}`}
+                                                value={route.region + "|" + system.system}
+                                            >
+                                                {system.system}
+                                            </option>
+                                        ))}
+                                    </optgroup>
+                                ))
+                                : null}
                         </select>
                     </div>
 
+                    {/* Station from */}
                     <div className="flex justify-between items-center my-2 border-b border-dashed border-blue-700 pb-1 text-sm text-gray-400">
                         <div>Station (from):</div>
                         <div className="flex items-center space-x-2">
-                            <span className="cursor-pointer hover:text-white" onClick={() => outboundRoute && UtilsService.clipboardCopy(outboundRoute.station)}>
+                            <span
+                                className="cursor-pointer hover:text-white"
+                                onClick={() => outboundRoute && UtilsService.clipboardCopy(outboundRoute.station)}
+                            >
                                 {outboundRoute && outboundRoute.station}
                             </span>
-                            <FontAwesomeIcon className="cursor-pointer text-blue-500 hover:text-blue-300" icon={faCopy} onClick={() => outboundRoute && UtilsService.clipboardCopy(outboundRoute.station)} />
+                            <FontAwesomeIcon
+                                className="cursor-pointer text-blue-500 hover:text-blue-300"
+                                icon={faCopy}
+                                onClick={() => outboundRoute && UtilsService.clipboardCopy(outboundRoute.station)}
+                            />
                         </div>
                     </div>
 
+                    {/* Dropoff */}
                     <div className="flex justify-between items-center text-sm text-gray-300 mb-2">
                         <label htmlFor="inbound" className="mr-2">Dropoff:</label>
                         <select
                             name="inbound"
-                            defaultValue=""
+                            value={inboundValue}
                             onChange={handleInboundChanged}
                             className="bg-gray-800 border border-gray-600 text-gray-200 px-3 py-1 rounded w-2/3"
                         >
                             <option value="">None</option>
-                            {DataService.getRoutes(outboundValue).map(route => (
-                                <optgroup key={route.region} label={route.region}>
-                                    {route.systems.map(system => (
-                                        <option key={`${route.region}-${system.system}`} value={route.region + "|" + system.system}>
-                                            {system.system}
-                                        </option>
-                                    ))}
-                                </optgroup>
-                            ))}
+                            {isLoaded && data
+                                ? DataService.getRoutes(data, outboundValue).map(route => (
+                                    <optgroup key={route.region} label={route.region}>
+                                        {route.systems.map(system => (
+                                            <option
+                                                key={`${route.region}-${system.system}`}
+                                                value={route.region + "|" + system.system}
+                                            >
+                                                {system.system}
+                                            </option>
+                                        ))}
+                                    </optgroup>
+                                ))
+                                : null}
                         </select>
                     </div>
 
+                    {/* Station to */}
                     <div className="flex justify-between items-center my-2 border-b border-dashed border-purple-700 pb-1 text-sm text-gray-400">
                         <div>Station (to):</div>
                         <div className="flex items-center space-x-2">
-                            <span className="cursor-pointer hover:text-white" onClick={() => inboundRoute && UtilsService.clipboardCopy(inboundRoute.station)}>
+                            <span
+                                className="cursor-pointer hover:text-white"
+                                onClick={() => inboundRoute && UtilsService.clipboardCopy(inboundRoute.station)}
+                            >
                                 {inboundRoute && inboundRoute.station}
                             </span>
-                            <FontAwesomeIcon className="cursor-pointer text-purple-500 hover:text-purple-300" icon={faCopy} onClick={() => inboundRoute && UtilsService.clipboardCopy(inboundRoute.station)} />
+                            <FontAwesomeIcon
+                                className="cursor-pointer text-purple-500 hover:text-purple-300"
+                                icon={faCopy}
+                                onClick={() => inboundRoute && UtilsService.clipboardCopy(inboundRoute.station)}
+                            />
                         </div>
                     </div>
 
+                    {/* Rush checkbox */}
                     <div className="mb-4 mt-3">
                         <label className="flex items-center text-sm text-gray-300">
                             <input
@@ -265,7 +330,9 @@ export default function ContractCreator() {
                         </label>
                         <div className={`text-xs mt-1 ml-6 leading-snug ${!rushAllowed ? 'text-gray-500' : 'text-gray-400'}`}>
                             +<span className="font-bold text-green-400">{displayRushFee.toLocaleString()}</span> ISK flat fee — <span className="font-semibold text-yellow-300">Guaranteed Priority</span><br />
-                            <span className="italic text-gray-500">Delivery within 24h or placed top of queue. Marked as <span className="text-blue-500">priority</span>.</span>
+                            <span className="italic text-gray-500">
+                                Delivery within 24h or placed top of queue. Marked as <span className="text-blue-500">priority</span>.
+                            </span>
                         </div>
                     </div>
 
@@ -280,8 +347,12 @@ export default function ContractCreator() {
                             </div>
                             <div>
                                 <p className="font-bold text-white">Informational Notice</p>
-                                <p className="text-sm">Contracts are issued to <span className="select-all text-blue-400">Evola Deliveries</span>. Feedback is welcome!</p>
-                                <p><span className="font-bold text-yellow-400">Note:</span> Though volumes are high, our goal is delivery within 48 hours.</p>
+                                <p className="text-sm">
+                                    Contracts are issued to <span className="select-all text-blue-400">Evola Deliveries</span>. Feedback is welcome!
+                                </p>
+                                <p>
+                                    <span className="font-bold text-yellow-400">Note:</span> Though volumes are high, our goal is delivery within 48 hours.
+                                </p>
                             </div>
                         </div>
                     </div>
