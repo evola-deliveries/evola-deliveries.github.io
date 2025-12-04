@@ -23,3 +23,7 @@ stop:
 update-api:
 	@docker compose --project-directory=./evola-api build
 	@docker compose --project-directory=./evola-api up --force-recreate evola-api -d
+
+update-mailer:
+	@docker compose --project-directory=./evola-mail build
+	@docker compose --project-directory=./evola-mail up --force-recreate evola-mail -d
