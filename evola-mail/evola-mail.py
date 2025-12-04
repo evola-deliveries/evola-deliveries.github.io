@@ -230,7 +230,7 @@ def testSendMail():
 
     data = {
         "approved_cost": 0,
-        "body": "Test Body <url=https://www.pandemic-horde.org/forum/index.php?threads/evola-deliveries-horde-courier-service.3266/>LINK</url>",
+        "body": "Test Body <url=https://discord.com/invite/SS2GFCPkt2>LINK</url>",
         "recipients": [
             {
                 "recipient_id": 2117867283,
