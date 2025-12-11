@@ -15,7 +15,7 @@ services:
         max-size: "10m"
         max-file: "5"
     networks:
-      - evola_network
+      - evola
 
   courier-service:
     build:
@@ -28,7 +28,7 @@ services:
     command: npm run courier-service
     restart: unless-stopped
     networks:
-      - evola_network
+      - evola
 
   contract-watcher:
     build:
@@ -46,7 +46,7 @@ services:
         max-size: "10m"
         max-file: "5"
     networks:
-      - evola_network
+      - evola
 
   fetch-contracts:
     build:
@@ -64,7 +64,7 @@ services:
         max-size: "10m"
         max-file: "5"
     networks:
-      - evola_network
+      - evola
 
   process-contract:
     build:
@@ -82,7 +82,7 @@ services:
         max-size: "10m"
         max-file: "5"
     networks:
-      - evola_network
+      - evola
 
   contract-created:
     build:
@@ -100,7 +100,7 @@ services:
         max-size: "10m"
         max-file: "5"
     networks:
-      - evola_network
+      - evola
 
   contract-updated:
     build:
@@ -118,7 +118,7 @@ services:
         max-size: "10m"
         max-file: "5"
     networks:
-      - evola_network
+      - evola
 
   contract-completed:
     build:
@@ -136,7 +136,7 @@ services:
         max-size: "10m"
         max-file: "5"
     networks:
-      - evola_network
+      - evola
 
   update-corporation:
     build:
@@ -154,7 +154,7 @@ services:
         max-size: "10m"
         max-file: "5"
     networks:
-      - evola_network
+      - evola
 
   update-member:
     build:
@@ -172,7 +172,7 @@ services:
         max-size: "10m"
         max-file: "5"
     networks:
-      - evola_network
+      - evola
   
   send-eve-mail:
     build:
@@ -190,9 +190,9 @@ services:
         max-size: "10m"
         max-file: "5"
     networks:
-      - evola_network
+      - evola
 
 networks:
-  evola_network:
+  evola:
     external: true
     name: evola

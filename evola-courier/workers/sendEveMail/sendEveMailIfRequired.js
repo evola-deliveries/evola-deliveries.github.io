@@ -46,7 +46,7 @@ export default async function sendEveMailIfRequired(contract) {
 				recipient_id: config.override_recipient_character_id || issuer_id
 			}],
 			subject: 'Your Delivery',
-			body: `Your <url=contract:${start_location_id}//${contract_id}>package</url> has been delivered. Thank you for using Evola Deliveries. If you enjoyed our service, remember to check us out on <url=https://discord.gg/ZGt6eUwuXt>Discord</url> and <url=https://www.pandemic-horde.org/forum/index.php?threads/evola-deliveries-horde-courier-service.3266/>our forum post</url> for updated pricing and route status. -Evola`
+			body: `Your <url=contract:${start_location_id}//${contract_id}>package</url> has been delivered. Thank you for using Evola Deliveries. If you enjoyed our service, remember to check us out on <url=https://discord.com/invite/SS2GFCPkt2>Discord</url> for updated pricing and route status. -Evola`
 		});
 	} catch (err) {
 		const message = err.message || '';
