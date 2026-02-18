@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import ConfigService from '../../services/config-service';
 import { Link } from 'react-router-dom';
 
 export default function NavigationBar() {
     const { t, i18n } = useTranslation();
+    const [currentLang, setCurrentLang] = useState(i18n.language || 'en');
+
+    useEffect(() => {
+        const lang = i18n.language || i18n.languages?.[0] || 'en';
+        const normalizedLang = lang.split('-')[0];
+        setCurrentLang(normalizedLang);
+    }, [i18n.language, i18n.languages]);
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
+        setCurrentLang(lng);
     };
 
     return (
@@ -37,7 +45,7 @@ export default function NavigationBar() {
 
                     {/* Language Selector */}
                     <select
-                        value={i18n.language}
+                        value={currentLang}
                         onChange={(e) => changeLanguage(e.target.value)}
                         className="bg-gray-800 border border-gray-600 text-gray-200 text-sm px-2 py-1 rounded focus:outline-none focus:border-blue-500"
                     >
