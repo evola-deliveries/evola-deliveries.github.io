@@ -395,17 +395,28 @@ export default function ContractCreator() {
                         </div>
                     </div>
                     <h3 className="text-xl font-bold text-center text-red-500 mb-2">Package Too Large</h3>
-                    <p className="text-gray-300 text-center mb-4">
-                        {pricing.totals.volumeInvalid && pricing.totals.collateralInvalid && (
-                            "Both the volume and collateral exceed the route limits."
+                    <div className="mb-4">
+                        {pricing.totals.volumeInvalid && (
+                            <div className="bg-red-900 bg-opacity-30 border border-red-700 rounded p-3 mb-2">
+                                <div className="text-red-400 font-semibold text-sm">Volume Exceeds Limit</div>
+                                <div className="text-gray-300">
+                                    Current: <span className="font-bold text-red-400">{Number(pricing.volume).toLocaleString()} m³</span> 
+                                    {' / '}
+                                    Max: <span className="font-bold text-green-400">{inboundRoute && Number(inboundRoute.limits.volume).toLocaleString()} m³</span>
+                                </div>
+                            </div>
                         )}
-                        {pricing.totals.volumeInvalid && !pricing.totals.collateralInvalid && (
-                            "The volume exceeds the route limit."
+                        {pricing.totals.collateralInvalid && (
+                            <div className="bg-red-900 bg-opacity-30 border border-red-700 rounded p-3">
+                                <div className="text-red-400 font-semibold text-sm">Collateral Exceeds Limit</div>
+                                <div className="text-gray-300">
+                                    Current: <span className="font-bold text-red-400">{Number(pricing.price).toLocaleString()} ISK</span>
+                                    {' / '}
+                                    Max: <span className="font-bold text-green-400">{inboundRoute && Number(inboundRoute.limits.collateral).toLocaleString()} ISK</span>
+                                </div>
+                            </div>
                         )}
-                        {!pricing.totals.volumeInvalid && pricing.totals.collateralInvalid && (
-                            "The collateral exceeds the route limit."
-                        )}
-                    </p>
+                    </div>
                     <p className="text-gray-400 text-sm text-center mb-6">
                         Please change your package details to fit within the route limits shown on the Order Ticket.
                     </p>
