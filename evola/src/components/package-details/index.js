@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Janice from '../../services/janice-service';
 
 export default function PackageDetails({ system, onPricingChange }) {
+    const { t } = useTranslation();
     const [content, setContent] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
     const [success, setSuccess] = useState(false);
@@ -46,7 +48,7 @@ export default function PackageDetails({ system, onPricingChange }) {
     const handleContentChange = (event) => setContent(event.target.value);
     const HandledAppraisal = (result) => {
         if (result.items.length === 0) {
-            setErrorMessage("No Prices Found for items.");
+            setErrorMessage(t('packageDetails.noPricesFound'));
             setSuccess(false);
             return;
         }
@@ -70,7 +72,7 @@ export default function PackageDetails({ system, onPricingChange }) {
                 .catch((reason) => setErrorMessage(reason.message));
         } else {
             setSuccess(false);
-            setErrorMessage("Please enter at least one item to the package.")
+            setErrorMessage(t('packageDetails.enterAtLeastOneItem'))
         }
     };
 
@@ -78,14 +80,14 @@ export default function PackageDetails({ system, onPricingChange }) {
 
     return (
         <div className="mt-6">
-            <h3 className="text-blue-400 font-bold text-lg leading-tight tracking-wide uppercase mb-1">Package Details</h3>
-            <p className="text-sm text-gray-400 mb-3">Select both pickup and dropoff routes to enable input area below.</p>
+            <h3 className="text-blue-400 font-bold text-lg leading-tight tracking-wide uppercase mb-1">{t('packageDetails.title')}</h3>
+            <p className="text-sm text-gray-400 mb-3">{t('packageDetails.subtitle')}</p>
 
             <div>
                 {overridePriceCheck ? (
                     <div className="flex-wrap bg-gray-800 border-l-4 border-blue-600 rounded-md w-full px-6 py-4">
                         <div className="flex justify-between items-center mb-3 text-sm text-gray-300">
-                            <label className="mr-2" htmlFor="input-Isk">Total Sell Price (ISK)</label>
+                            <label className="mr-2" htmlFor="input-Isk">{t('packageDetails.totalSellPrice')}</label>
                             <input
                                 id="input-Isk"
                                 type="number"
@@ -98,7 +100,7 @@ export default function PackageDetails({ system, onPricingChange }) {
                             />
                         </div>
                         <div className="flex justify-between items-center text-sm text-gray-300">
-                            <label className="mr-2" htmlFor="input-volume">Total Volume (m³)</label>
+                            <label className="mr-2" htmlFor="input-volume">{t('packageDetails.totalVolume')}</label>
                             <input
                                 id="input-volume"
                                 type="number"
@@ -116,7 +118,7 @@ export default function PackageDetails({ system, onPricingChange }) {
                         className="w-full rounded bg-gray-800 text-gray-200 border border-gray-700 px-4 py-2 disabled:opacity-50"
                         disabled={isDisabled()}
                         onChange={handleContentChange}
-                        placeholder="Tritanium 1000 ..."
+                        placeholder={t('packageDetails.placeholder')}
                     />
                 )}
             </div>
@@ -127,7 +129,7 @@ export default function PackageDetails({ system, onPricingChange }) {
                     disabled={isDisabled()}
                     onClick={getJanicePrices}
                 >
-                    Calculate Prices
+                    {t('packageDetails.calculatePrices')}
                 </button>
                 <div className="pl-6">
                     <label className="flex items-center text-sm text-gray-300 cursor-pointer">
@@ -139,7 +141,7 @@ export default function PackageDetails({ system, onPricingChange }) {
                             disabled={isDisabled()}
                             id="overridePrice"
                         />
-                        Override Price
+                        {t('packageDetails.overridePrice')}
                     </label>
                 </div>
             </div>
@@ -149,16 +151,16 @@ export default function PackageDetails({ system, onPricingChange }) {
                 <div className="bg-red-900 border-l-4 border-red-600 my-3 rounded-md w-full px-6 py-4 text-red-300 text-sm">
                     {errorMessage}
                     <br />
-                    You can override the price instead.
+                    {t('packageDetails.youCanOverride')}
                 </div>
             )}
 
             {/* Success */}
             {success && (
                 <div className="bg-green-900 border-l-4 border-green-600 my-3 rounded-md w-full px-6 py-4 text-green-300 text-sm">
-                    <span className="font-semibold text-white">Success!</span> See results on the <span className="font-bold text-blue-400">Order Ticket</span> once you're ready.
+                    <span className="font-semibold text-white">{t('packageDetails.success')}</span> {t('packageDetails.orderTicket')}.
                     <br />
-                    <span className="italic">Select and copy/paste</span> the <span className="font-bold text-yellow-300">Station names, Total Reward, Total Collateral, and Janice reference</span> into your in-game contract.
+                    {t('packageDetails.copyPaste')}
                 </div>
             )}
         </div>

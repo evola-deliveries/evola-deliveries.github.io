@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "contracts": "Contracts",
+    "joinDiscord": "Join Discord"
+  },
+  "welcome": {
+    "title": "Welcome to",
+    "subtitle": "EVOLA DELIVERIES"
+  },
+  "stats": {
+    "taskStatus": "Task Status",
+    "outstanding": "Outstanding",
+    "inProgress": "In Progress",
+    "avgContractTime": "Avg Contract Time",
+    "hoursPerContract": "Hours per Contract",
+    "travelTime": "4-HWWF ↔ Jita Travel",
+    "journeyDuration": "Journey Duration"
+  },
+  "contractCreator": {
+    "title": "Contract Creator",
+    "subtitle": "Select the Pickup and Dropoff stations",
+    "pickup": "Pickup:",
+    "dropoff": "Dropoff:",
+    "stationFrom": "Station (from):",
+    "stationTo": "Station (to):",
+    "rushDelivery": "Request Rush Delivery",
+    "rushFee": "ISK flat fee",
+    "guaranteedPriority": "Guaranteed Priority",
+    "rushDescription": "Delivery within 24h or placed top of queue. Marked as priority.",
+    "informationalNotice": "Informational Notice",
+    "contractsIssuedTo": "Contracts are issued to Evola Deliveries. Feedback is welcome!",
+    "note": "Note: Though volumes are high, our goal is delivery within 48 hours."
+  },
+  "packageDetails": {
+    "title": "Package Details",
+    "subtitle": "Select both pickup and dropoff routes to enable input area below.",
+    "totalSellPrice": "Total Sell Price (ISK)",
+    "totalVolume": "Total Volume (m³)",
+    "placeholder": "Tritanium 1000 ...",
+    "calculatePrices": "Calculate Prices",
+    "overridePrice": "Override Price",
+    "noPricesFound": "No Prices Found for items.",
+    "enterAtLeastOneItem": "Please enter at least one item to the package.",
+    "youCanOverride": "You can override the price instead.",
+    "success": "Success!",
+    "orderTicket": "Order Ticket",
+    "copyPaste": "Select and copy/paste the Station names, Total Reward, Total Collateral, and Janice reference into your in-game contract."
+  },
+  "orderTicket": {
+    "packageDetails": "Package Details",
+    "janice": "Janice",
+    "appraisalRef": "Appraisal Ref",
+    "cubicMeters": "Cubic Meters",
+    "pricing": "Pricing",
+    "volume": "Volume",
+    "collateral": "Collateral",
+    "rushDelivery": "Rush Delivery",
+    "limits": "Limits",
+    "minReward": "Min Reward",
+    "maxVolume": "Max Volume",
+    "maxCollateral": "Max Collateral",
+    "totalReward": "Total Reward",
+    "totalCollateral": "Total Collateral",
+    "contractsIssuedTo": "Contracts issued to:",
+    "evolaDeliveries": "Evola Deliveries",
+    "noContainers": "No Containers!",
+    "noAssembledShips": "No Assembled Ships!",
+    "expiration": "Expiration: 7 Days",
+    "daysToComplete": "Days to Complete: 7",
+    "feedback": "Feedback? Contact Nahtsu"
+  },
+  "footer": {
+    "copyright": "Fly safe, pilot o7"
+  },
+  "dialog": {
+    "packageTooLarge": "Package Too Large",
+    "volumeExceedsLimit": "Volume Exceeds Limit",
+    "collateralExceedsLimit": "Collateral Exceeds Limit",
+    "current": "Current",
+    "max": "Max",
+    "changePackageDetails": "Please change your package details to fit within the route limits shown on the Order Ticket.",
+    "ok": "OK"
+  },
+  "language": {
+    "select": "Language",
+    "en": "English",
+    "zh": "中文",
+    "ru": "Русский"
+  }
+}

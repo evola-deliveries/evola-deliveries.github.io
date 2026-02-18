@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "contracts": "Контракты",
+    "joinDiscord": "Присоединиться к Discord"
+  },
+  "welcome": {
+    "title": "Добро пожаловать в",
+    "subtitle": "EVOLA ДОСТАВКА"
+  },
+  "stats": {
+    "taskStatus": "Статус задач",
+    "outstanding": "Ожидающие",
+    "inProgress": "В процессе",
+    "avgContractTime": "Среднее время контракта",
+    "hoursPerContract": "Часов за контракт",
+    "travelTime": "Время в пути 4-HWWF ↔ Jita",
+    "journeyDuration": "Продолжительность пути"
+  },
+  "contractCreator": {
+    "title": "Создание контракта",
+    "subtitle": "Выберите станции забора и доставки",
+    "pickup": "Забор:",
+    "dropoff": "Доставка:",
+    "stationFrom": "Станция (откуда):",
+    "stationTo": "Station (куда):",
+    "rushDelivery": "Заказать срочную доставку",
+    "rushFee": "ISK фиксированная плата",
+    "guaranteedPriority": "Гарантированный приоритет",
+    "rushDescription": "Доставка в течение 24ч или в top очереди. Помечено как приоритет.",
+    "informationalNotice": "Информационное уведомление",
+    "contractsIssuedTo": "Контракты выдаются Evola Deliveries. Отзывы приветствуются!",
+    "note": "Примечание: Несмотря на большой объём, наша цель - доставка в течение 48 часов."
+  },
+  "packageDetails": {
+    "title": "Детали посылки",
+    "subtitle": "Выберите маршруты забора и доставки, чтобы активировать поле ввода ниже.",
+    "totalSellPrice": "Общая цена продажи (ISK)",
+    "totalVolume": "Общий объём (m³)",
+    "placeholder": "Тританниум 1000 ...",
+    "calculatePrices": "Рассчитать цены",
+    "overridePrice": "Переопределить цену",
+    "noPricesFound": "Цены не найдены для предметов.",
+    "enterAtLeastOneItem": "Пожалуйста, введите хотя бы один предмет в посылку.",
+    "youCanOverride": "Вы можете переопределить цену.",
+    "success": "Успешно!",
+    "orderTicket": "Бланк заказа",
+    "copyPaste": "Выберите и скопируйте названия станций, Общее вознаграждение, Общее обеспечение и ссылку Janice в контракт в игре."
+  },
+  "orderTicket": {
+    "packageDetails": "Детали посылки",
+    "janice": "Janice",
+    "appraisalRef": "Ссылка на оценку",
+    "cubicMeters": "Кубические метры",
+    "pricing": "Ценообразование",
+    "volume": "Объём",
+    "collateral": "Обеспечение",
+    "rushDelivery": "Срочная доставка",
+    "limits": "Лимиты",
+    "minReward": "Мин. вознаграждение",
+    "maxVolume": "Макс. объём",
+    "maxCollateral": "Макс. обеспечение",
+    "totalReward": "Общее вознаграждение",
+    "totalCollateral": "Общее обеспечение",
+    "contractsIssuedTo": "Контракты выдаются:",
+    "evolaDeliveries": "Evola Deliveries",
+    "noContainers": "Без контейнеров!",
+    "noAssembledShips": "Без собранных кораблей!",
+    "expiration": "Срок действия: 7 дней",
+    "daysToComplete": "Дней на выполнение: 7",
+    "feedback": "Отзывы? Связаться с Nahtsu"
+  },
+  "footer": {
+    "copyright": "Летите безопасно, пилот o7"
+  },
+  "dialog": {
+    "packageTooLarge": "Посылка слишком большая",
+    "volumeExceedsLimit": "Объём превышает лимит",
+    "collateralExceedsLimit": "Обеспечение превышает лимит",
+    "current": "Текущий",
+    "max": "Макс.",
+    "changePackageDetails": "Пожалуйста, измените детали посылки, чтобы они соответствовали лимитам маршрута, указанным в бланке заказа.",
+    "ok": "ОК"
+  },
+  "language": {
+    "select": "Язык",
+    "en": "English",
+    "zh": "中文",
+    "ru": "Русский"
+  }
+}
