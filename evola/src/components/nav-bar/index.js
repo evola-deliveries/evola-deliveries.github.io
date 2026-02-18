@@ -1,8 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import ConfigService from '../../services/config-service';
 import { Link } from 'react-router-dom';
 
 export default function NavigationBar() {
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
     return (
         <header className="bg-gray-900 border-b border-gray-700 shadow-md">
             <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
@@ -14,19 +21,31 @@ export default function NavigationBar() {
                     </h1>
                 </Link>
                 
+                <div className="flex items-center space-x-6">
+                    {/* Navigation */}
+                    <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-400">
+                        <Link to="/" className="hover:text-white transition duration-150">{t('nav.contracts')}</Link>
+                        <a
+                            href={ConfigService.discord_url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-blue-500 hover:text-blue-300 transition duration-150"
+                        >
+                            {t('nav.joinDiscord')}
+                        </a>
+                    </nav>
 
-                {/* Navigation (optional links - placeholder) */}
-                <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-400">
-                    <Link to="/" className="hover:text-white transition duration-150">Contracts</Link>
-                    <a
-                        href={ConfigService.discord_url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-blue-500 hover:text-blue-300 transition duration-150"
+                    {/* Language Selector */}
+                    <select
+                        value={i18n.language}
+                        onChange={(e) => changeLanguage(e.target.value)}
+                        className="bg-gray-800 border border-gray-600 text-gray-200 text-sm px-2 py-1 rounded focus:outline-none focus:border-blue-500"
                     >
-                        Join Discord
-                    </a>
-                </nav>
+                        <option value="en">{t('language.en')}</option>
+                        <option value="zh">{t('language.zh')}</option>
+                        <option value="ru">{t('language.ru')}</option>
+                    </select>
+                </div>
             </div>
         </header>
     );

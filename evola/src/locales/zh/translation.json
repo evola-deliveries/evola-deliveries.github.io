@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "contracts": "合同",
+    "joinDiscord": "加入 Discord"
+  },
+  "welcome": {
+    "title": "欢迎使用",
+    "subtitle": "EVOLA 快递服务"
+  },
+  "stats": {
+    "taskStatus": "任务状态",
+    "outstanding": "待完成",
+    "inProgress": "进行中",
+    "avgContractTime": "平均合同时间",
+    "hoursPerContract": "每小时合同数",
+    "travelTime": "4-HWWF ↔ 吉塔时间",
+    "journeyDuration": "行程时长"
+  },
+  "contractCreator": {
+    "title": "合同创建器",
+    "subtitle": "选择取货和送货空间站",
+    "pickup": "取货：",
+    "dropoff": "送货：",
+    "stationFrom": "空间站（起点）：",
+    "stationTo": "空间站（终点）：",
+    "rushDelivery": "申请加急配送",
+    "rushFee": "ISK 固定费用",
+    "guaranteedPriority": "保证优先",
+    "rushDescription": "24小时内送达或置顶队列。标记为优先。",
+    "informationalNotice": "通知",
+    "contractsIssuedTo": "合同发布给 Evola Deliveries。欢迎反馈！",
+    "note": "注意：尽管货量很大，我们的目标是在48小时内送达。"
+  },
+  "packageDetails": {
+    "title": "包裹详情",
+    "subtitle": "选择取货和送货路线以启用下方输入区域。",
+    "totalSellPrice": "总售价 (ISK)",
+    "totalVolume": "总体积 (m³)",
+    "placeholder": "三钛合金 1000 ...",
+    "calculatePrices": "计算价格",
+    "overridePrice": "覆盖价格",
+    "noPricesFound": "未找到物品价格。",
+    "enterAtLeastOneItem": "请至少输入一个物品到包裹中。",
+    "youCanOverride": "您可以覆盖价格。",
+    "success": "成功！",
+    "orderTicket": "订单票据",
+    "copyPaste": "选择并复制/粘贴空间站名称、总报酬、总抵押品和 Janic e参考到您的游戏内合同中。"
+  },
+  "orderTicket": {
+    "packageDetails": "包裹详情",
+    "janice": "Janice",
+    "appraisalRef": "评估参考",
+    "cubicMeters": "立方米",
+    "pricing": "定价",
+    "volume": "体积",
+    "collateral": "抵押品",
+    "rushDelivery": "加急配送",
+    "limits": "限制",
+    "minReward": "最低报酬",
+    "maxVolume": "最大体积",
+    "maxCollateral": "最大抵押品",
+    "totalReward": "总报酬",
+    "totalCollateral": "总抵押品",
+    "contractsIssuedTo": "合同发布给：",
+    "evolaDeliveries": "Evola Deliveries",
+    "noContainers": "禁止容器！",
+    "noAssembledShips": "禁止组装飞船！",
+    "expiration": "过期时间：7天",
+    "daysToComplete": "完成天数：7天",
+    "feedback": "反馈？请联系 Nahtsu"
+  },
+  "footer": {
+    "copyright": "飞行安全，飞行员 o7"
+  },
+  "dialog": {
+    "packageTooLarge": "包裹过大",
+    "volumeExceedsLimit": "体积超过限制",
+    "collateralExceedsLimit": "抵押品超过限制",
+    "current": "当前",
+    "max": "最大",
+    "changePackageDetails": "请更改您的包裹详情以符合订单票据上显示的路线限制。",
+    "ok": "确定"
+  },
+  "language": {
+    "select": "语言",
+    "en": "English",
+    "zh": "中文",
+    "ru": "Русский"
+  }
+}

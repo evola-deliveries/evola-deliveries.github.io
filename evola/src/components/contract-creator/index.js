@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import PackageDetails from '../package-details';
 import OrderTicket from '../order-ticket';
 import DataService from '../../services/data-service';
@@ -39,6 +40,7 @@ function calculatePricing(inboundRouteDeep, price, volume, janice, rushFee = 0, 
 }
 
 export default function ContractCreator() {
+    const { t } = useTranslation();
     // API-loaded data
     const [data, setData] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -189,8 +191,8 @@ export default function ContractCreator() {
                     <div className="my-2 text-gray-300 text-sm">
                         <div className="bg-gray-900 text-white p-6 rounded-lg shadow-lg border border-gray-700">
                             <div className="headerCont text-center md:text-left">
-                                <h4 className="uppercase tracking-widest text-sm text-gray-400 mb-1 md:block">Welcome to</h4>
-                                <h3 className="font-extrabold text-3xl md:text-4xl text-blue-400 md:block">EVOLA DELIVERIES</h3>
+                                <h4 className="uppercase tracking-widest text-sm text-gray-400 mb-1 md:block">{t('welcome.title')}</h4>
+                                <h3 className="font-extrabold text-3xl md:text-4xl text-blue-400 md:block">{t('welcome.subtitle')}</h3>
 
                                 <a
                                     className="inline-flex items-center mt-4 text-lg text-blue-500 hover:text-blue-300 focus:text-blue-300 transition-colors duration-200"
@@ -198,7 +200,7 @@ export default function ContractCreator() {
                                     target="_blank"
                                     rel="noreferrer"
                                 >
-                                    <span className="uppercase font-medium tracking-wide">Join Discord</span>
+                                    <span className="uppercase font-medium tracking-wide">{t('nav.joinDiscord')}</span>
                                     <span className="text-xl ml-2 animate-pulse">&#x279c;</span>
                                 </a>
                             </div>
@@ -208,37 +210,37 @@ export default function ContractCreator() {
 
                                 {/* Box 1: Task Overview */}
                                 <div className="bg-gray-900 border border-gray-700 rounded-lg p-6 text-center shadow-lg">
-                                    <h2 className="text-sm uppercase text-gray-400 tracking-widest mb-2">Task Status</h2>
+                                    <h2 className="text-sm uppercase text-gray-400 tracking-widest mb-2">{t('stats.taskStatus')}</h2>
                                     <p className="text-3xl font-extrabold text-green-400">{outstandingContracts}</p>
-                                    <p className="text-xs text-gray-500 mt-1">Outstanding</p>
+                                    <p className="text-xs text-gray-500 mt-1">{t('stats.outstanding')}</p>
                                     <p className="text-2xl font-bold text-yellow-400 mt-4">{progressContracts}</p>
-                                    <p className="text-xs text-gray-500">In Progress</p>
+                                    <p className="text-xs text-gray-500">{t('stats.inProgress')}</p>
                                 </div>
 
                                 {/* Box 2: Contract Time */}
                                 <div className="bg-gray-900 border border-gray-700 rounded-lg p-6 text-center shadow-lg">
-                                    <h2 className="text-sm uppercase text-gray-400 tracking-widest mb-2">Avg Contract Time</h2>
+                                    <h2 className="text-sm uppercase text-gray-400 tracking-widest mb-2">{t('stats.avgContractTime')}</h2>
                                     <p className="text-4xl font-extrabold text-blue-400">{HundredContracts}h</p>
-                                    <p className="text-xs text-gray-500 mt-1">Hours per Contract</p>
+                                    <p className="text-xs text-gray-500 mt-1">{t('stats.hoursPerContract')}</p>
                                 </div>
 
                                 {/* Box 3: MJ to Jita */}
                                 <div className="bg-gray-900 border border-gray-700 rounded-lg p-6 text-center shadow-lg">
-                                    <h2 className="text-sm uppercase text-gray-400 tracking-widest mb-2">4-HWWF ↔ Jita Travel</h2>
+                                    <h2 className="text-sm uppercase text-gray-400 tracking-widest mb-2">{t('stats.travelTime')}</h2>
                                     <p className="text-4xl font-extrabold text-purple-400">{MJJitaHundredContracts}h</p>
-                                    <p className="text-xs text-gray-500 mt-1">Journey Duration</p>
+                                    <p className="text-xs text-gray-500 mt-1">{t('stats.journeyDuration')}</p>
                                 </div>
 
                             </div>
                         </div>
 
                     </div>
-                    <h2 className="w-full text-xl text-blue-400 font-bold uppercase tracking-wider mb-1">Contract Creator</h2>
-                    <h3 className="w-full text-gray-400 font-medium text-sm mb-4">Select the Pickup and Dropoff stations</h3>
+                    <h2 className="w-full text-xl text-blue-400 font-bold uppercase tracking-wider mb-1">{t('contractCreator.title')}</h2>
+                    <h3 className="w-full text-gray-400 font-medium text-sm mb-4">{t('contractCreator.subtitle')}</h3>
 
                     {/* Pickup */}
                     <div className="flex justify-between items-center text-sm text-gray-300 mb-2">
-                        <label htmlFor="outbound" className="mr-2">Pickup:</label>
+                        <label htmlFor="outbound" className="mr-2">{t('contractCreator.pickup')}</label>
                         <select
                             name="outbound"
                             value={outboundValue}
@@ -265,7 +267,7 @@ export default function ContractCreator() {
 
                     {/* Station from */}
                     <div className="flex justify-between items-center my-2 border-b border-dashed border-blue-700 pb-1 text-sm text-gray-400">
-                        <div>Station (from):</div>
+                        <div>{t('contractCreator.stationFrom')}</div>
                         <div className="flex items-center space-x-2">
                             <span
                                 className="cursor-pointer hover:text-white"
@@ -283,7 +285,7 @@ export default function ContractCreator() {
 
                     {/* Dropoff */}
                     <div className="flex justify-between items-center text-sm text-gray-300 mb-2">
-                        <label htmlFor="inbound" className="mr-2">Dropoff:</label>
+                        <label htmlFor="inbound" className="mr-2">{t('contractCreator.dropoff')}</label>
                         <select
                             name="inbound"
                             value={inboundValue}
@@ -310,7 +312,7 @@ export default function ContractCreator() {
 
                     {/* Station to */}
                     <div className="flex justify-between items-center my-2 border-b border-dashed border-purple-700 pb-1 text-sm text-gray-400">
-                        <div>Station (to):</div>
+                        <div>{t('contractCreator.stationTo')}</div>
                         <div className="flex items-center space-x-2">
                             <span
                                 className="cursor-pointer hover:text-white"
@@ -338,13 +340,13 @@ export default function ContractCreator() {
                                 id="rushOrderTop"
                             />
                             <span className={`font-semibold ${!rushAllowed ? 'opacity-50 text-gray-500' : 'text-blue-400'}`}>
-                                Request Rush Delivery
+                                {t('contractCreator.rushDelivery')}
                             </span>
                         </label>
                         <div className={`text-xs mt-1 ml-6 leading-snug ${!rushAllowed ? 'text-gray-500' : 'text-gray-400'}`}>
-                            +<span className="font-bold text-green-400">{displayRushFee.toLocaleString()}</span> ISK flat fee — <span className="font-semibold text-yellow-300">Guaranteed Priority</span><br />
+                            +<span className="font-bold text-green-400">{displayRushFee.toLocaleString()}</span> {t('contractCreator.rushFee')} — <span className="font-semibold text-yellow-300">{t('contractCreator.guaranteedPriority')}</span><br />
                             <span className="italic text-gray-500">
-                                Delivery within 24h or placed top of queue. Marked as <span className="text-blue-500">priority</span>.
+                                {t('contractCreator.rushDescription')}
                             </span>
                         </div>
                     </div>
@@ -359,12 +361,12 @@ export default function ContractCreator() {
                                 </svg>
                             </div>
                             <div>
-                                <p className="font-bold text-white">Informational Notice</p>
+                                <p className="font-bold text-white">{t('contractCreator.informationalNotice')}</p>
                                 <p className="text-sm">
-                                    Contracts are issued to <span className="select-all text-blue-400">Evola Deliveries</span>. Feedback is welcome!
+                                    {t('contractCreator.contractsIssuedTo')}
                                 </p>
                                 <p>
-                                    <span className="font-bold text-yellow-400">Note:</span> Though volumes are high, our goal is delivery within 48 hours.
+                                    {t('contractCreator.note')}
                                 </p>
                             </div>
                         </div>
@@ -394,38 +396,38 @@ export default function ContractCreator() {
                             </svg>
                         </div>
                     </div>
-                    <h3 className="text-xl font-bold text-center text-red-500 mb-2">Package Too Large</h3>
+                    <h3 className="text-xl font-bold text-center text-red-500 mb-2">{t('dialog.packageTooLarge')}</h3>
                     <div className="mb-4">
                         {pricing.totals.volumeInvalid && (
                             <div className="bg-red-900 bg-opacity-30 border border-red-700 rounded p-3 mb-2">
-                                <div className="text-red-400 font-semibold text-sm">Volume Exceeds Limit</div>
+                                <div className="text-red-400 font-semibold text-sm">{t('dialog.volumeExceedsLimit')}</div>
                                 <div className="text-gray-300">
-                                    Current: <span className="font-bold text-red-400">{Number(pricing.volume).toLocaleString()} m³</span> 
+                                    {t('dialog.current')}: <span className="font-bold text-red-400">{Number(pricing.volume).toLocaleString()} m³</span> 
                                     {' / '}
-                                    Max: <span className="font-bold text-green-400">{inboundRoute && Number(inboundRoute.limits.volume).toLocaleString()} m³</span>
+                                    {t('dialog.max')}: <span className="font-bold text-green-400">{inboundRoute && Number(inboundRoute.limits.volume).toLocaleString()} m³</span>
                                 </div>
                             </div>
                         )}
                         {pricing.totals.collateralInvalid && (
                             <div className="bg-red-900 bg-opacity-30 border border-red-700 rounded p-3">
-                                <div className="text-red-400 font-semibold text-sm">Collateral Exceeds Limit</div>
+                                <div className="text-red-400 font-semibold text-sm">{t('dialog.collateralExceedsLimit')}</div>
                                 <div className="text-gray-300">
-                                    Current: <span className="font-bold text-red-400">{Number(pricing.price).toLocaleString()} ISK</span>
+                                    {t('dialog.current')}: <span className="font-bold text-red-400">{Number(pricing.price).toLocaleString()} ISK</span>
                                     {' / '}
-                                    Max: <span className="font-bold text-green-400">{inboundRoute && Number(inboundRoute.limits.collateral).toLocaleString()} ISK</span>
+                                    {t('dialog.max')}: <span className="font-bold text-green-400">{inboundRoute && Number(inboundRoute.limits.collateral).toLocaleString()} ISK</span>
                                 </div>
                             </div>
                         )}
                     </div>
                     <p className="text-gray-400 text-sm text-center mb-6">
-                        Please change your package details to fit within the route limits shown on the Order Ticket.
+                        {t('dialog.changePackageDetails')}
                     </p>
                     <div className="flex justify-center">
                         <button
                             onClick={() => setShowInvalidDialog(false)}
                             className="bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded transition duration-200"
                         >
-                            OK
+                            {t('dialog.ok')}
                         </button>
                     </div>
                 </div>
