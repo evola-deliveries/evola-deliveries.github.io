@@ -57,6 +57,9 @@ export default function ContractCreator() {
     const [HundredContracts, setLast100ContractTime] = useState();
     const [MJJitaHundredContracts, setLast100MJJitaContracts] = useState();
 
+    const [showInvalidDialog, setShowInvalidDialog] = useState(false);
+    const [pricingCalculated, setPricingCalculated] = useState(false);
+
     const rushAllowed = inboundRoute?.allowRush === true;
 
     // Rush fee: override on route, else default from API data, else hardcoded fallback
@@ -167,7 +170,16 @@ export default function ContractCreator() {
             rushFee,
             rushOrderCheck && rushAllowed
         ));
+        setPricingCalculated(true);
     };
+
+    useEffect(() => {
+        if (pricingCalculated && pricing.totals) {
+            if (pricing.totals.volumeInvalid || pricing.totals.collateralInvalid) {
+                setShowInvalidDialog(true);
+            }
+        }
+    }, [pricing, pricingCalculated]);
 
     return (
         <div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">
@@ -370,5 +382,42 @@ export default function ContractCreator() {
                 </div>
             </div>
         </div>
+
+        {showInvalidDialog && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+                <div className="bg-gray-800 border border-red-500 rounded-lg shadow-2xl max-w-md w-full mx-4 p-6">
+                    <div className="flex items-center justify-center mb-4">
+                        <div className="bg-red-900 rounded-full p-3">
+                            <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-center text-red-500 mb-2">Package Too Large</h3>
+                    <p className="text-gray-300 text-center mb-4">
+                        {pricing.totals.volumeInvalid && pricing.totals.collateralInvalid && (
+                            "Both the volume and collateral exceed the route limits."
+                        )}
+                        {pricing.totals.volumeInvalid && !pricing.totals.collateralInvalid && (
+                            "The volume exceeds the route limit."
+                        )}
+                        {!pricing.totals.volumeInvalid && pricing.totals.collateralInvalid && (
+                            "The collateral exceeds the route limit."
+                        )}
+                    </p>
+                    <p className="text-gray-400 text-sm text-center mb-6">
+                        Please change your package details to fit within the route limits shown on the Order Ticket.
+                    </p>
+                    <div className="flex justify-center">
+                        <button
+                            onClick={() => setShowInvalidDialog(false)}
+                            className="bg-red-600 hover:bg-red-500 text-white font-bold py-2 px-6 rounded transition duration-200"
+                        >
+                            OK
+                        </button>
+                    </div>
+                </div>
+            </div>
+        )}
     );
 };
